@@ -1,0 +1,32 @@
+province,abbreviation,capital,population ,area ,population density ,counties
+Alborz,AL,Karaj,"2,730,000","5,833",465.01,7
+Ardabil,AR,Ardabil,"1,284,000","17,800",71.37,12
+Bushehr,BU,Bushehr,"1,174,000","22,743",51.15,10
+Chaharmahal and Bakhtiari,CB,Shahr-e Kord,"973,000","16,332",58.03,12
+East Azerbaijan,EA,Tabriz,"3,925,000","45,650",85.64
+Pars,FA,Shiraz,"4,904,000","122,608",39.57
+Gilan,GN,Rasht,"2,546,000","14,042",180.22
+Golestan,GO,Gorgan,"1,893,000","20,195",92.53,14
+Hamadan,HA,Hamadan,"1,756,000","19,368",90.78,10
+Hormozgan,HO,Bandar Abbas,"1,806,000","70,669",25.14,13
+Ilam,IL,Ilam,"591,000","20,133",28.82,12
+Isfahan,IS,Isfahan,"5,136,000","107,029",47.85,28
+Kerman,KN,Kerman,"3,184,000","183,285",17.27
+Kermanshah,KE,Kermanshah,"2,003,000","24,998",78.10,14
+Khuzestan,KH,Ahvaz,"4,725,000","64,055",73.54
+Kohgiluyeh and Boyer-Ahmad,KB,Yasuj,"728,000","15,504",45.99,9
+Kurdistan,KU,Sanandaj,"1,614,000","29,137",55.02,10
+Lorestan,LO,Khorramabad,"1,784,000","28,294",62.23,12
+Markazi,MA,Arak,"1,436,000","29,130",49.07,12
+Mazandaran,MN,Sari,"3,302,000","23,701",138.54
+North Khorasan,NK,Bojnord,"868,000","28,434",30.35,10
+Qazvin,QA,Qazvin,"1,284,000","15,549",81.92,6
+Qom,QM,Qom,"1,300,000","11,526",112.12,3
+Razavi Khorasan,RK,Mashhad,"6,444,000","118,884",54.12,34
+Semnan,SE,Semnan,"715,000","97,491",7.20,8
+Sistan and Baluchestan,SB,Zahedan,"2,777,000","180,726",15.35,26
+South Khorasan,SK,Birjand,"786,000","151,913",5.06,12
+Tehran,TE,Tehran,"13,323,000","18,814",705.20,16
+West Azerbaijan,WA,Urmia,"3,278,000","37,437",87.22,20
+Yazd,YA,Yazd,"1,156,000","76,469",14.89,12
+Zanjan,ZA,Zanjan,"1,103,000","21,773",48.57,8
