@@ -4,11 +4,12 @@ import shutil
 import sys
 from os import listdir
 from os.path import exists, isfile, join
-import json
 import csv
 from copy import deepcopy
 
-from requests_html import HTMLSession
+from requests_html import HTMLSession, AsyncHTMLSession
+from tqdm import tqdm
+from pprint import pprint
 
 
 def script_directory():
@@ -130,27 +131,6 @@ def create_folder():
         if not os.path.exists(dst):
             os.makedirs(dst)
             shutil.move(src, dst)
-
-
-def create_url():
-    """Create amar.org.ir URL base on the site structure"""
-    # https://amar.org.ir/salnameh-amari/agentType/ViewType/PropertyTypeID/615 = 615 = Kole Keshvar
-    # 616-646 province range
-    # https://amar.org.ir/salnameh-amari/agentType/ViewSearch/CustomFieldIDs/65/SearchValues/1394/PropertyTypeID/618
-    from pprint import pprint
-
-    year = None
-    province = None
-    for i in range(616, 647):
-        city_i_code_urls = []
-        for j in range(1345, 1403):
-            year = i
-            province = j
-            base = f"https://amar.org.ir/salnameh-amari/agentType/ViewSearch/CustomFieldIDs/65/SearchValues/{year}/PropertyTypeID/{province}"
-            city_i_code_urls.append(base)
-        print(len(city_i_code_urls))
-        pprint(city_i_code_urls)
-        break
 
 
 def scrap_province():
@@ -296,6 +276,157 @@ def matching_game():
     return csvfile_name
 
 
+def code_matching_english():
+    translate_file_name = matching_game()
+    persian_file = scrap_province()
+    with (
+        open(translate_file_name, mode="r") as translate,
+        open(persian_file, mode="r") as persian,
+    ):
+        # load persian data
+        persian_reader = csv.reader(persian)
+        persian = {}
+        i_counter = 0
+        for i in persian_reader:
+            if i_counter == 0:
+                i_counter += 1
+            else:
+                persian[i[0]] = i[1]
+                i_counter += 1
+
+        # load english data
+        english = {}
+        translate_reader = csv.reader(translate)
+        j_counter = 0
+        for j in translate_reader:
+            if j_counter == 0:
+                j_counter += 1
+            else:
+                english[j[0]] = j[1]
+                j_counter += 1
+
+        bridge = {}
+        for k, v in persian.items():
+            bridge[k] = english[v]
+
+        return bridge
+
+
+def generate_urls():
+    """Create amar.org.ir URL base on the site structure"""
+    # https://amar.org.ir/salnameh-amari/agentType/ViewType/PropertyTypeID/615 = 615 = Kole Keshvar
+    # 616-646 province range
+    # https://amar.org.ir/salnameh-amari/agentType/ViewSearch/CustomFieldIDs/65/SearchValues/1394/PropertyTypeID/618
+    year = None
+    province = None
+    bridge = code_matching_english()
+    csvfile_name = "generated_urls.csv"
+    if exists(csvfile_name):
+        return csvfile_name
+
+    urls = {}
+    for k, v in bridge.items():
+        for j in range(1345, 1403):
+            year = j
+            province = int(k)
+            base = f"https://amar.org.ir/salnameh-amari/agentType/ViewSearch/CustomFieldIDs/65/SearchValues/{year}/PropertyTypeID/{province}"
+            urls[v, year] = base
+
+    with open(csvfile_name, mode="w", newline="") as csvfile:
+        account = csv.writer(csvfile, delimiter=",")
+        account.writerow(["Province Name", "Year", "URL"])
+        for k, v in urls.items():
+            account.writerow([k[0], k[1], v])
+    return csvfile_name
+
+
+def check_url_availability():
+    # add logging
+    # add async
+    # break 1800 url into smaller pieces and smaller csv then concatenate csvs
+    csvfile_name = "url_availability.csv"
+    urls_csvfile = generate_urls()
+    if exists(csvfile_name):
+        with open(csvfile_name, "r") as main, open(urls_csvfile, "r") as reference:
+            reference_reader = csv.reader(reference)
+            main_reader = csv.reader(main)
+            row_count_reference = len(list(reference_reader))
+            row_count_main = len(list(main_reader))
+            if row_count_reference == row_count_main:
+                return csvfile_name
+
+    with (
+        open(urls_csvfile, newline="") as urls,
+        open(csvfile_name, mode="w") as csvfile,
+    ):
+        reader = csv.reader(urls)
+        writer = csv.writer(csvfile, delimiter=",")
+        count = 0
+        header = None
+        # 1798 url = 30 min run
+        # do it async
+        for url in tqdm(reader):
+            if count == 0:
+                header = url + ["Status"]
+                writer.writerow(header)
+                count += 1
+            else:
+                single_url = url[2]
+                session = HTMLSession()
+                r = session.get(single_url)
+                try:
+                    if r.status_code == 200:
+                        html = r.html
+                        fail_massage = "هيچ نتيجه اي مطابق با معيارهاي شما يافت نشد."
+                        response = html.find(
+                            "div.DnnModule.DnnModule-PropertyAgent.DnnModule-6200",
+                            first=True,
+                        ).text.split("\n")[0]
+                        if response == fail_massage:
+                            url = url + ["0"]
+                            writer.writerow(url)
+                        else:
+                            url = url + ["1"]
+                            writer.writerow(url)
+                    else:
+                        url = url + [str(r.status_code)]
+                        writer.writerow(url)
+                    return csvfile_name
+                except Exception as e:
+                    url = url + [str(e)]
+                    writer.writerow(url)
+
+
+def missing_year_checker():
+    delete_dsstore()
+    all_years = [i for i in range(1345, 1403)]
+    csvfile = check_url_availability()
+    missing_year_counter = 0
+    eng, _ = get_province_name()
+    with open(csvfile, mode="r") as file:
+        rows = csv.reader(file)
+        counter = 0
+        missing_year_dic = {k: [] for k in eng}
+        for row in rows:
+            if counter == 0:
+                counter += 1
+            else:
+                if row[-1] == "0":
+                    missing_year_dic[row[0]].append(row[1])
+                    missing_year_counter += 1
+                    counter += 1
+                else:
+                    counter += 1
+    print(missing_year_counter)
+    pprint(missing_year_dic)
+    just_number = {k: f"{len(v)}/58" for k, v in missing_year_dic.items()}
+    pprint(just_number)
+
+
 # scrap_province()
 # scrap_wikipedia()
 # matching_game()
+# code_matching_english()
+# generate_urls()
+# check_url_availability()
+missing_year_checker()

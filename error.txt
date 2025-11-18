@@ -1,0 +1,72 @@
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/ai/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/ai/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/opt/anaconda3/envs/ai/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/ai/lib/python3.12/http/client.py", line 1411, in getresponse
+    response.begin()
+  File "/opt/anaconda3/envs/ai/lib/python3.12/http/client.py", line 324, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/ai/lib/python3.12/http/client.py", line 293, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/ai/lib/python3.12/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/ai/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/ai/lib/python3.12/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/ai/lib/python3.12/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/opt/anaconda3/envs/ai/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/ai/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/opt/anaconda3/envs/ai/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/ai/lib/python3.12/http/client.py", line 1411, in getresponse
+    response.begin()
+  File "/opt/anaconda3/envs/ai/lib/python3.12/http/client.py", line 324, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/ai/lib/python3.12/http/client.py", line 293, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/masoudkord/Documents/projects/salname-amari-data-processing/./amar_file_organizer.py", line 393, in <module>
+    check_url_availability()
+  File "/Users/masoudkord/Documents/projects/salname-amari-data-processing/./amar_file_organizer.py", line 365, in check_url_availabilit
+y
+    r = session.get(single_url)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/ai/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/ai/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/ai/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/ai/lib/python3.12/site-packages/requests/adapters.py", line 659, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
