@@ -8,100 +8,121 @@ import csv
 from copy import deepcopy
 
 from requests_html import HTMLSession, AsyncHTMLSession
-from tqdm import tqdm
+from tqdm.asyncio import tqdm_asyncio
+import asyncio
 from pprint import pprint
 
 
 def script_directory():
-    """Show where script is located"""
-    directory = os.path.dirname(os.path.abspath(sys.argv[0]))
-    return directory
+    """Return the directory that the script is located"""
+    return os.path.dirname(os.path.abspath(sys.argv[0]))
 
 
-def get_files(path=r"/Volumes/MASOUD/Salname"):
-    """Return ( path, files, folder ) within 'path'"""
-    onlyfiles = [f for f in listdir(path) if isfile(join(path, f))]
-    onlyfolders = set(listdir(path)) - set(onlyfiles)
-    return path, onlyfiles, onlyfolders
+def get_files(path=None):
+    """Get path, Return (path, files_within_path, folder_within_path)"""
+    if path is None:
+        path = script_directory()
 
-
-def get_file_info(i):
-    """Return file name and file format for given full file name"""
-    count = 0
-    for j in i:
-        if j == ".":
-            break
-        count += 1
-    file_name = i[:count]
-    file_format = i[count:]
-    return file_name, file_format
-
-
-def delete_dsstore():
-    """Delete .DS_Store File"""
-    extra_file = ".DS_Store"
-    path, onlyfiles, _ = get_files()
-    if extra_file in onlyfiles:
-        os.remove(join(path, ".DS_Store"))
-
-
-def file_rename():
-    """Change all files name within path to a format that only contain their year"""
-    delete_dsstore()
-    download_path, onlyfiles, _ = get_files()
-    for i in onlyfiles:
-        source = join(download_path, i)
-        dest = ""
-        count = 0
-        for j in i:
-            if j == ".":
-                break
-            elif j in "1234567890":
-                dest += j
-            count += 1
-        file_type = i[count:]
-        # print(dest)
-        dest = join(download_path, dest + file_type)
-        # print(dest)
-        # print(count)
-        # print(source)
-        # print("file type is:", file_type)
-        os.rename(source, dest)
-
-
-def find_missing_years():
-    """Checkout which year missing report"""
-    delete_dsstore()
-    download_path, onlyfiles, _ = get_files()
-    all_years = [i for i in range(1345, 1403)]
-    # print(all_years)
-    have_years = []
-    onlyfiles = [f for f in listdir(download_path) if isfile(join(download_path, f))]
-    for i in onlyfiles:
-        count = 0
-        for j in i:
-            if j == ".":
-                break
-            count += 1
-        have_years.append(i[:count])
-    have_years = sorted(map(int, have_years))
-    # print(have_years)
-    missing_years = []
-    for i in all_years:
-        if i not in have_years:
-            missing_years.append(i)
-    print(missing_years)
-
-
-def get_rar_zip_files():
-    _, onlyfiles, _ = get_files()
     files = []
-    for i in onlyfiles:
-        _, file_format = get_file_info(i)
-        target_format = [".zip", ".rar"]
-        if file_format in target_format:
-            files.append(i)
-    return files
+    folders = []
+
+    for name in os.listdir(path):
+        full = os.path.join(path, name)
+        if os.path.isfile(full):
+            files.append(name)
+        else:
+            folders.append(name)
+    return path, files, folders
+
+
+def get_file_info(full_file_name):
+    """Get full file name, Return file_name, file_format"""
+    return os.path.splitext(full_file_name)
+
+
+def delete_dsstore(path=None):
+    """Delete .DS_Store file, Return None"""
+    if path is None:
+        path = script_directory()
+    for root, dirs, files in os.walk(path):
+        if ".DS_Store" in files:
+            os.remove(join(root, ".DS_Store"))
+
+
+def extract_year_prefix(text):
+    """Extract leading digits from a filename"""
+    year = ""
+    for char in text:
+        if char.isdigit():
+            year += char
+        else:
+            break
+    return year
+
+
+def file_rename(file_name, path):
+    """
+    Get file_name, path
+    Do change files name within path to a format that only contain their year
+    Return None
+    """
+    name, ext = get_file_info(file_name)
+    new_name = extract_year_prefix(name)
+
+    src = join(path, file_name)
+    dst = join(path, new_name + ext)
+    if not exists(dst):
+        os.rename(src, dst)
+
+
+def files_rename(path=None):
+    """
+    Get path
+    Do change files name within given path
+    Return None
+    """
+    if path is None:
+        path = script_directory()
+
+    delete_dsstore()
+
+    path, files, _ = get_files(path)
+    for file in files:
+        file_rename(file, path)
+
+
+def find_missing_years(path=None):
+    """Checkout which year missing report"""
+    if path is None:
+        path = script_directory()
+
+    delete_dsstore()
+
+    _, files, folders = get_files(path)
+    # list of years -> this range can be scrap from the site for more automation
+    valid_year_range = set(range(1345, 1403))
+    available_years = set()
+    path, files, folders = get_files(path)
+
+    for f in files:
+        year = extract_year_prefix(get_file_info(f)[0])
+        if year.isdigit():
+            available_years.add(int(year))
+
+    for f in folders:
+        if f.isdigit():
+            available_years.add(int(f))
+
+    missing_years = sorted(valid_year_range - available_years)
+    return missing_years
+
+
+def get_compressed_files(path=r"/Volumes/MASOUD/Amar-Salname/"):
+    if path is None:
+        path = script_directory()
+
+    _, files, _ = get_files(path)
+    return [f for f in files if get_file_info(f)[1] in (".zip", ".rar")]
 
 
 def extract():
@@ -111,11 +132,8 @@ def extract():
     from patoolib import extract_archive
 
     path, _, _ = get_files()
-    compresed_files = get_rar_zip_files()
+    compresed_files = get_compressed_files()
     for i in compresed_files:
-        # print(join(path, i))
-        # print(get_file_info(i)[0])
-        # print(join(path, get_file_info(i)[0]))
         src = join(path, i)
         dst = join(path, get_file_info(i)[0])
         extract_archive(src, outdir=dst)
@@ -420,13 +438,10 @@ def missing_year_checker():
     print(missing_year_counter)
     pprint(missing_year_dic)
     just_number = {k: f"{len(v)}/58" for k, v in missing_year_dic.items()}
+    just_number_int = {k: f"{len(v)}/58" for k, v in missing_year_dic.items()}
     pprint(just_number)
 
 
-# scrap_province()
-# scrap_wikipedia()
-# matching_game()
-# code_matching_english()
-# generate_urls()
-# check_url_availability()
-missing_year_checker()
+path = r"/Volumes/MASOUD/Amar-Salname/Keshvari/"
+print(find_missing_years(path))
+print(get_rar_zip_files(path))
