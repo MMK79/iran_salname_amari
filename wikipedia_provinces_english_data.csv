@@ -1,4 +1,4 @@
-province,abbreviation,capital,population ,area ,population density ,counties
+province,abbreviation,capital,population,area,population density,counties
 Alborz,AL,Karaj,"2,730,000","5,833",465.01,7
 Ardabil,AR,Ardabil,"1,284,000","17,800",71.37,12
 Bushehr,BU,Bushehr,"1,174,000","22,743",51.15,10
@@ -30,3 +30,4 @@ Tehran,TE,Tehran,"13,323,000","18,814",705.20,16
 West Azerbaijan,WA,Urmia,"3,278,000","37,437",87.22,20
 Yazd,YA,Yazd,"1,156,000","76,469",14.89,12
 Zanjan,ZA,Zanjan,"1,103,000","21,773",48.57,8
+Whole Country,Iran, IR,0,0,0
