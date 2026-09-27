@@ -108,6 +108,33 @@ def cross_publication(df: pd.DataFrame, key: list[str], domain: str) -> list[dic
     return out
 
 
+def province_shift(df: pd.DataFrame, key: list[str], domain: str) -> list[dict]:
+    """PDF tables: each province's share of the total vs its share one year earlier.
+
+    A two-line label in the PDF can shift numbers onto the wrong province while every row
+    still adds up; province shares are very stable year to year, so >=3 provinces whose
+    share moves by a factor > 1.6 marks the table as misaligned."""
+    k = [c for c in key if c not in ("yearbook_sh", "source_file", "source_table", "row_label", "province_code",
+                                     "year_sh")] + ["gender"]
+    x = df[(df.province_code.isin(CUR)) & (df.yearbook_sh == df.year_sh) & (df.gender == "total")].copy()
+    x["share"] = x.value / x.groupby(["source_file", "source_table"] + k).value.transform("sum")
+    prev = x[["year_sh", "province_code", "share"] + k].copy()
+    prev["year_sh"] += 1
+    prev = prev.groupby(["year_sh", "province_code"] + k, dropna=False).share.median().rename("prev").reset_index()
+    m = x[x.source_format == "pdf"].merge(prev, on=["year_sh", "province_code"] + k)
+    m = m[(m.share > 0) & (m.prev > 0.005)]
+    m["bad"] = ((m.share / m.prev) > 1.6) | ((m.prev / m.share) > 1.6)
+    out = []
+    for (f, t), g in m.groupby(["source_file", "source_table"]):
+        n_bad = int(g.bad.sum())
+        ok = n_bad < 3
+        out.append({"check_name": "province_shift", "severity": "info" if ok else "error", "domain": domain,
+                    "yearbook_sh": int(g.yearbook_sh.iloc[0]), "year_sh": int(g.year_sh.iloc[0]), "source_file": f,
+                    "source_table": t, "detail": f"{n_bad} provinces moved share >1.6x vs previous year",
+                    "expected": None, "actual": float(n_bad), "ok": ok})
+    return out
+
+
 def revisions(df: pd.DataFrame, key: list[str], domain: str) -> list[dict]:
     k = [c for c in key if c not in ("yearbook_sh", "source_file", "source_table", "row_label")] + ["gender"]
     g = df.groupby(k, dropna=False).value.agg(["min", "max", "count"]).reset_index()
@@ -129,11 +156,14 @@ def run() -> None:
     rows += province_sum(he, HE_KEY, "he")
     rows += cross_publication(k12, K12_KEY, "k12")
     rows += cross_publication(he, HE_KEY, "he")
+    rows += province_shift(k12, K12_KEY, "k12")
+    rows += province_shift(he, HE_KEY, "he")
     v = pd.DataFrame(rows)
     # table status from the arithmetic checks + agreement with the next yearbook
-    arith = v[v.check_name.isin(["gender_sum", "degree_sum", "cross_publication"])]
+    arith = v[v.check_name.isin(["gender_sum", "degree_sum", "cross_publication", "province_shift"])]
     st = arith.groupby(["source_file", "source_table"]).ok.agg(["mean", "count"]).reset_index()
-    cp = v[v.check_name == "cross_publication"].groupby(["source_file", "source_table"]).ok.mean().rename("cross_ok")
+    cp = v[v.check_name.isin(["cross_publication", "province_shift"])].groupby(
+        ["source_file", "source_table"]).ok.min().astype(float).rename("cross_ok")
     st = st.merge(cp.reset_index(), on=["source_file", "source_table"], how="left")
     # failed: arithmetic mostly wrong, or the national row disagrees with later yearbooks for most cells
     st["check_status"] = [

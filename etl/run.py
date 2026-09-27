@@ -179,6 +179,7 @@ def main(argv=None) -> None:
     lo.add_argument("--duckdb", default=None)
     sub.add_parser("validate")
     sub.add_parser("mappings")
+    sub.add_parser("docs")
     args = ap.parse_args(argv)
     if args.cmd == "extract":
         cmd_extract(args)
@@ -190,10 +191,12 @@ def main(argv=None) -> None:
         from etl.validate import run
 
         run()
-    elif args.cmd == "mappings":
-        from etl.docs import write_mappings
+    elif args.cmd in ("mappings", "docs"):
+        from etl.docs import write_inventory, write_mappings
 
         write_mappings()
+        if args.cmd == "docs":
+            write_inventory()
 
 
 if __name__ == "__main__":

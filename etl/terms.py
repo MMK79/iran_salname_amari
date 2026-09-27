@@ -201,14 +201,15 @@ _K12 = [
 
 def classify_domain(title: str) -> str:
     """'k12' | 'he' | 'teacher_training' | 'other'. Decided from the title only."""
-    t = norm(title).replace("پیش دانشگاهی", " PREUNIV ")  # pre-university is K-12, not HE
-    if any(k in t for k in _OTHER):
+    t = norm(title).replace("پیش دانشگاهی", " PREUNIV ").replace("پیشدانشگاهی", " PREUNIV ")  # K-12, not HE
+    t = t.replace(" ", "")  # PDFs drop the ZWNJ ("دانشآموزان"); compare without spaces
+    if any(k.replace(" ", "") in t for k in _OTHER):
         return "other"
-    if any(k in t for k in _TT) and "دانشگاه" not in t:
+    if any(k.replace(" ", "") in t for k in _TT) and "دانشگاه" not in t:
         return "teacher_training"
-    if any(k in t for k in _HE):
+    if any(k.replace(" ", "") in t for k in _HE):
         return "he"
-    if any(k in t for k in _K12):
+    if any(k.replace(" ", "") in t for k in _K12):
         return "k12"
     return "other"
 

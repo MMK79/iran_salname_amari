@@ -80,6 +80,9 @@ def frames() -> dict[str, pd.DataFrame]:
     return f
 
 
+INT_COLS = {"year_sh", "year_gregorian", "yearbook_sh", "established_sh", "n_tables", "part", "table_year_sh",
+            "n_rows", "n_cols", "n_provinces", "n_k12_facts", "n_he_facts", "row_index", "col_index", "rule_order"}
+
 ORDER = ["provinces", "province_aliases", "metrics", "term_map", "source_files", "source_tables", "raw_cells",
          "k12_stats", "higher_ed_stats", "validation_issues"]
 
@@ -99,7 +102,11 @@ def load_pg(url: str) -> None:
         for name in ORDER:
             if name not in fr:
                 continue
-            df = fr[name].astype(object).where(pd.notna(fr[name]), None)
+            df = fr[name].copy()
+            for c in df.columns:
+                if c in INT_COLS:
+                    df[c] = df[c].astype("Int64")
+            df = df.astype(object).where(pd.notna(df), None)
             cols = list(df.columns)
             with cur.copy(f"COPY {name} ({', '.join(cols)}) FROM STDIN") as cp:
                 for row in df.itertuples(index=False, name=None):
