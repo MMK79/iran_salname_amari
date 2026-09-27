@@ -15,7 +15,7 @@ from etl.terms import (
 
 # dims that a title may supply as a default
 _TITLE_DIMS_K12 = ["metric", "level", "programme", "branch", "sector", "area"]
-_TITLE_DIMS_HE = ["metric", "university_type", "degree_level", "area"]
+_TITLE_DIMS_HE = ["metric", "university_type", "degree_level", "employment", "area"]
 
 
 def system_for(year_sh: int) -> str:
@@ -39,22 +39,34 @@ def table_to_records(rt: RawTable) -> tuple[list[dict], list[dict], list[dict]]:
         "domain": domain,
         "header_source": rt.header_source,
     }
+    context: dict = {}  # dims set by a section-header row ("سال اول", "جمع روستایی") for the rows below it
+    context_label = ""
     for ri, (label, vals) in enumerate(rt.rows):
         rdims = dims_of_row_label(label, domain, dims) if label else {}
+        if label and all(v is None for v in vals):
+            # a section header: remember what it says for the following rows
+            context, context_label = ({k: v for k, v in rdims.items() if k not in ("year",)}, label)
+            continue
+        if label and "جمع" in norm(label) and "area" in rdims:
+            context, context_label = {"area": rdims["area"]}, label
+        if context:
+            rdims = {**context, **rdims}
+            if not any(k in rdims for k in ("year", "province")) and not dims_of_row_label(label, domain, dims):
+                pass
         for ci, v in enumerate(vals):
             if v is None:
                 continue
             cdims = col_dims[ci] if ci < len(col_dims) else {}
             header = rt.col_headers[ci] if ci < len(rt.col_headers) else ""
             raw.append({**base, "row_index": ri, "row_label": label, "col_index": ci, "col_header": header, "value": v})
-            if domain not in ("k12", "he"):
+            if domain not in ("k12", "he") or rt.header_source == "none":
                 continue
             d = {**tdims, **rdims, **{k: v for k, v in cdims.items() if k != "unmatched"}}
             if "metric" not in d:
                 continue
             year = int(d["year"][0]) if "year" in d else ty
             prov = d.get("province", ("IRN", ""))[0]
-            known_row = bool(rdims) or not label
+            known_row = (bool(rdims) or not label) and (not context_label or bool(context))
             rec = {
                 **base,
                 "year_sh": year,
@@ -67,7 +79,7 @@ def table_to_records(rt: RawTable) -> tuple[list[dict], list[dict], list[dict]]:
                 "value": v,
                 "row_label": label,
                 "col_header": header,
-                "row_category": None if known_row else norm(label),
+                "row_category": None if known_row else norm(f"{context_label} / {label}" if context_label else label),
                 "col_category": cdims["unmatched"][0] if "unmatched" in cdims else None,
             }
             if domain == "k12":
@@ -91,6 +103,7 @@ def table_to_records(rt: RawTable) -> tuple[list[dict], list[dict], list[dict]]:
                     university_type_source=ut[1] if ut else "",
                     field_group=d.get("field_group", ("all", ""))[0],
                     rank=d.get("rank", ("all", ""))[0],
+                    employment=d.get("employment", ("unspecified", ""))[0],
                 )
                 he.append(rec)
     return raw, k12, he

@@ -8,6 +8,7 @@ tatweel, diacritics, dotted leaders, footnote markers) compare equal.
 from __future__ import annotations
 
 import re
+import unicodedata
 
 _DIGITS = str.maketrans("۰۱۲۳۴۵۶۷۸۹٠١٢٣٤٥٦٧٨٩", "01234567890123456789")
 _CHARS = str.maketrans(
@@ -50,7 +51,7 @@ def norm(s: str | None, *, keep_footnotes: bool = False) -> str:
     """Canonical form of a Persian label for matching (not for display)."""
     if not s:
         return ""
-    s = digits(s).translate(_CHARS)
+    s = digits(unicodedata.normalize("NFKC", s)).translate(_CHARS)
     s = _DIACRITICS.sub("", s)
     s = _LEADERS.sub(" ", s)
     if not keep_footnotes:

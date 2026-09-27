@@ -88,6 +88,12 @@ def read_blocks(path: str | Path) -> list[Para | Table]:
                 if t:
                     out.append(Para(t))
             elif el.tag == f"{W}tbl":
+                if el.find(f".//{W}tc/{W}tbl") is not None:
+                    # layout table wrapping real tables (1387 .doc conversion): descend into cells
+                    for tc in el.iter(f"{W}tc"):
+                        if tc.getparent().getparent() is el:
+                            walk(tc)
+                    continue
                 out.append(Table(ti, _table_grid(el)))
                 ti += 1
             elif el.tag in (f"{W}sdt", f"{W}sdtContent", f"{W}customXml"):

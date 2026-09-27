@@ -95,6 +95,17 @@ RULES: list[Rule] = [
     R("metric", "schools", "مدارس", "exact", "k12"),
     R("metric", "classes", "کلاس", domain="k12"),
     R("metric", "graduates", "فارغ التحصیل", domain="k12"), R("metric", "passed", "قبول شد", domain="k12"),
+    # K-12 upper-secondary streams (graduates / students by branch tables)
+    R("branch", "math_physics", "ریاضی فیزیک", domain="k12"), R("branch", "experimental_sciences", "علوم تجربی", domain="k12"),
+    R("branch", "humanities", "علوم انسانی", domain="k12"), R("branch", "islamic_studies", "معارف اسلامی", domain="k12"),
+    R("branch", "kardanesh", "کار دانش", domain="k12"),
+    # umbrella header cells ("staff", "facilities") carry no dimension of their own
+    R("staffgroup", "staff", "کارکنان", domain="any"), R("staffgroup", "facilities", "امکانات", domain="any"),
+    R("staffgroup", "faculty_group", "هیات علمی", "exact", "he"),
+    # ---------------- higher-ed employment type of academic staff
+    R("employment", "fulltime_and_hourly", "تمام وقت و حق التدریس", domain="he"),
+    R("employment", "fulltime", "تمام وقت", domain="he"), R("employment", "hourly", "حق التدریس", domain="he"),
+    R("employment", "hourly", "پاره وقت", domain="he"),
     # ---------------- higher-education degree level (specific before generic!)
     R("degree_level", "master", "کارشناسی ارشد", domain="he"), R("degree_level", "master", "فوق لیسانس", domain="he"),
     R("degree_level", "professional_doctorate", "دکترای حرفه ای", domain="he"),
@@ -138,9 +149,9 @@ RULES: list[Rule] = [
     R("metric", "new_entrants", "ثبت نام شدگان جدید", domain="he"), R("metric", "new_entrants", "پذیرفته شد", domain="he"),
     R("metric", "new_entrants", "پذیرفه شد", domain="he", note="typo in 1353 source"),
     R("metric", "graduates", "دانش آموخت", domain="he"), R("metric", "graduates", "فارغ التحصیل", domain="he"),
-    R("metric", "faculty_fulltime", "آموزشگران", domain="he", note="full-time academic staff (faculty + non-faculty instructors)"),
-    R("metric", "faculty_fulltime", "هیات علمی", domain="he"), R("metric", "faculty_fulltime", "استادان", domain="he"),
-    R("metric", "faculty_fulltime", "کادر آموزشی", domain="he"),
+    R("metric", "academic_staff", "آموزشگران", domain="he", note="academic staff (faculty + non-faculty instructors); see employment dim"),
+    R("metric", "academic_staff", "هیات علمی", domain="he"), R("metric", "academic_staff", "استادان", domain="he"),
+    R("metric", "academic_staff", "کادر آموزشی", domain="he"), R("metric", "academic_staff", "کارکنان آموزشی", domain="he"),
     R("metric", "students", "دانشجو", domain="he"),
     R("metric", "institutions", "تعداد دانشگاه", domain="he"), R("metric", "institutions", "مراکز آموزش عالی", "exact", "he"),
 ]
@@ -181,13 +192,13 @@ _HE = ["دانشجو", "آموزش عالی", "دانشگاه", "دانش آمو
 _TT = ["تربیت معلم", "دانشسرا"]
 _K12 = [
     "دانش آموز", "مدارس", "آموزشگاه", "دبستان", "دبیرستان", "هنرستان", "کودکستان", "معلم", "کلاس", "راهنمایی",
-    "ابتدایی", "متوسطه", "پیش دانشگاهی", "پیش دبستانی", "استثنایی", "قبول شدگان", "فارغ التحصیلان", "کودکان",
+    "ابتدایی", "متوسطه", "پیش_دانشگاهی", "پیش دبستانی", "استثنایی", "قبول شدگان", "فارغ التحصیلان", "کودکان",
 ]
 
 
 def classify_domain(title: str) -> str:
     """'k12' | 'he' | 'teacher_training' | 'other'. Decided from the title only."""
-    t = norm(title)
+    t = norm(title).replace("پیش دانشگاهی", "پیش_دانشگاهی")  # pre-university is K-12, not HE
     if any(k in t for k in _OTHER):
         return "other"
     if any(k in t for k in _TT) and "دانشگاه" not in t:
@@ -199,8 +210,8 @@ def classify_domain(title: str) -> str:
     return "other"
 
 
-DIMS_K12 = ["metric", "gender", "level", "programme", "branch", "sector", "area"]
-DIMS_HE = ["metric", "gender", "degree_level", "university_type", "field_group", "rank", "area"]
+DIMS_K12 = ["metric", "gender", "level", "programme", "branch", "sector", "area", "staffgroup"]
+DIMS_HE = ["metric", "gender", "degree_level", "university_type", "field_group", "rank", "employment", "area", "staffgroup"]
 
 
 def dims_of_text(text: str, domain: str, dims: list[str]) -> dict[str, tuple[str, str]]:
