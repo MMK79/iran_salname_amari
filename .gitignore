@@ -7,3 +7,4 @@ data/out/
 .env
 .ruff_cache/
 .pytest_cache/
+.gstack/
