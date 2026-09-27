@@ -16,8 +16,8 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 1349 | doc_converted_book | `1349/1349.doc` | 36/4/19 | 0 | HE academic staff, HE graduates, HE institutions, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 2 |
 | 1350 | doc_converted_book | `1350/1350.doc` | 47/9/21 | 0 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 7 |
 | 1351 | doc_converted_book | `1351/1351.doc` | 37/7/10 | 0 | HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 8 |
-| 1352 | doc_converted_book | `1352/1352.doc` | 41/10/19 | 19 | HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students | 3 |
-| 1353 | html_grid | 58 files in `1353/سالنامه آماري كشور -1353/آموزش/` | 33/7/18 | 20 | HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 6 |
+| 1352 | doc_converted_book | `1352/1352.doc` | 41/10/19 | 19 | HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students | 4 |
+| 1353 | html_grid | 58 files in `1353/سالنامه آماري كشور -1353/آموزش/` | 33/7/18 | 20 | HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 9 |
 | 1355 | html_grid | 60 files in `1355/سالنامه آماري كشور -1355/آموزش/` | 33/7/21 | 20 | HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 1 |
 | 1356 | doc_converted_book | `1356/1356.doc` | 33/5/21 | 20 | HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 7 |
 | 1357 | doc_converted_book | `1357/1357.doc` | 32/5/25 | 19 | HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students | 2 |
@@ -25,13 +25,13 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 1359 | doc_converted_book | `1359/1359.doc` | 30/7/22 | 16 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 2 |
 | 1360 | doc_converted_book | `1360/1360.doc` | 0/0/0 | 0 | **none parsed** | 0 |
 | 1361 | doc_converted_book | `1361/1361.doc` | 22/8/28 | 28 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 5 |
-| 1362 | doc_converted_book | `1362/1362.doc` | 13/19/21 | 14 | HE academic staff, HE graduates, HE institutions, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students | 7 |
-| 1363 | doc_converted_book | `1363/1363.doc` | 9/17/28 | 27 | HE academic staff, HE graduates, HE institutions, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 6 |
-| 1364 | doc_converted_book | `1364/1364.doc` | 10/15/16 | 21 | HE academic staff, HE graduates, HE institutions, HE students, K-12 schools/classes, K-12 students, K-12 teachers/staff | 8 |
-| 1365 | doc_converted_book | `1365/1365.doc` | 16/18/21 | 28 | HE academic staff, HE graduates, HE institutions, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 8 |
-| 1366 | doc_converted_book | `1366/1366.doc` | 14/14/31 | 31 | HE academic staff, HE graduates, HE institutions, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 11 |
-| 1367 | doc_converted_book | `1367/1367.doc` | 36/14/18 | 28 | HE academic staff, HE graduates, HE institutions, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students | 9 |
-| 1368 | doc_converted_book | `1368/1368.doc` | 18/15/24 | 38 | HE academic staff, HE graduates, HE institutions, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students | 3 |
+| 1362 | doc_converted_book | `1362/1362.doc` | 13/19/21 | 14 | HE academic staff, HE graduates, HE institutions, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students | 8 |
+| 1363 | doc_converted_book | `1363/1363.doc` | 9/17/28 | 27 | HE academic staff, HE graduates, HE institutions, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 7 |
+| 1364 | doc_converted_book | `1364/1364.doc` | 10/15/16 | 21 | HE academic staff, HE graduates, HE institutions, HE students, K-12 schools/classes, K-12 students, K-12 teachers/staff | 9 |
+| 1365 | doc_converted_book | `1365/1365.doc` | 16/18/21 | 28 | HE academic staff, HE graduates, HE institutions, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 10 |
+| 1366 | doc_converted_book | `1366/1366.doc` | 14/14/31 | 31 | HE academic staff, HE graduates, HE institutions, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 13 |
+| 1367 | doc_converted_book | `1367/1367.doc` | 36/14/18 | 28 | HE academic staff, HE graduates, HE institutions, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students | 16 |
+| 1368 | doc_converted_book | `1368/1368.doc` | 18/15/24 | 38 | HE academic staff, HE graduates, HE institutions, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students | 6 |
 | 1369 | doc_converted_book | `1369/1369.doc` | 17/13/27 | 39 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students | 1 |
 | 1370 | html_text | 43 files in `1370/salnameh_1370/salnameh_1370/آموزش/` | 0/0/0 | 0 | **none parsed** | 0 |
 | 1371 | html_text | 45 files in `1371/salnameh-1371/آموزش/` | 0/0/0 | 0 | **none parsed** | 0 |
@@ -45,27 +45,27 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 1379 | html_text | 22 files in `1379/سالنامه آماري كشور - 1379/آموزش/` | 0/0/0 | 0 | **none parsed** | 0 |
 | 1380 | doc_converted_book | `1380/1380.doc` | 19/18/19 | 37 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 0 |
 | 1381 | html_grid | 47 files in `1381/Yearbook_1381_h/F15/` | 19/18/19 | 37 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 0 |
-| 1382 | doc_converted_book | `1382/1382.doc` | 18/18/19 | 37 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 1 |
+| 1382 | doc_converted_book | `1382/1382.doc` | 18/18/19 | 37 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 2 |
 | 1383 | doc_converted_book | `1383/1383.doc` | 18/18/19 | 37 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 0 |
-| 1384 | doc_converted_book | `1384/1384.doc` | 18/18/16 | 35 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 0 |
-| 1385 | doc_converted_book | `1385/1385.doc` | 18/20/17 | 35 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 2 |
-| 1386 | doc_converted_book | `1386/1386.doc` | 18/20/17 | 34 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 1 |
-| 1387 | doc_converted_chapter | `1387/Yearbook_1387_w/TEST15.DOC` | 18/20/19 | 36 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 5 |
-| 1388 | docx_chapter | `1388/Yearbook_1388_w/TEST15.docx` | 18/20/19 | 36 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 2 |
+| 1384 | doc_converted_book | `1384/1384.doc` | 18/18/16 | 35 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 2 |
+| 1385 | doc_converted_book | `1385/1385.doc` | 18/20/17 | 35 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 3 |
+| 1386 | doc_converted_book | `1386/1386.doc` | 18/20/17 | 34 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 2 |
+| 1387 | doc_converted_chapter | `1387/Yearbook_1387_w/TEST15.DOC` | 18/20/19 | 36 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 6 |
+| 1388 | docx_chapter | `1388/Yearbook_1388_w/TEST15.docx` | 18/20/19 | 36 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 3 |
 | 1389 | docx_chapter | `1389/salname_keshvar_1389/15.docx` | 18/20/19 | 36 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 3 |
-| 1390 | docx_chapter | `1390/salname_keshvar_1390/15.docx` | 18/20/20 | 36 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 3 |
+| 1390 | docx_chapter | `1390/salname_keshvar_1390/15.docx` | 18/20/20 | 36 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 6 |
 | 1391 | docx_chapter | `1391/1391_w/15.docx` | 20/20/23 | 39 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 1 |
-| 1392 | docx_chapter | `1392/1392_w/16-آموزش.docx` | 20/20/23 | 39 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 2 |
-| 1393 | docx_chapter | `1393/1393_w/اموزش- 17.docx` | 16/20/16 | 30 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 2 |
+| 1392 | docx_chapter | `1392/1392_w/16-آموزش.docx` | 20/20/23 | 39 | HE academic staff, HE graduates, HE institutions, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 3 |
+| 1393 | docx_chapter | `1393/1393_w/اموزش- 17.docx` | 16/20/16 | 30 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 3 |
 | 1394 | docx_chapter | `1394/1394_w/17-آموزش.docx` | 16/20/16 | 30 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 1 |
 | 1395 | docx_chapter | `1395/1395_w/17-آموزش.docx` | 16/20/16 | 30 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 1 |
 | 1396 | docx_chapter | `1396/1396_w/17-آموزش.docx` | 15/20/16 | 29 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 1 |
 | 1397 | docx_chapter | `1397/salname_keshvar_1397/فصل 17- آموزش.docx` | 15/20/16 | 28 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 1 |
 | 1398 | docx_chapter | `1398/salname_keshvar_1398/فصل 17- آموزش.docx` | 15/20/16 | 29 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 1 |
-| 1399 | pdf_book | `1399/1399.pdf` | 18/156/47 | 29 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 14 |
-| 1400 | pdf_book | `1400/1400.pdf` | 18/30/46 | 29 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 7 |
-| 1401 | pdf_book | `1401/1401.pdf` | 16/33/138 | 29 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 7 |
-| 1402 | pdf_chapter | `1402/salname-kole-keshvar-1402/17. آموزش.pdf` | 18/27/46 | 29 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 0 |
+| 1399 | pdf_book | `1399/1399.pdf` | 18/156/47 | 29 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 15 |
+| 1400 | pdf_book | `1400/1400.pdf` | 18/30/46 | 29 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 11 |
+| 1401 | pdf_book | `1401/1401.pdf` | 16/33/138 | 29 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 10 |
+| 1402 | pdf_chapter | `1402/salname-kole-keshvar-1402/17. آموزش.pdf` | 18/27/46 | 29 | HE academic staff, HE graduates, HE new entrants, HE students, K-12 graduates/passed, K-12 schools/classes, K-12 students, K-12 teachers/staff | 3 |
 
 ## Gaps and caveats (read this before using a year)
 
@@ -729,7 +729,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 24-s5#0 | k12 | national | 7x7 | unchecked | 24- فارغ التحصيلان ششم متوسط دبيرستانهاي عادي كشور برحسب رشته‌هاي تحصيلي در سالهاي تحصيلي مختلف |
 | 25-s5#0 | k12 | national | 7x7 | unchecked | 25- فارغ التحصيلان ششم متوسط متفرقه كشور برحسب رشته‌هاي تحصيلي در سالهاي تحصيلي مختلف |
 | 26-s5#0 | k12 | national | 27x8 | unchecked | 26- تعداد كارمندان دبيرستان‌هاي(1) عمومي كشور برحسب وضع استخدامي و جنس بتفكيك نقاط شهري و روستائي در سالهاي تح |
-| 27-s5#0 | k12 | national | 10x4 | passed | 27- تعداد مدارس فني و حرفه‌اي و تعداد دانش‌‌آموزان برحسب جنس در سالهاي مختلف تحصيلي |
+| 27-s5#0 | k12 | national | 10x4 | failed | 27- تعداد مدارس فني و حرفه‌اي و تعداد دانش‌‌آموزان برحسب جنس در سالهاي مختلف تحصيلي |
 | 28-s5#0 | k12 | national | 7x6 | unchecked | 28- تعداد دانش‌‌آموزان مدارس فني و حرفه‌اي و تعداد برحسب و رشته‌هاي عمده در سالهاي مختلف تحصيلي |
 | 29-s5#0 | k12 | province | 22x7 | unchecked | 29- مدارس فني و حرفه‌اي بتفكيك نقسيمات كشوري در سالهاي مختلف |
 | 30-s5#0 | k12 | province | 22x7 | passed | 30- دانش‌آموزان مدارس فني و حرفه‌اي بتفكيك نقسيمات كشوري در سالهاي مختلف |
@@ -792,19 +792,19 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 26#0 | k12 | national | 8x7 | unchecked | 26- فارغ‌التحصيلان ششم متوسطه دبيرستانهاي عادي كشور برحسب رشته‌هاي تحصيلي در سالهاي تحصيلي مختلف |
 | 27#0 | k12 | national | 8x7 | unchecked | 27- فارغ‌التحصيلان ششم متوسطه متفرقه كشور برحسب رشته‌هاي تحصيلي در سالهاي تحصيلي مختلف |
 | 28#0 | k12 | national | 31x8 | unchecked | 28- كارمندان دبيرستانهاي(1) عمومي كشور برحسب وضع استخدامي و جنس بتفكيك نقاط شهري و روستائي در سالهاي تحصيلي مخ |
-| 29#0 | k12 | national | 10x4 | passed | 29- مدارس فني و حرفه‌اي و تعداد دانش‌‌آموزان برحسب جنس در سالهاي مختلف تحصيلي |
+| 29#0 | k12 | national | 10x4 | failed | 29- مدارس فني و حرفه‌اي و تعداد دانش‌‌آموزان برحسب جنس در سالهاي مختلف تحصيلي |
 | 3#0 | k12 | national | 19x9 | passed | 3- كلاسهاي مبارزه با بيسوادي در سالهاي مختلف |
 | 30#0 | k12 | national | 8x6 | unchecked | 30- دانش‌‌آموزان مدارس فني و حرفه‌اي برحسب جنس و رشته‌هاي عمده در سالهاي تحصيلي مختلف |
 | 31#0 | k12 | province | 22x8 | unchecked | 31- مدارس فني و حرفه‌اي بتفكيك تقسيمات كشوري در سالهاي مختلف |
 | 32#0 | k12 | province | 22x8 | passed | 32- دانش‌آموزان مدارس فني و حرفه‌اي بتفكيك تقسيمات كشوري در سالهاي تحصيلي مختلف |
-| 33#0 | k12 | national | 21x6 | passed | 33- مدارس فني و حرفه‌اي و تعداد دانش‌آموزان بر‌حسب انواع مدارس در سال تحصيلي 54-1353 |
+| 33#0 | k12 | national | 21x6 | failed | 33- مدارس فني و حرفه‌اي و تعداد دانش‌آموزان بر‌حسب انواع مدارس در سال تحصيلي 54-1353 |
 | 34#0 | k12 | national | 8x9 | unchecked | 34- فارغ‌التحصيلان مدارس فني و حرفه‌اي كشور در سالهاي تحصيلي مختلف |
 | 35#0 | k12 | national | 31x11 | unchecked | 35- كارمندان مدارس فني و حرفه‌اي كشور برحسب وضع استخدامي و جنس و بتفكيك مناطق شهري و روستائي در سالهاي مختلف ت |
 | 36#0 | teacher_training | national | 10x4 | unchecked | 36- دانشسراها و تعداد دانش‌آموزان در سالهاي مختلف تحصيلي |
 | 37#0 | teacher_training | national | 5x5 | unchecked | 37- دانشسراها و مراكز تربيت معلم كشور و دانش‌آموزان آنها در سال تحصيلي 54-1353 |
 | 38#0 | teacher_training | province | 24x8 | unchecked | 38- دانشسراها و كلاسهاي تربيت معلم كشور بتفكيك تقسيمات كشوري در سالهاي مختلف |
 | 39#0 | teacher_training | province | 24x8 | unchecked | 39- دانش‌آموزان دانشسراها و تربيت معلم كشور بتفكيك تقسيمات كشوري در سالهاي مختلف |
-| 4#0 | k12 | national | 8x5 | passed | 4- آموزش كودكان استثنائي در سالهاي مختلف تحصيلي |
+| 4#0 | k12 | national | 8x5 | failed | 4- آموزش كودكان استثنائي در سالهاي مختلف تحصيلي |
 | 40#0 | teacher_training | national | 7x8 | unchecked | 40- فارغ‌التحصيلان دوره تربيت معلم و دانشسراهاي كشور در سالهاي تحصيلي مختلف |
 | 41#0 | teacher_training | national | 5x3 | unchecked | 41- فارغ‌التحصيلان دوره تربيت معلم و دانشسراهاي كشور در سال تحصيلي 53-1352 |
 | 42#0 | teacher_training | national | 31x4 | unchecked | 42- كارمندان تربيت معلم و دانشسراهاي كشور برحسب وضع استخدامي و جنس و بتفكيك مناطق شهري و روستائي در سالهاي مخت |
@@ -1153,7 +1153,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 26-s6#3 | he | national | 10x6 | passed | 26- دانشجويان دانشگاهها و موسسات آموزش عالي برحسب نوع مراكز آموزش عالي و به‌تفكيك دوره تحصيلي و جنس: سال تحصيل |
 | 28-s6#0 | he | national | 9x6 | failed | 28- تعداد و درصد دانشجويان برحسب نوع مراكز آموزش عالي و به‌تفكيك جنس: سال تحصيلي 63-1362 |
 | 29-s6#0 | he | national | 21x6 | failed | 29- دانشجويان دانشگاهها برحسب جنس و به‌تفكيك دانشگاه: سال تحصيلي 63-1362 |
-| 30-s6#0 | he | province | 25x6 | passed | 30- دانشجويان، فارغ‌التحصيلان، كادر آموزشي و كادر فني آموزشي دانشگاهها و موسسات آموزش عالي برحسب استان: سال تح |
+| 30-s6#0 | he | province | 25x6 | failed | 30- دانشجويان، فارغ‌التحصيلان، كادر آموزشي و كادر فني آموزشي دانشگاهها و موسسات آموزش عالي برحسب استان: سال تح |
 | 30-s6#1 | he | province | 25x6 | passed | 30- دانشجويان، فارغ‌التحصيلان، كادر آموزشي و كادر فني آموزشي دانشگاهها و موسسات آموزش عالي برحسب استان: سال تح |
 | 31-s6#0 | he | national | 10x9 | passed | 31- دانشجويان، فارغ‌التحصيلان و كادر آموزشي دانشگاهها و موسسات آموزش عالي ايران به‌تفكيك جنس: سالهاي 59-1351 و |
 | 32-s6#0 | he | national | 10x9 | passed | 32- فارغ‌التحصيلان دانشگاهها و موسسات آموزش عالي برحسب گروه عمده رشته‌هاي تحصيلي و به‌تفكيك دوره تحصيل: سال تح |
@@ -1193,7 +1193,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 25-s5#1 | he | national | 10x9 | passed | 25- دانشجويان دانشگاهها و موسسات آموزش عالي ايران برحسب گروه عمده رشته‌هاي تحصيلي و به تفكيك دوره تحصيلي و جنس |
 | 26-s5#0 | he | national | 10x9 | passed | 26- دانشجويان، فارغ‌التحصيلان، كادر آموزشي دانشگاهها و موسسات آموزش عالي ايران به تفكيك جنس: سالهاي 64- 63 -53 |
 | 27-s5#0 | he | national | 24x3 | failed | 27- دانشجويان دانشگاهها برحسب جنس و به تفكيك دانشگاه: سال تحصيلي 64- 1363 |
-| 28-s5#0 | he | province | 25x6 | passed | 28- دانشجويان، فارغ‌التحصيلان، كادر آموزشي وكادر فني كمك آموزشي دانشگاهها و موسسات آموزش عالي برحسب استان: سال |
+| 28-s5#0 | he | province | 25x6 | failed | 28- دانشجويان، فارغ‌التحصيلان، كادر آموزشي وكادر فني كمك آموزشي دانشگاهها و موسسات آموزش عالي برحسب استان: سال |
 | 28-s5#1 | he | province | 25x6 | passed | 28- دانشجويان، فارغ‌التحصيلان، كادر آموزشي وكادر فني كمك آموزشي دانشگاهها و موسسات آموزش عالي برحسب استان: سال |
 | 29-s5#0 | he | national | 10x9 | passed | 29- فارغ‌التحصيلان دانشگاهها و موسسات آموزش عالي برحسب گروه عمده رشته‌هاي تحصيلي و به تفكيك دوره تحصيل: سال تح |
 | 29-s5#1 | he | national | 10x9 | passed | 29- فارغ‌التحصيلان دانشگاهها و موسسات آموزش عالي برحسب گروه عمده رشته‌هاي تحصيلي و به تفكيك دوره تحصيل: سال تح |
@@ -1224,7 +1224,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 23-s6#1 | he | national | 10x9 | passed | 23- دانشجويان، دانشگاهها و موسسات آموزش عالي برحسب دوره تحصيلي و جنس به‌تفكيك رشته‌هاي عمده تحصيلي: سال تحصيلي |
 | 24-s6#0 | he | national | 10x9 | passed | 24- دانشجويان، فارغ‌‌التحصيلان، كادر آموزشي دانشگاهها و موسسات آموزش عالي ايران به‌تفكيك جنس سالهاي 65-1353 |
 | 25-s6#0 | he | national | 24x3 | failed | 25- دانشجويان دانشگاهها برحسب جنس و به‌تفكيك دانشگاه سال تحصيلي 65-1364 |
-| 26-s6#0 | he | province | 25x6 | passed | 26- دانشجويان، فارغ‌التحصيلان، كادر آموزشي و كادر فني كمك آموزشي دانشگاهها و موسسات آموزش عالي برحسب استان: سا |
+| 26-s6#0 | he | province | 25x6 | failed | 26- دانشجويان، فارغ‌التحصيلان، كادر آموزشي و كادر فني كمك آموزشي دانشگاهها و موسسات آموزش عالي برحسب استان: سا |
 | 26-s6#1 | he | province | 25x6 | passed | 26- دانشجويان، فارغ‌التحصيلان، كادر آموزشي و كادر فني كمك آموزشي دانشگاهها و موسسات آموزش عالي برحسب استان: سا |
 | 27-s6#0 | he | national | 10x9 | passed | 27- فارغ‌التحصيلان دانشگاهها و موسسات آموزش عالي برحسب گروه عمده رشته‌هاي تحصيلي و به‌تفكيك دوره تحصيلي سال تح |
 | 27-s6#1 | he | national | 10x9 | passed | 27- فارغ‌التحصيلان دانشگاهها و موسسات آموزش عالي برحسب گروه عمده رشته‌هاي تحصيلي و به‌تفكيك دوره تحصيلي سال تح |
@@ -1246,7 +1246,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | table | domain | geo | rows x cols | status | title |
 |---|---|---|---|---|---|
 | 10-s5#0 | k12 | province | 25x6 | passed | 10- آموزش ابتدايي به تفكيك استان: سال تحصيلي 66-1365 |
-| 11-s5#0 | k12 | province | 25x6 | passed | 11- آموزش راهنمايي تحصيلي به تفكيك استان: سال تحصيلي 66-1365 |
+| 11-s5#0 | k12 | province | 25x6 | failed | 11- آموزش راهنمايي تحصيلي به تفكيك استان: سال تحصيلي 66-1365 |
 | 12-s5#0 | k12 | province | 25x6 | passed | 12- آموزش متوسطه عمومي به تفكيك استان: سال تحصيلي 66-1365 |
 | 13-s5#0 | k12 | province | 25x6 | passed | 13- آموزش هنرستان فني به تفكيك استان: سال تحصيلي 66-1365 |
 | 16-s5#0 | teacher_training | province | 25x6 | unchecked | 16- مراكز تربيت معلم(1) به تفكيك استان: 66-1365 |
@@ -1263,7 +1263,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 27-s5#0 | he | national | 19x9 | passed | 27- دانشجويان دانشگاهها و موسسات آموزش عالي ايران برحسب دوره تحصيلي و جنس به تفكيك رشته‌هاي عمده تحصيلي: سال ت |
 | 27-s5#1 | he | national | 19x9 | passed | 27- دانشجويان دانشگاهها و موسسات آموزش عالي ايران برحسب دوره تحصيلي و جنس به تفكيك رشته‌هاي عمده تحصيلي: سال ت |
 | 28-s5#0 | he | national | 41x3 | failed | 28- دانشجويان دانشگاهها برحسب جنس و به تفكيك دانشگاه: سال تحصيلي 66-1365 |
-| 29-s5#0 | he | province | 25x6 | passed | 29- دانشجويان، فارغ‌التحصيلان، كادر آموزشي و كادر فني كمك آموزشي دانشگاهها و موسسات آموزش عالي ايران برحسب است |
+| 29-s5#0 | he | province | 25x6 | failed | 29- دانشجويان، فارغ‌التحصيلان، كادر آموزشي و كادر فني كمك آموزشي دانشگاهها و موسسات آموزش عالي ايران برحسب است |
 | 29-s5#1 | he | province | 25x6 | passed | 29- دانشجويان، فارغ‌التحصيلان، كادر آموزشي و كادر فني كمك آموزشي دانشگاهها و موسسات آموزش عالي ايران برحسب است |
 | 30-s5#0 | he | national | 19x9 | passed | 30- فارغ‌التحصيلان دانشگاهها و موسسات آموزش عالي، برحسب دوره تحصيلي و جنس و به تفكيك عمده رشته‌هاي تحصيلي: سال |
 | 30-s5#1 | he | national | 19x9 | passed | 30- فارغ‌التحصيلان دانشگاهها و موسسات آموزش عالي، برحسب دوره تحصيلي و جنس و به تفكيك عمده رشته‌هاي تحصيلي: سال |
@@ -1304,13 +1304,13 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 25-s4#1 | k12 | province | 25x5 | passed | 25- كارمندان آموزشي و دفتري حق التدريسي به‌تفكيك نوع آموزشگاه و برحسب استان: 67-1366 (دنباله) |
 | 26-s4#0 | k12 | province | 25x6 | passed | 26- آموزش پنجم ابتدايي شبانه بزرگسالان به‌تفكيك استان: سال تحصيلي 67-1366 |
 | 29-s4#0 | k12 | province | 25x8 | failed | 29- فارغ التحصيلان رشته‌هاي مختلف تحصيلي (دنباله) |
-| 30-s4#0 | he | national | 5x9 | passed | 30- دانشجويان، فارغ‌التحصيلان، كادر آموزشي دانشگاهها و موسسات آموزش‌عالي ايران به‌تفكيك جنس: سالهاي تحصيلي 63- |
+| 30-s4#0 | he | national | 5x9 | failed | 30- دانشجويان، فارغ‌التحصيلان، كادر آموزشي دانشگاهها و موسسات آموزش‌عالي ايران به‌تفكيك جنس: سالهاي تحصيلي 63- |
 | 31-s4#0 | he | national | 7x6 | failed | 31- تعداد و درصد دانشجويان برحسب نوع مراكز آموزش‌عالي و به‌تفكيك جنس: سال تحصيلي 67-1366 |
 | 32-s4#0 | he | national | 19x9 | passed | 32- دانشجويان دانشگاهها و موسسات آموزش‌عالي ايران برحسب دوره تحصيلي و جنس به‌تفكيك گروه عمده رشته‌هاي تحصيلي:  |
 | 32-s4.dup1#0 | he | national | 19x9 | passed | 32- دانشجويان دانشگاهها و موسسات ... (دنباله) |
 | 33-s4#0 | he | national | 32x6 | failed | 33- دانشجويان و كادرآموزشي دانشگاهها برحسب جنس و به‌تفكيك نام دانشگاه: سال تحصيلي 67-1366 |
 | 33-s4.dup1#0 | he | some-provinces | 28x6 | passed | 33- دانشجويان و كادرآموزشي دانشگاهها000(دنباله) |
-| 34-s4#0 | he | province | 25x6 | passed | 34- دانشجويان، فارغ‌التحصيلان، كادر آموزشي و كادرفني كمك آموزشي دانشگاهها و موسسات آموزش‌عالي ايران به‌تفكيك ج |
+| 34-s4#0 | he | province | 25x6 | failed | 34- دانشجويان، فارغ‌التحصيلان، كادر آموزشي و كادرفني كمك آموزشي دانشگاهها و موسسات آموزش‌عالي ايران به‌تفكيك ج |
 | 34-s4.dup1#0 | he | province | 25x6 | passed | 34- دانشجويان، فارغ‌التحصيلان، كادر آموزشي... (دنباله) |
 | 35-s4#0 | he | national | 19x9 | failed | 35- فارغ‌التحصيلان دانشگاهها و موسسات آموزش‌عالي، برحسب دوره تحصيلي و جنس و به‌تفكيك گروه عمده رشته‌هاي تحصيلي |
 | 35-s4.dup1#0 | he | national | 19x9 | failed | 35- فارغ‌التحصيلان دانشگاهها و موسسات آموزش‌عالي... (دنباله) |
@@ -1337,8 +1337,8 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 19-5#0 | k12 | province | 25x6 | passed | 19-5- تعداد دانش‌آموزان و امكانات آموزشي دوره متوسطه عمومي كشور برحسب استان: سال تحصيل 68-1367 |
 | 20-5#0 | k12 | national | 5x6 | passed | 20-5- تعداد دانش‌آموزان و امكانات آموزشي دوره هنرستانهاي فني كشور: سالهاي تحصيلي 64-1363 تا 68-1367 |
 | 21-5#0 | k12 | province | 25x4 | passed | 21-5- تعداد دانش‌آموزان و امكانات آموزشي دوره هنرستانهاي فني كشور برحسب استان: سال تحصيلي 68-1367 |
-| 22-5#0 | k12 | national | 5x6 | passed | 22-5- تعداد دانش‌آموزان و امكانات آموزشي دوره بازرگاني و حرفه‌اي كشور: سالهاي تحصيلي 64-1363 تا 68-1367 |
-| 23-5#0 | k12 | province | 25x6 | passed | 23-5- تعداد دانش‌آموزان و امكانات آموزشي دوره بازرگاني و حرفه‌اي كشور برحسب استان: سال تحصيلي 68-1367 |
+| 22-5#0 | k12 | national | 5x6 | failed | 22-5- تعداد دانش‌آموزان و امكانات آموزشي دوره بازرگاني و حرفه‌اي كشور: سالهاي تحصيلي 64-1363 تا 68-1367 |
+| 23-5#0 | k12 | province | 25x6 | failed | 23-5- تعداد دانش‌آموزان و امكانات آموزشي دوره بازرگاني و حرفه‌اي كشور برحسب استان: سال تحصيلي 68-1367 |
 | 24-5#0 | k12 | national | 5x4 | failed | 24-5- تعداد دانش‌آموزان و امكانات آموزشي دوره كشاورزي كشور: سالهاي تحصيلي 64-1363 تا 68-1367 |
 | 25-5#0 | k12 | province | 25x4 | failed | 25-5- تعداد دانش‌آموزان و امكانات آموزشي دوره كشاورزي كشور برحسب استان: سال تحصيلي 68-1367 |
 | 26-5#0 | teacher_training | national | 5x5 | unchecked | 26-5- تعداد دانش‌آموزان و امكانات ‌آموزشي دوره دانشسراي تربيت‌معلم روستايي‌كشور: سالهاي تحصيل 64-1363 تا 68-13 |
@@ -1355,9 +1355,9 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 37-5#0 | k12 | province | 25x5 | passed | 37-5- تعداد دانش‌آموزان و امكانات آموزشي دوره عمومي شبانه‌ آموزش بزرگسالان كشور برحسب استان: سال تحصيلي 68-136 |
 | 38-5#0 | k12 | national | 5x5 | passed | 38-5- تعداد دانش‌آموزان و امكانات آموزشي دوره تكميلي شبانه‌ آموزش بزرگسالان كشور: سالهاي تحصيلي 64-1363 تا 68- |
 | 39-5#0 | k12 | province | 25x5 | passed | 39-5- تعداد دانش‌آموزان و امكانات آموزشي دوره تكميلي‌ آموزش بزرگسالان كشور برحسب استان: سال تحصيلي 68-1367 |
-| 40-5#0 | k12 | national | 5x5 | passed | 40-5- كارمندان آموزشي و دفتري حق‌التدريسي انواع آموزشگاههاي كشور: سالهاي تحصيلي 64-1363 تا 68-1367 |
+| 40-5#0 | k12 | national | 5x5 | failed | 40-5- كارمندان آموزشي و دفتري حق‌التدريسي انواع آموزشگاههاي كشور: سالهاي تحصيلي 64-1363 تا 68-1367 |
 | 40-5#1 | k12 | national | 5x5 | passed | 40-5- كارمندان آموزشي و دفتري حق‌التدريسي انواع آموزشگاههاي كشور: سالهاي تحصيلي 64-1363 تا 68-1367 |
-| 41-5#0 | k12 | province | 25x5 | passed | 41-5- كارمندان آموزشي و دفتري حق‌التدريسي انواع آموزشگاههاي كشور برحسب استان: 68-1367 |
+| 41-5#0 | k12 | province | 25x5 | failed | 41-5- كارمندان آموزشي و دفتري حق‌التدريسي انواع آموزشگاههاي كشور برحسب استان: 68-1367 |
 | 41-5#1 | k12 | province | 25x5 | passed | 41-5- كارمندان آموزشي و دفتري حق‌التدريسي انواع آموزشگاههاي كشور برحسب استان: 68-1367 (دنباله) |
 | 42-5#0 | k12 | national | 5x6 | unchecked | 42-5- فارغ‌التحصيلان دوره‌هاي مختلف تحصيلي متوسطه كشور: سالهاي تحصيلي 63-1362تا 67-1366 |
 | 42-5#1 | k12 | national | 5x4 | unchecked | 42-5- فارغ‌التحصيلان دوره‌هاي مختلف تحصيلي متوسطه كشور: سالهاي تحصيلي 63-1362تا 67-1366 |
@@ -1366,7 +1366,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 43-5.dup1#0 | k12 | province | 25x6 | unchecked | 43-5- فارغ‌التحصيلان دوره‌هاي مختلف تحصيلي متوسطه كشور برحسب استان: سال تحصيل 67-1368 (دنباله) |
 | 44-5#0 | he | national | 5x9 | passed | 44-5- دانشجويان، فارغ‌التحصيلان و كادر آموزشي دانشگاهها و موسسات آموزش عالي كشور برحسب جنس: سالهاي تحصيلي 64-1 |
 | 45-5#0 | he | national | 8x6 | failed | 45-5- تعداد و درصد دانشجويان برحسب نوع مراكز آموزش عالي و به تفكيك جنس: سال تحصيلي 68-1367 |
-| 46-5#0 | he | national | 19x9 | passed | 46-5- دانشجويان سطوح مختلف تحصيلي دانشگاهها و موسسات آموزش عالي كشور برحسب رشته‌هاي عمده تحصيلي: سال تحصيلي 68 |
+| 46-5#0 | he | national | 19x9 | failed | 46-5- دانشجويان سطوح مختلف تحصيلي دانشگاهها و موسسات آموزش عالي كشور برحسب رشته‌هاي عمده تحصيلي: سال تحصيلي 68 |
 | 46-5#1 | he | national | 19x9 | passed | 46-5- دانشجويان سطوح مختلف تحصيلي دانشگاهها و موسسات آموزش عالي كشور برحسب رشته‌هاي عمده تحصيلي: سال تحصيلي 68 |
 | 47-5#0 | he | province | 25x6 | passed | 47-5- دانشجويان، فارغ‌التحصيلان، كادر آموزشي و كادر فني كمك آموزشي دانشگاهها و موسسات آموزش عالي كشور برحسب اس |
 | 47-5.dup1#0 | he | province | 25x6 | passed | 47-5- دانشجويان، فارغ‌التحصيلان. كادر آموزشي و كادر فني كمك آموزشي دانشگاهها و موسسات آموزش عالي كشور برحسب اس |
@@ -1374,10 +1374,10 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 48-5#1 | he | national | 19x9 | passed | 48-5- فارغ‌التحصيلان سطوح مختلف تحصيلي دانشگاهها و موسسات آموزش عالي كشور برحسب رشته‌هاي عمده تحصيلي: سال تحصي |
 | 49-5#0 | he | national | 8x9 | passed | 49-5- فارغ‌التحصيلان سطوح مختلف تحصيل دانشگاهها و موسسات آموزش عالي كشور برحسب رشته‌هاي عمده سال تحصيلي: سال ت |
 | 49-5#1 | he | national | 8x9 | passed | 49-5- فارغ‌التحصيلان سطوح مختلف تحصيل دانشگاهها و موسسات آموزش عالي كشور برحسب رشته‌هاي عمده سال تحصيلي: سال ت |
-| 50-5#0 | he | national | 8x6 | passed | 50-5- كادر آموزشي دانشگاهها و مزاكز آموزش عالي كشور برحسب نوع استخدام: سال تحصيلي 68-1367 |
+| 50-5#0 | he | national | 8x6 | failed | 50-5- كادر آموزشي دانشگاهها و مزاكز آموزش عالي كشور برحسب نوع استخدام: سال تحصيلي 68-1367 |
 | 50-5#1 | he | national | 8x6 | passed | 50-5- كادر آموزشي دانشگاهها و مزاكز آموزش عالي كشور برحسب نوع استخدام: سال تحصيلي 68-1367 |
 | 7-5#0 | k12 | national | 5x6 | failed | 7-5- تعداد دانش‌آموزان و امكانات آموزشي سطوح مختلف تحصيلي وزارت آموزش و پرورش: سالهاي تحصيلي 64-1363 تا 68-136 |
-| 8-5#0 | k12 | national | 17x6 | passed | 8-5- تعداد دانش‌آموزان و امكانات آموزشي سطوح مختلف تحصيلي وزارت آموزش و پروش سال تحصيل 68-1367 |
+| 8-5#0 | k12 | national | 17x6 | failed | 8-5- تعداد دانش‌آموزان و امكانات آموزشي سطوح مختلف تحصيلي وزارت آموزش و پروش سال تحصيل 68-1367 |
 | 9-5#0 | k12 | province | 25x6 | failed | 9-5- تعداد دانش‌آموزان و امكانات آموزشي سطوح مختلف تحصيلي وزارت آموزش و پروش برحسب استان: سال تحصيل 68-1367 |
 
 ### 1368
@@ -1389,7 +1389,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 12-5#0 | k12 | province | 29x6 | passed | 12-5- تعداد دانش‌آموزان و امكانات آموزشي دوره راهنمايي تحصيلي كشور: سالهاي تحصيلي 65-1364 تا 69-1368 |
 | 13-5#0 | k12 | province | 29x6 | passed | 13-5- تعداد دانش‌آموزان و امكانات آموزشي دوره متوسطه عمومي كشور: سالهاي تحصيلي 65-1364 تا 69-1368 |
 | 14-5#0 | k12 | province | 29x6 | passed | 14-5- تعداد دانش‌آموزان و امكانات آموزشي دوره هنرستانهاي فني كشور: سالهاي تحصيلي 65-1364 تا 69-1368 |
-| 15-5#0 | k12 | province | 29x6 | passed | 15-5- تعداد دانش‌آموزان و امكانات آموزشي دوره بازرگاني و حرفه‌اي كشور: سالهاي تحصيلي 65-1364 تا 69-1368 |
+| 15-5#0 | k12 | province | 29x6 | failed | 15-5- تعداد دانش‌آموزان و امكانات آموزشي دوره بازرگاني و حرفه‌اي كشور: سالهاي تحصيلي 65-1364 تا 69-1368 |
 | 16-5#0 | k12 | province | 29x4 | failed | 16-5- تعداد دانش‌آموزان و امكانات آموزشي دوره كشاورزي كشور: سالهاي تحصيلي65-1364 تا 69-1368 |
 | 17-5#0 | teacher_training | province | 29x5 | unchecked | 17-5- تعداد دانش‌آموزان و امكانات آموزشي دانشسراهاي تربيت معلم روستايي كشور: سالهاي تحصيلي 65-1364 تا 69-1368 |
 | 18-5#0 | teacher_training | province | 29x6 | unchecked | 18-5- تعداد دانشجويان و امكانات آموزشي مراكز تربيت معلم كشور: سالهاي تحصيلي65-1364 تا 69-1368 |
@@ -1398,7 +1398,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 21-5#0 | k12 | province | 29x5 | passed | 21-5- تعداد دانش‌آموزان و امكانات آموزشي دوره عمومي شبانه آموزش بزرگسالان كشور: سالهاي تحصيلي 65-1364 تا 69-13 |
 | 22-5#0 | k12 | province | 29x5 | passed | 22-5- تعداد دانش‌آموزان و امكانات آموزشي دوره تكميلي شبانه ‌آموزش بزرگسالان كشور: سالهاي تحصيلي 65-1364 تا 69- |
 | 23-5#0 | k12 | province | 29x5 | passed | 23-5- تعداد دانش‌آموزان و امكانات آموزشي پنجم ابتدايي شبانه‌ بزرگسالان كشور: سالهاي تحصيلي 65-1364 تا 69-1368 |
-| 24-5#0 | k12 | province | 29x5 | passed | 24-5- كارمندان آموزشي و دفتري حق‌التدريسي انواع آموزشگاههاي كشور: سالهاي تحصيلي65-1364 تا 69-1368 |
+| 24-5#0 | k12 | province | 29x5 | failed | 24-5- كارمندان آموزشي و دفتري حق‌التدريسي انواع آموزشگاههاي كشور: سالهاي تحصيلي65-1364 تا 69-1368 |
 | 24-5.dup1#0 | k12 | province | 29x5 | passed | 24-5- كارمندان آموزشي و دفتري حق‌التدريسي انواع آموزشگاههاي كشور: سالهاي تحصيلي 65-1364 تا 69-1368 (دنباله) |
 | 25-5#0 | k12 | province | 29x10 | unchecked | 25-5- فارغ‌التحصيلان دوره‌هاي مختلف تحصيلي متوسطه عمومي كشور: سالهاي تحصيلي 64-1363 تا 68-1367 |
 | 26-5#0 | k12 | province | 29x7 | unchecked | 26-5- فارغ‌التحصيلان دوره‌هاي مختلف تحصيلي متوسطه فني و حرفه‌اي كشور سالهاي تحصيلي 64-1363 تا 68-1367 |
@@ -1416,7 +1416,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 41-5#1 | he | national | 8x9 | passed | 41-5- فارغ‌التحصيلان سطوح مختلف تحصيلي دانشگاهها و موسسات آموزش عالي كشور برحسب نوع مراكز آموزشي: سال تحصيلي 6 |
 | 42-5#0 | he | national | 8x6 | passed | 42-5- كادر آموزشي دانشگاهها و مراكز آموزش عالي كشور برحسب نوع استخدام: سال تحصيلي 68-1367 |
 | 42-5#1 | he | national | 8x6 | passed | 42-5- كادر آموزشي دانشگاهها و مراكز آموزش عالي كشور برحسب نوع استخدام: سال تحصيلي 68-1367 |
-| 7-5#0 | k12 | national | 19x6 | passed | 7-5- تعداد دانش‌آموزان و امكانات آموزشي سطوح مختلف تحصيلي وزارت آموزش و پرورش: سال تحصيلي 69-1368 |
+| 7-5#0 | k12 | national | 19x6 | failed | 7-5- تعداد دانش‌آموزان و امكانات آموزشي سطوح مختلف تحصيلي وزارت آموزش و پرورش: سال تحصيلي 69-1368 |
 | 8-5#0 | k12 | province | 29x6 | failed | 8-5- تعداد دانش‌آموزان و امكانات آموزشي سطوح مختلف تحصيلي وزارت آموزش و پرورش: سالهاي تحصيلي 65-1364 تا 69-136 |
 | 9-5#0 | k12 | province | 29x6 | unchecked | 9-5- تعداد دانش‌آموزان و امكانات دوره‌هاي آموزش استثنايي كشور: سالهاي تحصيلي 65-1364 تا 69-1368 |
 | 9-5.dup1#0 | k12 | province | 29x3 | unchecked | 9-5- تعداد دانش‌آموزان و امكانات دوره‌هاي آموزش استثنايي كشور: سالهاي تحصيلي65-1364 تا 69-1368 (دنباله) |
@@ -1561,7 +1561,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 17-15#0 | k12 | province | 36x5 | passed | 17-15- دانش آموزان و امكانات آموزشي دوره‌ي تكميلي شبانه (متوسطه) |
 | 18-15#0 | k12 | province | 33x5 | passed | 18-15- دانش آموزان و امكانات آموزشي دوره‌ي پيش دانشگاهي شبانه |
 | 23-15#0 | k12 | province | 33x6 | passed | 23-15- تعداد قبول شدگان(1) پايه‌هاي دوره‌ي ابتدايي و دوره‌ي راهنمايي تحصيلي برحسب جنس |
-| 24-15#0 | k12 | province | 36x7 | passed | 24-15- فارغ التحصيلان(1) دوره‌ي متوسطه عمومي برحسب رشته‌ي تحصيلي |
+| 24-15#0 | k12 | province | 36x7 | failed | 24-15- فارغ التحصيلان(1) دوره‌ي متوسطه عمومي برحسب رشته‌ي تحصيلي |
 | 24-15#1 | k12 | province | 36x6 | failed | 24-15- فارغ التحصيلان(1) دوره‌ي متوسطه عمومي برحسب رشته‌ي تحصيلي (دنباله) |
 | 25-15#0 | k12 | province | 33x11 | passed | 25-15- فارغ التحصيلان(1) دوره‌ي پيش دانشگاهي برحسب رشته‌ي تحصيلي |
 | 27-15#0 | teacher_training | province | 36x2 | unchecked | 27- 15- كاركنان آموزشي، دفتري و اداري دوره‌ي تربيت معلم |
@@ -1670,10 +1670,10 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 41-15#1 | he | national | 13x6 | passed | 41-15- دانش‌آموختگان سطوح مختلف ‌تحصيلي دانشگاه آزاد اسلامي برحسب گروه عمده رشته ‌‌تحصيلي و جنس |
 | 42-15#0 | he | province | 31x3 | passed | 42-15- دانش‌آموختگان دانشگاه‌ها و مراكز آموزش عالي(1) برحسب جنس و استان: سال تحصيلي 84-1383 |
 | 43-15#0 | he | province | 31x3 | passed | 43-15- دانش‌آموختگان دانشگاه آزاد اسلامي برحسب جنس و استان: سال تحصيلي84-1383 |
-| 5-15#0 | k12 | national | 17x5 | passed | 5-15- دانش‌آموزان و كاركنان آموزشي، دفتري و اداري دوره‌هاي تحصيلي(1) |
+| 5-15#0 | k12 | national | 17x5 | failed | 5-15- دانش‌آموزان و كاركنان آموزشي، دفتري و اداري دوره‌هاي تحصيلي(1) |
 | 6-15#0 | k12 | province | 31x5 | passed | 6-15- دانش‌آموزان و كاركنان آموزشـي، دفتـري و اداري وزارت آمـوزش و پـرورش برحسب استـان: سال تحصيلي 85-1384 |
 | 7-15#0 | k12 | national | 13x1 | passed | 7-15- دانش‌آموزان آموزش استثنايي برحسب دوره‌هاي آموزشي |
-| 8-15#0 | k12 | province | 38x7 | passed | 8-15- دانش‌آموزان و امكانات آموزشي دوره آموزش استثنايي |
+| 8-15#0 | k12 | province | 38x7 | failed | 8-15- دانش‌آموزان و امكانات آموزشي دوره آموزش استثنايي |
 | 9-15#0 | k12 | province | 38x7 | passed | 9-15- دانش‌آموزان و امكانات آموزشي دوره آمادگي |
 
 ### 1385
@@ -1707,7 +1707,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 37-15#1 | he | national | 13x6 | passed | 37-15- دانشجويان سطوح مختلف تحصيلي دانشگاه آزاد اسلامي برحسب گروه عمده رشته‌ تحصيلي و جنس |
 | 38-15#0 | he | province | 31x3 | failed | 38-15- دانشجويان دانشگاه‌ها و مراكز آموزش عالي(1) برحسب جنس و استان: سال تحصيلي 86-1385  (2) |
 | 39-15#0 | he | province | 31x3 | passed | 39-15- دانشجويان دانشگاه آزاد اسلامي برحسب جنس و استان: سال تحصيلي 86-1385 |
-| 40-15#0 | he | national | 45x6 | passed | 40-15- براورد دانش آموختگان دانشگاه‌ها و موسسات آموزش عالي بر حسب جنس، سن و آخرين مدرك تحصيلي: آبان 1385 |
+| 40-15#0 | he | national | 45x6 | failed | 40-15- براورد دانش آموختگان دانشگاه‌ها و موسسات آموزش عالي بر حسب جنس، سن و آخرين مدرك تحصيلي: آبان 1385 |
 | 41-15#0 | he | national | 30x6 | failed | 41-15- براورد دانش‌آموختگان دانشگاه‌ها و موسسات آموزش عالي بر حسب جنس، گروه‌هاي عمده رشته  تحصيلي و آخرين مدرك |
 | 42-15#0 | he | national | 14x9 | passed | 42-15- دانش‌آموختگان سطوح مختلف تحصيلي دانشگاه‌ها و مراكز آموزش عالي(1)برحسب گروه عمده رشته‌ تحصيلي و جنس |
 | 42-15#1 | he | national | 14x9 | passed | 42-15- دانش‌آموختگان سطوح مختلف تحصيلي دانشگاه‌ها و مراكز آموزش عالي(1)برحسب گروه عمده رشته‌ تحصيلي و جنس |
@@ -1746,7 +1746,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 33-15#0 | he | province | 37x7 | passed | 33-15- كاركنان آموزشي(1و2)دانشگاه آزاد اسلامي برحسب عنوان دانشگاهي |
 | 34-15#0 | he | province | 38x3 | passed | 34-15- تعداد پذيرفته‌شدگان دانشگاه‌ها و مراكز آموزش عالي(1و2) برحسب جنس |
 | 35-15#0 | he | province | 37x3 | passed | 35-15- تعداد پذيرفته‌شدگان دانشگاه آزاد اسلامي برحسب جنس |
-| 36-15#0 | he | national | 14x9 | passed | 36-15- دانشجويان سطوح مختلف تحصيلي دانشگاه‌ها و مراكز آموزش عالي(1) برحسب گروه عمده رشته‌ تحصيلي و جنس |
+| 36-15#0 | he | national | 14x9 | failed | 36-15- دانشجويان سطوح مختلف تحصيلي دانشگاه‌ها و مراكز آموزش عالي(1) برحسب گروه عمده رشته‌ تحصيلي و جنس |
 | 36-15#1 | he | national | 14x9 | passed | 36-15- دانشجويان سطوح مختلف تحصيلي دانشگاه‌ها و مراكز آموزش عالي(1) برحسب گروه عمده رشته‌ تحصيلي و جنس |
 | 37-15#0 | he | national | 13x9 | passed | 37-15- دانشجويان سطوح مختلف تحصيلي دانشگاه آزاد اسلامي برحسب گروه عمده رشته‌ تحصيلي و جنس |
 | 37-15#1 | he | national | 13x6 | passed | 37-15- دانشجويان سطوح مختلف تحصيلي دانشگاه آزاد اسلامي برحسب گروه عمده رشته‌ تحصيلي و جنس |
@@ -1791,7 +1791,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 33-15#0 | he | province | 37x7 | passed | ٣٣-١٥- كاركنان آموزشي(١و٢) دانشگاه آزاد اسلامي برحسب عنوان دانشگاهي |
 | 34-15#0 | he | province | 38x3 | unchecked | ٣٤-١٥- تعداد ثبت نام شدگان دانشگاه‌ها و مراكز آموزش عالي(٢،١) برحسب جنس |
 | 35-15#0 | he | province | 38x3 | unchecked | ٣٥-١٥- تعداد ثبت نام شدگان دانشگاه آزاد اسلامي برحسب جنس |
-| 36-15#0 | he | national | 14x9 | passed | ٣٦-١٥- دانشجويان سطوح مختلف تحصيلي دانشگاه‌ها و مراكز آموزش عالي(١) برحسب گروه عمده رشته‌ تحصيلي و جنس |
+| 36-15#0 | he | national | 14x9 | failed | ٣٦-١٥- دانشجويان سطوح مختلف تحصيلي دانشگاه‌ها و مراكز آموزش عالي(١) برحسب گروه عمده رشته‌ تحصيلي و جنس |
 | 36-15#1 | he | national | 14x9 | failed | ٣٦-١٥- دانشجويان سطوح مختلف تحصيلي دانشگاه‌ها و مراكز آموزش عالي(١) برحسب گروه عمده رشته‌ تحصيلي و جنس |
 | 37-15#0 | he | national | 13x9 | passed | ٣٧-١٥-دانشجويان سطوح مختلف تحصيلي دانشگاه آزاد اسلامي برحسب گروه عمده رشته‌ تحصيلي و جنس |
 | 37-15#1 | he | national | 13x6 | passed | ٣٧-١٥-دانشجويان سطوح مختلف تحصيلي دانشگاه آزاد اسلامي برحسب گروه عمده رشته‌ تحصيلي و جنس |
@@ -1818,7 +1818,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 10-15#0 | k12 | province | 38x7 | passed | 10-15- دانش‌آموزان ، كاركنان و امكانات آموزشي دوره ابتدايي |
 | 11-15#0 | k12 | province | 38x7 | passed | 11-15- دانش‌آموزان ، كاركنان و امكانات آموزشي دوره راهنمايي تحصيلي |
 | 12-15#0 | k12 | province | 38x7 | passed | 12-15- دانش‌آموزان ، كاركنان و امكانات آموزشي دوره متوسطه عمومي |
-| 13-15#0 | k12 | province | 31x11 | passed | 13-15- دانش‌آموزان دوره متوسطه عمومي برحسب رشته تحصيلي و استان: سال تحصيلي89-1388 |
+| 13-15#0 | k12 | province | 31x11 | failed | 13-15- دانش‌آموزان دوره متوسطه عمومي برحسب رشته تحصيلي و استان: سال تحصيلي89-1388 |
 | 14-15#0 | k12 | province | 37x5 | passed | 14-15- دانش‌آموزان و امكانات آموزشي دوره پيش‌دانشگاهي(1) |
 | 15-15#0 | k12 | province | 37x11 | passed | 15-15- دانش‌آموزان دوره پيش‌دانشگاهي برحسب رشته تحصيلي |
 | 17-15#0 | k12 | province | 38x5 | passed | 17-15- دانش‌آموزان و امكانات آموزشي دوره عمومي شبانه (راهنمايي) |
@@ -1907,7 +1907,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 |---|---|---|---|---|---|
 | 10-15#0 | k12 | province | 39x7 | passed | 10-15- دانش‌آموزان ، كاركنان و امكانات آموزشي دوره ابتدايي |
 | 11-15#0 | k12 | province | 39x7 | passed | 11-15- دانش‌آموزان ، كاركنان و امكانات آموزشي دوره راهنمايي تحصيلي |
-| 12-15#0 | k12 | province | 39x7 | passed | 12-15- دانش‌آموزان ، كاركنان و امكانات آموزشي دوره متوسطه |
+| 12-15#0 | k12 | province | 39x7 | failed | 12-15- دانش‌آموزان ، كاركنان و امكانات آموزشي دوره متوسطه |
 | 12-15#1 | k12 | province | 32x11 | passed | 12-15- دانش‌آموزان ، كاركنان و امكانات آموزشي دوره متوسطه |
 | 14-15#0 | k12 | province | 39x5 | passed | 14-15- دانش‌آموزان و امكانات آموزشي دوره پيش‌دانشگاهي |
 | 15-15#0 | k12 | province | 39x11 | passed | 15-15- دانش‌آموزان دوره پيش‌دانشگاهي برحسب رشته تحصيلي |
@@ -1932,7 +1932,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 37-15#1 | he | national | 14x6 | passed | 37-15-دانشجويان سطوح مختلف تحصيلي دانشگاه آزاد اسلامي برحسب گروه عمده رشته‌ تحصيلي و جنس |
 | 38-15#0 | he | province | 32x3 | passed | 38-15- دانشجويان دانشگاه‌ها و مراكز آموزش عالي(1) برحسب جنس و استان: سال تحصيلي 91-1390 |
 | 39-15#0 | he | province | 32x3 | passed | 39-15- دانشجويان دانشگاه آزاد اسلامي برحسب جنس و استان: سال تحصيلي 91-1390 |
-| 40-15#0 | he | national | 48x6 | passed | 40-15- برآورد دانش آموختگان دانشگاه‌ها و مؤسسات آموزش عالي بر حسب جنس، سن و آخرين مدرك تحصيلي: آبان 1390 |
+| 40-15#0 | he | national | 48x6 | failed | 40-15- برآورد دانش آموختگان دانشگاه‌ها و مؤسسات آموزش عالي بر حسب جنس، سن و آخرين مدرك تحصيلي: آبان 1390 |
 | 41-15#0 | he | national | 30x6 | failed | 41-15- برآورد دانـش‌آموختگان دانشگاه‌ها و مؤسسات آموزش عالي بر حسب جنس، گروه‌هاي عمده رشته  تحصيلي و آخرين |
 | 42-15#0 | he | national | 14x9 | failed | 42-15- دانش‌آموختگان سطوح مختلف تحصيلي دانشگاه‌ها و مراكز آموزش عالي(1)برحسب گروه عمده رشته‌ تحصيلي و جنس |
 | 42-15#1 | he | national | 14x9 | passed | 42-15- دانش‌آموختگان سطوح مختلف تحصيلي دانشگاه‌ها و مراكز آموزش عالي(1)برحسب گروه عمده رشته‌ تحصيلي و جنس |
@@ -1941,7 +1941,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 44-15#0 | he | province | 32x3 | failed | 44-15- دانش‌آموختگان دانشگاه‌ها و مراكز آموزش عالي(1) برحسب جنس و استان: سال تحصيلي 90-1389 |
 | 45-15#0 | he | province | 32x3 | passed | 45-15- دانش‌آموختگان دانشگاه آزاد اسلامي برحسب جنس و استان: سال تحصيلي 90-1389 |
 | 5-15#0 | k12 | national | 17x5 | passed | 5-15- دانش‌آموزان و كاركنان آموزشي، دفتري و اداري دوره‌هاي تحصيلي(1) |
-| 6-15#0 | k12 | province | 32x5 | passed | 6-15- دانش‌آموزان و كاركنان آموزشي، دفتري و اداري وزارت آموزش و پرورش برحسب استان: سال تحصيلي 91-1390 |
+| 6-15#0 | k12 | province | 32x5 | failed | 6-15- دانش‌آموزان و كاركنان آموزشي، دفتري و اداري وزارت آموزش و پرورش برحسب استان: سال تحصيلي 91-1390 |
 | 7-15#0 | k12 | national | 14x1 | passed | 7-15- دانش‌آموزان آموزش استثنايي برحسب دوره‌هاي آموزشي |
 | 8-15#0 | k12 | province | 39x7 | passed | 8-15- دانش‌آموزان ، كاركنان و امكانات آموزشي دوره آموزش استثنايي |
 | 9-15#0 | k12 | province | 39x7 | passed | 9-15- دانش‌آموزان ، كاركنان و امكانات آموزشي دوره آمادگي |
@@ -2034,7 +2034,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 43-16#1 | he | national | 14x6 | passed | 43-16-دانش‌آموختگان سطوح مختلف ‌تحصيلي دانشگاه آزاد اسلامي برحسب گروه عمده رشته ‌‌تحصيلي و جنس |
 | 44-16#0 | he | province | 32x3 | passed | 44-16- دانش‌آموختگان دانشگاه‌ها و مراكز آموزش عالي(1) برحسب جنس و استان: سال تحصيلي92-1391 |
 | 45-16#0 | he | province | 32x3 | passed | 45-16- دانش‌آموختگان دانشگاه آزاد اسلامي برحسب جنس و استان: سال تحصيلي92-1391 |
-| 5-16#0 | k12 | national | 17x5 | passed | 5-16- دانش‌آموزان و كاركنان آموزشي، دفتري و اداري دوره‌هاي تحصيلي |
+| 5-16#0 | k12 | national | 17x5 | failed | 5-16- دانش‌آموزان و كاركنان آموزشي، دفتري و اداري دوره‌هاي تحصيلي |
 | 6-16#0 | k12 | province | 32x5 | failed | 6-16- دانش‌آموزان و كاركنان آموزشي، دفتري و اداري وزارت آموزش و پرورش برحسب استان: سال تحصيلي 93-1392 |
 | 7-16#0 | k12 | national | 14x1 | passed | 7-16- دانش‌آموزان آموزش استثنايي برحسب دوره‌هاي آموزشي |
 | 8-16#0 | k12 | province | 39x7 | passed | 8-16- دانش‌آموزان، كاركنان و امكانات آموزشي دوره آموزش استثنايي |
@@ -2075,7 +2075,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 30-17#1 | he | national | 17x9 | passed | 30-17- دانش آموختگان دوره هاي مختلف تحصيلي موسسات آموزش عالي به تفکيک نوع وابستگي به دستگاه اجرايي برحسب جنس |
 | 31-17#0 | he | province | 39x9 | passed | 31-17- دانش‌آموختگان دورههاي مختلف تحصيلي موسسات آموزش عالي (1) برحسب استان و جنس |
 | 31-17.dup1#0 | he | province | 39x9 | passed | 31-17- دانش آموختگان دوره هاي مختلف تحصيلي موسسات آموزش عالي (1) برحسب استان و جنس (دنباله) |
-| 5-17#0 | k12 | national | 15x5 | passed | 5-17- دانش‌آموزان و كاركنان آموزشي، دفتري و اداري دوره‌هاي تحصيلي |
+| 5-17#0 | k12 | national | 15x5 | failed | 5-17- دانش‌آموزان و كاركنان آموزشي، دفتري و اداري دوره‌هاي تحصيلي |
 | 6-17#0 | k12 | province | 32x5 | failed | 6-17- دانش‌آموزان و كاركنان آموزشي، دفتري و اداري وزارت آموزش و پرورش برحسب استان: سال تحصيلي 94-1393 |
 | 7-17#0 | k12 | national | 14x1 | passed | 7-17- دانش‌آموزان آموزش استثنايي برحسب دوره‌هاي آموزشي |
 | 8-17#0 | k12 | province | 39x7 | passed | 8-17- دانش‌آموزان، كاركنان و امكانات آموزشي دوره آموزش استثنايي |
@@ -2460,7 +2460,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 7-17#5 | he | national | 1x1 | unchecked | 7-17- دانش آموختگان موسسات آموزش عالی به تفکیک نوع وابستگی به دستگاه اجرایی: |
 | 7-17.dup1#0 | he | national | 1x3 | unchecked | 7-17- دانش آموختگان موسسات آموزش عالی به تفکیک نوع وابستگی به دستگاه اجرایی: |
 | 8-17#1 | k12 | province | 32x7 | passed | 8-17- دانشآموزان ،کارکنان و امکانات آموزشی دوره آموزش استثنایی |
-| 9-17#1 | k12 | province | 32x5 | passed | 9-17- دانشآموزان و امکانات آموزشی دوره پیش دبستانی |
+| 9-17#1 | k12 | province | 32x5 | failed | 9-17- دانشآموزان و امکانات آموزشی دوره پیش دبستانی |
 
 ### 1400
 
@@ -2478,7 +2478,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 18-17#0 | k12 | province | 38x9 | passed | 18-17- فارغ التحصیلان دوره دوم متوسطه) (1برحسب جنس و شاخه تحصیلی |
 | 18-17#1 | k12 | province | 38x4 | unchecked | 18-17- فارغ التحصیلان دوره دوم متوسطه) (1برحسب جنس و شاخه تحصیلی )دنباله( |
 | 21-17#0 | he | province | 39x3 | passed | 21-17- آموزشگران دانشگاهی تمام وقت موسسات آموزش عالی ) (1بر حسب استان و جنس |
-| 22-17#0 | he | province | 39x7 | passed | 22-17- آموزشگران دانشگاهی تماموقت موسسات آموزش عالی) (1برحسب مرتبه علمی |
+| 22-17#0 | he | province | 39x7 | failed | 22-17- آموزشگران دانشگاهی تماموقت موسسات آموزش عالی) (1برحسب مرتبه علمی |
 | 23-17#0 | he | national | 14x9 | failed | 23-17- ثبت نام شدگان جدید دورههاي مختلف تحصیلی موسسات آموزش عالی) (1برحسب گروه عمده رشته تحصیلی و جنس |
 | 23-17#1 | he | national | 14x9 | failed | 23-17- ثبت نام شدگان جدید دورههاي مختلف تحصیلی موسسات آموزش عالی) (1برحسب گروه عمده رشته تحصیلی و جنس |
 | 24-17#0 | he | national | 17x9 | failed | 24-17- ثبت نام شدگان جدید دورههاي مختلف تحصیلی موسسات آموزش عالی) (1به تفکیک نوع وابستگی به دستگاه اجرایی |
@@ -2489,8 +2489,8 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 26-17#1 | he | national | 14x9 | passed | 26-17- دانشجویان دورههاي مختلف تحصیلی موسسات آموزش عالی) (1بر حسب گروه عمده رشته تحصیلی و جنس |
 | 27-17#0 | he | national | 17x9 | passed | 27-17- دانشجویان دورههاي مختلف تحصیلی موسسات آموزش عالی) (1به تفکیک نوع وابستگی به دسـتگاه اجرایـی بـر حسـب |
 | 27-17#1 | he | national | 17x9 | passed | 27-17- دانشجویان دورههاي مختلف تحصیلی موسسات آموزش عالی) (1به تفکیک نوع وابستگی به دسـتگاه اجرایـی بـر حسـب |
-| 28-17#0 | he | province | 39x9 | passed | 28-17- دانشجویان دورههاي مختلف تحصیلی موسسات آموزش عالی) (1بر حسب استان و جنس |
-| 28-17#1 | he | province | 39x9 | passed | 28-17- دانشجویان دورههاي مختلف تحصیلی موسسات آموزش عالی) (1بر حسب استان و جنس )دنباله( |
+| 28-17#0 | he | province | 39x9 | failed | 28-17- دانشجویان دورههاي مختلف تحصیلی موسسات آموزش عالی) (1بر حسب استان و جنس |
+| 28-17#1 | he | province | 39x9 | failed | 28-17- دانشجویان دورههاي مختلف تحصیلی موسسات آموزش عالی) (1بر حسب استان و جنس )دنباله( |
 | 29-17#0 | he | national | 13x9 | passed | 29-17- دانشآموختگان دورههاي مختلف تحصیلی موسسات آموزش عالی) (1برحسب گروه عمده رشته تحصیلی و جنس |
 | 29-17#1 | he | national | 13x9 | passed | 29-17- دانشآموختگان دورههاي مختلف تحصیلی موسسات آموزش عالی) (1برحسب گروه عمده رشته تحصیلی و جنس |
 | 3-17.dup1#0 | k12 | national | 1x3 | unchecked | 3-17- فارغالتحصیلان دوره دوم متوسطه برحسب جنس و رشته تحصیلی 1399-1400 |
@@ -2513,7 +2513,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 7-17.dup1#0 | he | national | 1x1 | unchecked | 7-17- دانش آموختگان موسسات آموزش عالی به تفکیک نوع وابستگی به دستگاه اجرایی :سال تحصیلی 1399-1400 |
 | 8-17#0 | k12 | national | 1x1 | unchecked | 8-17- دانشآموزان ،کارکنان و امکانات آموزشی دوره آموزش استثنایی |
 | 8-17#1 | k12 | province | 39x7 | passed | 8-17- دانشآموزان ،کارکنان و امکانات آموزشی دوره آموزش استثنایی |
-| 9-17#0 | k12 | province | 39x5 | passed | 9-17- دانشآموزان و امکانات آموزشی دوره پیش دبستانی |
+| 9-17#0 | k12 | province | 39x5 | failed | 9-17- دانشآموزان و امکانات آموزشی دوره پیش دبستانی |
 
 ### 1401
 
@@ -2531,7 +2531,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 18-17#0 | k12 | province | 38x9 | passed | 18-17- فارغ التحصیلان دوره دوم متوسطه) (1به تفکیک جنس و شاخه تحصیلی |
 | 18-17#1 | k12 | province | 38x4 | unchecked | 18-17- فارغ التحصیلان دوره دوم متوسطه) (1به تفکیک جنس و شاخه تحصیلی )دنباله( |
 | 21-17#0 | he | province | 39x3 | passed | 21-17- آموزشگران دانشگاهی تمام وقت موسسات آموزش عالی به تفکیک استان و جنس |
-| 22-17#0 | he | province | 39x7 | passed | 22-17- آموزشگران دانشگاهی تماموقت موسسات آموزش عالی به تفکیک مرتبه علمی |
+| 22-17#0 | he | province | 39x7 | failed | 22-17- آموزشگران دانشگاهی تماموقت موسسات آموزش عالی به تفکیک مرتبه علمی |
 | 23-17#0 | he | national | 14x9 | failed | 23-17- ثبت نام شدگان جدید دورههاي مختلف تحصیلی موسسات آموزش عالی به تفکیک گروه عمده رشته تحصیلی و جنس |
 | 23-17#1 | he | national | 14x9 | failed | 23-17- ثبت نام شدگان جدید دورههاي مختلف تحصیلی موسسات آموزش عالی به تفکیک گروه عمده رشته تحصیلی و جنس |
 | 24-17#0 | he | national | 17x9 | failed | 24-17- ثبت نام شدگان جدید دورههاي مختلف تحصیلی موسسات آموزش عالی به تفکیک نوع وابستگی به دستگاه اجرایی و |
@@ -2554,7 +2554,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 31-17#1 | he | province | 38x9 | passed | 31-17- دانش آموختگان دورههاي مختلف تحصیلی موسسات آموزش عالی به تفکیک استان و جنس )دنباله( |
 | 4-17#0 | he | national | 1x1 | unchecked | 4-17- دانشجویان دورههاي مختلف تحصیلی موسسات آموزش عالی به تفکیک گروههاي عمده رشته تحصیلی و جنس: |
 | 4-17.dup1#1 | he | national | 1x3 | unchecked | 4-17- دانشجویان دورههاي مختلف تحصیلی موسسات آموزش عالی به تفکیک گروههاي عمده رشته تحصیلی و جنس: |
-| 5-17#0 | k12 | national | 15x5 | passed | 5-17- دانشآموزان و کارکنان آموزشی به تفکیک دورههاي تحصیلی |
+| 5-17#0 | k12 | national | 15x5 | failed | 5-17- دانشآموزان و کارکنان آموزشی به تفکیک دورههاي تحصیلی |
 | 5-17#1 | he | national | 1x3 | unchecked | 5-17- دانشآموختگان دورههاي مختلف تحصیلی موسسات آموزش عالی :سال تحصیلی 1400-1401 |
 | 6-17#0 | he | national | 1x2 | unchecked | 6-17- دانشآموختگان موسسات آموزش عالی به تفکیک نوع وابستگی به دستگاه اجرایی :سال تحصیلی 648 ................... |
 | 6-17#1 | he | national | 2x1 | unchecked | 6-17- دانش آموختگان موسسات آموزش عالی به تفکیک نوع وابستگی به دستگاه اجرایی :سال تحصیلی 1400-1401 |
@@ -2567,7 +2567,7 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 6-17.dup1#0 | k12 | province | 32x5 | passed | 6-17- دانشآموزان و کارکنان آموزشی وزارت آموزش و پرورش ) (1به تفکیک استان :سال تحصیلی 1401 -1402 |
 | 7-17#0 | k12 | national | 14x1 | passed | 7-17- دانش آموزان آموزش استثنایی به تفکیک دورههاي تحصیلی |
 | 8-17#0 | k12 | province | 39x7 | passed | 8-17- دانشآموزان ،کارکنان و امکانات آموزشی دوره آموزش استثنایی |
-| 9-17#0 | k12 | province | 39x5 | passed | 9-17- دانشآموزان و امکانات آموزشی دوره پیش دبستانی |
+| 9-17#0 | k12 | province | 39x5 | failed | 9-17- دانشآموزان و امکانات آموزشی دوره پیش دبستانی |
 
 ### 1402
 
@@ -2584,14 +2584,14 @@ Legend: **geo** = national (year rows only) / province (>=10 provinces as rows).
 | 17-17#0 | k12 | province | 38x6 | passed | 17-17- تعداد قبول شدگان پايههاي دوره ابتدايي و دوره اول متوسطه  به تفكيک جنس(1) |
 | 18-17#0 | k12 | province | 38x9 | unchecked | 18-17- فارغ التحصيالن دوره دوم متوسطه  به تفكيک شاخه تحصيلي(1) |
 | 18-17#1 | k12 | province | 38x4 | unchecked | 18-17- فارغ التحصيالن دوره دوم متوسطه  به تفكيک شاخه تحصيلي (دنباله)(1) |
-| 21-17#0 | he | province | 39x3 | passed | 21-17- آموزشگران دانشگاهي تمام وقت موسسات آموزش عالي به تفكيک استان و جنس |
-| 22-17#0 | he | province | 39x7 | unchecked | 22-17- آموزشگران دانشگاهي تمام وقت موسسات آموزش عالي به تفكيک مرتبه علمي |
+| 21-17#0 | he | province | 39x3 | failed | 21-17- آموزشگران دانشگاهي تمام وقت موسسات آموزش عالي به تفكيک استان و جنس |
+| 22-17#0 | he | province | 39x7 | failed | 22-17- آموزشگران دانشگاهي تمام وقت موسسات آموزش عالي به تفكيک مرتبه علمي |
 | 23-17#0 | he | national | 14x9 | passed | 23-17- ثبت نام شدگان جديد دورههاي مختلف تحصيلي موسسات آموزش عالي به تفكيک گروه عمده رشته تحصيلي و جنس |
 | 23-17#1 | he | national | 14x9 | passed | 23-17- ثبت نام شدگان جديد دورههاي مختلف تحصيلي موسسات آموزش عالي به تفكيک گروه عمده رشته تحصيلي و جنس |
 | 24-17#0 | he | national | 17x9 | passed | 24-17- ثبت نام شدگان جديد دوره هاي مختلف تحصيلي موسسات آموزش عالي به تفكيک نوع وابستگي به دستگاه اجرايي و |
 | 24-17#1 | he | national | 17x9 | passed | 24-17- ثبت نام شدگان جديد دوره هاي مختلف تحصيلي موسسات آموزش عالي به تفكيک نوع وابستگي به دستگاه اجرايي و |
 | 25-17#0 | he | province | 39x9 | passed | 25-17- ثبت نام شدگان جديد دورههاي مختلف تحصيلي موسسات آموزش عالي به تفكيک جنس و استان |
-| 25-17#1 | he | province | 39x9 | passed | 25-17- ثبت نام شدگان جديد دورههاي مختلف تحصيلي موسسات آموزش عالي به تفكيک جنس و استان (دنباله) |
+| 25-17#1 | he | province | 39x9 | failed | 25-17- ثبت نام شدگان جديد دورههاي مختلف تحصيلي موسسات آموزش عالي به تفكيک جنس و استان (دنباله) |
 | 26-17#0 | he | national | 14x9 | passed | 26-17- دانشجويان دوره هاي مختلف تحصيلي موسسات آموزش عالي به تفكيک گروه عمده رشته تحصيلي و جنس |
 | 26-17#1 | he | national | 14x9 | passed | 26-17- دانشجويان دوره هاي مختلف تحصيلي موسسات آموزش عالي به تفكيک گروه عمده رشته تحصيلي و جنس |
 | 27-17#0 | he | national | 17x9 | passed | 27-17- دانشجويان دوره هاي مختلف تحصيلي موسسات آموزش عالي به تفكيک نوع وابستگي به دستگاه اجرايي و جنس |
