@@ -128,17 +128,24 @@ def blocks_to_rawtables(
     title = default_title
     part = 0
     pending_notes: list[str] = []
-    last: RawTable | None = None
+    group: list[RawTable] = []  # physical tables under the current title (notes apply to all parts)
+
+    def flush_notes() -> None:
+        nonlocal pending_notes
+        if pending_notes:
+            for g in group:
+                g.notes.extend(pending_notes)
+        pending_notes = []
+
     for b in blocks:
         if isinstance(b, Para):
             txt = b.text.strip()
             if is_title(txt):
-                if last is not None and pending_notes:
-                    last.notes.extend(pending_notes)
-                pending_notes = []
+                flush_notes()
                 base = re.sub(r"\(\s*دنباله\s*\)", "", txt).strip()
                 if norm(base) != norm(re.sub(r"\(\s*دنباله\s*\)", "", title)).strip():
                     part = 0
+                    group = []
                 title = txt
             elif "دنباله" in txt and len(txt) < 40:
                 continue
@@ -147,7 +154,6 @@ def blocks_to_rawtables(
         else:
             if not b.rows:
                 continue
-            # a table whose first cell *is* the title (plain-text html era) is handled elsewhere
             rt = grid_to_rawtable(
                 b.rows,
                 title=title,
@@ -157,15 +163,12 @@ def blocks_to_rawtables(
                 part=part,
                 slash_swapped=slash_swapped,
             )
-            if last is not None and pending_notes:
-                last.notes.extend(pending_notes)
-            pending_notes = []
+            flush_notes()
             if rt is not None:
                 out.append(rt)
-                last = rt
+                group.append(rt)
                 part += 1
-    if last is not None and pending_notes:
-        last.notes.extend(pending_notes)
+    flush_notes()
     return out
 
 

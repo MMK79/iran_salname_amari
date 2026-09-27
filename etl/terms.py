@@ -60,6 +60,8 @@ RULES: list[Rule] = [
     R("level", "lower_secondary", "دوره اول متوسطه", domain="k12", note="new 6-3-3 system (from 1391-92): grades 7-9"),
     R("level", "lower_secondary", "متوسطه اول", domain="k12", note="new 6-3-3 system: grades 7-9"),
     R("level", "upper_secondary", "دوره دوم متوسطه", domain="k12", note="new system: grades 10-12"),
+    R("level", "lower_secondary", "متوسطه دوره اول", domain="k12", note="1393-94 yearbooks' word order"),
+    R("level", "upper_secondary", "متوسطه دوره دوم", domain="k12", note="1393-94 yearbooks' word order"),
     R("level", "upper_secondary", "متوسطه دوم", domain="k12", note="new system: grades 10-12"),
     R("level", "lower_secondary", "راهنمایی", domain="k12", note="old 5-3-4 system: guidance school, grades 6-8"),
     R("level", "lower_secondary", "عمومی شبانه", domain="k12", note="evening guidance (1370s)"),
@@ -104,6 +106,7 @@ RULES: list[Rule] = [
     R("staffgroup", "faculty_group", "هیات علمی", "exact", "he"),
     # ---------------- higher-ed employment type of academic staff
     R("employment", "fulltime_and_hourly", "تمام وقت و حق التدریس", domain="he"),
+    R("employment", "fulltime_and_hourly", "تمام وقت و پاره وقت", domain="he"),
     R("employment", "fulltime", "تمام وقت", domain="he"), R("employment", "hourly", "حق التدریس", domain="he"),
     R("employment", "hourly", "پاره وقت", domain="he"),
     # ---------------- higher-education degree level (specific before generic!)
@@ -192,13 +195,13 @@ _HE = ["دانشجو", "آموزش عالی", "دانشگاه", "دانش آمو
 _TT = ["تربیت معلم", "دانشسرا"]
 _K12 = [
     "دانش آموز", "مدارس", "آموزشگاه", "دبستان", "دبیرستان", "هنرستان", "کودکستان", "معلم", "کلاس", "راهنمایی",
-    "ابتدایی", "متوسطه", "پیش_دانشگاهی", "پیش دبستانی", "استثنایی", "قبول شدگان", "فارغ التحصیلان", "کودکان",
+    "ابتدایی", "متوسطه", "PREUNIV", "پیش دبستانی", "استثنایی", "قبول شدگان", "فارغ التحصیلان", "کودکان",
 ]
 
 
 def classify_domain(title: str) -> str:
     """'k12' | 'he' | 'teacher_training' | 'other'. Decided from the title only."""
-    t = norm(title).replace("پیش دانشگاهی", "پیش_دانشگاهی")  # pre-university is K-12, not HE
+    t = norm(title).replace("پیش دانشگاهی", " PREUNIV ")  # pre-university is K-12, not HE
     if any(k in t for k in _OTHER):
         return "other"
     if any(k in t for k in _TT) and "دانشگاه" not in t:

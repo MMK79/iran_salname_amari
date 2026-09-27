@@ -139,7 +139,15 @@ def cmd_extract(args) -> None:
                 print(f"{y} {u.kind}: ERROR {e!r}", file=sys.stderr)
                 continue
             nk = nh = 0
+            seen_ids: dict[tuple[str, str], int] = {}
             for rt in rts:
+                # keep (source_file, source_table) unique: chart captions / repeated numbers in PDFs
+                k = (rt.source_file, rt.source_table)
+                if k in seen_ids:
+                    seen_ids[k] += 1
+                    rt.table_no = f"{rt.table_no}.dup{seen_ids[k]}"
+                else:
+                    seen_ids[k] = 0
                 r, k, h = table_to_records(rt)
                 R += r
                 K += k

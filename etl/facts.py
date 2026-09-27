@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from etl.coverage import flags, markers, parse_notes
 from etl.normalize import norm, sh_to_gregorian_start
 from etl.tables import RawTable, table_year
 from etl.terms import (
@@ -30,6 +31,9 @@ def table_to_records(rt: RawTable) -> tuple[list[dict], list[dict], list[dict]]:
     dims = DIMS_K12 if domain in ("k12",) else DIMS_HE
     tdims = dims_of_text(rt.title, domain, _TITLE_DIMS_K12 if domain == "k12" else _TITLE_DIMS_HE)
     col_dims = [dims_of_header(h, domain, dims) for h in rt.col_headers]
+    numbered, unnumbered = parse_notes(rt.notes)
+    title_marks = markers(rt.title)
+    col_marks = [markers(h) for h in rt.col_headers]
     base = {
         "yearbook_sh": rt.yearbook_sh,
         "source_file": rt.source_file,
@@ -62,9 +66,12 @@ def table_to_records(rt: RawTable) -> tuple[list[dict], list[dict], list[dict]]:
             if domain not in ("k12", "he") or rt.header_source == "none":
                 continue
             d = {**tdims, **rdims, **{k: v for k, v in cdims.items() if k != "unmatched"}}
+            marks = title_marks | markers(label) | (col_marks[ci] if ci < len(col_marks) else set())
+            applicable = [numbered[m] for m in sorted(marks) if m in numbered] + unnumbered
             if "metric" not in d:
                 continue
             year = int(d["year"][0]) if "year" in d else ty
+            cov = flags(applicable, year) if domain == "he" else set()
             prov = d.get("province", ("IRN", ""))[0]
             known_row = (bool(rdims) or not label) and (not context_label or bool(context))
             rec = {
@@ -99,8 +106,10 @@ def table_to_records(rt: RawTable) -> tuple[list[dict], list[dict], list[dict]]:
                 rec.update(
                     degree_level=deg[0] if deg else "all",
                     degree_level_source=deg[1] if deg else "",
-                    university_type=ut[0] if ut else "all_reported",
-                    university_type_source=ut[1] if ut else "",
+                    # aggregate rows: coverage of Azad decided by the footnotes that apply to this cell
+                    university_type=ut[0] if ut else ("excl_azad" if "excl_azad" in cov else "all_reported"),
+                    university_type_source=ut[1] if ut else ("footnote" if "excl_azad" in cov else ""),
+                    coverage=";".join(sorted(cov)),
                     field_group=d.get("field_group", ("all", ""))[0],
                     rank=d.get("rank", ("all", ""))[0],
                     employment=d.get("employment", ("unspecified", ""))[0],

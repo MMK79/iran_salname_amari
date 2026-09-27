@@ -57,16 +57,26 @@ def _clean(line: str) -> str:
     return _FOOT.sub(" ", s)
 
 
+def _marks_of(raw: str) -> str:
+    """Footnote numbers on a line, re-emitted as "(n)" so etl.coverage can resolve them."""
+    s = digits(unicodedata.normalize("NFKC", _BIDI.sub("", raw)))
+    nums = []
+    for m in _FOOT.finditer(s):
+        nums += re.findall(r"\d{1,2}", m.group(0))
+    return "".join(f"({n})" for n in nums)
+
+
 def _is_edu_page(page: str) -> bool:
     head = " ".join(_clean(x) for x in page.strip().splitlines()[:3])
     return "آموزش" in head and not any(w in head for w in ("بهداشت", "فرهنگ", "نیروی", "نيروي"))
 
 
 @lru_cache(maxsize=1)
-def _templates() -> list[tuple[str, int, int, list[str], str, str]]:
-    """(title_key, part, ncols, headers, source, domain) from the Word-era yearbooks."""
+def _templates() -> list[tuple[str, int, int, list[str], str, str, dict]]:
+    """(title_key, part, ncols, headers, source, domain, {year: values}) from the Word-era yearbooks."""
     from etl.discover import units_for_year
     from etl.extract.docx_tables import read_blocks
+    from etl.normalize import parse_academic_year
     from etl.tables import blocks_to_rawtables
     from etl.terms import classify_domain
 
@@ -77,8 +87,13 @@ def _templates() -> list[tuple[str, int, int, list[str], str, str]]:
                 continue
             for rt in blocks_to_rawtables(read_blocks(u.paths[0]), yearbook_sh=y, source_file=u.rel(u.paths[0]),
                                           source_format="docx"):
+                yrows = {}
+                for lbl, vals in rt.rows:
+                    yy = parse_academic_year(lbl)
+                    if yy:
+                        yrows[yy] = vals
                 out.append((title_key(rt.title), rt.part, len(rt.col_headers), rt.col_headers,
-                            f"{y}/{rt.source_table}", classify_domain(rt.title)))
+                            f"{y}/{rt.source_table}", classify_domain(rt.title), yrows))
     return out
 
 
@@ -90,13 +105,37 @@ def title_key(title: str) -> str:
     return re.sub(r"\s+", "", t)
 
 
-def find_template(title: str, part: int, ncols: int) -> tuple[list[str], str] | None:
+def find_template(title: str, part: int, ncols: int, rows=None) -> tuple[list[str], str] | None:
+    """Best Word-era table with the same column count and a similar title.
+
+    When the PDF table repeats historic year rows that the Word table also has, the
+    candidates are ranked by how many of those numbers agree exactly -- this is what
+    tells continuation parts apart (e.g. associate/bachelor vs master/PhD columns).
+    """
+    from etl.normalize import parse_academic_year
+
     key = title_key(title)
+    pdf_years = {}
+    for lbl, vals in rows or []:
+        yy = parse_academic_year(lbl)
+        if yy:
+            pdf_years[yy] = vals
     best, score = None, 0.0
-    for tk, tp, tn, headers, src, _dom in _templates():
+    for tk, tp, tn, headers, src, _dom, yrows in _templates():
         if tn != ncols:
             continue
-        s = difflib.SequenceMatcher(None, key, tk).ratio() + (0.05 if tp == part else 0)
+        sim = difflib.SequenceMatcher(None, key, tk).ratio()
+        if sim < 0.6:
+            continue
+        common = [y for y in pdf_years if y in yrows]
+        agree = total = 0
+        for y in common:
+            for a, b in zip(pdf_years[y], yrows[y]):
+                if a is not None and b is not None:
+                    total += 1
+                    agree += int(abs(a - b) < 0.5)
+        match = agree / total if total else None
+        s = sim + (0.05 if tp == part else 0) + (2 * match if match is not None else 0)
         if s > score:
             best, score = (headers, src), s
     return best if score >= 0.72 else None
@@ -116,6 +155,8 @@ def _parse_line(line: str) -> tuple[str, list[float | None]] | None:
             label_parts.append(t)
     label = " ".join(label_parts)
     label = re.sub(r"\.{2,}|…+", " ", label).strip(" .")
+    if label:
+        label += _marks_of(line)
     if not nums:
         return None
     # pdftotext keeps visual order: right-most column (the first logical one) comes last
@@ -148,7 +189,7 @@ def _parse_pages(pages: list[str], u: Unit, pdf: Path) -> list[RawTable]:
             if m and re.search(r"[آ-ی]{3,}", line) and len(line) > 15:
                 a, b = int(m.group(1)), int(m.group(2))
                 chapter, no = (a, b) if a >= b or a == 17 else (b, a)
-                title = f"{no}-{chapter}- " + line[m.end():].strip()
+                title = f"{no}-{chapter}- " + line[m.end():].strip() + _marks_of(raw)
                 base = title_key(title)
                 part = seen.get(base, -1) + 1
                 seen[base] = part
@@ -159,8 +200,10 @@ def _parse_pages(pages: list[str], u: Unit, pdf: Path) -> list[RawTable]:
             if cur is None:
                 continue
             nline = norm(line)
-            if nline.startswith("ماخذ") or nline.startswith("مأخذ") or re.match(r"^\)?\d\)", line.strip()):
-                cur["notes"].append(line)
+            rl = digits(unicodedata.normalize("NFKC", _BIDI.sub("", raw))).strip()
+            if nline.startswith("ماخذ") or nline.startswith("مأخذ") or re.match(r"^\)?\s*\d{1,2}\s*\)", rl):
+                mm = re.match(r"^\)?\s*(\d{1,2})\s*\)?", rl)
+                cur["notes"].append(f"{mm.group(1)}) {line}" if mm and not nline.startswith("ماخذ") else line)
                 continue
             if "سالنامه آماری" in line or "سالنامه آماري" in line:
                 continue
@@ -181,12 +224,21 @@ def _parse_pages(pages: list[str], u: Unit, pdf: Path) -> list[RawTable]:
             pending_label = []
             if not label and len(vals) == 1:
                 continue  # page number
-            if label and any(lbl == label for lbl, _ in cur["rows"]):
-                # the same row label again = the next physical part of the table (headers change!)
+            prev = [v for lbl, v in cur["rows"] if lbl == label] if label else []
+            if prev and prev[0] == vals:
+                continue  # a page continuation repeating the last national row: same columns, skip it
+            if prev:
+                # the same row label with other numbers = the next physical part (headers change!)
                 cur = {"title": cur["title"], "no": cur["no"], "part": cur["part"] + 1, "rows": [], "notes": []}
                 seen[title_key(cur["title"])] = cur["part"]
                 tables.append(cur)
             cur["rows"].append((label, vals))
+    # footnotes are printed once, after the last part: share them with every part of that title
+    by_title: dict[str, list[str]] = {}
+    for t in tables:
+        by_title.setdefault(title_key(t["title"]), []).extend(t["notes"])
+    for t in tables:
+        t["notes"] = list(dict.fromkeys(by_title[title_key(t["title"])]))
     out = []
     for t in tables:
         if not t["rows"]:
@@ -198,7 +250,7 @@ def _parse_pages(pages: list[str], u: Unit, pdf: Path) -> list[RawTable]:
         rows = [(lbl, v) for lbl, v in t["rows"] if len(v) == ncols]
         t["dropped_rows"] = [(lbl, len(v)) for lbl, v in t["rows"] if len(v) != ncols]
         dropped = len(t["rows"]) - len(rows)
-        tpl = find_template(t["title"], t["part"], ncols)
+        tpl = find_template(t["title"], t["part"], ncols, rows)
         headers, src = (tpl if tpl else ([""] * ncols, "none"))
         notes = t["notes"] + ([f"[etl] {dropped} row(s) dropped: token count != {ncols}: {t['dropped_rows'][:6]}"]
                               if dropped else [])

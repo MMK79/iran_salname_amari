@@ -37,39 +37,89 @@ def _text(el) -> str:
     return "".join(parts).strip()
 
 
+_SNAP = 80  # twips; grid columns narrower than this are layout slivers, not data columns
+
+
+def _int(el, attr: str, default: int) -> int:
+    try:
+        return int(el.get(f"{W}{attr}", default))
+    except (TypeError, ValueError):
+        return default
+
+
 def _table_grid(tbl) -> list[list[str]]:
-    grid: list[list[str]] = []
-    vorigin: dict[int, str] = {}
+    """Dense grid of a Word table, aligned by *horizontal position*.
+
+    Header and body rows often disagree on gridSpan (Word inserts 9-22 twip sliver
+    columns), so counting grid columns misaligns values and headers (seen in 1395).
+    We place every cell at its x-extent from <w:tblGrid>, snap boundaries that are
+    closer than _SNAP twips, and build the grid on the snapped boundaries.
+    """
+    gridcols = [_int(g, "w", 0) for g in tbl.findall(f"{W}tblGrid/{W}gridCol")]
+    xs = [0]
+    for w in gridcols:
+        xs.append(xs[-1] + max(w, 0))
+
+    def xpos(col: int) -> int:
+        return xs[min(col, len(xs) - 1)] if gridcols else col * 1000
+
+    rows: list[list[tuple[int, int, str, str | None]]] = []
     for tr in tbl.iterchildren(f"{W}tr"):
-        row: list[str] = []
-        col = 0
+        gb = tr.find(f"{W}trPr/{W}gridBefore")
+        col = _int(gb, "val", 0) if gb is not None else 0
+        cells = []
         for tc in tr.iterchildren(f"{W}tc"):
             tcpr = tc.find(f"{W}tcPr")
-            span = 1
-            vmerge = None
+            span, vmerge = 1, None
             if tcpr is not None:
                 gs = tcpr.find(f"{W}gridSpan")
                 if gs is not None:
-                    span = int(gs.get(f"{W}val", "1"))
+                    span = _int(gs, "val", 1)
                 vm = tcpr.find(f"{W}vMerge")
                 if vm is not None:
                     vmerge = vm.get(f"{W}val", "continue")
-            # nested tables: take only direct paragraphs' text
             txt = " ".join(_text(p) for p in tc.iterchildren(f"{W}p")).strip()
-            if vmerge == "continue":
-                txt = vorigin.get(col, "")
-            elif vmerge == "restart":
-                for k in range(span):
-                    vorigin[col + k] = txt
-            else:
-                for k in range(span):
-                    vorigin.pop(col + k, None)
-            for _ in range(span):
-                row.append(txt)
+            cells.append((xpos(col), xpos(col + span), txt, vmerge))
             col += span
+        rows.append(cells)
+    # snapped column boundaries
+    bounds = sorted({x for r in rows for c in r for x in (c[0], c[1])})
+    snapped: list[int] = []
+    for b in bounds:
+        if not snapped or b - snapped[-1] >= _SNAP:
+            snapped.append(b)
+    if len(snapped) < 2:
+        return []
+
+    def idx(x: int) -> int:
+        return min(range(len(snapped)), key=lambda i: abs(snapped[i] - x))
+
+    ncol = len(snapped) - 1
+    grid: list[list[str]] = []
+    vorigin: dict[int, str] = {}
+    for cells in rows:
+        row = [""] * ncol
+        for x0, x1, txt, vmerge in cells:
+            a, b = idx(x0), idx(x1)
+            if b <= a:
+                continue
+            if vmerge == "continue":
+                txt = vorigin.get(a, "")
+            for k in range(a, b):
+                if vmerge == "restart":
+                    vorigin[k] = txt
+                elif vmerge is None:
+                    vorigin.pop(k, None)
+                row[k] = txt
         grid.append(row)
-    width = max((len(r) for r in grid), default=0)
-    return [r + [""] * (width - len(r)) for r in grid]
+    # collapse columns that are the same cell in every row (a body cell spanning two header columns)
+    keep = [0]
+    for c in range(1, ncol):
+        if any(r[c] != r[keep[-1]] for r in grid):
+            keep.append(c)
+        else:
+            continue
+    return [[r[c] for c in keep] for r in grid]
 
 
 def read_blocks(path: str | Path) -> list[Para | Table]:
