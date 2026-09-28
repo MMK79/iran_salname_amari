@@ -1,0 +1,29 @@
+# Postgres 16 + ETL. The yearbook folder is mounted READ-ONLY.
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: edu
+      POSTGRES_PASSWORD: edu
+      POSTGRES_DB: edu
+    ports: ["5433:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U edu"]
+      interval: 3s
+      retries: 20
+  etl:
+    build: .
+    depends_on:
+      db: {condition: service_healthy}
+    environment:
+      DATABASE_URL: postgresql://edu:edu@db:5432/edu
+      SOURCE_DIR: /source
+    volumes:
+      - ${SOURCE_DIR:-/Volumes/MigMig/Programming/Datasets/Statistical Yearbook/Keshvari}:/source:ro
+      - ./.cache:/app/.cache          # doc->docx conversions and pdftotext output
+      - ./data:/app/data
+    profiles: ["etl"]
+volumes:
+  pgdata:
