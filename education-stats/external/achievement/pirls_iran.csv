@@ -1,0 +1,6 @@
+study,grade,subject,year,avg_scale_score,std_error,geography,source_url,retrieved,verified,note
+PIRLS,4,reading,2021,413,4.9,national,https://pirls2021.org/wp-content/uploads/2022/files/P21_2-trends-reading-achievement.pdf,2026-10-01,true,"Exhibit 2.2 trend table, PIRLS 2021 International Results; assessed one year later than scheduled (six-year trend from 2016)"
+PIRLS,4,reading,2016,428,4.0,national,https://pirls2021.org/wp-content/uploads/2022/files/P21_2-trends-reading-achievement.pdf,2026-10-01,true,"Exhibit 2.2 trend table, PIRLS 2021 International Results; regular PIRLS version; Iran also took the Literacy version"
+PIRLS,4,reading,2011,457,2.9,national,https://pirls2021.org/wp-content/uploads/2022/files/P21_2-trends-reading-achievement.pdf,2026-10-01,true,"Exhibit 2.2 trend table, PIRLS 2021 International Results; "
+PIRLS,4,reading,2006,421,3.2,national,https://pirls2021.org/wp-content/uploads/2022/files/P21_2-trends-reading-achievement.pdf,2026-10-01,true,"Exhibit 2.2 trend table, PIRLS 2021 International Results; "
+PIRLS,4,reading,2001,414,4.3,national,https://pirls2021.org/wp-content/uploads/2022/files/P21_2-trends-reading-achievement.pdf,2026-10-01,true,"Exhibit 2.2 trend table, PIRLS 2021 International Results; "
