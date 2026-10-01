@@ -3,9 +3,10 @@
 
     uv run python scripts/export_site.py [--db data/out/edu.duckdb] [--out exports/site]
 
-Writes provinces.json, k12.json, he.json, provenance.json, meta.json.
+Writes provinces.json, k12.json, he.json, outcomes.json, relations.json, provenance.json, meta.json.
 Everything is read from the SQL views (v_k12_best, v_k12_students_per_teacher,
-v_k12_core_students_per_teacher, v_he_best, v_he_students_per_staff); no cleaning is redone here.
+v_k12_core_students_per_teacher, v_he_best, v_he_students_per_staff, v_k12_pass_rate, v_k12_class_size,
+v_k12_completion, v_he_graduation_ratio); no cleaning is redone here.
 
 Conventions
 * A missing value is absent or JSON null; a zero is never used for "not available".
@@ -23,6 +24,8 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 import duckdb
+import numpy as np
+import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 GEOJSON = ROOT / "dashboard" / "data" / "provinces.geojson"
@@ -435,6 +438,254 @@ def he_json(con) -> tuple[dict, dict]:
     return doc, prov
 
 
+
+# ------------------------------------------------------------------ outcomes + relations
+PASS_LEVELS = ["primary", "lower_secondary"]
+REL_MIN_PROVINCES = 25  # a cross-province correlation is only computed for years with >= this many units
+# Specs for the pooled within-province (province + year fixed effects) regressions.
+FE_SPECS = {
+    "all_valid_years": "every year x level with a published pass rate",
+    "excl_reform_1391_93": "drops 1391-1393 (5-3-4 -> 6-3-3 reform moves grades between levels)",
+    "from_1394": "1394 onwards only: one school system and the same teacher definition (moallem)",
+}
+OUTCOME_FLAGS = ("school_reform_1391_93", "pandemic_1399", "pass_year_relabelled_1398")
+
+
+def _opt(v):
+    return _num(v)
+
+
+def _round(v, nd=4):
+    if v is None:
+        return None
+    try:
+        if math.isnan(v) or math.isinf(v):
+            return None
+    except TypeError:
+        return None
+    return round(float(v), nd)
+
+
+def outcomes_json(con) -> dict:
+    data: dict[int, dict] = {}
+
+    def prov(y, p):
+        return data.setdefault(y, {}).setdefault(p, {})
+
+    pass_withheld: dict[int, set] = {}
+    for y, p, lv, g, passed, st, rate, status in con.execute(
+        "select year_sh, province_code, level, gender, passed, students, pass_rate, status from v_k12_pass_rate"
+    ).fetchall():
+        slot = prov(y, p).setdefault("pass_rate", {}).setdefault(lv, {})
+        if rate is None:
+            slot[g] = {"pass_rate": None, "status": status}
+            if status == "year_unreliable":
+                pass_withheld.setdefault(y, set()).add(lv)
+        else:
+            slot[g] = {
+                "passed": _num(passed),
+                "students": _num(st),
+                "pass_rate": _round(rate),
+                "status": status,
+            }
+    for y, p, lv, st, cl, status in con.execute(
+        "select year_sh, province_code, level, students, classes, status from v_k12_class_size"
+    ).fetchall():
+        rec = {"students": _num(st), "classes": _num(cl), "students_per_class": _ratio(st, cl)}
+        if status != "ok":
+            rec = {"students_per_class": None, "status": status}
+        prov(y, p).setdefault("class_size", {})[lv] = rec
+    for y, p, g, gr, st, rate, status in con.execute(
+        "select year_sh, province_code, gender, graduates, students, completion_proxy, status from v_k12_completion"
+    ).fetchall():
+        rec = (
+            {"graduates": _num(gr), "students": _num(st), "completion_proxy": _round(rate), "status": status}
+            if status == "ok"
+            else {"completion_proxy": None, "status": status}
+        )
+        prov(y, p).setdefault("completion_proxy", {})[g] = rec
+    for y, p, g, gr, st, rate, basis, status in con.execute(
+        "select year_sh, province_code, gender, graduates, students, graduation_ratio, basis, status "
+        "from v_he_graduation_ratio"
+    ).fetchall():
+        rec = (
+            {
+                "graduates": _num(gr),
+                "students": _num(st),
+                "graduation_ratio": _round(rate),
+                "basis": basis,
+                "status": status,
+            }
+            if status == "ok"
+            else {"graduation_ratio": None, "basis": basis, "status": status}
+        )
+        prov(y, p).setdefault("he_graduation_ratio", {})[g] = rec
+
+    years = []
+    for y in sorted(data):
+        flags = []
+        if 1391 <= y <= 1393:
+            flags.append("school_reform_1391_93")
+        if y == 1399:
+            flags.append("pandemic_1399")
+        if y == 1398:
+            flags.append("pass_year_relabelled_1398")
+        if y <= 1393:
+            flags.append("teacher_proxy_educational_staff")
+        if y <= 1392:
+            flags.append("coverage_excl_azad_vs_azad_separate")
+        else:
+            flags.append("coverage_incl_azad_fulltime_staff")
+        if pass_withheld.get(y):
+            flags.append("pass_rate_provinces_withheld")
+        years.append(
+            {
+                "year_sh": y,
+                "n_units": len([p for p in data[y] if p != "IRN"]),
+                "flags": flags,
+                "pass_rate_withheld_levels": sorted(pass_withheld.get(y, [])),
+            }
+        )
+    return {
+        "levels_pass_rate": PASS_LEVELS,
+        "levels_class_size": K12_LEVELS,
+        "genders": GENDERS,
+        "measures": {
+            "pass_rate": "passed / students, same level, gender, province, year; regular programme, adults "
+            "excluded; null + status when withheld (status implausible_rate | year_unreliable). "
+            "data[year][prov].pass_rate[level][gender]",
+            "class_size": "students / classes (regular programme); data[year][prov].class_size[level]",
+            "completion_proxy": "upper-secondary graduates / upper-secondary students (a throughput proxy, "
+            "NOT a completion rate); data[year][prov].completion_proxy[gender]; only some years exist",
+            "he_graduation_ratio": "higher-education graduates / students, all degrees (a throughput proxy, "
+            "NOT a completion rate); basis = all_reported | azad_plus_excl_azad | mixed; "
+            "data[year][prov].he_graduation_ratio[gender]",
+        },
+        "years": years,
+        "data": {
+            str(y): {p: _clean(v) for p, v in d.items()} for y, d in sorted(data.items())
+        },
+    }
+
+
+def _cluster_fe(df: pd.DataFrame, x: str, y: str) -> dict | None:
+    """OLS of y on x with province and year dummies; CR1 standard errors clustered by province."""
+    d = df[["province_code", "year_sh", x, y]].dropna()
+    cnt = d.groupby("province_code")["year_sh"].transform("count")
+    d = d[cnt >= 2]
+    ys = d["year_sh"].nunique()
+    g = d["province_code"].nunique()
+    if len(d) < 30 or ys < 3 or g < 5:
+        return None
+    X = pd.concat(
+        [
+            d[[x]].reset_index(drop=True),
+            pd.get_dummies(d["province_code"], drop_first=True, dtype=float).reset_index(drop=True),
+            pd.get_dummies(d["year_sh"], drop_first=True, dtype=float).reset_index(drop=True),
+        ],
+        axis=1,
+    )
+    X.insert(0, "const", 1.0)
+    Xm = X.to_numpy(float)
+    yv = d[y].to_numpy(float)
+    n, k = Xm.shape
+    xtx_inv = np.linalg.pinv(Xm.T @ Xm)
+    beta = xtx_inv @ Xm.T @ yv
+    u = yv - Xm @ beta
+    meat = np.zeros((k, k))
+    for _, idx in d.reset_index(drop=True).groupby("province_code").indices.items():
+        sg = Xm[idx].T @ u[idx]
+        meat += np.outer(sg, sg)
+    adj = (g / (g - 1)) * ((n - 1) / (n - k))
+    V = adj * xtx_inv @ meat @ xtx_inv
+    coef, se = float(beta[1]), float(math.sqrt(max(V[1, 1], 0.0)))
+    out = {
+        "coef": _round(coef, 6),
+        "se_cluster": _round(se, 6),
+        "t": _round(coef / se, 3) if se else None,
+        "n": int(n),
+        "n_provinces": int(g),
+        "n_years": int(ys),
+        "years": [int(d["year_sh"].min()), int(d["year_sh"].max())],
+    }
+    try:  # optional: t(g-1) interval; scipy ships with the analysis dependency group
+        from scipy import stats
+
+        crit = float(stats.t.ppf(0.975, g - 1))
+        out["ci95"] = [_round(coef - crit * se, 6), _round(coef + crit * se, 6)]
+        out["p_value"] = _round(float(2 * stats.t.sf(abs(coef / se), g - 1)), 4) if se else None
+    except ImportError:
+        out["ci95"] = None
+        out["p_value"] = None
+    return out
+
+
+def relations_json(con) -> dict:
+    df = con.execute(
+        """select t.year_sh, t.province_code, t.level, t.students_per_teacher, t.teacher_definition,
+                  c.students_per_class, p.pass_rate
+           from v_k12_students_per_teacher t
+           left join v_k12_class_size c on c.year_sh=t.year_sh and c.province_code=t.province_code
+                and c.level=t.level and c.status='ok'
+           left join v_k12_pass_rate p on p.year_sh=t.year_sh and p.province_code=t.province_code
+                and p.level=t.level and p.gender='total'
+           where t.province_code <> 'IRN' and t.level in ('primary','lower_secondary')"""
+    ).df()
+    pairs = {
+        "students_per_teacher_vs_pass_rate": ("students_per_teacher", "pass_rate"),
+        "class_size_vs_pass_rate": ("students_per_class", "pass_rate"),
+    }
+    cross: dict = {}
+    for lv in PASS_LEVELS:
+        for name, (x, y) in pairs.items():
+            rows = []
+            for yr, g in df[df.level == lv].groupby("year_sh"):
+                d = g[[x, y]].dropna()
+                if len(d) < REL_MIN_PROVINCES:
+                    continue
+                rows.append(
+                    {
+                        "year_sh": int(yr),
+                        "n": int(len(d)),
+                        "pearson": _round(d[x].corr(d[y], method="pearson")),
+                        "spearman": _round(d[x].corr(d[y], method="spearman")),
+                        "flags": [f for f, ok in (("school_reform_1391_93", 1391 <= yr <= 1393),
+                                                  ("pandemic_1399", yr == 1399),
+                                                  ("teacher_proxy_educational_staff", yr <= 1393)) if ok],
+                    }
+                )
+            cross.setdefault(name, {})[lv] = rows
+
+    fe: dict = {}
+    for lv in PASS_LEVELS:
+        d_lv = df[df.level == lv]
+        for name, (x, y) in pairs.items():
+            for spec in FE_SPECS:
+                d = d_lv
+                if spec == "excl_reform_1391_93":
+                    d = d[~d.year_sh.between(1391, 1393)]
+                elif spec == "from_1394":
+                    d = d[d.year_sh >= 1394]
+                est = _cluster_fe(d, x, y)
+                fe.setdefault(name, {}).setdefault(lv, {})[spec] = est
+    return {
+        "interpretation": "ASSOCIATION, not effect. Correlations are ecological (province aggregates) and "
+        "confounded by urbanisation, income, the teacher-definition break at 1394, composition of "
+        "provinces, and data-definition changes. Primary pass rates are high and low-variance "
+        "(descriptive evaluation), so primary is a weak outcome.",
+        "min_provinces_per_year": REL_MIN_PROVINCES,
+        "gender": "total",
+        "cross_province_by_year": cross,
+        "within_province_fixed_effects": {
+            "model": "pass_rate_it = a_province + b_year + beta * x_it + e_it, OLS with dummies, standard "
+            "errors CR1-clustered by province; coef = change in pass rate (a fraction; x100 for "
+            "percentage points) per +1 unit of x",
+            "specs": FE_SPECS,
+            "results": fe,
+        },
+    }
+
+
 # ------------------------------------------------------------------ coverage / meta
 def _coverage(k12: dict, he: dict) -> dict:
     cov: dict = {"k12": {}, "he": {}}
@@ -514,6 +765,19 @@ FLAG_DEFINITIONS = {
         "Higher education up to 1392: yearbooks print non-Azad institutions (university_type excl_azad, "
         "full-time AND hourly staff) and Islamic Azad University (azad) separately. Not comparable with "
         "1393+."
+    ),
+    "pandemic_1399": (
+        "Academic year 1399-1400 (COVID-19 school closures): the national primary pass rate drops to 0.926 "
+        "from 0.99 the year before. Read pass rates of this year as exceptional."
+    ),
+    "pass_year_relabelled_1398": (
+        "The 1398 province pass counts come from the 1399 yearbook PDF table 17-17#1, which has no printed "
+        "year labels and was labelled 1399 by the parser; its province rows sum to the national 1398 value "
+        "printed in the 1400 yearbook, so it is relabelled to 1398 in v_k12_passed_best."
+    ),
+    "pass_rate_provinces_withheld": (
+        "Province pass rates of the listed levels are not published for this year (>= 2 provinces with "
+        "rates outside 0.5-1; source table misaligned). Individual implausible rows are also withheld."
     ),
     "coverage_incl_azad_fulltime_staff": (
         "Higher education from 1393: all_reported includes Islamic Azad University and counts full-time "
@@ -601,6 +865,10 @@ def meta_json(k12, he, generated_at) -> dict:
             "k12.json": "data[year][province][level][gender] = {students, teachers, students_per_teacher}",
             "he.json": "data[year][province|null][university_type][degree_level][gender] = "
             "{students, academic_staff, students_per_staff}; province null = quarantined",
+            "outcomes.json": "data[year][province].{pass_rate[level][gender], class_size[level], "
+            "completion_proxy[gender], he_graduation_ratio[gender]}; withheld values are null with a status",
+            "relations.json": "cross_province_by_year (Pearson/Spearman, n >= 25) and "
+            "within_province_fixed_effects (province + year FE, cluster-robust); association only",
             "provenance.json": "datasets[k12|he][year] = list of 'source_file :: source_table'",
         },
     }
@@ -617,6 +885,8 @@ def export(db: Path, out: Path) -> dict[str, int]:
     con = duckdb.connect(str(db), read_only=True)
     k12, k_prov = k12_json(con)
     he, h_prov = he_json(con)
+    outcomes = outcomes_json(con)
+    relations = relations_json(con)
     con.close()
     now = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
     provenance = {
@@ -631,6 +901,8 @@ def export(db: Path, out: Path) -> dict[str, int]:
         ("provinces.json", provinces_json()),
         ("k12.json", k12),
         ("he.json", he),
+        ("outcomes.json", outcomes),
+        ("relations.json", relations),
         ("provenance.json", provenance),
         ("meta.json", meta_json(k12, he, now)),
     ]:

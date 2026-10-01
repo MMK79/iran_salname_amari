@@ -59,3 +59,17 @@ Flag and caveat definitions are in `meta.json`. Measured: gender splits are stud
 academic staff are totals); HE per-type and per-degree figures are national only; HE academic staff for
 1402 are absent from the views (so no 1402 ratio, national or province). Per-university counts are not
 in the yearbooks and are not exported.
+
+## Outcomes and relations (2026-10-01)
+
+Two more files in `exports/site/`: `outcomes.json` (per year x province incl. IRN: `pass_rate[level][gender]`
+for primary and lower secondary, `class_size[level]`, `completion_proxy[gender]`,
+`he_graduation_ratio[gender]`; withheld values are absent with a `status`; year `flags` are defined in
+`meta.json`) and `relations.json` (per-year cross-province Pearson/Spearman and n for years with >= 25
+provinces, pooled province + year fixed-effects estimates in three specs). Suggested UI: a second map layer
+or small scatter "students per teacher vs pass rate" for the selected year (grey out years with no
+correlation: 1386-88, 1391 lower secondary, 1400, 1402), the within-province estimates as a footnote, and
+always the wording **association, not effect**. Show the flags `school_reform_1391_93`, `pandemic_1399`,
+`pass_year_relabelled_1398`, `pass_rate_provinces_withheld`. Primary pass rates are near ceiling and
+low-variance: lead with lower secondary. Completion proxy and HE graduation ratio are throughput proxies,
+label them so.

@@ -1,0 +1,35 @@
+National (primary): students/teacher, students/class, pass rate
+  primary
+    1380: spt 24.3  class 24.0  pass 0.955
+    1385: spt 21.8  class 20.9  pass 0.965
+    1390: spt 24.2  class 22.0  pass 0.980
+    1394: spt 27.2  class 23.5  pass 0.969
+    1398: spt 36.2  class 23.6  pass 0.990
+    1399: spt 38.0  class 23.7  pass 0.926
+    1401: spt 33.7  class 24.4  pass 0.976
+  lower_secondary
+    1380: spt 27.1  class 28.7  pass 0.876
+    1385: spt 21.8  class 23.9  pass 0.900
+    1390: spt 19.5  class 24.4  pass 0.967
+    1394: spt 21.4  class 24.3  pass 0.945
+    1398: spt 26.4  class 25.2  pass 0.975
+    1399: spt 27.7  class 25.8  pass 0.949
+    1401: spt 29.2  class 26.0  pass 0.955
+
+Scatter latest good year: {'primary': {'year': 1401, 'n': 31, 'r': -0.1316989068915728, 'slope_pp': np.float64(-0.02688372081320534)}, 'lower_secondary': {'year': 1401, 'n': 31, 'r': -0.2010716179198324, 'slope_pp': np.float64(-0.06058172236375782)}}
+
+cluster-FE cross-check vs statsmodels (students_per_teacher -> pass_rate, all_valid_years):
+  primary          ours coef -0.001279 se 0.000379 | statsmodels coef -0.001279 se 0.000379
+  lower_secondary  ours coef -0.001673 se 0.000618 | statsmodels coef -0.001673 se 0.000618
+
+Cross-province Pearson: mean over years by level (spt vs pass rate)
+  primary: n_years=18, mean r=-0.23, 1380-85 mean -0.47, 1392+ mean -0.09
+  lower_secondary: n_years=17, mean r=-0.25, 1380-85 mean -0.46, 1392+ mean -0.17
+
+Within-province FE (pass rate on students per teacher; coef in percentage points per +1 student/teacher)
+  primary          all_valid_years      -0.128 pp (se 0.038, p=0.002), n=540, provinces=32, years [1380, 1401]
+  primary          excl_reform_1391_93  -0.125 pp (se 0.040, p=0.004), n=448, provinces=32, years [1380, 1401]
+  primary          from_1394            -0.033 pp (se 0.045, p=0.4722), n=217, provinces=31, years [1394, 1401]
+  lower_secondary  all_valid_years      -0.167 pp (se 0.062, p=0.011), n=511, provinces=32, years [1380, 1401]
+  lower_secondary  excl_reform_1391_93  -0.174 pp (se 0.063, p=0.01), n=449, provinces=32, years [1380, 1401]
+  lower_secondary  from_1394            +0.044 pp (se 0.101, p=0.664), n=217, provinces=31, years [1394, 1401]

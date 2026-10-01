@@ -126,3 +126,36 @@ New entrants 1.18 M (1393) -> 0.82 M (1397) -> 1.09 M (1402); graduates 0.86 M (
 * 1370-1379 province data: not parsed (plain-text HTML, legacy-font PDFs).
 * Province HE ratios mislead where students study at Azad/Payame Noor branches staffed from
   elsewhere (e.g. Mazandaran, Gilan): read with university-type shares.
+
+## 5. Outcomes next to the resource ratios (2026-10-01)
+
+Views `v_k12_pass_rate`, `v_k12_class_size`, `v_k12_completion`, `v_he_graduation_ratio`; exports
+`outcomes.json`, `relations.json`; analysis and plain-language reading in `analysis/README.md`.
+**Association only; no causal claim.**
+
+* **Pass rate** (promoted / enrolled, regular programme, adults excluded from both): national primary
+  0.955 (1380) -> 0.965 (1385) -> 0.980 (1390) -> 0.969 (1394) -> 0.990 (1398) -> 0.926 (1399, COVID) -> 0.976
+  (1401); lower secondary 0.876 (1380) -> 0.967 (1390) -> 0.945 (1394) -> 0.955 (1401). Province sums equal
+  the national rows. *measured*
+* **Usable years.** Province pass rates (27-31 units): 1380-85, 1389-90, 1392-99, 1401 (primary also 1391
+  minus one row; 1385 primary minus one row; lower secondary 1391 withheld). Withheld: 1386 and 1387 (source
+  columns misaligned, rates of 0.07 to 6.2), 1391 lower secondary (4 provinces > 1, reform year). Not
+  available at province level: 1388 and 1400 (national only), 1370-1379. Completion proxy: provinces 1390,
+  1392-95, 1397, 1399 (1396 prints 53,544 national graduates, withheld). HE graduation ratio: provinces
+  1380-84, 1387, 1390-97, 1401. *measured*
+* **Source defect found and repaired:** the 1399 PDF table 17-17#1 is the 1398 table (province rows sum to the
+  national 1398 value, 8,213,495 primary passes) but was labelled 1399 and masked the 1399 values printed
+  in the 1400 yearbook. Relabelled in `v_k12_passed_best`; this adds 1398 province pass rates. *measured*
+* **Cross-province correlation of students per teacher with pass rate** (years with >= 25 provinces):
+  1380-85 clearly negative (primary r -0.29 to -0.65, lower secondary -0.24 to -0.62), 1392+ near zero or
+  mildly negative (1401: -0.13 primary, -0.20 lower secondary), sign flip in 1390. Class size: no consistent
+  relation. *measured; ecological*
+* **Within-province (province + year fixed effects, SE clustered by province):** pass rate falls by 0.13 pp
+  (primary, SE 0.04) and 0.17 pp (lower secondary, SE 0.06) per +1 student per teacher over 1380-1401, but
+  from 1394 on only: -0.03 pp (SE 0.045) and +0.04 pp (SE 0.10), not distinguishable from zero. So there is
+  no reliable evidence in the post-1394 data that the rise in students per teacher went with lower pass
+  rates, and the pooled estimate is dominated by the proxy/catch-up period. *(uncertain; association)*
+* **Doubtful:** primary pass rates are near-ceiling (descriptive evaluation); pass rate is promotion, not
+  learning; completion and HE graduation ratios are throughput proxies (three/four-year cohorts, shrinking and
+  growing intakes, series break at 1393) and are not completion rates; HE ratios 1385-86, 1388-89 fail
+  plausibility and are withheld.

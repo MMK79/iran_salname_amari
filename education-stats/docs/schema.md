@@ -19,3 +19,6 @@ Views: `v_k12_clean`, `v_k12_best` (one value per key), `v_k12_level_panel`,
 `v_k12_students_per_teacher`, `v_k12_core_students_per_teacher`, `v_k12_growth`,
 `v_k12_province_inequality`, `v_he_clean`, `v_he_best`, `v_he_students`, `v_he_staff`,
 `v_he_students_per_staff`, `v_he_degree_mix`, `v_he_growth`.
+Outcome views (2026-10-01): `v_k12_passed_best` (best `passed` value; repairs the 1399-PDF table that is
+the 1398 one, see views.sql), `v_k12_pass_rate`, `v_k12_class_size`, `v_k12_completion` (proxy),
+`v_he_graduation_ratio` (proxy). Each carries a `status` column (`ok` | `implausible*` | `year_unreliable`).
