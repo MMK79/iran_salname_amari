@@ -50,3 +50,12 @@ with its own validated steps; Persian labels RTL.
 * Faculty per province *by university type* is not in the yearbooks after 1392 - not shown.
 * Add a "definitions changed here" marker on the time axis (1391-93 school reform, 1394 teacher
   definition, 1393 HE coverage).
+
+## Static-site export (2026-10-01)
+
+`make export-site` (`scripts/export_site.py`, tested by `tests/test_export_site.py`) writes
+`exports/site/{provinces,k12,he,provenance,meta}.json` from the same views the dashboard reads.
+Flag and caveat definitions are in `meta.json`. Measured: gender splits are students only (teachers and
+academic staff are totals); HE per-type and per-degree figures are national only; HE academic staff for
+1402 are absent from the views (so no 1402 ratio, national or province). Per-university counts are not
+in the yearbooks and are not exported.

@@ -1,4 +1,4 @@
-# make up | etl | load | test | lint | dashboard | etl-local
+# make up | etl | load | test | lint | dashboard | etl-local | export-site
 SOURCE_DIR ?= /Volumes/MigMig/Programming/Datasets/Statistical Yearbook/Keshvari
 PG ?= postgresql://edu:edu@localhost:5433/edu
 export SOURCE_DIR
@@ -22,6 +22,9 @@ load:          ## (re)load parquet outputs into Postgres
 test:
 	uv run pytest -q
 
+export-site:  ## static-site JSON (map paths, K-12, HE, provenance, meta) -> exports/site/
+	uv run python scripts/export_site.py
+
 lint:
 	uv run ruff check etl tests dashboard
 
@@ -30,4 +33,4 @@ dashboard:     ## Streamlit prototype on http://localhost:8501 (reads DuckDB or 
 
 down:
 	docker compose down
-.PHONY: up etl etl-local load test lint dashboard down
+.PHONY: up etl etl-local load test lint dashboard export-site down

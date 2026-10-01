@@ -28,8 +28,9 @@ make up            # Postgres 16 on localhost:5433 (user/pass/db: edu), volume "
 make etl           # in Docker: convert .doc -> .cache, extract, validate, load Postgres
 # or on the host:
 make etl-local     # same; loads Postgres if it is up, else DuckDB data/out/edu.duckdb
-make test          # pytest (17 tests)
+make test          # pytest (24 tests)
 make dashboard     # Streamlit prototype on http://localhost:8501
+make export-site   # static JSON for a website map -> exports/site/ (scripts/export_site.py)
 ```
 
 Step by step: `scripts/convert_docs.sh 4` -> `uv run python -m etl.run extract [--years 1388-1402]`
@@ -46,6 +47,7 @@ etl/extract/   docx (fast lxml, x-position grid), html grid, PDF text (pdftotext
 etl/           normalize (Persian digits/letters), provinces, terms (mapping), coverage (footnotes),
                facts, validate, load, docs, run (CLI)
 sql/           schema.sql, views.sql (derived ratios, growth, inequality)
+scripts/       convert_docs.sh, export_site.py (provinces/k12/he/provenance/meta JSON for the site)
 dashboard/     app.py (Streamlit + Plotly), data/provinces.geojson (geoBoundaries, ODbL)
 docs/          inventory, schema, mappings, provinces, validation, findings, dashboard-spec
 ```
