@@ -159,3 +159,68 @@ Views `v_k12_pass_rate`, `v_k12_class_size`, `v_k12_completion`, `v_he_graduatio
   learning; completion and HE graduation ratios are throughput proxies (three/four-year cohorts, shrinking and
   growing intakes, series break at 1393) and are not completion rates; HE ratios 1385-86, 1388-89 fail
   plausibility and are withheld.
+
+## 6. TIMSS 2023 microdata: class size vs achievement (2026-10-01)
+
+Reproduce: `uv run --group analysis python analysis/timss2023_class_size.py` (reads the public-use TIMSS 2023
+Iran files from `$TIMSS_IRAN_DIR`, default `/Volumes/MigMig/Personal/Research/Iran Achievement Data/`; the
+microdata is not in the repo). Writes `analysis/figures/timss2023_class_size_*.png` and
+`exports/site/timss_class_size.json`; test `tests/test_timss_class_size.py`.
+
+**Question:** do Iranian students in larger classes score lower in maths and science? **Association only.**
+
+### What is measured
+* **Class size:** teacher-reported "number of students in the class": `ATBG10A` (grade 4, teacher file ATG;
+  999 = omitted, dropped) and `BTBG10` (grade 8; `BTM` file for maths, `BTS` for science). Linked to students
+  through the student-teacher link files AST/BST (`IDTEACH`, `IDLINK`).
+* **Score:** TIMSS scale scores, 5 plausible values (`ASMMAT01-05`, `ASSSCI01-05`, `BSMMAT01-05`, `BSSSCI01-05`),
+  combined with Rubin's rules. **Weight:** `MATWGT` / `SCIWGT` (teacher-linked analyses, User Guide).
+  **SE:** jackknife repeated replication with `JKZONE`/`JKREP`; the Iran files have 112 zones (not 75), so all
+  zones are used (the Technical Report chapter 13 is not in the downloaded material, so the 2x/0x JRR2 convention
+  is the standard IDB Analyzer variant, applied by us, not checked against the Analyzer).
+* **Controls:** home resources (`ASBGHRL` G4 / `BSBGHER` G8 scale), gender (`ITSEX`), school location
+  (`ACBG05B`/`BCBG05B`, 5 categories), principal-reported emphasis on academic success (`ACBGEAS`/`BCBGEAS`),
+  instruction affected by resource shortage (`ACBGMRS`|`ACBGSRS` / `BCBGMRS`|`BCBGSRS`), school SES composition
+  (`ACDGSBC`/`BCDGSBC`). Omitted codes (999999 in home resources, 9 in location) set to missing.
+* **Students per teacher: not derivable.** The Iran school/teacher files carry no school enrolment or teacher count.
+* About 214-221 classes (and as many schools) per grade, 5.9-6.2 thousand students.
+
+### Results (mean score, SE in brackets)
+
+| Grade / subject | <=20 | 21-25 | 26-30 | 31-35 | >35 |
+|---|---|---|---|---|---|
+| G4 maths | 410 (10) | 441 (11) | 429 (8) | 414 (7) | 410 (10) |
+| G4 science | 417 (11) | 454 (12) | 443 (8) | 427 (9) | 422 (11) |
+| G8 maths | 405 (8) | 426 (14) | 438 (8) | 427 (7) | 414 (7) |
+| G8 science | 391 (12) | 418 (12) | 430 (9) | 422 (6) | 423 (8) |
+
+| Slope, points per +5 students (SE) | n students (all / complete controls) | no controls | no controls, controls sample | with controls |
+|---|---|---|---|---|
+| G4 math | 5855 / 5372 | -2.3 (2.5) | -1.8 (2.5) | -2.8 (2.9) |
+| G4 science | 5855 / 5372 | -1.8 (2.7) | -1.4 (2.6) | -2.8 (3.1) |
+| G8 math | 6158 / 5935 | +0.7 (1.5) | +0.5 (1.5) | -0.2 (1.5) |
+| G8 science | 6091 / 5896 | +2.2 (3.0) | +2.1 (3.0) | +1.0 (2.0) |
+
+### In plain language
+1. **There is no detectable penalty from larger classes.** The regression slopes are small and all within
+   about one standard error of zero (G4: -2 points per +5 students, SE 2.5-3; G8: between -0.2 and +2). *measured*
+2. **The band means are not monotonic.** The smallest classes (<=20) have the *lowest* or near-lowest scores in
+   grades 4 and 8; the best scores are in 21-25 (G4) and 26-30 (G8) students. In G4 means then fall by roughly
+   20 points from 21-25 to >35 (maths 441 -> 410), but with SEs of 7-11 per band this is borderline. *measured; weak*
+3. **Controls change little.** Adding home resources, gender, location, school emphasis, resource shortage and
+   school SES moves the slopes by roughly one point (G4 maths -1.8 -> -2.8; G8 maths +0.5 -> -0.2); none become
+   significant. The change is not a clean "shrinkage" because the unadjusted slopes are already near zero. *measured*
+4. **Larger classes are urban:** the weighted share of students in urban/suburban schools rises from 19% (<=20)
+   to 73% (>35) in grade 4 and 40% to 70% in grade 8 (`share_urban_or_suburban` in the JSON); small classes are
+   mostly rural and low-scoring. This is the selection that makes the raw band pattern hard to read. *measured*
+
+### Caveats
+* Association, not effect: no variable assigns class size independently of school type, place or enrolment.
+* Class size is one teacher-reported number per teacher; reporting error and rounding (30, 35) are likely.
+* Effective sample is about 220 classes per grade, so the SEs are large; "no effect" is not shown, only that
+  effects larger than roughly 5-6 points per +5 students are unlikely at 95%. *(inferred from the SEs)*
+* TIMSS is nationally representative, not province-representative; no province identifier exists.
+* Controls may be partly on the causal path (rich urban schools have larger classes); adjusting for them is not
+  guaranteed to remove bias.
+* Class size here is the grade-4 class or the grade-8 maths/science class, not the school-level pupil-teacher ratio
+  in the yearbook; the two are not interchangeable.
