@@ -1,0 +1,2718 @@
+openalex_id,name,province_code,year,works,citations,intl_works,ai_works,edu_works
+I23946033,University of Tehran,THR,2000,280,4011,54,5,2
+I23946033,University of Tehran,THR,2001,291,6902,73,13,3
+I23946033,University of Tehran,THR,2002,333,7619,89,12,1
+I23946033,University of Tehran,THR,2003,482,13492,120,17,0
+I23946033,University of Tehran,THR,2004,670,14274,140,33,6
+I23946033,University of Tehran,THR,2005,912,21878,165,23,10
+I23946033,University of Tehran,THR,2006,1280,37339,238,40,8
+I23946033,University of Tehran,THR,2007,1985,56785,316,47,14
+I23946033,University of Tehran,THR,2008,2600,68694,393,69,15
+I23946033,University of Tehran,THR,2009,2946,69324,421,75,28
+I23946033,University of Tehran,THR,2010,3719,82026,493,102,29
+I23946033,University of Tehran,THR,2011,4887,85535,605,127,43
+I23946033,University of Tehran,THR,2012,5788,92653,682,141,73
+I23946033,University of Tehran,THR,2013,6611,97031,855,175,79
+I23946033,University of Tehran,THR,2014,7575,116367,987,192,85
+I23946033,University of Tehran,THR,2015,8350,118707,1046,205,80
+I23946033,University of Tehran,THR,2016,8777,136700,1212,199,115
+I23946033,University of Tehran,THR,2017,9484,149115,1325,197,132
+I23946033,University of Tehran,THR,2018,10188,163828,1580,269,160
+I23946033,University of Tehran,THR,2019,11019,171578,1903,274,150
+I23946033,University of Tehran,THR,2020,11396,180114,2257,303,163
+I23946033,University of Tehran,THR,2021,10384,150005,2424,276,143
+I23946033,University of Tehran,THR,2022,6243,124766,2481,238,100
+I23946033,University of Tehran,THR,2023,5594,83421,2260,215,94
+I23946033,University of Tehran,THR,2024,5559,56188,2196,233,68
+I23946033,University of Tehran,THR,2025,6243,25228,2191,296,121
+I110525433,"Islamic Azad University, Tehran",THR,2000,217,663,6,7,10
+I110525433,"Islamic Azad University, Tehran",THR,2001,46,583,3,0,0
+I110525433,"Islamic Azad University, Tehran",THR,2002,87,3248,8,3,0
+I110525433,"Islamic Azad University, Tehran",THR,2003,113,3942,4,5,0
+I110525433,"Islamic Azad University, Tehran",THR,2004,170,4065,16,5,0
+I110525433,"Islamic Azad University, Tehran",THR,2005,260,7873,30,11,2
+I110525433,"Islamic Azad University, Tehran",THR,2006,338,7949,27,10,1
+I110525433,"Islamic Azad University, Tehran",THR,2007,434,12033,42,6,4
+I110525433,"Islamic Azad University, Tehran",THR,2008,794,16008,76,23,3
+I110525433,"Islamic Azad University, Tehran",THR,2009,1139,22645,143,35,6
+I110525433,"Islamic Azad University, Tehran",THR,2010,1694,36730,235,46,19
+I110525433,"Islamic Azad University, Tehran",THR,2011,3098,53741,343,104,46
+I110525433,"Islamic Azad University, Tehran",THR,2012,4185,73996,523,177,66
+I110525433,"Islamic Azad University, Tehran",THR,2013,4604,79768,498,165,83
+I110525433,"Islamic Azad University, Tehran",THR,2014,5338,82680,581,218,104
+I110525433,"Islamic Azad University, Tehran",THR,2015,5868,91860,674,253,106
+I110525433,"Islamic Azad University, Tehran",THR,2016,6750,95919,734,248,143
+I110525433,"Islamic Azad University, Tehran",THR,2017,7390,103131,816,220,124
+I110525433,"Islamic Azad University, Tehran",THR,2018,7835,103131,831,217,153
+I110525433,"Islamic Azad University, Tehran",THR,2019,9009,115592,1084,233,193
+I110525433,"Islamic Azad University, Tehran",THR,2020,11017,123158,1417,306,252
+I110525433,"Islamic Azad University, Tehran",THR,2021,10819,115571,1620,296,235
+I110525433,"Islamic Azad University, Tehran",THR,2022,6450,81739,1536,248,163
+I110525433,"Islamic Azad University, Tehran",THR,2023,5747,58772,1427,184,133
+I110525433,"Islamic Azad University, Tehran",THR,2024,6492,44396,1513,218,212
+I110525433,"Islamic Azad University, Tehran",THR,2025,7213,19856,1451,291,296
+I70640408,Tehran University of Medical Sciences,THR,2000,168,2404,24,1,2
+I70640408,Tehran University of Medical Sciences,THR,2001,133,3668,14,0,0
+I70640408,Tehran University of Medical Sciences,THR,2002,200,6018,23,0,0
+I70640408,Tehran University of Medical Sciences,THR,2003,378,12902,43,0,1
+I70640408,Tehran University of Medical Sciences,THR,2004,550,20444,75,2,4
+I70640408,Tehran University of Medical Sciences,THR,2005,713,26313,87,1,0
+I70640408,Tehran University of Medical Sciences,THR,2006,967,31690,134,4,3
+I70640408,Tehran University of Medical Sciences,THR,2007,1120,33762,140,4,2
+I70640408,Tehran University of Medical Sciences,THR,2008,1431,38242,174,7,5
+I70640408,Tehran University of Medical Sciences,THR,2009,1762,51537,231,5,13
+I70640408,Tehran University of Medical Sciences,THR,2010,2089,49710,276,7,10
+I70640408,Tehran University of Medical Sciences,THR,2011,3381,73491,394,9,22
+I70640408,Tehran University of Medical Sciences,THR,2012,4486,124724,476,16,30
+I70640408,Tehran University of Medical Sciences,THR,2013,4967,102603,566,23,30
+I70640408,Tehran University of Medical Sciences,THR,2014,5347,118973,667,28,53
+I70640408,Tehran University of Medical Sciences,THR,2015,5878,128057,756,25,51
+I70640408,Tehran University of Medical Sciences,THR,2016,6226,143595,895,18,62
+I70640408,Tehran University of Medical Sciences,THR,2017,6700,152686,967,37,77
+I70640408,Tehran University of Medical Sciences,THR,2018,6692,151069,1159,37,81
+I70640408,Tehran University of Medical Sciences,THR,2019,7081,162851,1500,25,76
+I70640408,Tehran University of Medical Sciences,THR,2020,8105,187818,1913,32,65
+I70640408,Tehran University of Medical Sciences,THR,2021,8080,142409,1958,45,71
+I70640408,Tehran University of Medical Sciences,THR,2022,7177,104779,2125,56,53
+I70640408,Tehran University of Medical Sciences,THR,2023,6521,74053,2054,49,69
+I70640408,Tehran University of Medical Sciences,THR,2024,6934,51785,2272,63,78
+I70640408,Tehran University of Medical Sciences,THR,2025,7290,24720,2319,65,76
+I48379061,Shahid Beheshti University,THR,2000,161,2281,12,2,1
+I48379061,Shahid Beheshti University,THR,2001,118,1964,7,3,1
+I48379061,Shahid Beheshti University,THR,2002,180,4564,32,1,0
+I48379061,Shahid Beheshti University,THR,2003,287,7688,43,2,0
+I48379061,Shahid Beheshti University,THR,2004,356,8812,47,6,2
+I48379061,Shahid Beheshti University,THR,2005,518,14416,54,6,1
+I48379061,Shahid Beheshti University,THR,2006,621,16464,67,10,3
+I48379061,Shahid Beheshti University,THR,2007,918,22817,103,17,2
+I48379061,Shahid Beheshti University,THR,2008,1152,27044,109,27,8
+I48379061,Shahid Beheshti University,THR,2009,1506,38009,182,48,11
+I48379061,Shahid Beheshti University,THR,2010,1711,34222,201,38,12
+I48379061,Shahid Beheshti University,THR,2011,2269,43794,251,57,17
+I48379061,Shahid Beheshti University,THR,2012,2698,45913,265,68,34
+I48379061,Shahid Beheshti University,THR,2013,3226,50330,307,66,32
+I48379061,Shahid Beheshti University,THR,2014,4005,80649,359,72,42
+I48379061,Shahid Beheshti University,THR,2015,4906,70714,462,105,33
+I48379061,Shahid Beheshti University,THR,2016,5850,105399,589,117,66
+I48379061,Shahid Beheshti University,THR,2017,6507,97329,754,100,67
+I48379061,Shahid Beheshti University,THR,2018,6914,112294,965,116,92
+I48379061,Shahid Beheshti University,THR,2019,7332,123413,1065,134,103
+I48379061,Shahid Beheshti University,THR,2020,8199,152702,1536,154,145
+I48379061,Shahid Beheshti University,THR,2021,8112,128284,1844,169,94
+I48379061,Shahid Beheshti University,THR,2022,6076,85712,1828,111,82
+I48379061,Shahid Beheshti University,THR,2023,5657,62730,1660,133,85
+I48379061,Shahid Beheshti University,THR,2024,5648,40721,1627,139,69
+I48379061,Shahid Beheshti University,THR,2025,6016,21409,1673,140,100
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2000,116,1784,10,0,0
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2001,66,1427,3,0,2
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2002,92,3331,12,1,2
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2003,177,7329,27,0,4
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2004,214,6029,16,0,3
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2005,310,9746,31,0,1
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2006,420,12201,37,0,1
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2007,590,16138,71,0,3
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2008,633,16764,64,1,2
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2009,859,21651,92,1,6
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2010,1032,20877,86,5,3
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2011,1563,31753,150,9,11
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2012,2111,43359,189,7,18
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2013,2597,43946,211,5,23
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2014,3188,52520,284,8,32
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2015,3684,61409,334,11,27
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2016,4245,71346,450,12,52
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2017,4594,78155,527,13,48
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2018,4701,87731,680,23,48
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2019,4887,97812,756,14,59
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2020,5752,126521,1224,20,60
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2021,5706,102549,1439,28,47
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2022,4977,73877,1499,29,46
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2023,4651,48522,1333,41,62
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2024,4694,30494,1278,54,57
+I58048189,Shahid Beheshti University of Medical Sciences,THR,2025,5098,17733,1444,64,53
+I1516879,Tarbiat Modares University,THR,2000,147,2844,16,1,0
+I1516879,Tarbiat Modares University,THR,2001,155,4072,18,5,0
+I1516879,Tarbiat Modares University,THR,2002,244,6835,36,9,2
+I1516879,Tarbiat Modares University,THR,2003,363,11157,33,5,0
+I1516879,Tarbiat Modares University,THR,2004,413,9279,45,6,2
+I1516879,Tarbiat Modares University,THR,2005,595,13825,71,4,3
+I1516879,Tarbiat Modares University,THR,2006,717,19155,76,12,3
+I1516879,Tarbiat Modares University,THR,2007,1095,29615,121,22,3
+I1516879,Tarbiat Modares University,THR,2008,1269,32710,143,36,9
+I1516879,Tarbiat Modares University,THR,2009,1643,47831,174,45,12
+I1516879,Tarbiat Modares University,THR,2010,2087,48242,194,55,16
+I1516879,Tarbiat Modares University,THR,2011,2704,53612,257,65,26
+I1516879,Tarbiat Modares University,THR,2012,3082,58041,272,72,38
+I1516879,Tarbiat Modares University,THR,2013,3339,59080,339,71,28
+I1516879,Tarbiat Modares University,THR,2014,3716,55605,379,64,49
+I1516879,Tarbiat Modares University,THR,2015,4103,64809,414,82,46
+I1516879,Tarbiat Modares University,THR,2016,4154,67758,428,60,37
+I1516879,Tarbiat Modares University,THR,2017,4219,75488,517,71,43
+I1516879,Tarbiat Modares University,THR,2018,4552,76674,587,90,57
+I1516879,Tarbiat Modares University,THR,2019,4946,90229,789,91,74
+I1516879,Tarbiat Modares University,THR,2020,5076,92570,991,95,86
+I1516879,Tarbiat Modares University,THR,2021,4590,73314,1076,106,59
+I1516879,Tarbiat Modares University,THR,2022,3050,54684,1017,79,43
+I1516879,Tarbiat Modares University,THR,2023,2750,38994,939,64,36
+I1516879,Tarbiat Modares University,THR,2024,2708,23898,887,82,30
+I1516879,Tarbiat Modares University,THR,2025,2893,13000,929,97,44
+I166459259,Shiraz University,FRS,2000,145,2657,14,2,1
+I166459259,Shiraz University,FRS,2001,162,3368,21,5,1
+I166459259,Shiraz University,FRS,2002,235,5890,20,2,3
+I166459259,Shiraz University,FRS,2003,298,9462,39,7,3
+I166459259,Shiraz University,FRS,2004,400,10036,37,6,4
+I166459259,Shiraz University,FRS,2005,388,10263,52,5,1
+I166459259,Shiraz University,FRS,2006,507,13604,75,16,2
+I166459259,Shiraz University,FRS,2007,665,19686,89,21,4
+I166459259,Shiraz University,FRS,2008,834,20018,120,14,2
+I166459259,Shiraz University,FRS,2009,952,23570,127,28,8
+I166459259,Shiraz University,FRS,2010,1195,30020,168,28,15
+I166459259,Shiraz University,FRS,2011,1559,33038,196,49,17
+I166459259,Shiraz University,FRS,2012,1884,32886,215,52,21
+I166459259,Shiraz University,FRS,2013,2097,36547,259,55,24
+I166459259,Shiraz University,FRS,2014,2379,45471,307,65,30
+I166459259,Shiraz University,FRS,2015,2908,51569,352,67,48
+I166459259,Shiraz University,FRS,2016,3035,55978,397,80,57
+I166459259,Shiraz University,FRS,2017,3238,63265,497,88,49
+I166459259,Shiraz University,FRS,2018,3357,61757,540,74,57
+I166459259,Shiraz University,FRS,2019,3545,61990,657,105,67
+I166459259,Shiraz University,FRS,2020,3757,70708,872,81,53
+I166459259,Shiraz University,FRS,2021,3517,53589,907,72,54
+I166459259,Shiraz University,FRS,2022,2668,35693,851,65,35
+I166459259,Shiraz University,FRS,2023,2457,30494,818,61,25
+I166459259,Shiraz University,FRS,2024,2463,21871,798,67,29
+I166459259,Shiraz University,FRS,2025,2576,10412,780,74,46
+I86958956,Ferdowsi University of Mashhad,KHR,2000,77,1151,4,3,2
+I86958956,Ferdowsi University of Mashhad,KHR,2001,61,741,7,2,0
+I86958956,Ferdowsi University of Mashhad,KHR,2002,102,1094,16,2,1
+I86958956,Ferdowsi University of Mashhad,KHR,2003,134,2811,21,3,2
+I86958956,Ferdowsi University of Mashhad,KHR,2004,177,3913,34,5,0
+I86958956,Ferdowsi University of Mashhad,KHR,2005,250,5648,39,10,1
+I86958956,Ferdowsi University of Mashhad,KHR,2006,339,7030,58,17,2
+I86958956,Ferdowsi University of Mashhad,KHR,2007,435,10043,78,19,3
+I86958956,Ferdowsi University of Mashhad,KHR,2008,539,12146,74,18,2
+I86958956,Ferdowsi University of Mashhad,KHR,2009,776,15685,106,33,8
+I86958956,Ferdowsi University of Mashhad,KHR,2010,1074,22492,122,45,19
+I86958956,Ferdowsi University of Mashhad,KHR,2011,1595,27493,192,68,35
+I86958956,Ferdowsi University of Mashhad,KHR,2012,2000,38825,237,82,35
+I86958956,Ferdowsi University of Mashhad,KHR,2013,2356,39542,261,88,42
+I86958956,Ferdowsi University of Mashhad,KHR,2014,2912,37862,305,100,49
+I86958956,Ferdowsi University of Mashhad,KHR,2015,3184,38877,298,88,47
+I86958956,Ferdowsi University of Mashhad,KHR,2016,3366,41645,326,87,41
+I86958956,Ferdowsi University of Mashhad,KHR,2017,3476,42584,398,81,39
+I86958956,Ferdowsi University of Mashhad,KHR,2018,3522,49402,452,108,59
+I86958956,Ferdowsi University of Mashhad,KHR,2019,3590,45980,490,100,62
+I86958956,Ferdowsi University of Mashhad,KHR,2020,3736,44294,638,104,69
+I86958956,Ferdowsi University of Mashhad,KHR,2021,3459,40735,759,121,61
+I86958956,Ferdowsi University of Mashhad,KHR,2022,2257,33656,794,113,33
+I86958956,Ferdowsi University of Mashhad,KHR,2023,1861,23333,666,86,38
+I86958956,Ferdowsi University of Mashhad,KHR,2024,1708,14822,586,83,39
+I86958956,Ferdowsi University of Mashhad,KHR,2025,1748,6165,577,77,32
+I161106909,Iran University of Medical Sciences,THR,2000,48,700,2,0,1
+I161106909,Iran University of Medical Sciences,THR,2001,41,974,2,1,0
+I161106909,Iran University of Medical Sciences,THR,2002,58,1739,7,0,0
+I161106909,Iran University of Medical Sciences,THR,2003,66,2085,11,0,1
+I161106909,Iran University of Medical Sciences,THR,2004,104,1701,9,0,2
+I161106909,Iran University of Medical Sciences,THR,2005,139,5463,15,0,0
+I161106909,Iran University of Medical Sciences,THR,2006,233,6216,24,0,0
+I161106909,Iran University of Medical Sciences,THR,2007,316,5941,36,0,1
+I161106909,Iran University of Medical Sciences,THR,2008,443,8011,46,0,3
+I161106909,Iran University of Medical Sciences,THR,2009,507,9693,55,1,4
+I161106909,Iran University of Medical Sciences,THR,2010,543,8641,62,2,3
+I161106909,Iran University of Medical Sciences,THR,2011,169,2616,24,2,2
+I161106909,Iran University of Medical Sciences,THR,2012,81,1032,6,0,0
+I161106909,Iran University of Medical Sciences,THR,2013,628,8826,66,4,10
+I161106909,Iran University of Medical Sciences,THR,2014,1989,31220,186,10,41
+I161106909,Iran University of Medical Sciences,THR,2015,2294,42195,239,9,21
+I161106909,Iran University of Medical Sciences,THR,2016,2791,63408,317,6,32
+I161106909,Iran University of Medical Sciences,THR,2017,3022,58279,370,9,46
+I161106909,Iran University of Medical Sciences,THR,2018,3282,61375,500,22,37
+I161106909,Iran University of Medical Sciences,THR,2019,3709,78302,596,26,45
+I161106909,Iran University of Medical Sciences,THR,2020,4352,107768,926,33,46
+I161106909,Iran University of Medical Sciences,THR,2021,4210,77312,996,24,57
+I161106909,Iran University of Medical Sciences,THR,2022,3694,49767,951,35,43
+I161106909,Iran University of Medical Sciences,THR,2023,3492,33878,982,36,54
+I161106909,Iran University of Medical Sciences,THR,2024,3549,25150,935,47,49
+I161106909,Iran University of Medical Sciences,THR,2025,3612,13591,981,51,49
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2000,81,440,2,0,4
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2001,23,290,1,0,0
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2002,54,1986,5,1,0
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2003,55,2006,0,2,0
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2004,94,2355,7,1,0
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2005,153,5074,13,8,0
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2006,148,3977,9,9,0
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2007,231,7367,16,4,0
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2008,393,8300,23,10,1
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2009,717,12911,66,29,6
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2010,1035,19841,112,34,7
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2011,1635,26869,164,63,19
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2012,2062,31057,221,93,35
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2013,2234,33396,176,67,32
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2014,2459,32563,166,87,37
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2015,2629,32127,199,142,32
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2016,2934,37339,231,113,33
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2017,3120,43464,296,88,40
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2018,3438,43012,309,100,53
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2019,3826,47725,385,104,65
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2020,4386,47958,503,143,75
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2021,4154,48887,630,137,57
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2022,2481,34644,609,93,53
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2023,2034,22325,513,80,36
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2024,2087,14298,489,69,52
+I155419210,"Islamic Azad University, Science and Research Branch",THR,2025,1808,6237,386,60,36
+I158248296,Amirkabir University of Technology,THR,2000,81,2000,26,1,0
+I158248296,Amirkabir University of Technology,THR,2001,88,3433,25,4,0
+I158248296,Amirkabir University of Technology,THR,2002,116,4009,23,11,0
+I158248296,Amirkabir University of Technology,THR,2003,180,7130,37,6,1
+I158248296,Amirkabir University of Technology,THR,2004,233,7684,46,13,0
+I158248296,Amirkabir University of Technology,THR,2005,314,11471,64,16,0
+I158248296,Amirkabir University of Technology,THR,2006,441,17271,80,29,0
+I158248296,Amirkabir University of Technology,THR,2007,539,18967,83,32,1
+I158248296,Amirkabir University of Technology,THR,2008,788,27237,95,57,3
+I158248296,Amirkabir University of Technology,THR,2009,993,36557,113,62,1
+I158248296,Amirkabir University of Technology,THR,2010,1180,40971,166,64,1
+I158248296,Amirkabir University of Technology,THR,2011,1658,49151,214,95,3
+I158248296,Amirkabir University of Technology,THR,2012,1777,49300,263,105,0
+I158248296,Amirkabir University of Technology,THR,2013,2024,55974,337,108,2
+I158248296,Amirkabir University of Technology,THR,2014,2269,59108,349,119,10
+I158248296,Amirkabir University of Technology,THR,2015,2250,56483,397,127,4
+I158248296,Amirkabir University of Technology,THR,2016,2350,61223,446,119,0
+I158248296,Amirkabir University of Technology,THR,2017,2587,61875,551,154,3
+I158248296,Amirkabir University of Technology,THR,2018,2385,59504,570,153,5
+I158248296,Amirkabir University of Technology,THR,2019,2409,65823,636,132,6
+I158248296,Amirkabir University of Technology,THR,2020,2579,63996,785,129,5
+I158248296,Amirkabir University of Technology,THR,2021,2476,57406,763,114,5
+I158248296,Amirkabir University of Technology,THR,2022,2016,41742,763,125,2
+I158248296,Amirkabir University of Technology,THR,2023,1865,35206,746,111,2
+I158248296,Amirkabir University of Technology,THR,2024,1889,22533,720,111,4
+I158248296,Amirkabir University of Technology,THR,2025,1871,9580,602,126,2
+I133529467,Sharif University of Technology,THR,2000,159,3278,22,6,1
+I133529467,Sharif University of Technology,THR,2001,185,5042,39,4,0
+I133529467,Sharif University of Technology,THR,2002,271,7122,64,18,0
+I133529467,Sharif University of Technology,THR,2003,335,10608,83,11,0
+I133529467,Sharif University of Technology,THR,2004,426,10684,70,21,0
+I133529467,Sharif University of Technology,THR,2005,556,15098,97,32,0
+I133529467,Sharif University of Technology,THR,2006,712,26515,145,42,1
+I133529467,Sharif University of Technology,THR,2007,754,23806,126,35,0
+I133529467,Sharif University of Technology,THR,2008,972,31177,185,57,3
+I133529467,Sharif University of Technology,THR,2009,1129,39285,262,62,1
+I133529467,Sharif University of Technology,THR,2010,1263,48217,293,49,3
+I133529467,Sharif University of Technology,THR,2011,1502,42092,307,61,4
+I133529467,Sharif University of Technology,THR,2012,1622,46731,330,74,8
+I133529467,Sharif University of Technology,THR,2013,1755,47668,405,77,1
+I133529467,Sharif University of Technology,THR,2014,1754,45719,384,87,3
+I133529467,Sharif University of Technology,THR,2015,1790,45500,394,96,4
+I133529467,Sharif University of Technology,THR,2016,1921,57871,457,91,4
+I133529467,Sharif University of Technology,THR,2017,2007,54084,465,93,6
+I133529467,Sharif University of Technology,THR,2018,2007,59054,532,104,3
+I133529467,Sharif University of Technology,THR,2019,2195,62138,589,107,4
+I133529467,Sharif University of Technology,THR,2020,2164,59441,722,107,12
+I133529467,Sharif University of Technology,THR,2021,2050,49315,715,125,11
+I133529467,Sharif University of Technology,THR,2022,1757,37531,726,114,2
+I133529467,Sharif University of Technology,THR,2023,1602,25551,611,111,6
+I133529467,Sharif University of Technology,THR,2024,1479,17794,615,98,3
+I133529467,Sharif University of Technology,THR,2025,1502,6803,552,99,8
+I41832843,University of Tabriz,AZS,2000,77,1269,8,2,0
+I41832843,University of Tabriz,AZS,2001,62,1935,7,0,2
+I41832843,University of Tabriz,AZS,2002,85,2350,11,4,4
+I41832843,University of Tabriz,AZS,2003,117,6999,24,8,0
+I41832843,University of Tabriz,AZS,2004,150,5561,29,9,1
+I41832843,University of Tabriz,AZS,2005,164,6479,38,6,0
+I41832843,University of Tabriz,AZS,2006,229,8419,41,12,1
+I41832843,University of Tabriz,AZS,2007,337,9432,62,19,0
+I41832843,University of Tabriz,AZS,2008,467,12487,80,16,0
+I41832843,University of Tabriz,AZS,2009,636,18093,107,28,8
+I41832843,University of Tabriz,AZS,2010,895,23782,134,35,5
+I41832843,University of Tabriz,AZS,2011,1221,28970,167,53,6
+I41832843,University of Tabriz,AZS,2012,1385,28944,197,55,13
+I41832843,University of Tabriz,AZS,2013,1616,28406,205,54,12
+I41832843,University of Tabriz,AZS,2014,2056,35486,221,67,9
+I41832843,University of Tabriz,AZS,2015,2353,35849,271,91,25
+I41832843,University of Tabriz,AZS,2016,2645,41771,287,94,29
+I41832843,University of Tabriz,AZS,2017,2924,52631,448,92,22
+I41832843,University of Tabriz,AZS,2018,2899,56428,530,100,29
+I41832843,University of Tabriz,AZS,2019,3327,67438,737,114,40
+I41832843,University of Tabriz,AZS,2020,3475,72647,1003,104,36
+I41832843,University of Tabriz,AZS,2021,3257,57569,994,145,44
+I41832843,University of Tabriz,AZS,2022,2221,43880,1023,99,18
+I41832843,University of Tabriz,AZS,2023,1929,31629,861,99,23
+I41832843,University of Tabriz,AZS,2024,2081,20741,933,100,19
+I41832843,University of Tabriz,AZS,2025,2156,9372,865,124,23
+I67009956,Iran University of Science and Technology,THR,2000,35,1131,9,1,0
+I67009956,Iran University of Science and Technology,THR,2001,67,2569,23,2,0
+I67009956,Iran University of Science and Technology,THR,2002,62,2804,25,1,0
+I67009956,Iran University of Science and Technology,THR,2003,117,3255,25,2,0
+I67009956,Iran University of Science and Technology,THR,2004,149,6461,33,3,0
+I67009956,Iran University of Science and Technology,THR,2005,201,5652,34,7,0
+I67009956,Iran University of Science and Technology,THR,2006,342,16306,51,20,0
+I67009956,Iran University of Science and Technology,THR,2007,499,14926,68,32,1
+I67009956,Iran University of Science and Technology,THR,2008,632,21555,87,44,2
+I67009956,Iran University of Science and Technology,THR,2009,842,27902,98,57,3
+I67009956,Iran University of Science and Technology,THR,2010,1064,38710,137,51,4
+I67009956,Iran University of Science and Technology,THR,2011,1384,43206,181,78,10
+I67009956,Iran University of Science and Technology,THR,2012,1481,41222,206,84,7
+I67009956,Iran University of Science and Technology,THR,2013,1649,39112,201,86,4
+I67009956,Iran University of Science and Technology,THR,2014,1799,42361,258,85,3
+I67009956,Iran University of Science and Technology,THR,2015,1781,35894,250,76,5
+I67009956,Iran University of Science and Technology,THR,2016,2006,43813,293,102,6
+I67009956,Iran University of Science and Technology,THR,2017,2274,49278,378,74,7
+I67009956,Iran University of Science and Technology,THR,2018,2256,51660,365,83,10
+I67009956,Iran University of Science and Technology,THR,2019,2441,56790,426,94,12
+I67009956,Iran University of Science and Technology,THR,2020,2735,64684,667,105,10
+I67009956,Iran University of Science and Technology,THR,2021,2576,58484,737,112,8
+I67009956,Iran University of Science and Technology,THR,2022,2155,44438,705,110,7
+I67009956,Iran University of Science and Technology,THR,2023,2047,41010,650,76,9
+I67009956,Iran University of Science and Technology,THR,2024,2028,26342,637,77,7
+I67009956,Iran University of Science and Technology,THR,2025,1950,10477,558,115,16
+I194604659,Shiraz University of Medical Sciences,FRS,2000,83,1269,4,2,2
+I194604659,Shiraz University of Medical Sciences,FRS,2001,87,1764,7,0,3
+I194604659,Shiraz University of Medical Sciences,FRS,2002,122,2752,9,1,1
+I194604659,Shiraz University of Medical Sciences,FRS,2003,180,5470,13,1,0
+I194604659,Shiraz University of Medical Sciences,FRS,2004,210,5513,18,1,2
+I194604659,Shiraz University of Medical Sciences,FRS,2005,263,5503,28,0,0
+I194604659,Shiraz University of Medical Sciences,FRS,2006,393,9124,38,1,2
+I194604659,Shiraz University of Medical Sciences,FRS,2007,481,10010,33,0,2
+I194604659,Shiraz University of Medical Sciences,FRS,2008,598,12175,65,1,1
+I194604659,Shiraz University of Medical Sciences,FRS,2009,653,12987,50,2,4
+I194604659,Shiraz University of Medical Sciences,FRS,2010,786,14771,73,3,4
+I194604659,Shiraz University of Medical Sciences,FRS,2011,979,18004,93,1,5
+I194604659,Shiraz University of Medical Sciences,FRS,2012,1087,19493,105,5,18
+I194604659,Shiraz University of Medical Sciences,FRS,2013,1428,24856,126,4,13
+I194604659,Shiraz University of Medical Sciences,FRS,2014,1725,29082,154,3,25
+I194604659,Shiraz University of Medical Sciences,FRS,2015,1936,31882,136,9,25
+I194604659,Shiraz University of Medical Sciences,FRS,2016,2110,50406,225,3,27
+I194604659,Shiraz University of Medical Sciences,FRS,2017,2184,41913,286,13,29
+I194604659,Shiraz University of Medical Sciences,FRS,2018,2308,47491,315,14,34
+I194604659,Shiraz University of Medical Sciences,FRS,2019,2502,50920,406,10,48
+I194604659,Shiraz University of Medical Sciences,FRS,2020,2944,65437,651,13,39
+I194604659,Shiraz University of Medical Sciences,FRS,2021,3017,54616,767,9,47
+I194604659,Shiraz University of Medical Sciences,FRS,2022,2984,40924,799,21,39
+I194604659,Shiraz University of Medical Sciences,FRS,2023,2675,30886,750,15,42
+I194604659,Shiraz University of Medical Sciences,FRS,2024,2786,20931,813,31,51
+I194604659,Shiraz University of Medical Sciences,FRS,2025,2982,12613,857,34,54
+I55547365,Payame Noor University,THR,2000,62,23,2,4,6
+I55547365,Payame Noor University,THR,2001,10,63,2,0,1
+I55547365,Payame Noor University,THR,2002,15,128,1,0,1
+I55547365,Payame Noor University,THR,2003,18,309,1,0,0
+I55547365,Payame Noor University,THR,2004,34,518,4,1,2
+I55547365,Payame Noor University,THR,2005,60,1073,5,2,0
+I55547365,Payame Noor University,THR,2006,98,2910,14,2,2
+I55547365,Payame Noor University,THR,2007,162,3934,22,3,2
+I55547365,Payame Noor University,THR,2008,331,5216,52,4,2
+I55547365,Payame Noor University,THR,2009,542,8107,70,12,11
+I55547365,Payame Noor University,THR,2010,762,11169,71,22,17
+I55547365,Payame Noor University,THR,2011,1177,12201,102,27,25
+I55547365,Payame Noor University,THR,2012,1666,16737,172,44,43
+I55547365,Payame Noor University,THR,2013,2086,19642,137,41,55
+I55547365,Payame Noor University,THR,2014,2432,19531,150,56,68
+I55547365,Payame Noor University,THR,2015,2876,22473,149,102,79
+I55547365,Payame Noor University,THR,2016,3162,24306,163,80,112
+I55547365,Payame Noor University,THR,2017,3367,25614,173,83,94
+I55547365,Payame Noor University,THR,2018,3557,30252,236,94,90
+I55547365,Payame Noor University,THR,2019,3623,24401,269,85,101
+I55547365,Payame Noor University,THR,2020,3529,24434,292,90,106
+I55547365,Payame Noor University,THR,2021,3166,21292,382,90,89
+I55547365,Payame Noor University,THR,2022,1431,14531,374,60,75
+I55547365,Payame Noor University,THR,2023,1212,10403,288,51,34
+I55547365,Payame Noor University,THR,2024,1147,5412,238,43,53
+I55547365,Payame Noor University,THR,2025,1347,2459,263,69,75
+I165560825,Mashhad University of Medical Sciences,KHR,2000,32,617,4,0,0
+I165560825,Mashhad University of Medical Sciences,KHR,2001,18,621,3,0,0
+I165560825,Mashhad University of Medical Sciences,KHR,2002,35,1410,2,0,0
+I165560825,Mashhad University of Medical Sciences,KHR,2003,81,1237,4,0,0
+I165560825,Mashhad University of Medical Sciences,KHR,2004,111,1909,9,0,0
+I165560825,Mashhad University of Medical Sciences,KHR,2005,169,4281,13,0,0
+I165560825,Mashhad University of Medical Sciences,KHR,2006,244,5498,24,1,0
+I165560825,Mashhad University of Medical Sciences,KHR,2007,353,6639,32,1,0
+I165560825,Mashhad University of Medical Sciences,KHR,2008,413,7516,33,1,1
+I165560825,Mashhad University of Medical Sciences,KHR,2009,546,9944,59,1,1
+I165560825,Mashhad University of Medical Sciences,KHR,2010,621,12489,69,2,0
+I165560825,Mashhad University of Medical Sciences,KHR,2011,986,16832,85,2,6
+I165560825,Mashhad University of Medical Sciences,KHR,2012,950,17225,97,1,8
+I165560825,Mashhad University of Medical Sciences,KHR,2013,1456,24492,133,3,14
+I165560825,Mashhad University of Medical Sciences,KHR,2014,2026,37473,213,5,20
+I165560825,Mashhad University of Medical Sciences,KHR,2015,2044,41974,235,6,24
+I165560825,Mashhad University of Medical Sciences,KHR,2016,2238,48905,286,12,30
+I165560825,Mashhad University of Medical Sciences,KHR,2017,2402,57678,397,12,16
+I165560825,Mashhad University of Medical Sciences,KHR,2018,2579,70682,438,11,24
+I165560825,Mashhad University of Medical Sciences,KHR,2019,2658,63811,580,15,21
+I165560825,Mashhad University of Medical Sciences,KHR,2020,2867,61950,652,11,36
+I165560825,Mashhad University of Medical Sciences,KHR,2021,2911,53924,738,13,23
+I165560825,Mashhad University of Medical Sciences,KHR,2022,2623,40345,776,12,15
+I165560825,Mashhad University of Medical Sciences,KHR,2023,2492,29175,808,19,21
+I165560825,Mashhad University of Medical Sciences,KHR,2024,2671,20419,819,17,24
+I165560825,Mashhad University of Medical Sciences,KHR,2025,2835,11652,802,34,33
+I114982161,Isfahan University of Medical Sciences,ISF,2000,95,765,4,0,1
+I114982161,Isfahan University of Medical Sciences,ISF,2001,94,636,3,2,0
+I114982161,Isfahan University of Medical Sciences,ISF,2002,115,1405,6,0,0
+I114982161,Isfahan University of Medical Sciences,ISF,2003,117,3139,10,0,2
+I114982161,Isfahan University of Medical Sciences,ISF,2004,135,3856,8,0,1
+I114982161,Isfahan University of Medical Sciences,ISF,2005,201,3144,16,0,1
+I114982161,Isfahan University of Medical Sciences,ISF,2006,303,8150,27,1,1
+I114982161,Isfahan University of Medical Sciences,ISF,2007,372,12299,34,1,0
+I114982161,Isfahan University of Medical Sciences,ISF,2008,580,10915,34,0,5
+I114982161,Isfahan University of Medical Sciences,ISF,2009,614,12575,48,3,4
+I114982161,Isfahan University of Medical Sciences,ISF,2010,824,12891,78,4,13
+I114982161,Isfahan University of Medical Sciences,ISF,2011,1176,23396,84,3,15
+I114982161,Isfahan University of Medical Sciences,ISF,2012,1749,28882,105,8,20
+I114982161,Isfahan University of Medical Sciences,ISF,2013,1877,39000,159,6,21
+I114982161,Isfahan University of Medical Sciences,ISF,2014,2086,44216,197,11,29
+I114982161,Isfahan University of Medical Sciences,ISF,2015,2248,41205,193,11,29
+I114982161,Isfahan University of Medical Sciences,ISF,2016,2229,39889,237,15,35
+I114982161,Isfahan University of Medical Sciences,ISF,2017,2368,42561,226,12,40
+I114982161,Isfahan University of Medical Sciences,ISF,2018,2466,41781,288,14,38
+I114982161,Isfahan University of Medical Sciences,ISF,2019,2378,46720,384,9,46
+I114982161,Isfahan University of Medical Sciences,ISF,2020,2570,52280,475,14,43
+I114982161,Isfahan University of Medical Sciences,ISF,2021,2620,44540,561,17,29
+I114982161,Isfahan University of Medical Sciences,ISF,2022,2500,34709,657,17,35
+I114982161,Isfahan University of Medical Sciences,ISF,2023,2477,25656,674,24,32
+I114982161,Isfahan University of Medical Sciences,ISF,2024,2257,16892,644,21,31
+I114982161,Isfahan University of Medical Sciences,ISF,2025,2459,9123,676,26,24
+I163205636,Tabriz University of Medical Sciences,AZS,2000,38,198,8,0,1
+I163205636,Tabriz University of Medical Sciences,AZS,2001,21,543,5,0,0
+I163205636,Tabriz University of Medical Sciences,AZS,2002,30,1308,14,0,0
+I163205636,Tabriz University of Medical Sciences,AZS,2003,46,1313,11,0,0
+I163205636,Tabriz University of Medical Sciences,AZS,2004,62,1254,23,0,1
+I163205636,Tabriz University of Medical Sciences,AZS,2005,97,3294,15,0,0
+I163205636,Tabriz University of Medical Sciences,AZS,2006,171,5013,42,0,0
+I163205636,Tabriz University of Medical Sciences,AZS,2007,352,8332,100,0,1
+I163205636,Tabriz University of Medical Sciences,AZS,2008,469,12467,129,0,0
+I163205636,Tabriz University of Medical Sciences,AZS,2009,425,9276,71,0,3
+I163205636,Tabriz University of Medical Sciences,AZS,2010,487,11109,81,1,3
+I163205636,Tabriz University of Medical Sciences,AZS,2011,825,16297,114,1,3
+I163205636,Tabriz University of Medical Sciences,AZS,2012,1007,21505,137,4,5
+I163205636,Tabriz University of Medical Sciences,AZS,2013,1286,28937,117,2,13
+I163205636,Tabriz University of Medical Sciences,AZS,2014,1534,38989,155,3,15
+I163205636,Tabriz University of Medical Sciences,AZS,2015,1672,40975,165,7,14
+I163205636,Tabriz University of Medical Sciences,AZS,2016,1923,46265,247,7,24
+I163205636,Tabriz University of Medical Sciences,AZS,2017,2236,60362,341,7,14
+I163205636,Tabriz University of Medical Sciences,AZS,2018,2236,61592,411,10,14
+I163205636,Tabriz University of Medical Sciences,AZS,2019,2558,76845,565,8,23
+I163205636,Tabriz University of Medical Sciences,AZS,2020,3055,98717,896,7,29
+I163205636,Tabriz University of Medical Sciences,AZS,2021,2984,74871,992,7,29
+I163205636,Tabriz University of Medical Sciences,AZS,2022,2590,52077,975,9,29
+I163205636,Tabriz University of Medical Sciences,AZS,2023,2517,34663,925,18,27
+I163205636,Tabriz University of Medical Sciences,AZS,2024,2562,20985,835,18,45
+I163205636,Tabriz University of Medical Sciences,AZS,2025,2558,12140,798,19,31
+I39268498,University of Isfahan,ISF,2000,64,1382,11,3,1
+I39268498,University of Isfahan,ISF,2001,83,1283,7,1,0
+I39268498,University of Isfahan,ISF,2002,78,1037,4,0,0
+I39268498,University of Isfahan,ISF,2003,121,3320,20,2,0
+I39268498,University of Isfahan,ISF,2004,160,2748,16,10,2
+I39268498,University of Isfahan,ISF,2005,198,4627,31,2,0
+I39268498,University of Isfahan,ISF,2006,262,6174,43,10,3
+I39268498,University of Isfahan,ISF,2007,352,5512,45,16,3
+I39268498,University of Isfahan,ISF,2008,432,6752,50,17,5
+I39268498,University of Isfahan,ISF,2009,629,10588,61,18,6
+I39268498,University of Isfahan,ISF,2010,973,11188,81,40,26
+I39268498,University of Isfahan,ISF,2011,1331,15547,101,51,47
+I39268498,University of Isfahan,ISF,2012,1734,18667,141,44,60
+I39268498,University of Isfahan,ISF,2013,1896,16542,157,72,66
+I39268498,University of Isfahan,ISF,2014,2240,19411,155,94,84
+I39268498,University of Isfahan,ISF,2015,2356,18910,180,77,74
+I39268498,University of Isfahan,ISF,2016,2383,22401,174,80,81
+I39268498,University of Isfahan,ISF,2017,2401,25044,214,63,56
+I39268498,University of Isfahan,ISF,2018,2424,22985,243,75,84
+I39268498,University of Isfahan,ISF,2019,2497,26049,274,64,80
+I39268498,University of Isfahan,ISF,2020,2568,24590,316,75,104
+I39268498,University of Isfahan,ISF,2021,2196,25161,442,89,68
+I39268498,University of Isfahan,ISF,2022,1234,18431,378,70,32
+I39268498,University of Isfahan,ISF,2023,1170,14467,378,79,47
+I39268498,University of Isfahan,ISF,2024,1175,9211,398,68,32
+I39268498,University of Isfahan,ISF,2025,1232,5862,386,81,38
+I170013655,Isfahan University of Technology,ISF,2000,111,2015,16,1,0
+I170013655,Isfahan University of Technology,ISF,2001,124,1945,12,4,0
+I170013655,Isfahan University of Technology,ISF,2002,168,3716,44,4,0
+I170013655,Isfahan University of Technology,ISF,2003,176,4498,42,4,0
+I170013655,Isfahan University of Technology,ISF,2004,197,6868,58,8,0
+I170013655,Isfahan University of Technology,ISF,2005,221,7603,73,8,0
+I170013655,Isfahan University of Technology,ISF,2006,320,10960,96,6,0
+I170013655,Isfahan University of Technology,ISF,2007,349,15059,84,10,1
+I170013655,Isfahan University of Technology,ISF,2008,489,21210,105,19,0
+I170013655,Isfahan University of Technology,ISF,2009,638,24903,147,16,0
+I170013655,Isfahan University of Technology,ISF,2010,840,30338,193,21,1
+I170013655,Isfahan University of Technology,ISF,2011,1029,31481,205,48,0
+I170013655,Isfahan University of Technology,ISF,2012,1186,31396,221,40,1
+I170013655,Isfahan University of Technology,ISF,2013,1404,37037,290,41,1
+I170013655,Isfahan University of Technology,ISF,2014,1735,43641,344,60,2
+I170013655,Isfahan University of Technology,ISF,2015,1850,44382,314,60,0
+I170013655,Isfahan University of Technology,ISF,2016,1880,48236,360,60,1
+I170013655,Isfahan University of Technology,ISF,2017,1827,47045,413,58,6
+I170013655,Isfahan University of Technology,ISF,2018,1847,46563,446,54,2
+I170013655,Isfahan University of Technology,ISF,2019,1900,47136,555,51,0
+I170013655,Isfahan University of Technology,ISF,2020,1736,38976,546,53,2
+I170013655,Isfahan University of Technology,ISF,2021,1780,39433,647,49,6
+I170013655,Isfahan University of Technology,ISF,2022,1486,29417,616,44,0
+I170013655,Isfahan University of Technology,ISF,2023,1359,20167,598,68,1
+I170013655,Isfahan University of Technology,ISF,2024,1310,14197,599,58,2
+I170013655,Isfahan University of Technology,ISF,2025,1367,5867,561,56,4
+I877176835,University of Guilan,GIL,2000,12,108,1,0,1
+I877176835,University of Guilan,GIL,2001,40,579,6,0,0
+I877176835,University of Guilan,GIL,2002,62,1079,7,2,0
+I877176835,University of Guilan,GIL,2003,92,1557,8,3,0
+I877176835,University of Guilan,GIL,2004,88,1439,8,1,0
+I877176835,University of Guilan,GIL,2005,96,1723,13,2,0
+I877176835,University of Guilan,GIL,2006,147,3270,26,0,0
+I877176835,University of Guilan,GIL,2007,207,5436,27,5,0
+I877176835,University of Guilan,GIL,2008,221,4845,25,7,0
+I877176835,University of Guilan,GIL,2009,278,6632,33,4,2
+I877176835,University of Guilan,GIL,2010,411,8814,33,7,2
+I877176835,University of Guilan,GIL,2011,649,13976,71,12,3
+I877176835,University of Guilan,GIL,2012,869,14311,73,29,6
+I877176835,University of Guilan,GIL,2013,1071,15698,71,19,9
+I877176835,University of Guilan,GIL,2014,1271,16372,81,39,12
+I877176835,University of Guilan,GIL,2015,1403,17327,115,36,16
+I877176835,University of Guilan,GIL,2016,1700,22073,138,32,15
+I877176835,University of Guilan,GIL,2017,1698,22415,164,30,21
+I877176835,University of Guilan,GIL,2018,1804,25778,209,30,16
+I877176835,University of Guilan,GIL,2019,1974,27826,265,40,22
+I877176835,University of Guilan,GIL,2020,2028,29671,316,27,15
+I877176835,University of Guilan,GIL,2021,1898,26975,337,37,10
+I877176835,University of Guilan,GIL,2022,1407,20464,412,31,11
+I877176835,University of Guilan,GIL,2023,1163,12854,340,30,13
+I877176835,University of Guilan,GIL,2024,1200,9910,345,28,11
+I877176835,University of Guilan,GIL,2025,1381,6777,362,38,23
+I38476204,Urmia University,AZG,2000,25,105,6,0,0
+I38476204,Urmia University,AZG,2001,9,43,2,1,0
+I38476204,Urmia University,AZG,2002,33,741,10,2,0
+I38476204,Urmia University,AZG,2003,43,1192,7,1,0
+I38476204,Urmia University,AZG,2004,51,1349,8,1,1
+I38476204,Urmia University,AZG,2005,76,1308,8,6,0
+I38476204,Urmia University,AZG,2006,123,3727,21,5,0
+I38476204,Urmia University,AZG,2007,202,4003,21,2,0
+I38476204,Urmia University,AZG,2008,187,3814,21,3,0
+I38476204,Urmia University,AZG,2009,273,5357,41,8,2
+I38476204,Urmia University,AZG,2010,367,6378,27,8,0
+I38476204,Urmia University,AZG,2011,563,9797,56,20,3
+I38476204,Urmia University,AZG,2012,712,11103,72,21,18
+I38476204,Urmia University,AZG,2013,866,13369,95,18,14
+I38476204,Urmia University,AZG,2014,1103,12132,75,28,12
+I38476204,Urmia University,AZG,2015,1279,15668,94,31,23
+I38476204,Urmia University,AZG,2016,1425,17418,99,29,7
+I38476204,Urmia University,AZG,2017,1613,21330,159,30,19
+I38476204,Urmia University,AZG,2018,1790,26615,166,46,20
+I38476204,Urmia University,AZG,2019,1991,35188,270,38,19
+I38476204,Urmia University,AZG,2020,2136,39434,355,37,23
+I38476204,Urmia University,AZG,2021,1963,30390,436,48,28
+I38476204,Urmia University,AZG,2022,1331,23538,410,33,29
+I38476204,Urmia University,AZG,2023,1219,16437,394,39,5
+I38476204,Urmia University,AZG,2024,1298,9705,351,40,15
+I38476204,Urmia University,AZG,2025,1446,6341,407,57,23
+I200432940,Allameh Tabataba'i University,THR,2000,42,199,1,0,3
+I200432940,Allameh Tabataba'i University,THR,2001,40,14,0,0,2
+I200432940,Allameh Tabataba'i University,THR,2002,65,190,3,0,1
+I200432940,Allameh Tabataba'i University,THR,2003,76,17,0,1,4
+I200432940,Allameh Tabataba'i University,THR,2004,130,267,2,1,13
+I200432940,Allameh Tabataba'i University,THR,2005,149,62,1,1,5
+I200432940,Allameh Tabataba'i University,THR,2006,167,153,0,0,12
+I200432940,Allameh Tabataba'i University,THR,2007,174,283,3,0,10
+I200432940,Allameh Tabataba'i University,THR,2008,198,445,8,2,7
+I200432940,Allameh Tabataba'i University,THR,2009,313,1796,5,6,12
+I200432940,Allameh Tabataba'i University,THR,2010,469,2593,8,14,16
+I200432940,Allameh Tabataba'i University,THR,2011,646,3126,13,14,22
+I200432940,Allameh Tabataba'i University,THR,2012,930,5211,19,13,35
+I200432940,Allameh Tabataba'i University,THR,2013,1025,3501,28,9,32
+I200432940,Allameh Tabataba'i University,THR,2014,1219,4516,32,12,44
+I200432940,Allameh Tabataba'i University,THR,2015,1534,7099,47,29,57
+I200432940,Allameh Tabataba'i University,THR,2016,1823,4775,50,27,93
+I200432940,Allameh Tabataba'i University,THR,2017,1956,7158,68,25,101
+I200432940,Allameh Tabataba'i University,THR,2018,2069,4077,56,32,100
+I200432940,Allameh Tabataba'i University,THR,2019,2303,5182,83,36,130
+I200432940,Allameh Tabataba'i University,THR,2020,2468,6466,99,38,140
+I200432940,Allameh Tabataba'i University,THR,2021,1894,6694,127,42,130
+I200432940,Allameh Tabataba'i University,THR,2022,677,4201,104,24,80
+I200432940,Allameh Tabataba'i University,THR,2023,525,2827,123,28,63
+I200432940,Allameh Tabataba'i University,THR,2024,632,2148,112,17,72
+I200432940,Allameh Tabataba'i University,THR,2025,757,1124,115,31,66
+I80543232,K. N. Toosi University of Technology,THR,2000,19,747,2,1,0
+I80543232,K. N. Toosi University of Technology,THR,2001,26,601,6,1,0
+I80543232,K. N. Toosi University of Technology,THR,2002,24,455,3,2,0
+I80543232,K. N. Toosi University of Technology,THR,2003,60,1726,16,3,0
+I80543232,K. N. Toosi University of Technology,THR,2004,65,1127,8,6,0
+I80543232,K. N. Toosi University of Technology,THR,2005,112,2817,22,7,0
+I80543232,K. N. Toosi University of Technology,THR,2006,160,3304,29,12,0
+I80543232,K. N. Toosi University of Technology,THR,2007,211,7540,28,11,0
+I80543232,K. N. Toosi University of Technology,THR,2008,362,10369,53,20,0
+I80543232,K. N. Toosi University of Technology,THR,2009,446,13022,62,13,0
+I80543232,K. N. Toosi University of Technology,THR,2010,571,13495,86,25,0
+I80543232,K. N. Toosi University of Technology,THR,2011,711,15283,95,44,0
+I80543232,K. N. Toosi University of Technology,THR,2012,842,18268,126,39,0
+I80543232,K. N. Toosi University of Technology,THR,2013,955,21482,165,50,0
+I80543232,K. N. Toosi University of Technology,THR,2014,998,18919,143,37,1
+I80543232,K. N. Toosi University of Technology,THR,2015,1146,20167,110,53,0
+I80543232,K. N. Toosi University of Technology,THR,2016,1026,19535,139,57,0
+I80543232,K. N. Toosi University of Technology,THR,2017,1198,24341,181,63,1
+I80543232,K. N. Toosi University of Technology,THR,2018,1142,22964,216,48,4
+I80543232,K. N. Toosi University of Technology,THR,2019,1366,25987,328,70,1
+I80543232,K. N. Toosi University of Technology,THR,2020,1399,32408,410,76,0
+I80543232,K. N. Toosi University of Technology,THR,2021,1413,28015,454,63,0
+I80543232,K. N. Toosi University of Technology,THR,2022,1035,19323,436,61,1
+I80543232,K. N. Toosi University of Technology,THR,2023,940,13291,373,60,3
+I80543232,K. N. Toosi University of Technology,THR,2024,991,10143,447,64,0
+I80543232,K. N. Toosi University of Technology,THR,2025,969,4161,355,67,1
+I181744264,Kharazmi University,THR,2000,25,575,8,0,1
+I181744264,Kharazmi University,THR,2001,14,402,6,0,0
+I181744264,Kharazmi University,THR,2002,32,1376,9,0,0
+I181744264,Kharazmi University,THR,2003,55,1853,10,0,0
+I181744264,Kharazmi University,THR,2004,54,1497,12,2,0
+I181744264,Kharazmi University,THR,2005,87,2790,17,3,2
+I181744264,Kharazmi University,THR,2006,117,2516,14,4,0
+I181744264,Kharazmi University,THR,2007,164,3364,17,2,2
+I181744264,Kharazmi University,THR,2008,153,3429,33,3,5
+I181744264,Kharazmi University,THR,2009,132,3302,20,10,3
+I181744264,Kharazmi University,THR,2010,180,4756,39,6,5
+I181744264,Kharazmi University,THR,2011,249,4504,28,11,12
+I181744264,Kharazmi University,THR,2012,463,4958,35,17,18
+I181744264,Kharazmi University,THR,2013,828,9582,62,18,19
+I181744264,Kharazmi University,THR,2014,1062,11955,70,42,22
+I181744264,Kharazmi University,THR,2015,1363,12874,95,45,44
+I181744264,Kharazmi University,THR,2016,1557,14586,95,41,36
+I181744264,Kharazmi University,THR,2017,1808,13672,106,29,57
+I181744264,Kharazmi University,THR,2018,1801,14868,140,45,47
+I181744264,Kharazmi University,THR,2019,2059,14871,164,60,73
+I181744264,Kharazmi University,THR,2020,2245,16788,231,62,92
+I181744264,Kharazmi University,THR,2021,1867,15556,307,40,83
+I181744264,Kharazmi University,THR,2022,1043,17280,347,41,56
+I181744264,Kharazmi University,THR,2023,870,10534,323,31,42
+I181744264,Kharazmi University,THR,2024,903,6343,328,35,27
+I181744264,Kharazmi University,THR,2025,890,2494,260,44,28
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2000,36,242,6,0,0
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2001,34,313,5,1,0
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2002,47,1481,8,0,0
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2003,60,670,8,1,0
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2004,76,827,14,3,1
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2005,89,1213,10,0,2
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2006,78,660,6,1,3
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2007,161,1909,9,3,1
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2008,190,3471,19,7,4
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2009,292,3793,18,7,7
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2010,392,6876,21,7,1
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2011,509,6010,35,16,6
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2012,734,8000,47,20,9
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2013,947,10419,51,19,15
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2014,1151,10800,63,25,13
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2015,1227,11642,81,31,15
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2016,1482,12591,86,38,19
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2017,1548,12415,91,34,26
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2018,1574,12469,94,39,27
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2019,1645,14494,146,35,27
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2020,1705,18084,212,57,34
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2021,1544,16141,264,51,27
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2022,927,13872,256,34,22
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2023,845,9879,263,23,16
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2024,794,5554,253,23,19
+I196051555,Shahid Chamran University of Ahvaz,KHZ,2025,851,2297,218,44,16
+I41775361,Islamic Azad University Central Tehran Branch,THR,2000,30,109,1,2,1
+I41775361,Islamic Azad University Central Tehran Branch,THR,2001,3,55,0,0,0
+I41775361,Islamic Azad University Central Tehran Branch,THR,2002,14,415,0,0,0
+I41775361,Islamic Azad University Central Tehran Branch,THR,2003,26,654,1,0,0
+I41775361,Islamic Azad University Central Tehran Branch,THR,2004,41,502,2,0,0
+I41775361,Islamic Azad University Central Tehran Branch,THR,2005,33,537,3,1,0
+I41775361,Islamic Azad University Central Tehran Branch,THR,2006,53,1978,7,2,0
+I41775361,Islamic Azad University Central Tehran Branch,THR,2007,43,837,3,2,0
+I41775361,Islamic Azad University Central Tehran Branch,THR,2008,85,1240,8,1,0
+I41775361,Islamic Azad University Central Tehran Branch,THR,2009,147,1426,11,0,0
+I41775361,Islamic Azad University Central Tehran Branch,THR,2010,215,2706,19,4,5
+I41775361,Islamic Azad University Central Tehran Branch,THR,2011,469,6676,41,16,2
+I41775361,Islamic Azad University Central Tehran Branch,THR,2012,659,8769,62,25,9
+I41775361,Islamic Azad University Central Tehran Branch,THR,2013,722,8910,56,15,4
+I41775361,Islamic Azad University Central Tehran Branch,THR,2014,822,9932,50,27,13
+I41775361,Islamic Azad University Central Tehran Branch,THR,2015,872,10951,79,46,12
+I41775361,Islamic Azad University Central Tehran Branch,THR,2016,1101,14972,102,45,22
+I41775361,Islamic Azad University Central Tehran Branch,THR,2017,1254,13227,107,33,25
+I41775361,Islamic Azad University Central Tehran Branch,THR,2018,1398,11972,114,24,26
+I41775361,Islamic Azad University Central Tehran Branch,THR,2019,1670,11699,154,37,53
+I41775361,Islamic Azad University Central Tehran Branch,THR,2020,2134,14504,174,34,53
+I41775361,Islamic Azad University Central Tehran Branch,THR,2021,2041,13303,176,32,48
+I41775361,Islamic Azad University Central Tehran Branch,THR,2022,1019,12223,190,38,32
+I41775361,Islamic Azad University Central Tehran Branch,THR,2023,957,9383,215,26,29
+I41775361,Islamic Azad University Central Tehran Branch,THR,2024,1159,7594,238,44,43
+I41775361,Islamic Azad University Central Tehran Branch,THR,2025,1302,2911,257,48,54
+I115566878,Shahid Bahonar University of Kerman,KRM,2000,40,336,7,3,0
+I115566878,Shahid Bahonar University of Kerman,KRM,2001,24,596,5,2,0
+I115566878,Shahid Bahonar University of Kerman,KRM,2002,33,511,4,1,0
+I115566878,Shahid Bahonar University of Kerman,KRM,2003,60,1365,14,3,0
+I115566878,Shahid Bahonar University of Kerman,KRM,2004,63,1645,7,9,1
+I115566878,Shahid Bahonar University of Kerman,KRM,2005,74,1380,11,4,0
+I115566878,Shahid Bahonar University of Kerman,KRM,2006,124,2911,23,5,0
+I115566878,Shahid Bahonar University of Kerman,KRM,2007,164,3429,23,3,2
+I115566878,Shahid Bahonar University of Kerman,KRM,2008,236,6626,30,8,2
+I115566878,Shahid Bahonar University of Kerman,KRM,2009,358,16074,45,28,3
+I115566878,Shahid Bahonar University of Kerman,KRM,2010,452,11945,60,21,2
+I115566878,Shahid Bahonar University of Kerman,KRM,2011,628,12876,74,44,6
+I115566878,Shahid Bahonar University of Kerman,KRM,2012,745,12234,89,45,5
+I115566878,Shahid Bahonar University of Kerman,KRM,2013,810,11653,67,58,9
+I115566878,Shahid Bahonar University of Kerman,KRM,2014,1057,14352,72,59,10
+I115566878,Shahid Bahonar University of Kerman,KRM,2015,1158,13906,105,62,13
+I115566878,Shahid Bahonar University of Kerman,KRM,2016,1240,14999,100,58,11
+I115566878,Shahid Bahonar University of Kerman,KRM,2017,1347,16647,155,78,21
+I115566878,Shahid Bahonar University of Kerman,KRM,2018,1379,17329,138,74,18
+I115566878,Shahid Bahonar University of Kerman,KRM,2019,1442,21603,198,80,22
+I115566878,Shahid Bahonar University of Kerman,KRM,2020,1430,22374,266,109,19
+I115566878,Shahid Bahonar University of Kerman,KRM,2021,1387,21370,314,73,14
+I115566878,Shahid Bahonar University of Kerman,KRM,2022,945,15054,333,68,13
+I115566878,Shahid Bahonar University of Kerman,KRM,2023,754,10403,273,52,8
+I115566878,Shahid Bahonar University of Kerman,KRM,2024,763,6323,298,58,10
+I115566878,Shahid Bahonar University of Kerman,KRM,2025,843,3972,295,71,12
+I167694869,Bu-Ali Sina University,HMD,2000,46,749,4,0,1
+I167694869,Bu-Ali Sina University,HMD,2001,72,1737,4,1,0
+I167694869,Bu-Ali Sina University,HMD,2002,59,1401,7,0,0
+I167694869,Bu-Ali Sina University,HMD,2003,92,2280,9,0,0
+I167694869,Bu-Ali Sina University,HMD,2004,126,5188,18,0,0
+I167694869,Bu-Ali Sina University,HMD,2005,177,3935,13,1,0
+I167694869,Bu-Ali Sina University,HMD,2006,203,7138,23,4,1
+I167694869,Bu-Ali Sina University,HMD,2007,237,6422,25,3,2
+I167694869,Bu-Ali Sina University,HMD,2008,241,6144,30,3,1
+I167694869,Bu-Ali Sina University,HMD,2009,297,10203,22,7,1
+I167694869,Bu-Ali Sina University,HMD,2010,408,10967,43,8,3
+I167694869,Bu-Ali Sina University,HMD,2011,562,13613,68,10,4
+I167694869,Bu-Ali Sina University,HMD,2012,764,15407,78,14,5
+I167694869,Bu-Ali Sina University,HMD,2013,829,13967,87,17,14
+I167694869,Bu-Ali Sina University,HMD,2014,1100,18298,112,23,17
+I167694869,Bu-Ali Sina University,HMD,2015,1210,16951,91,24,18
+I167694869,Bu-Ali Sina University,HMD,2016,1279,15426,101,19,20
+I167694869,Bu-Ali Sina University,HMD,2017,1316,15278,130,30,23
+I167694869,Bu-Ali Sina University,HMD,2018,1376,14243,155,18,20
+I167694869,Bu-Ali Sina University,HMD,2019,1307,17886,166,39,22
+I167694869,Bu-Ali Sina University,HMD,2020,1498,20418,250,45,43
+I167694869,Bu-Ali Sina University,HMD,2021,1310,17295,254,44,24
+I167694869,Bu-Ali Sina University,HMD,2022,854,14139,254,32,13
+I167694869,Bu-Ali Sina University,HMD,2023,799,9762,246,32,20
+I167694869,Bu-Ali Sina University,HMD,2024,748,6381,241,24,8
+I167694869,Bu-Ali Sina University,HMD,2025,807,2638,251,25,14
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2000,58,207,4,0,1
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2001,5,101,0,0,0
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2002,11,276,3,0,0
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2003,12,149,0,0,0
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2004,22,385,1,1,1
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2005,36,1002,3,0,0
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2006,77,1141,6,0,0
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2007,137,2137,11,0,0
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2008,136,2782,12,0,1
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2009,177,3648,12,1,0
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2010,264,3945,30,0,0
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2011,416,7003,26,0,1
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2012,605,7195,33,0,6
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2013,789,12605,32,3,2
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2014,1055,15986,51,3,11
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2015,1166,16908,41,2,12
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2016,1299,23706,74,2,15
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2017,1251,21721,127,3,20
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2018,1285,24822,151,5,19
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2019,1287,27976,163,4,17
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2020,1316,24377,197,5,6
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2021,1420,18416,207,2,20
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2022,1238,17003,246,8,27
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2023,1215,12328,246,7,13
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2024,1268,7694,251,7,17
+I119939603,Ahvaz Jundishapur University of Medical Sciences,KHZ,2025,1238,5740,297,14,11
+I1187138,Razi University,KSH,2000,70,1823,4,0,0
+I1187138,Razi University,KSH,2001,73,2399,6,0,0
+I1187138,Razi University,KSH,2002,77,2475,15,0,0
+I1187138,Razi University,KSH,2003,84,3034,16,1,0
+I1187138,Razi University,KSH,2004,89,2634,11,0,0
+I1187138,Razi University,KSH,2005,134,3171,15,0,1
+I1187138,Razi University,KSH,2006,130,4113,17,0,0
+I1187138,Razi University,KSH,2007,210,4995,28,2,2
+I1187138,Razi University,KSH,2008,199,6342,40,3,2
+I1187138,Razi University,KSH,2009,283,10551,44,9,2
+I1187138,Razi University,KSH,2010,376,9230,63,9,3
+I1187138,Razi University,KSH,2011,546,14522,62,8,5
+I1187138,Razi University,KSH,2012,697,16952,77,9,8
+I1187138,Razi University,KSH,2013,801,16014,77,4,11
+I1187138,Razi University,KSH,2014,848,14663,98,12,8
+I1187138,Razi University,KSH,2015,1076,14973,111,24,11
+I1187138,Razi University,KSH,2016,1129,16671,118,15,12
+I1187138,Razi University,KSH,2017,1290,19457,142,12,12
+I1187138,Razi University,KSH,2018,1399,18433,159,18,20
+I1187138,Razi University,KSH,2019,1518,21472,189,30,24
+I1187138,Razi University,KSH,2020,1475,19944,248,23,19
+I1187138,Razi University,KSH,2021,1367,13934,239,22,28
+I1187138,Razi University,KSH,2022,791,11116,205,27,10
+I1187138,Razi University,KSH,2023,694,7780,195,16,16
+I1187138,Razi University,KSH,2024,737,5203,213,11,15
+I1187138,Razi University,KSH,2025,822,3986,239,20,12
+I235686326,Kerman University of Medical Sciences,KRM,2000,31,199,2,0,0
+I235686326,Kerman University of Medical Sciences,KRM,2001,18,277,1,0,0
+I235686326,Kerman University of Medical Sciences,KRM,2002,24,569,1,0,0
+I235686326,Kerman University of Medical Sciences,KRM,2003,34,688,3,0,0
+I235686326,Kerman University of Medical Sciences,KRM,2004,55,890,7,1,1
+I235686326,Kerman University of Medical Sciences,KRM,2005,60,1913,3,0,0
+I235686326,Kerman University of Medical Sciences,KRM,2006,77,2259,7,0,0
+I235686326,Kerman University of Medical Sciences,KRM,2007,96,2634,9,0,0
+I235686326,Kerman University of Medical Sciences,KRM,2008,122,4165,14,0,0
+I235686326,Kerman University of Medical Sciences,KRM,2009,210,5723,28,1,2
+I235686326,Kerman University of Medical Sciences,KRM,2010,212,7716,25,1,3
+I235686326,Kerman University of Medical Sciences,KRM,2011,323,7535,38,1,2
+I235686326,Kerman University of Medical Sciences,KRM,2012,484,8832,39,1,5
+I235686326,Kerman University of Medical Sciences,KRM,2013,596,10965,54,3,9
+I235686326,Kerman University of Medical Sciences,KRM,2014,805,11694,69,2,12
+I235686326,Kerman University of Medical Sciences,KRM,2015,929,13138,58,7,17
+I235686326,Kerman University of Medical Sciences,KRM,2016,1023,14676,101,9,23
+I235686326,Kerman University of Medical Sciences,KRM,2017,1125,22384,114,5,10
+I235686326,Kerman University of Medical Sciences,KRM,2018,1057,20822,115,4,11
+I235686326,Kerman University of Medical Sciences,KRM,2019,1202,28915,140,5,25
+I235686326,Kerman University of Medical Sciences,KRM,2020,1352,34040,258,5,20
+I235686326,Kerman University of Medical Sciences,KRM,2021,1371,32025,306,5,15
+I235686326,Kerman University of Medical Sciences,KRM,2022,1333,20587,346,11,18
+I235686326,Kerman University of Medical Sciences,KRM,2023,1272,14128,321,10,21
+I235686326,Kerman University of Medical Sciences,KRM,2024,1265,9430,319,18,23
+I235686326,Kerman University of Medical Sciences,KRM,2025,1302,5645,327,24,16
+I112536369,Yazd University,YZD,2000,26,154,3,0,1
+I112536369,Yazd University,YZD,2001,16,255,3,1,0
+I112536369,Yazd University,YZD,2002,27,373,2,0,0
+I112536369,Yazd University,YZD,2003,45,772,1,4,1
+I112536369,Yazd University,YZD,2004,60,1349,10,5,0
+I112536369,Yazd University,YZD,2005,64,2189,6,2,0
+I112536369,Yazd University,YZD,2006,92,2186,13,6,0
+I112536369,Yazd University,YZD,2007,148,3268,23,7,1
+I112536369,Yazd University,YZD,2008,187,4913,29,10,4
+I112536369,Yazd University,YZD,2009,242,6162,48,15,3
+I112536369,Yazd University,YZD,2010,316,6763,45,14,3
+I112536369,Yazd University,YZD,2011,390,6199,53,18,4
+I112536369,Yazd University,YZD,2012,548,6936,58,39,12
+I112536369,Yazd University,YZD,2013,690,7675,70,40,7
+I112536369,Yazd University,YZD,2014,846,9870,60,49,8
+I112536369,Yazd University,YZD,2015,992,10452,66,66,13
+I112536369,Yazd University,YZD,2016,1156,11533,72,72,24
+I112536369,Yazd University,YZD,2017,1204,9721,116,69,15
+I112536369,Yazd University,YZD,2018,1233,10240,132,53,18
+I112536369,Yazd University,YZD,2019,1424,14975,204,66,19
+I112536369,Yazd University,YZD,2020,1565,17885,281,86,15
+I112536369,Yazd University,YZD,2021,1367,16395,331,87,26
+I112536369,Yazd University,YZD,2022,809,11537,256,56,20
+I112536369,Yazd University,YZD,2023,693,7403,230,54,20
+I112536369,Yazd University,YZD,2024,708,4589,225,32,15
+I112536369,Yazd University,YZD,2025,711,1962,178,67,25
+I928334797,Semnan University,SMN,2000,10,16,2,0,0
+I928334797,Semnan University,SMN,2001,4,873,1,0,0
+I928334797,Semnan University,SMN,2002,6,51,1,0,0
+I928334797,Semnan University,SMN,2003,9,191,0,0,2
+I928334797,Semnan University,SMN,2004,10,130,0,0,0
+I928334797,Semnan University,SMN,2005,20,527,8,0,0
+I928334797,Semnan University,SMN,2006,35,1271,7,1,0
+I928334797,Semnan University,SMN,2007,46,1049,7,0,0
+I928334797,Semnan University,SMN,2008,65,2013,7,1,0
+I928334797,Semnan University,SMN,2009,160,5093,18,2,3
+I928334797,Semnan University,SMN,2010,212,6720,25,3,1
+I928334797,Semnan University,SMN,2011,334,6161,44,4,2
+I928334797,Semnan University,SMN,2012,547,11098,82,7,4
+I928334797,Semnan University,SMN,2013,624,10986,64,9,3
+I928334797,Semnan University,SMN,2014,841,17736,86,17,10
+I928334797,Semnan University,SMN,2015,973,16792,89,27,9
+I928334797,Semnan University,SMN,2016,1224,17473,109,35,11
+I928334797,Semnan University,SMN,2017,1354,21008,118,32,20
+I928334797,Semnan University,SMN,2018,1433,19449,132,25,16
+I928334797,Semnan University,SMN,2019,1556,20011,178,45,15
+I928334797,Semnan University,SMN,2020,1485,22225,221,32,22
+I928334797,Semnan University,SMN,2021,1362,19150,241,52,10
+I928334797,Semnan University,SMN,2022,833,14625,229,40,11
+I928334797,Semnan University,SMN,2023,802,11265,228,31,6
+I928334797,Semnan University,SMN,2024,814,8211,273,48,5
+I928334797,Semnan University,SMN,2025,863,4530,256,58,12
+I72341708,University of Mohaghegh Ardabili,ARD,2000,15,0,0,0,2
+I72341708,University of Mohaghegh Ardabili,ARD,2001,1,13,0,0,0
+I72341708,University of Mohaghegh Ardabili,ARD,2003,9,80,1,0,0
+I72341708,University of Mohaghegh Ardabili,ARD,2004,9,60,1,0,0
+I72341708,University of Mohaghegh Ardabili,ARD,2005,20,492,1,0,0
+I72341708,University of Mohaghegh Ardabili,ARD,2006,33,989,3,0,1
+I72341708,University of Mohaghegh Ardabili,ARD,2007,74,2031,7,1,1
+I72341708,University of Mohaghegh Ardabili,ARD,2008,105,3527,9,0,1
+I72341708,University of Mohaghegh Ardabili,ARD,2009,166,4598,21,0,1
+I72341708,University of Mohaghegh Ardabili,ARD,2010,193,4745,17,2,0
+I72341708,University of Mohaghegh Ardabili,ARD,2011,235,4315,22,3,0
+I72341708,University of Mohaghegh Ardabili,ARD,2012,331,4278,23,1,7
+I72341708,University of Mohaghegh Ardabili,ARD,2013,367,4809,29,3,3
+I72341708,University of Mohaghegh Ardabili,ARD,2014,568,4420,30,8,3
+I72341708,University of Mohaghegh Ardabili,ARD,2015,778,6170,39,16,9
+I72341708,University of Mohaghegh Ardabili,ARD,2016,1004,10543,64,20,10
+I72341708,University of Mohaghegh Ardabili,ARD,2017,1219,14261,85,14,14
+I72341708,University of Mohaghegh Ardabili,ARD,2018,1527,20965,142,24,15
+I72341708,University of Mohaghegh Ardabili,ARD,2019,1529,20749,186,23,21
+I72341708,University of Mohaghegh Ardabili,ARD,2020,1765,27518,335,32,19
+I72341708,University of Mohaghegh Ardabili,ARD,2021,1671,18274,359,33,31
+I72341708,University of Mohaghegh Ardabili,ARD,2022,856,11510,337,22,7
+I72341708,University of Mohaghegh Ardabili,ARD,2023,771,9726,309,17,9
+I72341708,University of Mohaghegh Ardabili,ARD,2024,810,5978,305,22,20
+I72341708,University of Mohaghegh Ardabili,ARD,2025,860,3075,292,29,11
+I39642139,Kermanshah University of Medical Sciences,KSH,2000,17,326,0,0,0
+I39642139,Kermanshah University of Medical Sciences,KSH,2001,5,416,0,0,0
+I39642139,Kermanshah University of Medical Sciences,KSH,2002,9,178,0,0,0
+I39642139,Kermanshah University of Medical Sciences,KSH,2003,20,36,0,0,0
+I39642139,Kermanshah University of Medical Sciences,KSH,2004,39,588,1,0,0
+I39642139,Kermanshah University of Medical Sciences,KSH,2005,42,1076,3,0,0
+I39642139,Kermanshah University of Medical Sciences,KSH,2006,56,829,9,0,0
+I39642139,Kermanshah University of Medical Sciences,KSH,2007,69,1391,13,0,0
+I39642139,Kermanshah University of Medical Sciences,KSH,2008,81,2985,18,0,0
+I39642139,Kermanshah University of Medical Sciences,KSH,2009,126,1753,15,1,0
+I39642139,Kermanshah University of Medical Sciences,KSH,2010,142,2668,22,1,2
+I39642139,Kermanshah University of Medical Sciences,KSH,2011,241,3049,26,1,0
+I39642139,Kermanshah University of Medical Sciences,KSH,2012,336,3983,36,1,5
+I39642139,Kermanshah University of Medical Sciences,KSH,2013,434,5879,31,3,8
+I39642139,Kermanshah University of Medical Sciences,KSH,2014,563,7790,41,1,11
+I39642139,Kermanshah University of Medical Sciences,KSH,2015,788,10674,62,3,8
+I39642139,Kermanshah University of Medical Sciences,KSH,2016,761,13945,55,2,10
+I39642139,Kermanshah University of Medical Sciences,KSH,2017,933,18393,113,3,10
+I39642139,Kermanshah University of Medical Sciences,KSH,2018,1257,43003,226,6,15
+I39642139,Kermanshah University of Medical Sciences,KSH,2019,1435,38034,344,4,17
+I39642139,Kermanshah University of Medical Sciences,KSH,2020,1562,52774,441,6,19
+I39642139,Kermanshah University of Medical Sciences,KSH,2021,1418,35462,460,8,17
+I39642139,Kermanshah University of Medical Sciences,KSH,2022,1221,22512,400,1,13
+I39642139,Kermanshah University of Medical Sciences,KSH,2023,1077,14845,320,3,18
+I39642139,Kermanshah University of Medical Sciences,KSH,2024,1116,10627,344,9,16
+I39642139,Kermanshah University of Medical Sciences,KSH,2025,1169,6526,346,14,22
+I4871159,University of Mazandaran,MZN,2000,8,178,0,0,0
+I4871159,University of Mazandaran,MZN,2001,36,456,3,0,0
+I4871159,University of Mazandaran,MZN,2002,45,441,4,0,0
+I4871159,University of Mazandaran,MZN,2003,60,1235,5,0,0
+I4871159,University of Mazandaran,MZN,2004,97,1135,7,0,0
+I4871159,University of Mazandaran,MZN,2005,163,4143,18,1,1
+I4871159,University of Mazandaran,MZN,2006,223,5952,20,0,0
+I4871159,University of Mazandaran,MZN,2007,284,6304,29,3,0
+I4871159,University of Mazandaran,MZN,2008,305,5931,21,2,1
+I4871159,University of Mazandaran,MZN,2009,326,5741,17,2,0
+I4871159,University of Mazandaran,MZN,2010,396,6129,35,10,5
+I4871159,University of Mazandaran,MZN,2011,503,7114,43,12,4
+I4871159,University of Mazandaran,MZN,2012,657,10427,57,5,12
+I4871159,University of Mazandaran,MZN,2013,777,11564,85,7,8
+I4871159,University of Mazandaran,MZN,2014,853,11540,74,10,8
+I4871159,University of Mazandaran,MZN,2015,973,11070,91,8,19
+I4871159,University of Mazandaran,MZN,2016,1088,12287,105,10,15
+I4871159,University of Mazandaran,MZN,2017,1196,11418,116,13,19
+I4871159,University of Mazandaran,MZN,2018,1215,12448,109,12,18
+I4871159,University of Mazandaran,MZN,2019,1213,10916,129,15,18
+I4871159,University of Mazandaran,MZN,2020,1292,11732,149,23,41
+I4871159,University of Mazandaran,MZN,2021,1110,11883,208,10,29
+I4871159,University of Mazandaran,MZN,2022,614,7073,168,21,18
+I4871159,University of Mazandaran,MZN,2023,628,7373,188,14,11
+I4871159,University of Mazandaran,MZN,2024,708,5809,191,25,17
+I4871159,University of Mazandaran,MZN,2025,812,3156,201,30,19
+I88085062,Mazandaran University of Medical Sciences,MZN,2000,15,38,2,0,0
+I88085062,Mazandaran University of Medical Sciences,MZN,2001,3,16,1,0,0
+I88085062,Mazandaran University of Medical Sciences,MZN,2002,9,352,0,0,0
+I88085062,Mazandaran University of Medical Sciences,MZN,2003,16,641,2,0,0
+I88085062,Mazandaran University of Medical Sciences,MZN,2004,25,624,4,0,0
+I88085062,Mazandaran University of Medical Sciences,MZN,2005,59,2827,7,0,0
+I88085062,Mazandaran University of Medical Sciences,MZN,2006,74,2448,5,0,0
+I88085062,Mazandaran University of Medical Sciences,MZN,2007,81,3367,12,0,0
+I88085062,Mazandaran University of Medical Sciences,MZN,2008,101,2565,9,0,0
+I88085062,Mazandaran University of Medical Sciences,MZN,2009,143,3689,16,1,0
+I88085062,Mazandaran University of Medical Sciences,MZN,2010,156,3874,19,1,1
+I88085062,Mazandaran University of Medical Sciences,MZN,2011,212,4144,23,0,0
+I88085062,Mazandaran University of Medical Sciences,MZN,2012,297,5033,15,0,1
+I88085062,Mazandaran University of Medical Sciences,MZN,2013,450,10216,43,1,3
+I88085062,Mazandaran University of Medical Sciences,MZN,2014,682,12650,38,1,9
+I88085062,Mazandaran University of Medical Sciences,MZN,2015,915,20345,72,3,13
+I88085062,Mazandaran University of Medical Sciences,MZN,2016,1017,15359,86,2,8
+I88085062,Mazandaran University of Medical Sciences,MZN,2017,974,14886,93,1,4
+I88085062,Mazandaran University of Medical Sciences,MZN,2018,1051,17688,116,2,8
+I88085062,Mazandaran University of Medical Sciences,MZN,2019,1211,23456,159,1,14
+I88085062,Mazandaran University of Medical Sciences,MZN,2020,1353,26349,215,1,11
+I88085062,Mazandaran University of Medical Sciences,MZN,2021,1311,21239,220,4,12
+I88085062,Mazandaran University of Medical Sciences,MZN,2022,1043,13124,215,5,12
+I88085062,Mazandaran University of Medical Sciences,MZN,2023,1037,9598,253,2,31
+I88085062,Mazandaran University of Medical Sciences,MZN,2024,1026,5928,284,7,18
+I88085062,Mazandaran University of Medical Sciences,MZN,2025,1078,4721,308,11,28
+I67080706,Alzahra University,THR,2000,29,288,3,1,0
+I67080706,Alzahra University,THR,2001,50,445,3,0,0
+I67080706,Alzahra University,THR,2002,48,1146,6,0,0
+I67080706,Alzahra University,THR,2003,44,273,5,0,0
+I67080706,Alzahra University,THR,2004,90,891,8,1,0
+I67080706,Alzahra University,THR,2005,124,1764,13,0,3
+I67080706,Alzahra University,THR,2006,197,4145,24,0,6
+I67080706,Alzahra University,THR,2007,196,3606,24,1,2
+I67080706,Alzahra University,THR,2008,187,3706,22,1,0
+I67080706,Alzahra University,THR,2009,263,3781,22,1,5
+I67080706,Alzahra University,THR,2010,360,3160,24,5,7
+I67080706,Alzahra University,THR,2011,448,4371,26,11,5
+I67080706,Alzahra University,THR,2012,477,5353,31,6,10
+I67080706,Alzahra University,THR,2013,517,4900,28,17,12
+I67080706,Alzahra University,THR,2014,598,4737,25,9,16
+I67080706,Alzahra University,THR,2015,791,6739,37,11,22
+I67080706,Alzahra University,THR,2016,970,8826,51,20,40
+I67080706,Alzahra University,THR,2017,980,7486,53,20,50
+I67080706,Alzahra University,THR,2018,1059,9642,64,11,36
+I67080706,Alzahra University,THR,2019,1178,6639,75,22,67
+I67080706,Alzahra University,THR,2020,1286,11043,105,37,47
+I67080706,Alzahra University,THR,2021,1103,8093,109,25,36
+I67080706,Alzahra University,THR,2022,625,7052,163,14,34
+I67080706,Alzahra University,THR,2023,530,4913,153,22,18
+I67080706,Alzahra University,THR,2024,515,3886,177,13,20
+I67080706,Alzahra University,THR,2025,589,2025,157,21,30
+I112312016,Hamedan University of Medical Sciences,HMD,2000,16,66,0,0,0
+I112312016,Hamedan University of Medical Sciences,HMD,2001,6,31,0,0,0
+I112312016,Hamedan University of Medical Sciences,HMD,2002,10,67,1,0,0
+I112312016,Hamedan University of Medical Sciences,HMD,2003,12,250,1,0,0
+I112312016,Hamedan University of Medical Sciences,HMD,2004,20,584,1,0,0
+I112312016,Hamedan University of Medical Sciences,HMD,2005,36,471,3,0,0
+I112312016,Hamedan University of Medical Sciences,HMD,2006,68,1053,14,0,0
+I112312016,Hamedan University of Medical Sciences,HMD,2007,97,2075,9,0,0
+I112312016,Hamedan University of Medical Sciences,HMD,2008,122,2685,22,0,0
+I112312016,Hamedan University of Medical Sciences,HMD,2009,130,3367,17,0,1
+I112312016,Hamedan University of Medical Sciences,HMD,2010,166,2760,14,2,2
+I112312016,Hamedan University of Medical Sciences,HMD,2011,242,4562,31,0,0
+I112312016,Hamedan University of Medical Sciences,HMD,2012,348,5696,43,0,3
+I112312016,Hamedan University of Medical Sciences,HMD,2013,478,5285,26,3,7
+I112312016,Hamedan University of Medical Sciences,HMD,2014,732,9374,36,7,9
+I112312016,Hamedan University of Medical Sciences,HMD,2015,802,11130,42,3,7
+I112312016,Hamedan University of Medical Sciences,HMD,2016,951,16408,46,8,6
+I112312016,Hamedan University of Medical Sciences,HMD,2017,1077,12825,66,7,7
+I112312016,Hamedan University of Medical Sciences,HMD,2018,1161,16802,71,6,13
+I112312016,Hamedan University of Medical Sciences,HMD,2019,1169,21492,114,9,21
+I112312016,Hamedan University of Medical Sciences,HMD,2020,1335,19536,111,9,10
+I112312016,Hamedan University of Medical Sciences,HMD,2021,1318,25422,176,11,13
+I112312016,Hamedan University of Medical Sciences,HMD,2022,1147,16576,222,17,9
+I112312016,Hamedan University of Medical Sciences,HMD,2023,1128,11100,208,5,14
+I112312016,Hamedan University of Medical Sciences,HMD,2024,1045,6720,201,8,17
+I112312016,Hamedan University of Medical Sciences,HMD,2025,1042,5266,211,24,13
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2000,8,53,0,0,0
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2001,1,3,0,0,0
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2002,1,79,0,0,0
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2003,4,42,0,0,0
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2004,15,397,0,0,1
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2005,18,158,2,0,0
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2006,44,790,2,0,0
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2007,89,1051,3,0,1
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2008,95,2178,4,0,1
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2009,132,3506,10,1,1
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2010,106,2682,14,0,0
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2011,244,3424,11,0,1
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2012,349,3998,15,0,4
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2013,576,8015,25,0,1
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2014,719,7791,30,2,6
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2015,825,8241,35,3,9
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2016,1055,10440,51,7,7
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2017,1004,13326,68,8,11
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2018,985,13334,84,3,11
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2019,995,14649,100,3,11
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2020,1129,17917,139,5,19
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2021,1067,13348,185,2,12
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2022,941,11852,205,2,11
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2023,834,7948,150,2,19
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2024,983,5702,198,12,19
+I223669574,Shahid Sadoughi University of Medical Sciences and Health Services,YZD,2025,1043,3553,162,9,24
+I99861883,University of Zanjan,ZNJ,2000,12,183,6,0,0
+I99861883,University of Zanjan,ZNJ,2001,10,245,0,0,0
+I99861883,University of Zanjan,ZNJ,2002,31,107,5,0,0
+I99861883,University of Zanjan,ZNJ,2003,34,461,6,0,0
+I99861883,University of Zanjan,ZNJ,2004,43,904,9,0,0
+I99861883,University of Zanjan,ZNJ,2005,51,980,16,1,0
+I99861883,University of Zanjan,ZNJ,2006,73,1720,19,2,1
+I99861883,University of Zanjan,ZNJ,2007,116,2482,35,4,0
+I99861883,University of Zanjan,ZNJ,2008,131,2684,25,5,2
+I99861883,University of Zanjan,ZNJ,2009,158,3272,29,5,1
+I99861883,University of Zanjan,ZNJ,2010,219,4416,29,8,0
+I99861883,University of Zanjan,ZNJ,2011,283,4667,30,10,2
+I99861883,University of Zanjan,ZNJ,2012,391,4778,53,12,3
+I99861883,University of Zanjan,ZNJ,2013,423,5035,59,8,2
+I99861883,University of Zanjan,ZNJ,2014,588,7019,63,19,9
+I99861883,University of Zanjan,ZNJ,2015,705,9921,77,34,2
+I99861883,University of Zanjan,ZNJ,2016,892,10952,122,25,5
+I99861883,University of Zanjan,ZNJ,2017,983,12998,126,33,6
+I99861883,University of Zanjan,ZNJ,2018,1011,13966,130,34,12
+I99861883,University of Zanjan,ZNJ,2019,1064,14474,175,38,6
+I99861883,University of Zanjan,ZNJ,2020,1138,13545,198,29,12
+I99861883,University of Zanjan,ZNJ,2021,1040,11508,236,37,14
+I99861883,University of Zanjan,ZNJ,2022,649,9585,247,24,10
+I99861883,University of Zanjan,ZNJ,2023,562,7912,218,27,4
+I99861883,University of Zanjan,ZNJ,2024,550,4614,181,15,7
+I99861883,University of Zanjan,ZNJ,2025,568,2905,177,28,5
+I2799282979,"Islamic Azad University, Isfahan",ISF,2000,22,23,1,1,0
+I2799282979,"Islamic Azad University, Isfahan",ISF,2002,3,80,1,0,0
+I2799282979,"Islamic Azad University, Isfahan",ISF,2003,8,279,0,0,0
+I2799282979,"Islamic Azad University, Isfahan",ISF,2004,7,109,0,0,0
+I2799282979,"Islamic Azad University, Isfahan",ISF,2005,13,49,1,0,0
+I2799282979,"Islamic Azad University, Isfahan",ISF,2006,16,365,0,0,0
+I2799282979,"Islamic Azad University, Isfahan",ISF,2007,26,777,3,2,0
+I2799282979,"Islamic Azad University, Isfahan",ISF,2008,37,305,1,1,2
+I2799282979,"Islamic Azad University, Isfahan",ISF,2009,58,773,6,0,1
+I2799282979,"Islamic Azad University, Isfahan",ISF,2010,171,1709,7,6,13
+I2799282979,"Islamic Azad University, Isfahan",ISF,2011,282,5503,36,3,0
+I2799282979,"Islamic Azad University, Isfahan",ISF,2012,407,8344,38,11,14
+I2799282979,"Islamic Azad University, Isfahan",ISF,2013,518,5999,41,9,7
+I2799282979,"Islamic Azad University, Isfahan",ISF,2014,646,9391,54,12,20
+I2799282979,"Islamic Azad University, Isfahan",ISF,2015,752,11673,60,14,39
+I2799282979,"Islamic Azad University, Isfahan",ISF,2016,875,12862,76,17,52
+I2799282979,"Islamic Azad University, Isfahan",ISF,2017,793,9158,74,21,26
+I2799282979,"Islamic Azad University, Isfahan",ISF,2018,854,8698,71,16,37
+I2799282979,"Islamic Azad University, Isfahan",ISF,2019,849,8904,94,17,40
+I2799282979,"Islamic Azad University, Isfahan",ISF,2020,971,11271,110,14,44
+I2799282979,"Islamic Azad University, Isfahan",ISF,2021,866,7461,120,22,61
+I2799282979,"Islamic Azad University, Isfahan",ISF,2022,526,4504,101,20,26
+I2799282979,"Islamic Azad University, Isfahan",ISF,2023,593,4137,110,19,18
+I2799282979,"Islamic Azad University, Isfahan",ISF,2024,713,3324,188,14,65
+I2799282979,"Islamic Azad University, Isfahan",ISF,2025,969,2782,279,62,81
+I176861719,University of Shahrood,SMN,2000,4,1,0,0,0
+I176861719,University of Shahrood,SMN,2001,3,36,1,0,0
+I176861719,University of Shahrood,SMN,2002,7,114,2,1,0
+I176861719,University of Shahrood,SMN,2003,5,584,3,0,0
+I176861719,University of Shahrood,SMN,2004,21,642,8,0,0
+I176861719,University of Shahrood,SMN,2005,18,656,4,3,0
+I176861719,University of Shahrood,SMN,2006,37,1005,10,4,0
+I176861719,University of Shahrood,SMN,2007,56,1546,8,6,0
+I176861719,University of Shahrood,SMN,2008,93,2462,11,8,0
+I176861719,University of Shahrood,SMN,2009,186,4250,21,12,2
+I176861719,University of Shahrood,SMN,2010,216,4435,36,21,0
+I176861719,University of Shahrood,SMN,2011,287,6287,53,37,3
+I176861719,University of Shahrood,SMN,2012,394,8776,51,34,0
+I176861719,University of Shahrood,SMN,2013,442,7649,75,37,3
+I176861719,University of Shahrood,SMN,2014,475,8053,62,44,3
+I176861719,University of Shahrood,SMN,2015,588,8980,73,38,3
+I176861719,University of Shahrood,SMN,2016,685,9157,103,48,1
+I176861719,University of Shahrood,SMN,2017,817,15392,136,56,3
+I176861719,University of Shahrood,SMN,2018,1034,20202,240,84,3
+I176861719,University of Shahrood,SMN,2019,1149,19725,271,85,3
+I176861719,University of Shahrood,SMN,2020,1219,23610,371,69,3
+I176861719,University of Shahrood,SMN,2021,1042,15509,317,67,3
+I176861719,University of Shahrood,SMN,2022,683,11225,284,51,0
+I176861719,University of Shahrood,SMN,2023,634,8828,265,34,2
+I176861719,University of Shahrood,SMN,2024,551,5637,209,28,4
+I176861719,University of Shahrood,SMN,2025,578,2248,192,46,3
+I127908078,Shahrekord University,CHB,2000,6,10,0,0,0
+I127908078,Shahrekord University,CHB,2001,6,51,1,0,0
+I127908078,Shahrekord University,CHB,2002,2,27,0,0,0
+I127908078,Shahrekord University,CHB,2003,22,44,2,0,0
+I127908078,Shahrekord University,CHB,2004,37,539,3,1,0
+I127908078,Shahrekord University,CHB,2005,46,672,3,1,0
+I127908078,Shahrekord University,CHB,2006,89,1575,6,0,1
+I127908078,Shahrekord University,CHB,2007,91,1232,8,1,1
+I127908078,Shahrekord University,CHB,2008,153,1867,21,3,5
+I127908078,Shahrekord University,CHB,2009,176,3864,32,3,0
+I127908078,Shahrekord University,CHB,2010,208,4931,39,4,2
+I127908078,Shahrekord University,CHB,2011,307,6498,39,5,2
+I127908078,Shahrekord University,CHB,2012,328,4525,29,5,3
+I127908078,Shahrekord University,CHB,2013,481,5079,35,21,4
+I127908078,Shahrekord University,CHB,2014,571,6540,50,14,2
+I127908078,Shahrekord University,CHB,2015,711,8192,60,9,8
+I127908078,Shahrekord University,CHB,2016,861,12331,54,19,4
+I127908078,Shahrekord University,CHB,2017,895,13092,91,19,6
+I127908078,Shahrekord University,CHB,2018,862,12756,109,15,5
+I127908078,Shahrekord University,CHB,2019,938,15703,123,27,8
+I127908078,Shahrekord University,CHB,2020,985,15515,182,29,15
+I127908078,Shahrekord University,CHB,2021,853,10833,151,19,17
+I127908078,Shahrekord University,CHB,2022,583,9528,169,19,5
+I127908078,Shahrekord University,CHB,2023,561,6515,159,15,7
+I127908078,Shahrekord University,CHB,2024,540,4080,160,21,6
+I127908078,Shahrekord University,CHB,2025,549,1789,161,20,9
+I120514687,Baqiyatallah University of Medical Sciences,THR,2000,21,154,2,0,0
+I120514687,Baqiyatallah University of Medical Sciences,THR,2001,2,35,0,0,0
+I120514687,Baqiyatallah University of Medical Sciences,THR,2002,20,742,1,0,0
+I120514687,Baqiyatallah University of Medical Sciences,THR,2003,31,1588,2,0,0
+I120514687,Baqiyatallah University of Medical Sciences,THR,2004,42,1338,3,1,0
+I120514687,Baqiyatallah University of Medical Sciences,THR,2005,61,1544,3,0,1
+I120514687,Baqiyatallah University of Medical Sciences,THR,2006,76,1518,6,0,0
+I120514687,Baqiyatallah University of Medical Sciences,THR,2007,158,3851,8,0,0
+I120514687,Baqiyatallah University of Medical Sciences,THR,2008,155,3702,10,0,0
+I120514687,Baqiyatallah University of Medical Sciences,THR,2009,212,4209,25,1,1
+I120514687,Baqiyatallah University of Medical Sciences,THR,2010,194,4431,21,0,1
+I120514687,Baqiyatallah University of Medical Sciences,THR,2011,321,5535,24,0,1
+I120514687,Baqiyatallah University of Medical Sciences,THR,2012,459,7521,46,1,9
+I120514687,Baqiyatallah University of Medical Sciences,THR,2013,485,7079,45,1,7
+I120514687,Baqiyatallah University of Medical Sciences,THR,2014,645,11918,44,2,16
+I120514687,Baqiyatallah University of Medical Sciences,THR,2015,741,17515,90,5,10
+I120514687,Baqiyatallah University of Medical Sciences,THR,2016,910,29316,106,2,9
+I120514687,Baqiyatallah University of Medical Sciences,THR,2017,895,27504,144,1,14
+I120514687,Baqiyatallah University of Medical Sciences,THR,2018,873,30058,135,4,14
+I120514687,Baqiyatallah University of Medical Sciences,THR,2019,849,22986,131,4,11
+I120514687,Baqiyatallah University of Medical Sciences,THR,2020,956,27866,188,2,20
+I120514687,Baqiyatallah University of Medical Sciences,THR,2021,893,18300,172,1,15
+I120514687,Baqiyatallah University of Medical Sciences,THR,2022,714,8933,134,2,1
+I120514687,Baqiyatallah University of Medical Sciences,THR,2023,552,4810,70,4,4
+I120514687,Baqiyatallah University of Medical Sciences,THR,2024,518,3245,100,1,13
+I120514687,Baqiyatallah University of Medical Sciences,THR,2025,613,3188,111,5,8
+I105818395,University of Kashan,ISF,2000,6,107,0,1,0
+I105818395,University of Kashan,ISF,2001,7,241,1,0,0
+I105818395,University of Kashan,ISF,2002,19,734,5,1,0
+I105818395,University of Kashan,ISF,2003,44,1417,3,0,0
+I105818395,University of Kashan,ISF,2004,41,1636,2,2,0
+I105818395,University of Kashan,ISF,2005,79,2703,2,3,1
+I105818395,University of Kashan,ISF,2006,109,2802,7,4,0
+I105818395,University of Kashan,ISF,2007,106,3143,6,0,2
+I105818395,University of Kashan,ISF,2008,127,6334,12,4,0
+I105818395,University of Kashan,ISF,2009,194,9470,15,3,0
+I105818395,University of Kashan,ISF,2010,200,7745,17,2,3
+I105818395,University of Kashan,ISF,2011,282,7438,22,2,4
+I105818395,University of Kashan,ISF,2012,436,10667,46,9,6
+I105818395,University of Kashan,ISF,2013,468,11808,33,9,7
+I105818395,University of Kashan,ISF,2014,658,16210,48,17,12
+I105818395,University of Kashan,ISF,2015,732,20412,79,32,5
+I105818395,University of Kashan,ISF,2016,807,22969,88,22,8
+I105818395,University of Kashan,ISF,2017,873,25990,113,15,9
+I105818395,University of Kashan,ISF,2018,802,18126,105,21,11
+I105818395,University of Kashan,ISF,2019,965,25339,164,26,11
+I105818395,University of Kashan,ISF,2020,941,21731,232,33,12
+I105818395,University of Kashan,ISF,2021,803,18936,233,16,10
+I105818395,University of Kashan,ISF,2022,554,11062,180,17,3
+I105818395,University of Kashan,ISF,2023,502,7849,161,12,8
+I105818395,University of Kashan,ISF,2024,561,6298,178,16,9
+I105818395,University of Kashan,ISF,2025,585,2332,167,19,7
+I3124704065,University of Kurdistan,KRD,2000,1,4,0,0,0
+I3124704065,University of Kurdistan,KRD,2001,2,70,0,0,0
+I3124704065,University of Kurdistan,KRD,2002,4,77,0,0,0
+I3124704065,University of Kurdistan,KRD,2003,13,552,4,0,0
+I3124704065,University of Kurdistan,KRD,2004,20,957,4,1,0
+I3124704065,University of Kurdistan,KRD,2005,32,1094,4,0,0
+I3124704065,University of Kurdistan,KRD,2006,60,2503,6,1,0
+I3124704065,University of Kurdistan,KRD,2007,115,3421,16,3,0
+I3124704065,University of Kurdistan,KRD,2008,136,2457,14,4,0
+I3124704065,University of Kurdistan,KRD,2009,137,2511,16,9,3
+I3124704065,University of Kurdistan,KRD,2010,199,5359,37,6,2
+I3124704065,University of Kurdistan,KRD,2011,248,5102,29,6,3
+I3124704065,University of Kurdistan,KRD,2012,298,5234,45,8,5
+I3124704065,University of Kurdistan,KRD,2013,357,8817,39,10,5
+I3124704065,University of Kurdistan,KRD,2014,410,5955,48,15,1
+I3124704065,University of Kurdistan,KRD,2015,602,9387,57,24,5
+I3124704065,University of Kurdistan,KRD,2016,651,9903,54,13,6
+I3124704065,University of Kurdistan,KRD,2017,702,12034,87,17,6
+I3124704065,University of Kurdistan,KRD,2018,832,20665,131,30,13
+I3124704065,University of Kurdistan,KRD,2019,916,18503,160,30,26
+I3124704065,University of Kurdistan,KRD,2020,980,18824,254,46,30
+I3124704065,University of Kurdistan,KRD,2021,876,14322,242,37,23
+I3124704065,University of Kurdistan,KRD,2022,657,11863,256,32,20
+I3124704065,University of Kurdistan,KRD,2023,595,8648,261,30,13
+I3124704065,University of Kurdistan,KRD,2024,618,6056,250,32,7
+I3124704065,University of Kurdistan,KRD,2025,668,2466,275,48,15
+I119025939,Shahed University,THR,2000,8,123,0,0,1
+I119025939,Shahed University,THR,2001,3,692,2,0,0
+I119025939,Shahed University,THR,2002,7,345,2,0,0
+I119025939,Shahed University,THR,2003,25,740,1,0,0
+I119025939,Shahed University,THR,2004,48,664,3,0,0
+I119025939,Shahed University,THR,2005,37,1055,3,1,0
+I119025939,Shahed University,THR,2006,67,1967,8,0,0
+I119025939,Shahed University,THR,2007,95,2468,12,0,1
+I119025939,Shahed University,THR,2008,184,4211,13,0,3
+I119025939,Shahed University,THR,2009,204,4356,19,1,2
+I119025939,Shahed University,THR,2010,299,6565,22,3,3
+I119025939,Shahed University,THR,2011,456,7301,32,11,4
+I119025939,Shahed University,THR,2012,511,7383,32,9,4
+I119025939,Shahed University,THR,2013,539,5833,33,14,3
+I119025939,Shahed University,THR,2014,575,5405,37,10,11
+I119025939,Shahed University,THR,2015,645,6484,41,14,3
+I119025939,Shahed University,THR,2016,721,6375,35,19,11
+I119025939,Shahed University,THR,2017,809,8383,56,22,12
+I119025939,Shahed University,THR,2018,799,8620,55,23,15
+I119025939,Shahed University,THR,2019,896,8977,59,22,18
+I119025939,Shahed University,THR,2020,903,8406,92,20,24
+I119025939,Shahed University,THR,2021,833,6182,70,21,30
+I119025939,Shahed University,THR,2022,542,6082,118,20,11
+I119025939,Shahed University,THR,2023,448,4116,97,19,6
+I119025939,Shahed University,THR,2024,494,2947,84,14,6
+I119025939,Shahed University,THR,2025,546,2067,100,21,6
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2000,10,246,5,0,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2001,7,139,2,0,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2002,8,89,0,0,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2003,6,157,4,2,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2004,14,560,5,0,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2005,26,1000,11,2,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2006,36,1220,11,0,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2007,57,3263,29,0,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2008,91,3681,40,0,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2009,131,4338,23,1,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2010,142,2767,27,0,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2011,218,4646,32,0,1
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2012,350,6284,41,3,1
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2013,424,6351,52,3,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2014,648,8652,51,0,1
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2015,754,8941,58,4,1
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2016,837,13887,73,4,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2017,972,16011,92,4,2
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2018,996,15260,112,5,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2019,1044,17952,132,5,3
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2020,996,20504,191,4,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2021,797,12935,187,0,4
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2022,437,9830,222,2,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2023,423,9168,214,5,1
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2024,444,4839,183,4,0
+I67388046,Gorgan University of Agricultural Sciences and Natural Resources,GLS,2025,465,2124,190,7,4
+I204331812,Guilan University of Medical Sciences,GIL,2000,18,4,0,0,0
+I204331812,Guilan University of Medical Sciences,GIL,2001,19,8,1,0,0
+I204331812,Guilan University of Medical Sciences,GIL,2002,8,164,1,0,0
+I204331812,Guilan University of Medical Sciences,GIL,2003,9,378,1,0,0
+I204331812,Guilan University of Medical Sciences,GIL,2004,27,69,1,0,1
+I204331812,Guilan University of Medical Sciences,GIL,2005,24,719,2,0,0
+I204331812,Guilan University of Medical Sciences,GIL,2006,35,1079,6,0,0
+I204331812,Guilan University of Medical Sciences,GIL,2007,56,1260,7,0,0
+I204331812,Guilan University of Medical Sciences,GIL,2008,92,1098,5,0,0
+I204331812,Guilan University of Medical Sciences,GIL,2009,130,1639,8,0,0
+I204331812,Guilan University of Medical Sciences,GIL,2010,122,1493,6,0,1
+I204331812,Guilan University of Medical Sciences,GIL,2011,206,2392,13,0,1
+I204331812,Guilan University of Medical Sciences,GIL,2012,288,3492,15,0,5
+I204331812,Guilan University of Medical Sciences,GIL,2013,335,4343,19,0,1
+I204331812,Guilan University of Medical Sciences,GIL,2014,410,4258,21,1,6
+I204331812,Guilan University of Medical Sciences,GIL,2015,495,6354,33,2,5
+I204331812,Guilan University of Medical Sciences,GIL,2016,507,5479,38,0,6
+I204331812,Guilan University of Medical Sciences,GIL,2017,598,8593,60,0,8
+I204331812,Guilan University of Medical Sciences,GIL,2018,586,7823,53,3,16
+I204331812,Guilan University of Medical Sciences,GIL,2019,676,13567,84,0,12
+I204331812,Guilan University of Medical Sciences,GIL,2020,753,14136,132,1,6
+I204331812,Guilan University of Medical Sciences,GIL,2021,819,13367,144,1,8
+I204331812,Guilan University of Medical Sciences,GIL,2022,871,10304,181,3,11
+I204331812,Guilan University of Medical Sciences,GIL,2023,883,6744,205,2,11
+I204331812,Guilan University of Medical Sciences,GIL,2024,942,5659,195,5,20
+I204331812,Guilan University of Medical Sciences,GIL,2025,973,4925,276,17,13
+I1293555014,Islamic Azad University of Tabriz,AZS,2000,20,3,0,0,0
+I1293555014,Islamic Azad University of Tabriz,AZS,2002,1,0,0,0,0
+I1293555014,Islamic Azad University of Tabriz,AZS,2003,1,173,0,0,0
+I1293555014,Islamic Azad University of Tabriz,AZS,2004,7,392,0,0,0
+I1293555014,Islamic Azad University of Tabriz,AZS,2005,10,1329,0,0,0
+I1293555014,Islamic Azad University of Tabriz,AZS,2006,19,1090,1,1,0
+I1293555014,Islamic Azad University of Tabriz,AZS,2007,90,892,1,0,0
+I1293555014,Islamic Azad University of Tabriz,AZS,2008,177,1059,1,0,9
+I1293555014,Islamic Azad University of Tabriz,AZS,2009,200,1096,9,3,4
+I1293555014,Islamic Azad University of Tabriz,AZS,2010,233,1053,13,5,3
+I1293555014,Islamic Azad University of Tabriz,AZS,2011,355,2629,21,7,5
+I1293555014,Islamic Azad University of Tabriz,AZS,2012,449,3811,34,14,12
+I1293555014,Islamic Azad University of Tabriz,AZS,2013,464,8304,26,8,13
+I1293555014,Islamic Azad University of Tabriz,AZS,2014,566,8724,32,15,13
+I1293555014,Islamic Azad University of Tabriz,AZS,2015,603,6233,58,23,13
+I1293555014,Islamic Azad University of Tabriz,AZS,2016,666,9486,39,13,16
+I1293555014,Islamic Azad University of Tabriz,AZS,2017,730,11545,45,20,16
+I1293555014,Islamic Azad University of Tabriz,AZS,2018,768,9201,47,13,14
+I1293555014,Islamic Azad University of Tabriz,AZS,2019,752,10661,63,18,29
+I1293555014,Islamic Azad University of Tabriz,AZS,2020,850,9202,79,36,30
+I1293555014,Islamic Azad University of Tabriz,AZS,2021,976,9391,137,25,34
+I1293555014,Islamic Azad University of Tabriz,AZS,2022,544,7397,134,25,23
+I1293555014,Islamic Azad University of Tabriz,AZS,2023,472,6345,131,25,16
+I1293555014,Islamic Azad University of Tabriz,AZS,2024,511,4678,124,18,19
+I1293555014,Islamic Azad University of Tabriz,AZS,2025,624,1379,116,35,35
+I180634299,University of Sistan and Baluchestan,SBL,2000,21,175,2,1,1
+I180634299,University of Sistan and Baluchestan,SBL,2001,21,491,1,0,0
+I180634299,University of Sistan and Baluchestan,SBL,2002,14,294,4,0,0
+I180634299,University of Sistan and Baluchestan,SBL,2003,33,812,9,2,0
+I180634299,University of Sistan and Baluchestan,SBL,2004,43,634,6,2,0
+I180634299,University of Sistan and Baluchestan,SBL,2005,58,969,8,1,0
+I180634299,University of Sistan and Baluchestan,SBL,2006,88,2094,19,4,0
+I180634299,University of Sistan and Baluchestan,SBL,2007,94,2534,10,5,0
+I180634299,University of Sistan and Baluchestan,SBL,2008,113,2470,15,1,0
+I180634299,University of Sistan and Baluchestan,SBL,2009,163,3635,25,4,1
+I180634299,University of Sistan and Baluchestan,SBL,2010,226,4839,29,4,2
+I180634299,University of Sistan and Baluchestan,SBL,2011,315,5107,36,7,2
+I180634299,University of Sistan and Baluchestan,SBL,2012,393,5465,33,18,9
+I180634299,University of Sistan and Baluchestan,SBL,2013,474,5269,30,13,8
+I180634299,University of Sistan and Baluchestan,SBL,2014,551,5353,32,19,15
+I180634299,University of Sistan and Baluchestan,SBL,2015,675,6110,45,23,22
+I180634299,University of Sistan and Baluchestan,SBL,2016,853,8306,53,19,25
+I180634299,University of Sistan and Baluchestan,SBL,2017,875,8781,60,28,20
+I180634299,University of Sistan and Baluchestan,SBL,2018,926,9101,95,26,8
+I180634299,University of Sistan and Baluchestan,SBL,2019,1052,9349,112,31,28
+I180634299,University of Sistan and Baluchestan,SBL,2020,1008,8808,149,24,20
+I180634299,University of Sistan and Baluchestan,SBL,2021,875,6929,126,31,22
+I180634299,University of Sistan and Baluchestan,SBL,2022,433,4514,99,15,8
+I180634299,University of Sistan and Baluchestan,SBL,2023,367,4355,105,18,5
+I180634299,University of Sistan and Baluchestan,SBL,2024,378,2844,115,14,13
+I180634299,University of Sistan and Baluchestan,SBL,2025,383,1040,93,11,9
+I84248293,Babol Noshirvani University of Technology,MZN,2000,2,1,0,0,0
+I84248293,Babol Noshirvani University of Technology,MZN,2001,1,0,0,0,0
+I84248293,Babol Noshirvani University of Technology,MZN,2002,1,1,1,0,0
+I84248293,Babol Noshirvani University of Technology,MZN,2005,6,253,2,1,0
+I84248293,Babol Noshirvani University of Technology,MZN,2006,8,212,4,0,0
+I84248293,Babol Noshirvani University of Technology,MZN,2007,17,490,6,4,0
+I84248293,Babol Noshirvani University of Technology,MZN,2008,62,1941,14,4,0
+I84248293,Babol Noshirvani University of Technology,MZN,2009,150,5109,23,4,0
+I84248293,Babol Noshirvani University of Technology,MZN,2010,205,7071,56,14,0
+I84248293,Babol Noshirvani University of Technology,MZN,2011,303,10204,47,11,0
+I84248293,Babol Noshirvani University of Technology,MZN,2012,330,11738,58,11,0
+I84248293,Babol Noshirvani University of Technology,MZN,2013,410,16977,63,16,0
+I84248293,Babol Noshirvani University of Technology,MZN,2014,490,21631,77,14,0
+I84248293,Babol Noshirvani University of Technology,MZN,2015,561,21078,98,16,0
+I84248293,Babol Noshirvani University of Technology,MZN,2016,633,22881,84,6,0
+I84248293,Babol Noshirvani University of Technology,MZN,2017,679,27559,121,17,0
+I84248293,Babol Noshirvani University of Technology,MZN,2018,751,30214,167,18,0
+I84248293,Babol Noshirvani University of Technology,MZN,2019,862,29034,224,27,1
+I84248293,Babol Noshirvani University of Technology,MZN,2020,836,23207,226,17,3
+I84248293,Babol Noshirvani University of Technology,MZN,2021,774,17935,197,15,2
+I84248293,Babol Noshirvani University of Technology,MZN,2022,640,15488,179,20,0
+I84248293,Babol Noshirvani University of Technology,MZN,2023,680,12017,191,17,0
+I84248293,Babol Noshirvani University of Technology,MZN,2024,602,7339,201,16,0
+I84248293,Babol Noshirvani University of Technology,MZN,2025,632,3328,184,13,0
+I136830121,Islamic Azad University South Tehran Branch,THR,2000,16,6,0,1,0
+I136830121,Islamic Azad University South Tehran Branch,THR,2001,5,33,0,0,0
+I136830121,Islamic Azad University South Tehran Branch,THR,2002,2,21,0,0,0
+I136830121,Islamic Azad University South Tehran Branch,THR,2003,7,122,0,0,0
+I136830121,Islamic Azad University South Tehran Branch,THR,2004,9,100,0,0,0
+I136830121,Islamic Azad University South Tehran Branch,THR,2005,23,460,2,0,1
+I136830121,Islamic Azad University South Tehran Branch,THR,2006,27,916,3,0,1
+I136830121,Islamic Azad University South Tehran Branch,THR,2007,46,851,5,2,1
+I136830121,Islamic Azad University South Tehran Branch,THR,2008,65,1486,4,2,1
+I136830121,Islamic Azad University South Tehran Branch,THR,2009,105,2316,11,5,2
+I136830121,Islamic Azad University South Tehran Branch,THR,2010,180,3574,17,11,1
+I136830121,Islamic Azad University South Tehran Branch,THR,2011,314,6462,21,18,3
+I136830121,Islamic Azad University South Tehran Branch,THR,2012,462,10228,42,39,4
+I136830121,Islamic Azad University South Tehran Branch,THR,2013,522,10605,48,41,7
+I136830121,Islamic Azad University South Tehran Branch,THR,2014,590,9802,70,56,8
+I136830121,Islamic Azad University South Tehran Branch,THR,2015,574,12423,66,33,5
+I136830121,Islamic Azad University South Tehran Branch,THR,2016,702,11493,88,38,16
+I136830121,Islamic Azad University South Tehran Branch,THR,2017,688,9814,95,25,2
+I136830121,Islamic Azad University South Tehran Branch,THR,2018,741,8835,83,24,11
+I136830121,Islamic Azad University South Tehran Branch,THR,2019,879,11316,117,45,12
+I136830121,Islamic Azad University South Tehran Branch,THR,2020,1055,9596,127,54,24
+I136830121,Islamic Azad University South Tehran Branch,THR,2021,1037,10878,155,51,26
+I136830121,Islamic Azad University South Tehran Branch,THR,2022,467,5800,124,28,12
+I136830121,Islamic Azad University South Tehran Branch,THR,2023,451,5326,119,20,10
+I136830121,Islamic Azad University South Tehran Branch,THR,2024,459,3171,99,24,14
+I136830121,Islamic Azad University South Tehran Branch,THR,2025,378,1170,61,32,7
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2000,32,31,0,0,1
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2001,52,383,1,1,0
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2002,41,516,2,0,0
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2003,61,559,2,0,1
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2004,51,197,1,1,3
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2005,47,703,4,0,1
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2006,104,1669,12,2,0
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2007,179,2546,19,0,3
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2008,150,1735,19,0,5
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2009,169,3311,32,0,6
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2010,203,3464,37,0,3
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2011,305,4709,42,1,7
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2012,463,4308,46,3,11
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2013,573,5240,64,5,18
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2014,693,5781,76,5,24
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2015,770,7283,122,2,21
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2016,823,8032,113,5,20
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2017,732,8931,129,2,19
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2018,706,9047,137,4,16
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2019,732,7991,137,3,28
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2020,687,8482,152,0,20
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2021,670,6444,173,2,21
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2022,472,4763,150,2,20
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2023,465,2648,126,0,20
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2024,502,1603,142,1,14
+I4210166308,University of Social Welfare and Rehabilitation Sciences,THR,2025,550,2432,146,2,21
+I69425150,Imam Khomeini International University,QZV,2000,3,0,0,0,0
+I69425150,Imam Khomeini International University,QZV,2001,2,31,0,1,0
+I69425150,Imam Khomeini International University,QZV,2002,11,362,1,1,0
+I69425150,Imam Khomeini International University,QZV,2003,19,811,2,1,0
+I69425150,Imam Khomeini International University,QZV,2004,39,827,3,0,0
+I69425150,Imam Khomeini International University,QZV,2005,55,2971,6,4,0
+I69425150,Imam Khomeini International University,QZV,2006,54,2715,6,5,0
+I69425150,Imam Khomeini International University,QZV,2007,75,2157,10,0,0
+I69425150,Imam Khomeini International University,QZV,2008,80,1131,15,3,0
+I69425150,Imam Khomeini International University,QZV,2009,85,1392,12,2,1
+I69425150,Imam Khomeini International University,QZV,2010,140,1927,7,1,0
+I69425150,Imam Khomeini International University,QZV,2011,224,3673,21,7,2
+I69425150,Imam Khomeini International University,QZV,2012,327,4298,32,15,8
+I69425150,Imam Khomeini International University,QZV,2013,306,3693,36,8,3
+I69425150,Imam Khomeini International University,QZV,2014,380,4177,31,11,5
+I69425150,Imam Khomeini International University,QZV,2015,471,7070,35,14,7
+I69425150,Imam Khomeini International University,QZV,2016,611,10314,39,24,14
+I69425150,Imam Khomeini International University,QZV,2017,670,8330,48,17,6
+I69425150,Imam Khomeini International University,QZV,2018,875,11146,79,20,9
+I69425150,Imam Khomeini International University,QZV,2019,1028,14329,140,19,14
+I69425150,Imam Khomeini International University,QZV,2020,1116,15849,163,31,19
+I69425150,Imam Khomeini International University,QZV,2021,1054,10415,155,36,11
+I69425150,Imam Khomeini International University,QZV,2022,548,6017,152,25,14
+I69425150,Imam Khomeini International University,QZV,2023,485,6128,167,21,12
+I69425150,Imam Khomeini International University,QZV,2024,457,3092,150,13,13
+I69425150,Imam Khomeini International University,QZV,2025,472,1456,158,18,8
+I97626857,University of Birjand,KHJ,2000,10,577,1,0,0
+I97626857,University of Birjand,KHJ,2001,4,13,0,0,0
+I97626857,University of Birjand,KHJ,2002,17,191,2,0,0
+I97626857,University of Birjand,KHJ,2003,24,707,8,0,0
+I97626857,University of Birjand,KHJ,2004,30,434,8,2,0
+I97626857,University of Birjand,KHJ,2005,47,758,7,1,0
+I97626857,University of Birjand,KHJ,2006,55,1294,11,1,0
+I97626857,University of Birjand,KHJ,2007,56,656,9,3,0
+I97626857,University of Birjand,KHJ,2008,58,1629,17,1,0
+I97626857,University of Birjand,KHJ,2009,110,1846,21,1,0
+I97626857,University of Birjand,KHJ,2010,116,1697,19,3,2
+I97626857,University of Birjand,KHJ,2011,195,2878,20,8,0
+I97626857,University of Birjand,KHJ,2012,274,4688,16,12,0
+I97626857,University of Birjand,KHJ,2013,385,4897,27,17,7
+I97626857,University of Birjand,KHJ,2014,524,6300,47,24,3
+I97626857,University of Birjand,KHJ,2015,587,4882,27,20,6
+I97626857,University of Birjand,KHJ,2016,711,6044,58,25,10
+I97626857,University of Birjand,KHJ,2017,720,6553,72,31,9
+I97626857,University of Birjand,KHJ,2018,813,8395,81,33,16
+I97626857,University of Birjand,KHJ,2019,837,8604,95,28,21
+I97626857,University of Birjand,KHJ,2020,995,10861,133,58,19
+I97626857,University of Birjand,KHJ,2021,856,7219,138,58,14
+I97626857,University of Birjand,KHJ,2022,481,7174,140,31,7
+I97626857,University of Birjand,KHJ,2023,417,4434,124,26,4
+I97626857,University of Birjand,KHJ,2024,386,2391,122,22,6
+I97626857,University of Birjand,KHJ,2025,498,1228,133,35,7
+I183067279,Islamic Azad University North Tehran Branch,THR,2000,24,149,2,0,2
+I183067279,Islamic Azad University North Tehran Branch,THR,2001,5,10,0,0,0
+I183067279,Islamic Azad University North Tehran Branch,THR,2002,7,120,0,0,0
+I183067279,Islamic Azad University North Tehran Branch,THR,2003,13,517,0,0,0
+I183067279,Islamic Azad University North Tehran Branch,THR,2004,18,564,1,0,0
+I183067279,Islamic Azad University North Tehran Branch,THR,2005,27,896,0,0,0
+I183067279,Islamic Azad University North Tehran Branch,THR,2006,39,666,3,0,0
+I183067279,Islamic Azad University North Tehran Branch,THR,2007,48,901,1,1,0
+I183067279,Islamic Azad University North Tehran Branch,THR,2008,86,950,2,1,2
+I183067279,Islamic Azad University North Tehran Branch,THR,2009,126,1490,6,5,0
+I183067279,Islamic Azad University North Tehran Branch,THR,2010,186,2339,17,6,0
+I183067279,Islamic Azad University North Tehran Branch,THR,2011,277,2962,14,8,3
+I183067279,Islamic Azad University North Tehran Branch,THR,2012,339,3957,28,12,5
+I183067279,Islamic Azad University North Tehran Branch,THR,2013,341,4206,27,16,2
+I183067279,Islamic Azad University North Tehran Branch,THR,2014,458,5933,25,25,3
+I183067279,Islamic Azad University North Tehran Branch,THR,2015,448,6161,45,38,0
+I183067279,Islamic Azad University North Tehran Branch,THR,2016,580,7420,69,46,6
+I183067279,Islamic Azad University North Tehran Branch,THR,2017,664,10207,70,42,5
+I183067279,Islamic Azad University North Tehran Branch,THR,2018,725,11932,65,22,11
+I183067279,Islamic Azad University North Tehran Branch,THR,2019,852,14013,70,34,13
+I183067279,Islamic Azad University North Tehran Branch,THR,2020,1007,10195,73,44,28
+I183067279,Islamic Azad University North Tehran Branch,THR,2021,1144,10790,111,45,22
+I183067279,Islamic Azad University North Tehran Branch,THR,2022,597,8379,112,33,14
+I183067279,Islamic Azad University North Tehran Branch,THR,2023,517,5692,107,20,8
+I183067279,Islamic Azad University North Tehran Branch,THR,2024,538,4056,83,22,13
+I183067279,Islamic Azad University North Tehran Branch,THR,2025,473,1616,79,24,14
+I3123046734,Lorestan University,LRS,2000,7,18,2,0,0
+I3123046734,Lorestan University,LRS,2001,2,23,0,0,0
+I3123046734,Lorestan University,LRS,2002,3,27,0,0,1
+I3123046734,Lorestan University,LRS,2003,9,169,1,0,0
+I3123046734,Lorestan University,LRS,2004,9,103,0,0,1
+I3123046734,Lorestan University,LRS,2005,30,820,2,0,0
+I3123046734,Lorestan University,LRS,2006,38,1193,11,0,0
+I3123046734,Lorestan University,LRS,2007,64,1311,10,0,1
+I3123046734,Lorestan University,LRS,2008,65,1693,19,0,0
+I3123046734,Lorestan University,LRS,2009,100,2616,17,0,0
+I3123046734,Lorestan University,LRS,2010,87,2363,10,2,0
+I3123046734,Lorestan University,LRS,2011,140,2432,14,4,5
+I3123046734,Lorestan University,LRS,2012,123,2194,11,2,0
+I3123046734,Lorestan University,LRS,2013,146,2681,8,5,1
+I3123046734,Lorestan University,LRS,2014,228,4593,29,6,4
+I3123046734,Lorestan University,LRS,2015,353,9124,27,5,6
+I3123046734,Lorestan University,LRS,2016,475,9579,49,8,11
+I3123046734,Lorestan University,LRS,2017,593,11893,81,17,17
+I3123046734,Lorestan University,LRS,2018,626,13377,104,24,11
+I3123046734,Lorestan University,LRS,2019,693,13819,122,18,13
+I3123046734,Lorestan University,LRS,2020,767,12715,150,19,17
+I3123046734,Lorestan University,LRS,2021,757,10856,171,23,16
+I3123046734,Lorestan University,LRS,2022,646,8333,178,23,6
+I3123046734,Lorestan University,LRS,2023,630,7486,218,14,13
+I3123046734,Lorestan University,LRS,2024,695,6698,273,15,6
+I3123046734,Lorestan University,LRS,2025,718,3656,274,21,12
+I183859904,"Islamic Azad University, Mashhad",KHR,2000,17,14,0,0,0
+I183859904,"Islamic Azad University, Mashhad",KHR,2002,3,0,0,0,0
+I183859904,"Islamic Azad University, Mashhad",KHR,2003,3,63,1,0,0
+I183859904,"Islamic Azad University, Mashhad",KHR,2004,5,183,0,0,0
+I183859904,"Islamic Azad University, Mashhad",KHR,2005,17,680,4,0,0
+I183859904,"Islamic Azad University, Mashhad",KHR,2006,54,2168,6,2,0
+I183859904,"Islamic Azad University, Mashhad",KHR,2007,62,1686,5,2,0
+I183859904,"Islamic Azad University, Mashhad",KHR,2008,71,1519,5,2,0
+I183859904,"Islamic Azad University, Mashhad",KHR,2009,100,1683,15,4,2
+I183859904,"Islamic Azad University, Mashhad",KHR,2010,171,3142,8,9,0
+I183859904,"Islamic Azad University, Mashhad",KHR,2011,323,6560,25,16,12
+I183859904,"Islamic Azad University, Mashhad",KHR,2012,311,6581,30,17,8
+I183859904,"Islamic Azad University, Mashhad",KHR,2013,370,8080,49,19,1
+I183859904,"Islamic Azad University, Mashhad",KHR,2014,483,10375,77,27,4
+I183859904,"Islamic Azad University, Mashhad",KHR,2015,511,8955,59,23,5
+I183859904,"Islamic Azad University, Mashhad",KHR,2016,537,9240,66,19,2
+I183859904,"Islamic Azad University, Mashhad",KHR,2017,624,7489,72,33,11
+I183859904,"Islamic Azad University, Mashhad",KHR,2018,541,11653,69,23,10
+I183859904,"Islamic Azad University, Mashhad",KHR,2019,651,8341,81,30,12
+I183859904,"Islamic Azad University, Mashhad",KHR,2020,678,8116,89,32,12
+I183859904,"Islamic Azad University, Mashhad",KHR,2021,757,8078,123,27,21
+I183859904,"Islamic Azad University, Mashhad",KHR,2022,450,6615,118,27,4
+I183859904,"Islamic Azad University, Mashhad",KHR,2023,497,5168,134,25,11
+I183859904,"Islamic Azad University, Mashhad",KHR,2024,530,3229,134,27,13
+I183859904,"Islamic Azad University, Mashhad",KHR,2025,578,2771,147,46,15
+I35510649,Arak University,MRK,2000,3,58,1,0,0
+I35510649,Arak University,MRK,2001,6,100,2,0,0
+I35510649,Arak University,MRK,2002,9,202,3,0,0
+I35510649,Arak University,MRK,2003,34,493,13,0,0
+I35510649,Arak University,MRK,2004,42,723,13,0,0
+I35510649,Arak University,MRK,2005,34,544,9,1,0
+I35510649,Arak University,MRK,2006,42,993,10,1,0
+I35510649,Arak University,MRK,2007,67,1069,12,0,0
+I35510649,Arak University,MRK,2008,78,1735,14,0,0
+I35510649,Arak University,MRK,2009,134,2705,15,7,2
+I35510649,Arak University,MRK,2010,209,3921,27,3,1
+I35510649,Arak University,MRK,2011,267,3977,24,9,3
+I35510649,Arak University,MRK,2012,283,4934,27,7,4
+I35510649,Arak University,MRK,2013,345,5636,31,8,1
+I35510649,Arak University,MRK,2014,466,6774,36,4,6
+I35510649,Arak University,MRK,2015,465,6310,44,10,7
+I35510649,Arak University,MRK,2016,510,6414,43,4,9
+I35510649,Arak University,MRK,2017,560,9034,59,11,8
+I35510649,Arak University,MRK,2018,574,8270,58,16,10
+I35510649,Arak University,MRK,2019,730,10845,87,12,23
+I35510649,Arak University,MRK,2020,834,10368,125,14,26
+I35510649,Arak University,MRK,2021,747,9047,133,12,17
+I35510649,Arak University,MRK,2022,568,8686,159,9,12
+I35510649,Arak University,MRK,2023,521,5029,135,21,7
+I35510649,Arak University,MRK,2024,537,4397,142,12,6
+I35510649,Arak University,MRK,2025,680,2712,234,34,11
+I4391767979,Urmia University of Medical Sciences,AZG,2000,13,6,0,0,0
+I4391767979,Urmia University of Medical Sciences,AZG,2001,1,8,0,0,0
+I4391767979,Urmia University of Medical Sciences,AZG,2003,1,41,0,0,0
+I4391767979,Urmia University of Medical Sciences,AZG,2004,2,25,0,0,0
+I4391767979,Urmia University of Medical Sciences,AZG,2005,8,31,0,0,0
+I4391767979,Urmia University of Medical Sciences,AZG,2006,30,353,5,0,0
+I4391767979,Urmia University of Medical Sciences,AZG,2007,64,968,4,1,0
+I4391767979,Urmia University of Medical Sciences,AZG,2008,60,1075,7,0,0
+I4391767979,Urmia University of Medical Sciences,AZG,2009,86,1018,9,0,0
+I4391767979,Urmia University of Medical Sciences,AZG,2010,87,1271,10,0,0
+I4391767979,Urmia University of Medical Sciences,AZG,2011,226,2319,9,1,0
+I4391767979,Urmia University of Medical Sciences,AZG,2012,240,2297,10,0,0
+I4391767979,Urmia University of Medical Sciences,AZG,2013,325,3633,26,0,5
+I4391767979,Urmia University of Medical Sciences,AZG,2014,446,4342,28,0,4
+I4391767979,Urmia University of Medical Sciences,AZG,2015,488,4973,23,5,13
+I4391767979,Urmia University of Medical Sciences,AZG,2016,519,5616,27,1,4
+I4391767979,Urmia University of Medical Sciences,AZG,2017,573,8666,50,4,5
+I4391767979,Urmia University of Medical Sciences,AZG,2018,610,9170,50,4,9
+I4391767979,Urmia University of Medical Sciences,AZG,2019,666,13995,77,4,5
+I4391767979,Urmia University of Medical Sciences,AZG,2020,820,18707,148,3,8
+I4391767979,Urmia University of Medical Sciences,AZG,2021,764,13929,149,7,6
+I4391767979,Urmia University of Medical Sciences,AZG,2022,700,11593,155,13,7
+I4391767979,Urmia University of Medical Sciences,AZG,2023,643,6954,159,9,9
+I4391767979,Urmia University of Medical Sciences,AZG,2024,757,5006,155,12,15
+I4391767979,Urmia University of Medical Sciences,AZG,2025,772,5254,169,16,14
+I70876197,Babol University of Medical Sciences,MZN,2000,5,1,0,0,0
+I70876197,Babol University of Medical Sciences,MZN,2001,4,79,0,0,0
+I70876197,Babol University of Medical Sciences,MZN,2002,18,663,1,0,0
+I70876197,Babol University of Medical Sciences,MZN,2003,8,131,1,0,0
+I70876197,Babol University of Medical Sciences,MZN,2004,9,343,2,0,0
+I70876197,Babol University of Medical Sciences,MZN,2005,22,414,3,0,0
+I70876197,Babol University of Medical Sciences,MZN,2006,40,1791,2,0,0
+I70876197,Babol University of Medical Sciences,MZN,2007,45,750,1,0,0
+I70876197,Babol University of Medical Sciences,MZN,2008,54,1392,7,0,0
+I70876197,Babol University of Medical Sciences,MZN,2009,76,1595,5,0,0
+I70876197,Babol University of Medical Sciences,MZN,2010,85,1420,8,0,1
+I70876197,Babol University of Medical Sciences,MZN,2011,178,2808,13,2,0
+I70876197,Babol University of Medical Sciences,MZN,2012,224,3522,9,0,2
+I70876197,Babol University of Medical Sciences,MZN,2013,291,5719,13,2,8
+I70876197,Babol University of Medical Sciences,MZN,2014,396,5797,14,1,6
+I70876197,Babol University of Medical Sciences,MZN,2015,493,5449,21,1,4
+I70876197,Babol University of Medical Sciences,MZN,2016,596,6680,28,1,11
+I70876197,Babol University of Medical Sciences,MZN,2017,613,10152,37,1,3
+I70876197,Babol University of Medical Sciences,MZN,2018,650,11246,57,2,7
+I70876197,Babol University of Medical Sciences,MZN,2019,733,16362,92,1,10
+I70876197,Babol University of Medical Sciences,MZN,2020,729,21658,121,2,8
+I70876197,Babol University of Medical Sciences,MZN,2021,686,12416,144,3,4
+I70876197,Babol University of Medical Sciences,MZN,2022,628,8039,126,6,5
+I70876197,Babol University of Medical Sciences,MZN,2023,529,5125,103,4,5
+I70876197,Babol University of Medical Sciences,MZN,2024,626,4252,136,4,12
+I70876197,Babol University of Medical Sciences,MZN,2025,706,3961,142,14,6
+I9256017,Islamic Azad University of Najafabad,ISF,2000,5,2,0,0,0
+I9256017,Islamic Azad University of Najafabad,ISF,2001,1,0,0,0,0
+I9256017,Islamic Azad University of Najafabad,ISF,2002,1,0,0,0,0
+I9256017,Islamic Azad University of Najafabad,ISF,2003,3,0,0,0,0
+I9256017,Islamic Azad University of Najafabad,ISF,2005,2,16,0,0,0
+I9256017,Islamic Azad University of Najafabad,ISF,2006,8,25,0,0,0
+I9256017,Islamic Azad University of Najafabad,ISF,2007,11,212,1,1,0
+I9256017,Islamic Azad University of Najafabad,ISF,2008,23,1869,4,2,0
+I9256017,Islamic Azad University of Najafabad,ISF,2009,42,834,4,2,0
+I9256017,Islamic Azad University of Najafabad,ISF,2010,103,1277,3,3,0
+I9256017,Islamic Azad University of Najafabad,ISF,2011,202,3043,15,7,3
+I9256017,Islamic Azad University of Najafabad,ISF,2012,307,5934,28,14,9
+I9256017,Islamic Azad University of Najafabad,ISF,2013,399,5519,43,9,10
+I9256017,Islamic Azad University of Najafabad,ISF,2014,455,7784,63,15,8
+I9256017,Islamic Azad University of Najafabad,ISF,2015,530,12622,88,15,13
+I9256017,Islamic Azad University of Najafabad,ISF,2016,625,15770,91,20,10
+I9256017,Islamic Azad University of Najafabad,ISF,2017,603,12020,65,10,10
+I9256017,Islamic Azad University of Najafabad,ISF,2018,703,13521,81,14,11
+I9256017,Islamic Azad University of Najafabad,ISF,2019,855,16327,165,23,17
+I9256017,Islamic Azad University of Najafabad,ISF,2020,853,14794,171,20,22
+I9256017,Islamic Azad University of Najafabad,ISF,2021,874,11885,156,33,21
+I9256017,Islamic Azad University of Najafabad,ISF,2022,429,7927,142,28,7
+I9256017,Islamic Azad University of Najafabad,ISF,2023,398,6062,121,25,8
+I9256017,Islamic Azad University of Najafabad,ISF,2024,403,3070,118,19,13
+I9256017,Islamic Azad University of Najafabad,ISF,2025,513,1316,126,35,13
+I204588832,"Islamic Azad University, Karaj",ALB,2000,20,11,0,0,0
+I204588832,"Islamic Azad University, Karaj",ALB,2001,3,14,1,0,0
+I204588832,"Islamic Azad University, Karaj",ALB,2002,2,0,0,0,0
+I204588832,"Islamic Azad University, Karaj",ALB,2003,5,169,0,0,0
+I204588832,"Islamic Azad University, Karaj",ALB,2004,11,508,0,0,0
+I204588832,"Islamic Azad University, Karaj",ALB,2005,22,227,1,0,0
+I204588832,"Islamic Azad University, Karaj",ALB,2006,42,1183,2,1,1
+I204588832,"Islamic Azad University, Karaj",ALB,2007,50,617,1,0,0
+I204588832,"Islamic Azad University, Karaj",ALB,2008,75,1527,7,2,0
+I204588832,"Islamic Azad University, Karaj",ALB,2009,134,2338,7,2,0
+I204588832,"Islamic Azad University, Karaj",ALB,2010,247,4056,19,1,0
+I204588832,"Islamic Azad University, Karaj",ALB,2011,352,4877,21,2,1
+I204588832,"Islamic Azad University, Karaj",ALB,2012,438,5300,38,10,6
+I204588832,"Islamic Azad University, Karaj",ALB,2013,400,5161,32,3,11
+I204588832,"Islamic Azad University, Karaj",ALB,2014,506,5870,42,13,2
+I204588832,"Islamic Azad University, Karaj",ALB,2015,542,5749,54,12,7
+I204588832,"Islamic Azad University, Karaj",ALB,2016,597,5485,48,8,10
+I204588832,"Islamic Azad University, Karaj",ALB,2017,673,5598,64,3,12
+I204588832,"Islamic Azad University, Karaj",ALB,2018,676,5948,64,6,17
+I204588832,"Islamic Azad University, Karaj",ALB,2019,716,4939,54,13,16
+I204588832,"Islamic Azad University, Karaj",ALB,2020,837,5660,78,11,23
+I204588832,"Islamic Azad University, Karaj",ALB,2021,796,4212,93,15,21
+I204588832,"Islamic Azad University, Karaj",ALB,2022,419,3467,77,9,13
+I204588832,"Islamic Azad University, Karaj",ALB,2023,356,2515,82,9,11
+I204588832,"Islamic Azad University, Karaj",ALB,2024,348,3341,74,6,12
+I204588832,"Islamic Azad University, Karaj",ALB,2025,433,2366,82,18,17
+I112450260,Zabol University,SBL,2000,9,3,0,0,1
+I112450260,Zabol University,SBL,2002,2,39,1,0,0
+I112450260,Zabol University,SBL,2003,2,61,1,0,0
+I112450260,Zabol University,SBL,2004,3,0,0,0,0
+I112450260,Zabol University,SBL,2005,5,166,3,0,0
+I112450260,Zabol University,SBL,2006,10,53,1,0,0
+I112450260,Zabol University,SBL,2007,30,505,7,0,0
+I112450260,Zabol University,SBL,2008,32,1050,9,0,0
+I112450260,Zabol University,SBL,2009,101,2223,15,2,0
+I112450260,Zabol University,SBL,2010,123,1731,19,0,0
+I112450260,Zabol University,SBL,2011,168,3450,17,0,1
+I112450260,Zabol University,SBL,2012,195,2572,22,6,3
+I112450260,Zabol University,SBL,2013,252,4080,29,2,2
+I112450260,Zabol University,SBL,2014,393,3806,53,6,3
+I112450260,Zabol University,SBL,2015,539,4792,43,8,5
+I112450260,Zabol University,SBL,2016,623,4746,61,8,2
+I112450260,Zabol University,SBL,2017,614,7391,79,11,2
+I112450260,Zabol University,SBL,2018,632,8850,93,3,3
+I112450260,Zabol University,SBL,2019,641,7014,93,5,3
+I112450260,Zabol University,SBL,2020,693,12071,159,7,3
+I112450260,Zabol University,SBL,2021,613,9998,173,8,6
+I112450260,Zabol University,SBL,2022,389,8966,181,7,2
+I112450260,Zabol University,SBL,2023,366,6506,162,5,5
+I112450260,Zabol University,SBL,2024,405,4681,202,6,5
+I112450260,Zabol University,SBL,2025,429,1894,169,4,5
+I51301133,Azarbaijan Shahid Madani University,AZS,2000,7,0,0,0,0
+I51301133,Azarbaijan Shahid Madani University,AZS,2002,3,26,0,0,0
+I51301133,Azarbaijan Shahid Madani University,AZS,2003,10,251,0,0,0
+I51301133,Azarbaijan Shahid Madani University,AZS,2004,26,451,8,0,0
+I51301133,Azarbaijan Shahid Madani University,AZS,2005,22,600,5,0,0
+I51301133,Azarbaijan Shahid Madani University,AZS,2006,31,708,5,0,0
+I51301133,Azarbaijan Shahid Madani University,AZS,2007,29,352,9,1,0
+I51301133,Azarbaijan Shahid Madani University,AZS,2008,50,811,14,0,0
+I51301133,Azarbaijan Shahid Madani University,AZS,2009,48,1093,10,1,0
+I51301133,Azarbaijan Shahid Madani University,AZS,2010,95,2490,9,2,2
+I51301133,Azarbaijan Shahid Madani University,AZS,2011,109,1817,25,2,1
+I51301133,Azarbaijan Shahid Madani University,AZS,2012,193,4289,28,5,1
+I51301133,Azarbaijan Shahid Madani University,AZS,2013,274,3774,44,6,5
+I51301133,Azarbaijan Shahid Madani University,AZS,2014,361,6751,48,5,8
+I51301133,Azarbaijan Shahid Madani University,AZS,2015,475,5675,45,18,9
+I51301133,Azarbaijan Shahid Madani University,AZS,2016,549,6823,46,9,9
+I51301133,Azarbaijan Shahid Madani University,AZS,2017,671,8349,45,17,15
+I51301133,Azarbaijan Shahid Madani University,AZS,2018,729,9454,72,18,13
+I51301133,Azarbaijan Shahid Madani University,AZS,2019,723,9656,100,29,13
+I51301133,Azarbaijan Shahid Madani University,AZS,2020,809,12997,162,17,23
+I51301133,Azarbaijan Shahid Madani University,AZS,2021,722,10433,198,24,19
+I51301133,Azarbaijan Shahid Madani University,AZS,2022,487,7260,197,30,13
+I51301133,Azarbaijan Shahid Madani University,AZS,2023,403,5350,164,20,4
+I51301133,Azarbaijan Shahid Madani University,AZS,2024,456,3801,180,30,9
+I51301133,Azarbaijan Shahid Madani University,AZS,2025,446,1523,188,29,12
+I184468904,University of Qom,QOM,2000,20,1,0,2,2
+I184468904,University of Qom,QOM,2001,6,0,0,0,0
+I184468904,University of Qom,QOM,2002,13,1,0,0,3
+I184468904,University of Qom,QOM,2003,5,13,0,1,0
+I184468904,University of Qom,QOM,2004,18,111,2,0,2
+I184468904,University of Qom,QOM,2005,12,20,0,0,1
+I184468904,University of Qom,QOM,2006,25,215,0,0,7
+I184468904,University of Qom,QOM,2007,40,210,2,0,5
+I184468904,University of Qom,QOM,2008,33,259,3,0,2
+I184468904,University of Qom,QOM,2009,59,288,1,2,4
+I184468904,University of Qom,QOM,2010,101,669,3,3,6
+I184468904,University of Qom,QOM,2011,136,921,14,6,3
+I184468904,University of Qom,QOM,2012,183,664,6,5,9
+I184468904,University of Qom,QOM,2013,232,1642,9,4,10
+I184468904,University of Qom,QOM,2014,304,3845,25,8,12
+I184468904,University of Qom,QOM,2015,463,6774,52,13,17
+I184468904,University of Qom,QOM,2016,510,7027,44,16,27
+I184468904,University of Qom,QOM,2017,577,5948,35,18,24
+I184468904,University of Qom,QOM,2018,625,6031,65,18,25
+I184468904,University of Qom,QOM,2019,782,7354,74,22,41
+I184468904,University of Qom,QOM,2020,920,9709,103,29,51
+I184468904,University of Qom,QOM,2021,776,6048,99,23,32
+I184468904,University of Qom,QOM,2022,395,4852,86,21,16
+I184468904,University of Qom,QOM,2023,359,3316,56,22,19
+I184468904,University of Qom,QOM,2024,374,2004,66,20,15
+I184468904,University of Qom,QOM,2025,551,801,80,43,25
+I78323350,Malek Ashtar University of Technology,THR,2000,6,1,0,0,0
+I78323350,Malek Ashtar University of Technology,THR,2001,6,16,0,0,0
+I78323350,Malek Ashtar University of Technology,THR,2002,11,52,0,0,0
+I78323350,Malek Ashtar University of Technology,THR,2003,8,118,0,0,0
+I78323350,Malek Ashtar University of Technology,THR,2004,22,490,1,1,0
+I78323350,Malek Ashtar University of Technology,THR,2005,30,1032,2,1,0
+I78323350,Malek Ashtar University of Technology,THR,2006,57,1563,7,1,0
+I78323350,Malek Ashtar University of Technology,THR,2007,67,2461,7,2,0
+I78323350,Malek Ashtar University of Technology,THR,2008,83,2476,6,2,0
+I78323350,Malek Ashtar University of Technology,THR,2009,106,4253,3,0,0
+I78323350,Malek Ashtar University of Technology,THR,2010,95,2044,6,2,0
+I78323350,Malek Ashtar University of Technology,THR,2011,186,4847,15,2,0
+I78323350,Malek Ashtar University of Technology,THR,2012,220,4452,16,5,0
+I78323350,Malek Ashtar University of Technology,THR,2013,290,5442,15,8,3
+I78323350,Malek Ashtar University of Technology,THR,2014,396,6392,17,8,3
+I78323350,Malek Ashtar University of Technology,THR,2015,547,7617,16,13,2
+I78323350,Malek Ashtar University of Technology,THR,2016,738,10871,23,18,3
+I78323350,Malek Ashtar University of Technology,THR,2017,795,10326,42,16,0
+I78323350,Malek Ashtar University of Technology,THR,2018,750,7015,29,25,2
+I78323350,Malek Ashtar University of Technology,THR,2019,699,5751,35,25,1
+I78323350,Malek Ashtar University of Technology,THR,2020,733,5927,31,26,0
+I78323350,Malek Ashtar University of Technology,THR,2021,563,3868,27,18,1
+I78323350,Malek Ashtar University of Technology,THR,2022,291,2450,21,20,0
+I78323350,Malek Ashtar University of Technology,THR,2023,306,2362,20,13,1
+I78323350,Malek Ashtar University of Technology,THR,2024,232,1139,12,8,0
+I78323350,Malek Ashtar University of Technology,THR,2025,291,532,8,17,3
+I107853901,Sahand University of Technology,AZS,2000,6,91,0,0,0
+I107853901,Sahand University of Technology,AZS,2001,4,130,2,0,0
+I107853901,Sahand University of Technology,AZS,2002,7,362,2,1,0
+I107853901,Sahand University of Technology,AZS,2003,11,305,4,0,0
+I107853901,Sahand University of Technology,AZS,2004,20,491,9,0,0
+I107853901,Sahand University of Technology,AZS,2005,35,939,16,1,0
+I107853901,Sahand University of Technology,AZS,2006,37,1176,16,0,0
+I107853901,Sahand University of Technology,AZS,2007,64,1942,14,2,0
+I107853901,Sahand University of Technology,AZS,2008,80,3148,20,4,0
+I107853901,Sahand University of Technology,AZS,2009,95,2756,21,1,0
+I107853901,Sahand University of Technology,AZS,2010,132,3495,30,2,0
+I107853901,Sahand University of Technology,AZS,2011,153,3285,30,1,0
+I107853901,Sahand University of Technology,AZS,2012,201,5652,23,3,0
+I107853901,Sahand University of Technology,AZS,2013,297,8226,49,4,0
+I107853901,Sahand University of Technology,AZS,2014,355,10347,47,11,0
+I107853901,Sahand University of Technology,AZS,2015,388,9839,62,10,0
+I107853901,Sahand University of Technology,AZS,2016,471,10548,60,12,0
+I107853901,Sahand University of Technology,AZS,2017,479,13896,75,6,0
+I107853901,Sahand University of Technology,AZS,2018,511,12664,95,8,2
+I107853901,Sahand University of Technology,AZS,2019,573,14046,97,10,0
+I107853901,Sahand University of Technology,AZS,2020,659,14552,127,13,1
+I107853901,Sahand University of Technology,AZS,2021,589,11321,151,16,3
+I107853901,Sahand University of Technology,AZS,2022,433,7075,127,11,1
+I107853901,Sahand University of Technology,AZS,2023,436,6163,122,10,1
+I107853901,Sahand University of Technology,AZS,2024,475,4853,123,10,1
+I107853901,Sahand University of Technology,AZS,2025,525,2839,146,13,0
+I4210133472,Zahedan University of Medical Sciences,SBL,2000,18,27,0,0,0
+I4210133472,Zahedan University of Medical Sciences,SBL,2002,16,157,1,0,0
+I4210133472,Zahedan University of Medical Sciences,SBL,2003,21,215,3,0,0
+I4210133472,Zahedan University of Medical Sciences,SBL,2004,34,295,2,0,1
+I4210133472,Zahedan University of Medical Sciences,SBL,2005,37,1055,4,0,0
+I4210133472,Zahedan University of Medical Sciences,SBL,2006,43,744,4,0,1
+I4210133472,Zahedan University of Medical Sciences,SBL,2007,57,1348,5,0,0
+I4210133472,Zahedan University of Medical Sciences,SBL,2008,90,1898,7,0,0
+I4210133472,Zahedan University of Medical Sciences,SBL,2009,92,3067,18,0,0
+I4210133472,Zahedan University of Medical Sciences,SBL,2010,111,2100,16,0,0
+I4210133472,Zahedan University of Medical Sciences,SBL,2011,136,1646,15,0,2
+I4210133472,Zahedan University of Medical Sciences,SBL,2012,243,3872,19,0,4
+I4210133472,Zahedan University of Medical Sciences,SBL,2013,283,4720,16,0,4
+I4210133472,Zahedan University of Medical Sciences,SBL,2014,414,6827,25,1,3
+I4210133472,Zahedan University of Medical Sciences,SBL,2015,423,7677,21,0,6
+I4210133472,Zahedan University of Medical Sciences,SBL,2016,500,6982,26,0,4
+I4210133472,Zahedan University of Medical Sciences,SBL,2017,505,17573,43,0,6
+I4210133472,Zahedan University of Medical Sciences,SBL,2018,473,6676,43,1,5
+I4210133472,Zahedan University of Medical Sciences,SBL,2019,501,9504,77,6,2
+I4210133472,Zahedan University of Medical Sciences,SBL,2020,561,9022,94,4,8
+I4210133472,Zahedan University of Medical Sciences,SBL,2021,619,12088,125,2,3
+I4210133472,Zahedan University of Medical Sciences,SBL,2022,517,7154,129,1,5
+I4210133472,Zahedan University of Medical Sciences,SBL,2023,469,4901,105,1,7
+I4210133472,Zahedan University of Medical Sciences,SBL,2024,530,2858,100,4,10
+I4210133472,Zahedan University of Medical Sciences,SBL,2025,588,4228,116,5,9
+I116768543,Zanjan University of Medical Sciences,ZNJ,2000,4,38,1,0,0
+I116768543,Zanjan University of Medical Sciences,ZNJ,2003,6,178,2,0,0
+I116768543,Zanjan University of Medical Sciences,ZNJ,2004,7,276,0,0,0
+I116768543,Zanjan University of Medical Sciences,ZNJ,2005,6,314,1,0,0
+I116768543,Zanjan University of Medical Sciences,ZNJ,2006,14,224,1,0,0
+I116768543,Zanjan University of Medical Sciences,ZNJ,2007,43,747,3,0,0
+I116768543,Zanjan University of Medical Sciences,ZNJ,2008,65,3670,5,0,1
+I116768543,Zanjan University of Medical Sciences,ZNJ,2009,60,1962,1,0,0
+I116768543,Zanjan University of Medical Sciences,ZNJ,2010,82,1513,10,0,0
+I116768543,Zanjan University of Medical Sciences,ZNJ,2011,128,1128,3,0,1
+I116768543,Zanjan University of Medical Sciences,ZNJ,2012,188,3711,15,1,4
+I116768543,Zanjan University of Medical Sciences,ZNJ,2013,228,4274,21,0,7
+I116768543,Zanjan University of Medical Sciences,ZNJ,2014,251,3536,19,1,3
+I116768543,Zanjan University of Medical Sciences,ZNJ,2015,325,5472,16,0,6
+I116768543,Zanjan University of Medical Sciences,ZNJ,2016,410,6957,37,3,4
+I116768543,Zanjan University of Medical Sciences,ZNJ,2017,509,8160,32,0,4
+I116768543,Zanjan University of Medical Sciences,ZNJ,2018,500,8577,37,3,7
+I116768543,Zanjan University of Medical Sciences,ZNJ,2019,502,11739,64,2,6
+I116768543,Zanjan University of Medical Sciences,ZNJ,2020,594,13799,115,0,7
+I116768543,Zanjan University of Medical Sciences,ZNJ,2021,618,13802,140,1,8
+I116768543,Zanjan University of Medical Sciences,ZNJ,2022,595,7546,160,2,5
+I116768543,Zanjan University of Medical Sciences,ZNJ,2023,477,7811,153,5,5
+I116768543,Zanjan University of Medical Sciences,ZNJ,2024,581,4742,152,3,11
+I116768543,Zanjan University of Medical Sciences,ZNJ,2025,647,4279,183,7,13
+I95990688,Birjand University of Medical Sciences,KHJ,2000,5,13,0,0,0
+I95990688,Birjand University of Medical Sciences,KHJ,2001,3,6,0,0,0
+I95990688,Birjand University of Medical Sciences,KHJ,2002,2,4,0,0,0
+I95990688,Birjand University of Medical Sciences,KHJ,2003,1,19,0,0,0
+I95990688,Birjand University of Medical Sciences,KHJ,2004,20,45,1,0,0
+I95990688,Birjand University of Medical Sciences,KHJ,2005,38,73,2,0,2
+I95990688,Birjand University of Medical Sciences,KHJ,2006,48,300,1,0,1
+I95990688,Birjand University of Medical Sciences,KHJ,2007,49,111,0,0,0
+I95990688,Birjand University of Medical Sciences,KHJ,2008,55,663,5,0,0
+I95990688,Birjand University of Medical Sciences,KHJ,2009,85,818,6,1,0
+I95990688,Birjand University of Medical Sciences,KHJ,2010,80,736,5,1,2
+I95990688,Birjand University of Medical Sciences,KHJ,2011,93,723,4,0,0
+I95990688,Birjand University of Medical Sciences,KHJ,2012,147,1390,1,0,4
+I95990688,Birjand University of Medical Sciences,KHJ,2013,209,1607,8,0,1
+I95990688,Birjand University of Medical Sciences,KHJ,2014,265,2462,11,0,3
+I95990688,Birjand University of Medical Sciences,KHJ,2015,320,2801,13,1,9
+I95990688,Birjand University of Medical Sciences,KHJ,2016,361,4212,15,1,10
+I95990688,Birjand University of Medical Sciences,KHJ,2017,409,5133,19,0,6
+I95990688,Birjand University of Medical Sciences,KHJ,2018,483,9162,45,2,11
+I95990688,Birjand University of Medical Sciences,KHJ,2019,489,14182,83,3,8
+I95990688,Birjand University of Medical Sciences,KHJ,2020,652,14392,155,2,9
+I95990688,Birjand University of Medical Sciences,KHJ,2021,692,19680,199,2,9
+I95990688,Birjand University of Medical Sciences,KHJ,2022,619,8252,176,6,14
+I95990688,Birjand University of Medical Sciences,KHJ,2023,586,6500,177,4,10
+I95990688,Birjand University of Medical Sciences,KHJ,2024,504,3404,115,3,11
+I95990688,Birjand University of Medical Sciences,KHJ,2025,591,2334,143,5,12
+I198876898,Kashan University of Medical Sciences,ISF,2000,17,70,3,0,0
+I198876898,Kashan University of Medical Sciences,ISF,2001,1,43,0,0,0
+I198876898,Kashan University of Medical Sciences,ISF,2002,2,1,0,0,0
+I198876898,Kashan University of Medical Sciences,ISF,2003,7,67,1,0,0
+I198876898,Kashan University of Medical Sciences,ISF,2004,9,164,2,0,1
+I198876898,Kashan University of Medical Sciences,ISF,2005,17,567,2,0,0
+I198876898,Kashan University of Medical Sciences,ISF,2006,15,339,0,0,0
+I198876898,Kashan University of Medical Sciences,ISF,2007,35,563,1,0,0
+I198876898,Kashan University of Medical Sciences,ISF,2008,46,607,1,0,1
+I198876898,Kashan University of Medical Sciences,ISF,2009,59,1315,5,0,0
+I198876898,Kashan University of Medical Sciences,ISF,2010,91,931,2,0,1
+I198876898,Kashan University of Medical Sciences,ISF,2011,178,1556,3,0,1
+I198876898,Kashan University of Medical Sciences,ISF,2012,209,3119,3,0,3
+I198876898,Kashan University of Medical Sciences,ISF,2013,287,5263,6,0,4
+I198876898,Kashan University of Medical Sciences,ISF,2014,323,5932,11,1,5
+I198876898,Kashan University of Medical Sciences,ISF,2015,384,7567,15,0,3
+I198876898,Kashan University of Medical Sciences,ISF,2016,383,8836,16,3,12
+I198876898,Kashan University of Medical Sciences,ISF,2017,439,11256,44,2,12
+I198876898,Kashan University of Medical Sciences,ISF,2018,468,19688,74,7,7
+I198876898,Kashan University of Medical Sciences,ISF,2019,551,20695,130,3,6
+I198876898,Kashan University of Medical Sciences,ISF,2020,615,16629,143,4,11
+I198876898,Kashan University of Medical Sciences,ISF,2021,620,17454,126,2,10
+I198876898,Kashan University of Medical Sciences,ISF,2022,569,9162,149,2,10
+I198876898,Kashan University of Medical Sciences,ISF,2023,493,6175,153,1,8
+I198876898,Kashan University of Medical Sciences,ISF,2024,504,4051,147,1,6
+I198876898,Kashan University of Medical Sciences,ISF,2025,486,2817,137,12,14
+I197220011,Qazvin Islamic Azad University,QZV,2000,6,1,0,0,0
+I197220011,Qazvin Islamic Azad University,QZV,2004,3,119,0,0,0
+I197220011,Qazvin Islamic Azad University,QZV,2005,2,6,0,0,0
+I197220011,Qazvin Islamic Azad University,QZV,2006,1,0,0,0,0
+I197220011,Qazvin Islamic Azad University,QZV,2007,6,74,0,1,0
+I197220011,Qazvin Islamic Azad University,QZV,2008,17,662,3,2,0
+I197220011,Qazvin Islamic Azad University,QZV,2009,70,2904,3,10,0
+I197220011,Qazvin Islamic Azad University,QZV,2010,96,1680,3,11,1
+I197220011,Qazvin Islamic Azad University,QZV,2011,168,2055,13,16,0
+I197220011,Qazvin Islamic Azad University,QZV,2012,233,4164,14,22,2
+I197220011,Qazvin Islamic Azad University,QZV,2013,278,3510,23,18,2
+I197220011,Qazvin Islamic Azad University,QZV,2014,338,7573,30,24,2
+I197220011,Qazvin Islamic Azad University,QZV,2015,344,4636,46,29,2
+I197220011,Qazvin Islamic Azad University,QZV,2016,459,6607,58,26,4
+I197220011,Qazvin Islamic Azad University,QZV,2017,481,6952,59,30,3
+I197220011,Qazvin Islamic Azad University,QZV,2018,459,4637,60,29,2
+I197220011,Qazvin Islamic Azad University,QZV,2019,562,5072,61,33,3
+I197220011,Qazvin Islamic Azad University,QZV,2020,612,5710,55,33,12
+I197220011,Qazvin Islamic Azad University,QZV,2021,560,4934,93,22,6
+I197220011,Qazvin Islamic Azad University,QZV,2022,276,3466,81,19,3
+I197220011,Qazvin Islamic Azad University,QZV,2023,227,2535,66,13,7
+I197220011,Qazvin Islamic Azad University,QZV,2024,275,1678,42,17,9
+I197220011,Qazvin Islamic Azad University,QZV,2025,305,663,50,24,9
+I64532579,Qazvin University of Medical Sciences,QZV,2000,4,1,0,0,0
+I64532579,Qazvin University of Medical Sciences,QZV,2001,6,15,1,0,0
+I64532579,Qazvin University of Medical Sciences,QZV,2002,1,1,0,0,0
+I64532579,Qazvin University of Medical Sciences,QZV,2003,6,68,1,0,0
+I64532579,Qazvin University of Medical Sciences,QZV,2004,8,4,0,0,0
+I64532579,Qazvin University of Medical Sciences,QZV,2005,5,219,1,0,0
+I64532579,Qazvin University of Medical Sciences,QZV,2006,8,6,0,0,0
+I64532579,Qazvin University of Medical Sciences,QZV,2007,22,511,3,0,0
+I64532579,Qazvin University of Medical Sciences,QZV,2008,37,1878,2,0,0
+I64532579,Qazvin University of Medical Sciences,QZV,2009,59,1974,5,0,0
+I64532579,Qazvin University of Medical Sciences,QZV,2010,92,1976,10,0,0
+I64532579,Qazvin University of Medical Sciences,QZV,2011,146,1612,14,0,3
+I64532579,Qazvin University of Medical Sciences,QZV,2012,262,3386,9,1,4
+I64532579,Qazvin University of Medical Sciences,QZV,2013,265,4173,19,0,3
+I64532579,Qazvin University of Medical Sciences,QZV,2014,323,3870,34,1,4
+I64532579,Qazvin University of Medical Sciences,QZV,2015,365,3916,28,1,2
+I64532579,Qazvin University of Medical Sciences,QZV,2016,387,5208,46,2,5
+I64532579,Qazvin University of Medical Sciences,QZV,2017,440,5888,47,0,12
+I64532579,Qazvin University of Medical Sciences,QZV,2018,474,7447,63,1,5
+I64532579,Qazvin University of Medical Sciences,QZV,2019,515,13081,93,2,7
+I64532579,Qazvin University of Medical Sciences,QZV,2020,550,18264,101,1,6
+I64532579,Qazvin University of Medical Sciences,QZV,2021,568,12686,130,1,9
+I64532579,Qazvin University of Medical Sciences,QZV,2022,518,7052,135,5,7
+I64532579,Qazvin University of Medical Sciences,QZV,2023,416,4585,113,0,4
+I64532579,Qazvin University of Medical Sciences,QZV,2024,443,3300,120,3,6
+I64532579,Qazvin University of Medical Sciences,QZV,2025,503,1579,135,4,4
+I170350485,Shahrekord University of Medical Sciences,CHB,2000,6,10,0,0,0
+I170350485,Shahrekord University of Medical Sciences,CHB,2001,8,77,1,0,0
+I170350485,Shahrekord University of Medical Sciences,CHB,2002,1,20,1,0,0
+I170350485,Shahrekord University of Medical Sciences,CHB,2003,15,32,0,0,0
+I170350485,Shahrekord University of Medical Sciences,CHB,2004,28,304,1,0,0
+I170350485,Shahrekord University of Medical Sciences,CHB,2005,28,565,1,0,0
+I170350485,Shahrekord University of Medical Sciences,CHB,2006,55,295,4,0,0
+I170350485,Shahrekord University of Medical Sciences,CHB,2007,48,370,5,0,0
+I170350485,Shahrekord University of Medical Sciences,CHB,2008,51,385,3,0,1
+I170350485,Shahrekord University of Medical Sciences,CHB,2009,71,793,5,0,1
+I170350485,Shahrekord University of Medical Sciences,CHB,2010,97,915,7,0,1
+I170350485,Shahrekord University of Medical Sciences,CHB,2011,158,1369,8,0,1
+I170350485,Shahrekord University of Medical Sciences,CHB,2012,215,1771,5,1,5
+I170350485,Shahrekord University of Medical Sciences,CHB,2013,310,4820,3,1,3
+I170350485,Shahrekord University of Medical Sciences,CHB,2014,349,8023,16,1,3
+I170350485,Shahrekord University of Medical Sciences,CHB,2015,494,7333,18,1,4
+I170350485,Shahrekord University of Medical Sciences,CHB,2016,471,6644,17,1,10
+I170350485,Shahrekord University of Medical Sciences,CHB,2017,490,8249,29,3,7
+I170350485,Shahrekord University of Medical Sciences,CHB,2018,440,8385,52,4,3
+I170350485,Shahrekord University of Medical Sciences,CHB,2019,513,11111,72,2,4
+I170350485,Shahrekord University of Medical Sciences,CHB,2020,524,11899,99,1,7
+I170350485,Shahrekord University of Medical Sciences,CHB,2021,460,10296,88,2,6
+I170350485,Shahrekord University of Medical Sciences,CHB,2022,423,4683,95,0,4
+I170350485,Shahrekord University of Medical Sciences,CHB,2023,407,4249,100,1,2
+I170350485,Shahrekord University of Medical Sciences,CHB,2024,441,3174,131,2,3
+I170350485,Shahrekord University of Medical Sciences,CHB,2025,462,3679,110,2,6
+I83123760,Shahid Rajaee Teacher Training University,THR,2000,4,3,0,0,1
+I83123760,Shahid Rajaee Teacher Training University,THR,2004,1,4,0,0,0
+I83123760,Shahid Rajaee Teacher Training University,THR,2005,2,25,0,0,0
+I83123760,Shahid Rajaee Teacher Training University,THR,2006,16,414,1,1,0
+I83123760,Shahid Rajaee Teacher Training University,THR,2007,16,198,0,1,0
+I83123760,Shahid Rajaee Teacher Training University,THR,2008,18,247,4,0,1
+I83123760,Shahid Rajaee Teacher Training University,THR,2009,34,923,7,1,1
+I83123760,Shahid Rajaee Teacher Training University,THR,2010,67,1134,7,0,5
+I83123760,Shahid Rajaee Teacher Training University,THR,2011,145,3267,19,4,4
+I83123760,Shahid Rajaee Teacher Training University,THR,2012,205,5182,15,7,9
+I83123760,Shahid Rajaee Teacher Training University,THR,2013,254,3612,26,6,3
+I83123760,Shahid Rajaee Teacher Training University,THR,2014,295,3170,46,9,7
+I83123760,Shahid Rajaee Teacher Training University,THR,2015,322,3963,28,9,6
+I83123760,Shahid Rajaee Teacher Training University,THR,2016,405,5986,37,16,12
+I83123760,Shahid Rajaee Teacher Training University,THR,2017,429,6313,43,11,14
+I83123760,Shahid Rajaee Teacher Training University,THR,2018,462,5861,62,22,10
+I83123760,Shahid Rajaee Teacher Training University,THR,2019,587,7399,79,23,16
+I83123760,Shahid Rajaee Teacher Training University,THR,2020,699,8304,126,23,28
+I83123760,Shahid Rajaee Teacher Training University,THR,2021,592,8004,111,21,41
+I83123760,Shahid Rajaee Teacher Training University,THR,2022,394,6513,133,20,16
+I83123760,Shahid Rajaee Teacher Training University,THR,2023,326,4640,117,21,6
+I83123760,Shahid Rajaee Teacher Training University,THR,2024,296,2730,111,15,8
+I83123760,Shahid Rajaee Teacher Training University,THR,2025,287,1045,101,15,14
+I3121641575,Yasouj University,KBA,2000,2,1,0,0,0
+I3121641575,Yasouj University,KBA,2002,2,104,0,0,0
+I3121641575,Yasouj University,KBA,2003,5,354,0,0,0
+I3121641575,Yasouj University,KBA,2004,9,375,0,0,0
+I3121641575,Yasouj University,KBA,2005,32,890,4,0,0
+I3121641575,Yasouj University,KBA,2006,51,2167,5,0,0
+I3121641575,Yasouj University,KBA,2007,78,2766,17,0,0
+I3121641575,Yasouj University,KBA,2008,76,2140,16,1,0
+I3121641575,Yasouj University,KBA,2009,77,2140,20,2,1
+I3121641575,Yasouj University,KBA,2010,112,3561,19,5,0
+I3121641575,Yasouj University,KBA,2011,191,5531,31,7,3
+I3121641575,Yasouj University,KBA,2012,231,6194,39,1,1
+I3121641575,Yasouj University,KBA,2013,275,8249,38,6,3
+I3121641575,Yasouj University,KBA,2014,321,6994,32,5,6
+I3121641575,Yasouj University,KBA,2015,350,10191,63,6,8
+I3121641575,Yasouj University,KBA,2016,398,12000,64,5,11
+I3121641575,Yasouj University,KBA,2017,374,8743,52,7,6
+I3121641575,Yasouj University,KBA,2018,333,7074,47,7,5
+I3121641575,Yasouj University,KBA,2019,346,7974,45,5,6
+I3121641575,Yasouj University,KBA,2020,425,9798,93,8,7
+I3121641575,Yasouj University,KBA,2021,443,10644,117,9,13
+I3121641575,Yasouj University,KBA,2022,336,4257,95,7,3
+I3121641575,Yasouj University,KBA,2023,283,3457,66,5,4
+I3121641575,Yasouj University,KBA,2024,340,2259,70,4,3
+I3121641575,Yasouj University,KBA,2025,370,938,78,7,8
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2003,1,0,0,0,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2005,1,0,0,0,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2006,1,0,0,0,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2007,10,117,1,0,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2008,21,538,4,0,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2009,58,1917,5,1,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2010,87,2403,11,2,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2011,109,1696,14,2,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2012,165,2126,15,0,1
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2013,227,3079,13,1,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2014,380,4001,27,2,1
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2015,458,4330,29,3,1
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2016,549,5217,40,2,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2017,602,6787,58,3,3
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2018,642,9367,69,0,1
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2019,656,9723,91,3,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2020,656,8744,108,2,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2021,595,6925,127,4,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2022,329,4597,99,7,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2023,211,2153,64,4,0
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2024,228,1912,75,0,1
+I184896493,Sari Agricultural Sciences and Natural Resources University,MZN,2025,230,488,61,4,0
+I4210127922,Golestan University of Medical Sciences,GLS,2000,1,1,0,0,0
+I4210127922,Golestan University of Medical Sciences,GLS,2003,4,48,1,0,0
+I4210127922,Golestan University of Medical Sciences,GLS,2004,3,284,2,0,0
+I4210127922,Golestan University of Medical Sciences,GLS,2005,8,318,4,0,0
+I4210127922,Golestan University of Medical Sciences,GLS,2006,15,887,4,0,0
+I4210127922,Golestan University of Medical Sciences,GLS,2007,27,544,6,0,0
+I4210127922,Golestan University of Medical Sciences,GLS,2008,37,1209,6,0,0
+I4210127922,Golestan University of Medical Sciences,GLS,2009,51,1648,12,0,0
+I4210127922,Golestan University of Medical Sciences,GLS,2010,68,1502,7,0,0
+I4210127922,Golestan University of Medical Sciences,GLS,2011,99,2215,11,0,0
+I4210127922,Golestan University of Medical Sciences,GLS,2012,136,2746,13,0,0
+I4210127922,Golestan University of Medical Sciences,GLS,2013,180,3221,24,0,0
+I4210127922,Golestan University of Medical Sciences,GLS,2014,242,3803,27,0,1
+I4210127922,Golestan University of Medical Sciences,GLS,2015,278,4947,38,1,4
+I4210127922,Golestan University of Medical Sciences,GLS,2016,331,7498,38,0,7
+I4210127922,Golestan University of Medical Sciences,GLS,2017,386,7985,57,0,3
+I4210127922,Golestan University of Medical Sciences,GLS,2018,407,9952,61,1,5
+I4210127922,Golestan University of Medical Sciences,GLS,2019,488,12890,90,2,8
+I4210127922,Golestan University of Medical Sciences,GLS,2020,528,9633,119,1,10
+I4210127922,Golestan University of Medical Sciences,GLS,2021,559,10484,145,2,5
+I4210127922,Golestan University of Medical Sciences,GLS,2022,523,5930,144,0,4
+I4210127922,Golestan University of Medical Sciences,GLS,2023,507,4053,126,2,4
+I4210127922,Golestan University of Medical Sciences,GLS,2024,528,3459,138,2,5
+I4210127922,Golestan University of Medical Sciences,GLS,2025,550,3324,148,2,9
+I40734275,Hakim Sabzevari University,KHR,2000,1,0,0,0,0
+I40734275,Hakim Sabzevari University,KHR,2001,1,15,1,0,0
+I40734275,Hakim Sabzevari University,KHR,2005,1,36,0,0,0
+I40734275,Hakim Sabzevari University,KHR,2006,1,18,0,0,0
+I40734275,Hakim Sabzevari University,KHR,2007,2,43,0,0,0
+I40734275,Hakim Sabzevari University,KHR,2008,3,21,0,0,0
+I40734275,Hakim Sabzevari University,KHR,2009,2,12,1,0,0
+I40734275,Hakim Sabzevari University,KHR,2010,1,0,0,0,0
+I40734275,Hakim Sabzevari University,KHR,2011,8,6,0,0,0
+I40734275,Hakim Sabzevari University,KHR,2012,112,2045,25,3,2
+I40734275,Hakim Sabzevari University,KHR,2013,201,4077,42,6,4
+I40734275,Hakim Sabzevari University,KHR,2014,268,4028,32,4,2
+I40734275,Hakim Sabzevari University,KHR,2015,377,4772,31,11,10
+I40734275,Hakim Sabzevari University,KHR,2016,488,11007,62,10,18
+I40734275,Hakim Sabzevari University,KHR,2017,566,6487,58,15,6
+I40734275,Hakim Sabzevari University,KHR,2018,591,7570,67,12,8
+I40734275,Hakim Sabzevari University,KHR,2019,622,10884,82,8,8
+I40734275,Hakim Sabzevari University,KHR,2020,609,8236,109,9,16
+I40734275,Hakim Sabzevari University,KHR,2021,541,13445,129,10,10
+I40734275,Hakim Sabzevari University,KHR,2022,385,9452,140,9,4
+I40734275,Hakim Sabzevari University,KHR,2023,365,6061,168,7,12
+I40734275,Hakim Sabzevari University,KHR,2024,397,3904,168,7,9
+I40734275,Hakim Sabzevari University,KHR,2025,405,1520,133,11,15
+I4387153077,Alborz University of Medical Sciences,ALB,2000,3,5,0,0,0
+I4387153077,Alborz University of Medical Sciences,ALB,2006,1,53,0,0,0
+I4387153077,Alborz University of Medical Sciences,ALB,2007,2,90,0,0,0
+I4387153077,Alborz University of Medical Sciences,ALB,2008,2,14,0,0,0
+I4387153077,Alborz University of Medical Sciences,ALB,2009,1,51,0,0,0
+I4387153077,Alborz University of Medical Sciences,ALB,2010,1,10,0,0,0
+I4387153077,Alborz University of Medical Sciences,ALB,2011,10,75,1,0,0
+I4387153077,Alborz University of Medical Sciences,ALB,2012,70,979,8,0,1
+I4387153077,Alborz University of Medical Sciences,ALB,2013,133,4329,21,0,2
+I4387153077,Alborz University of Medical Sciences,ALB,2014,233,5285,13,2,5
+I4387153077,Alborz University of Medical Sciences,ALB,2015,266,4805,27,1,3
+I4387153077,Alborz University of Medical Sciences,ALB,2016,347,12640,40,1,1
+I4387153077,Alborz University of Medical Sciences,ALB,2017,391,14223,58,1,9
+I4387153077,Alborz University of Medical Sciences,ALB,2018,431,13328,83,0,8
+I4387153077,Alborz University of Medical Sciences,ALB,2019,541,18435,111,1,11
+I4387153077,Alborz University of Medical Sciences,ALB,2020,607,18020,128,3,4
+I4387153077,Alborz University of Medical Sciences,ALB,2021,621,12870,147,1,6
+I4387153077,Alborz University of Medical Sciences,ALB,2022,579,8115,169,1,6
+I4387153077,Alborz University of Medical Sciences,ALB,2023,581,6124,166,3,10
+I4387153077,Alborz University of Medical Sciences,ALB,2024,569,4227,132,1,10
+I4387153077,Alborz University of Medical Sciences,ALB,2025,580,3520,166,5,10
+I90767664,Persian Gulf University,BSH,2000,7,59,0,0,1
+I90767664,Persian Gulf University,BSH,2001,7,170,0,0,0
+I90767664,Persian Gulf University,BSH,2002,5,69,0,0,0
+I90767664,Persian Gulf University,BSH,2003,20,348,1,0,0
+I90767664,Persian Gulf University,BSH,2004,24,457,4,0,0
+I90767664,Persian Gulf University,BSH,2005,30,554,5,0,0
+I90767664,Persian Gulf University,BSH,2006,40,1202,6,1,0
+I90767664,Persian Gulf University,BSH,2007,66,1886,8,0,0
+I90767664,Persian Gulf University,BSH,2008,59,1807,11,0,0
+I90767664,Persian Gulf University,BSH,2009,96,3729,22,0,0
+I90767664,Persian Gulf University,BSH,2010,103,2728,17,0,1
+I90767664,Persian Gulf University,BSH,2011,152,3986,20,1,0
+I90767664,Persian Gulf University,BSH,2012,180,3971,16,2,1
+I90767664,Persian Gulf University,BSH,2013,212,3756,31,3,0
+I90767664,Persian Gulf University,BSH,2014,264,3397,26,3,7
+I90767664,Persian Gulf University,BSH,2015,296,4230,24,5,5
+I90767664,Persian Gulf University,BSH,2016,361,4136,38,7,1
+I90767664,Persian Gulf University,BSH,2017,390,6293,43,9,2
+I90767664,Persian Gulf University,BSH,2018,410,4667,75,13,5
+I90767664,Persian Gulf University,BSH,2019,430,5237,70,12,6
+I90767664,Persian Gulf University,BSH,2020,484,8492,120,24,7
+I90767664,Persian Gulf University,BSH,2021,499,6654,143,30,8
+I90767664,Persian Gulf University,BSH,2022,365,8150,178,25,9
+I90767664,Persian Gulf University,BSH,2023,327,5028,152,24,5
+I90767664,Persian Gulf University,BSH,2024,415,4718,204,18,3
+I90767664,Persian Gulf University,BSH,2025,428,2209,207,13,5
+I133903919,Arak University of Medical Sciences,MRK,2000,9,4,0,0,0
+I133903919,Arak University of Medical Sciences,MRK,2001,2,0,0,0,0
+I133903919,Arak University of Medical Sciences,MRK,2002,7,0,0,0,0
+I133903919,Arak University of Medical Sciences,MRK,2003,2,0,0,0,0
+I133903919,Arak University of Medical Sciences,MRK,2004,4,163,1,0,0
+I133903919,Arak University of Medical Sciences,MRK,2005,9,290,2,0,0
+I133903919,Arak University of Medical Sciences,MRK,2006,14,731,1,0,0
+I133903919,Arak University of Medical Sciences,MRK,2007,18,359,1,0,0
+I133903919,Arak University of Medical Sciences,MRK,2008,20,186,2,0,0
+I133903919,Arak University of Medical Sciences,MRK,2009,43,1588,3,0,0
+I133903919,Arak University of Medical Sciences,MRK,2010,63,1055,3,0,0
+I133903919,Arak University of Medical Sciences,MRK,2011,142,1344,7,0,4
+I133903919,Arak University of Medical Sciences,MRK,2012,212,1911,10,0,0
+I133903919,Arak University of Medical Sciences,MRK,2013,299,4299,11,1,3
+I133903919,Arak University of Medical Sciences,MRK,2014,367,4986,15,0,0
+I133903919,Arak University of Medical Sciences,MRK,2015,398,16084,17,0,2
+I133903919,Arak University of Medical Sciences,MRK,2016,405,12997,25,1,7
+I133903919,Arak University of Medical Sciences,MRK,2017,366,5757,25,1,3
+I133903919,Arak University of Medical Sciences,MRK,2018,474,6203,48,1,5
+I133903919,Arak University of Medical Sciences,MRK,2019,470,13532,56,0,6
+I133903919,Arak University of Medical Sciences,MRK,2020,495,13509,76,2,8
+I133903919,Arak University of Medical Sciences,MRK,2021,436,9356,65,1,1
+I133903919,Arak University of Medical Sciences,MRK,2022,424,4569,78,1,5
+I133903919,Arak University of Medical Sciences,MRK,2023,377,2486,57,2,5
+I133903919,Arak University of Medical Sciences,MRK,2024,360,3295,69,1,7
+I133903919,Arak University of Medical Sciences,MRK,2025,436,2656,82,7,5
+I204490172,Shiraz University of Technology,FRS,2000,2,1,0,0,0
+I204490172,Shiraz University of Technology,FRS,2003,1,0,0,0,0
+I204490172,Shiraz University of Technology,FRS,2004,2,233,2,0,0
+I204490172,Shiraz University of Technology,FRS,2005,5,121,0,0,0
+I204490172,Shiraz University of Technology,FRS,2006,13,256,2,1,0
+I204490172,Shiraz University of Technology,FRS,2007,32,643,3,0,0
+I204490172,Shiraz University of Technology,FRS,2008,28,892,6,0,0
+I204490172,Shiraz University of Technology,FRS,2009,63,2939,9,4,0
+I204490172,Shiraz University of Technology,FRS,2010,91,3202,14,5,0
+I204490172,Shiraz University of Technology,FRS,2011,139,6225,23,5,0
+I204490172,Shiraz University of Technology,FRS,2012,217,9407,34,6,0
+I204490172,Shiraz University of Technology,FRS,2013,212,6580,32,10,0
+I204490172,Shiraz University of Technology,FRS,2014,249,6500,20,18,0
+I204490172,Shiraz University of Technology,FRS,2015,250,5293,34,21,0
+I204490172,Shiraz University of Technology,FRS,2016,315,8660,56,25,0
+I204490172,Shiraz University of Technology,FRS,2017,336,7490,58,18,0
+I204490172,Shiraz University of Technology,FRS,2018,410,10257,105,26,0
+I204490172,Shiraz University of Technology,FRS,2019,495,13374,173,24,0
+I204490172,Shiraz University of Technology,FRS,2020,555,17781,231,40,0
+I204490172,Shiraz University of Technology,FRS,2021,457,10940,192,38,0
+I204490172,Shiraz University of Technology,FRS,2022,345,8481,164,18,1
+I204490172,Shiraz University of Technology,FRS,2023,310,6339,152,20,0
+I204490172,Shiraz University of Technology,FRS,2024,338,4702,153,25,0
+I204490172,Shiraz University of Technology,FRS,2025,338,2196,155,33,0
+I3122832768,Kurdistan University of Medical Sciences,KRD,2000,3,3,0,0,0
+I3122832768,Kurdistan University of Medical Sciences,KRD,2001,1,0,0,0,0
+I3122832768,Kurdistan University of Medical Sciences,KRD,2002,3,89,1,0,0
+I3122832768,Kurdistan University of Medical Sciences,KRD,2003,1,0,0,0,0
+I3122832768,Kurdistan University of Medical Sciences,KRD,2005,4,127,0,0,0
+I3122832768,Kurdistan University of Medical Sciences,KRD,2006,4,49,0,0,0
+I3122832768,Kurdistan University of Medical Sciences,KRD,2007,11,437,2,0,0
+I3122832768,Kurdistan University of Medical Sciences,KRD,2008,18,634,5,0,0
+I3122832768,Kurdistan University of Medical Sciences,KRD,2009,32,609,7,0,0
+I3122832768,Kurdistan University of Medical Sciences,KRD,2010,50,1259,7,0,1
+I3122832768,Kurdistan University of Medical Sciences,KRD,2011,100,1253,15,0,0
+I3122832768,Kurdistan University of Medical Sciences,KRD,2012,138,2499,14,1,1
+I3122832768,Kurdistan University of Medical Sciences,KRD,2013,225,3823,22,2,3
+I3122832768,Kurdistan University of Medical Sciences,KRD,2014,277,6506,19,2,3
+I3122832768,Kurdistan University of Medical Sciences,KRD,2015,345,5192,19,0,3
+I3122832768,Kurdistan University of Medical Sciences,KRD,2016,453,7557,35,1,2
+I3122832768,Kurdistan University of Medical Sciences,KRD,2017,406,7342,48,0,8
+I3122832768,Kurdistan University of Medical Sciences,KRD,2018,492,13666,63,0,7
+I3122832768,Kurdistan University of Medical Sciences,KRD,2019,562,14993,113,1,7
+I3122832768,Kurdistan University of Medical Sciences,KRD,2020,537,9372,106,3,6
+I3122832768,Kurdistan University of Medical Sciences,KRD,2021,488,10690,107,2,5
+I3122832768,Kurdistan University of Medical Sciences,KRD,2022,439,7101,128,0,8
+I3122832768,Kurdistan University of Medical Sciences,KRD,2023,377,3525,101,2,4
+I3122832768,Kurdistan University of Medical Sciences,KRD,2024,367,2263,100,5,7
+I3122832768,Kurdistan University of Medical Sciences,KRD,2025,335,2949,100,3,9
+I3121602497,Lorestan University of Medical Sciences,LRS,2000,20,47,2,0,0
+I3121602497,Lorestan University of Medical Sciences,LRS,2002,1,12,0,0,1
+I3121602497,Lorestan University of Medical Sciences,LRS,2004,4,81,0,0,0
+I3121602497,Lorestan University of Medical Sciences,LRS,2005,6,86,0,0,0
+I3121602497,Lorestan University of Medical Sciences,LRS,2006,9,181,0,0,0
+I3121602497,Lorestan University of Medical Sciences,LRS,2007,20,525,2,0,0
+I3121602497,Lorestan University of Medical Sciences,LRS,2008,28,451,2,0,0
+I3121602497,Lorestan University of Medical Sciences,LRS,2009,37,600,3,0,0
+I3121602497,Lorestan University of Medical Sciences,LRS,2010,67,1253,6,0,1
+I3121602497,Lorestan University of Medical Sciences,LRS,2011,149,1090,2,0,1
+I3121602497,Lorestan University of Medical Sciences,LRS,2012,129,1696,2,0,1
+I3121602497,Lorestan University of Medical Sciences,LRS,2013,176,2433,7,1,2
+I3121602497,Lorestan University of Medical Sciences,LRS,2014,206,4972,10,0,2
+I3121602497,Lorestan University of Medical Sciences,LRS,2015,318,4386,11,0,2
+I3121602497,Lorestan University of Medical Sciences,LRS,2016,376,6283,15,0,4
+I3121602497,Lorestan University of Medical Sciences,LRS,2017,408,6815,18,0,3
+I3121602497,Lorestan University of Medical Sciences,LRS,2018,406,7503,51,1,1
+I3121602497,Lorestan University of Medical Sciences,LRS,2019,504,12818,69,1,8
+I3121602497,Lorestan University of Medical Sciences,LRS,2020,541,10640,102,1,4
+I3121602497,Lorestan University of Medical Sciences,LRS,2021,479,7903,112,1,3
+I3121602497,Lorestan University of Medical Sciences,LRS,2022,418,4687,90,2,11
+I3121602497,Lorestan University of Medical Sciences,LRS,2023,431,3987,122,3,9
+I3121602497,Lorestan University of Medical Sciences,LRS,2024,398,2715,118,7,4
+I3121602497,Lorestan University of Medical Sciences,LRS,2025,446,2911,125,7,13
+I2801771032,"Islamic Azad University, Arak",MRK,2000,10,7,0,1,0
+I2801771032,"Islamic Azad University, Arak",MRK,2002,2,2,0,0,0
+I2801771032,"Islamic Azad University, Arak",MRK,2003,9,42,0,0,0
+I2801771032,"Islamic Azad University, Arak",MRK,2004,13,606,3,0,0
+I2801771032,"Islamic Azad University, Arak",MRK,2005,24,811,1,1,0
+I2801771032,"Islamic Azad University, Arak",MRK,2006,25,1374,5,0,0
+I2801771032,"Islamic Azad University, Arak",MRK,2007,58,1066,5,0,0
+I2801771032,"Islamic Azad University, Arak",MRK,2008,60,1183,4,1,0
+I2801771032,"Islamic Azad University, Arak",MRK,2009,77,1364,9,2,0
+I2801771032,"Islamic Azad University, Arak",MRK,2010,115,1575,22,1,1
+I2801771032,"Islamic Azad University, Arak",MRK,2011,177,2607,16,4,0
+I2801771032,"Islamic Azad University, Arak",MRK,2012,247,4719,20,8,4
+I2801771032,"Islamic Azad University, Arak",MRK,2013,261,3851,25,7,6
+I2801771032,"Islamic Azad University, Arak",MRK,2014,250,2886,27,10,7
+I2801771032,"Islamic Azad University, Arak",MRK,2015,325,6586,26,5,4
+I2801771032,"Islamic Azad University, Arak",MRK,2016,424,7171,26,10,7
+I2801771032,"Islamic Azad University, Arak",MRK,2017,477,6678,42,7,9
+I2801771032,"Islamic Azad University, Arak",MRK,2018,460,6753,38,7,12
+I2801771032,"Islamic Azad University, Arak",MRK,2019,463,5268,49,7,8
+I2801771032,"Islamic Azad University, Arak",MRK,2020,510,6380,73,12,13
+I2801771032,"Islamic Azad University, Arak",MRK,2021,455,6704,63,8,13
+I2801771032,"Islamic Azad University, Arak",MRK,2022,276,3263,50,7,8
+I2801771032,"Islamic Azad University, Arak",MRK,2023,227,2847,53,6,8
+I2801771032,"Islamic Azad University, Arak",MRK,2024,241,1622,35,10,8
+I2801771032,"Islamic Azad University, Arak",MRK,2025,223,274,19,13,9
+I91138267,Islamic Azad University of Shiraz,FRS,2000,8,4,0,0,0
+I91138267,Islamic Azad University of Shiraz,FRS,2002,1,0,0,0,0
+I91138267,Islamic Azad University of Shiraz,FRS,2003,1,8,0,0,0
+I91138267,Islamic Azad University of Shiraz,FRS,2005,2,63,0,0,0
+I91138267,Islamic Azad University of Shiraz,FRS,2006,4,73,1,1,0
+I91138267,Islamic Azad University of Shiraz,FRS,2007,12,184,1,3,0
+I91138267,Islamic Azad University of Shiraz,FRS,2008,22,117,4,0,0
+I91138267,Islamic Azad University of Shiraz,FRS,2009,28,652,1,3,0
+I91138267,Islamic Azad University of Shiraz,FRS,2010,45,467,5,2,1
+I91138267,Islamic Azad University of Shiraz,FRS,2011,108,2966,10,4,2
+I91138267,Islamic Azad University of Shiraz,FRS,2012,166,2977,15,9,6
+I91138267,Islamic Azad University of Shiraz,FRS,2013,165,3825,9,8,12
+I91138267,Islamic Azad University of Shiraz,FRS,2014,234,3546,20,7,3
+I91138267,Islamic Azad University of Shiraz,FRS,2015,286,3690,32,4,10
+I91138267,Islamic Azad University of Shiraz,FRS,2016,388,4040,36,13,6
+I91138267,Islamic Azad University of Shiraz,FRS,2017,458,4740,57,8,17
+I91138267,Islamic Azad University of Shiraz,FRS,2018,496,3986,56,15,23
+I91138267,Islamic Azad University of Shiraz,FRS,2019,527,4491,55,18,16
+I91138267,Islamic Azad University of Shiraz,FRS,2020,535,5568,66,19,12
+I91138267,Islamic Azad University of Shiraz,FRS,2021,537,6040,100,16,19
+I91138267,Islamic Azad University of Shiraz,FRS,2022,280,4659,75,5,15
+I91138267,Islamic Azad University of Shiraz,FRS,2023,281,2318,60,12,9
+I91138267,Islamic Azad University of Shiraz,FRS,2024,285,1660,56,12,6
+I91138267,Islamic Azad University of Shiraz,FRS,2025,428,864,91,31,27
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2000,14,19,1,1,3
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2005,2,3,0,0,0
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2007,3,7,0,0,0
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2008,17,134,1,0,0
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2009,49,383,3,0,0
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2010,69,755,10,2,0
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2011,79,1083,3,1,0
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2012,100,1207,12,4,3
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2013,122,2771,13,3,2
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2014,177,2767,16,8,1
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2015,251,3441,20,10,3
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2016,408,4360,31,6,14
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2017,476,4001,39,5,11
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2018,495,5134,23,6,7
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2019,567,4454,29,12,13
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2020,685,4652,31,20,15
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2021,634,4169,59,21,14
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2022,343,2538,47,13,13
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2023,262,1738,29,5,11
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2024,307,1931,50,9,9
+I4210147666,"Islamic Azad University, Ahvaz Branch",KHZ,2025,381,2417,59,11,29
+I143318147,University of Maragheh,AZS,2000,1,0,0,0,0
+I143318147,University of Maragheh,AZS,2002,1,6,0,0,0
+I143318147,University of Maragheh,AZS,2005,1,0,0,0,0
+I143318147,University of Maragheh,AZS,2007,6,397,2,0,0
+I143318147,University of Maragheh,AZS,2008,10,279,0,0,0
+I143318147,University of Maragheh,AZS,2009,21,448,2,0,0
+I143318147,University of Maragheh,AZS,2010,34,709,12,0,3
+I143318147,University of Maragheh,AZS,2011,53,1497,12,0,0
+I143318147,University of Maragheh,AZS,2012,100,2470,11,0,3
+I143318147,University of Maragheh,AZS,2013,155,3692,21,0,1
+I143318147,University of Maragheh,AZS,2014,205,4222,19,0,0
+I143318147,University of Maragheh,AZS,2015,254,5242,40,1,4
+I143318147,University of Maragheh,AZS,2016,351,6954,46,3,2
+I143318147,University of Maragheh,AZS,2017,497,7190,68,2,6
+I143318147,University of Maragheh,AZS,2018,463,10450,88,3,2
+I143318147,University of Maragheh,AZS,2019,479,12393,106,2,3
+I143318147,University of Maragheh,AZS,2020,530,13536,157,9,3
+I143318147,University of Maragheh,AZS,2021,516,12038,174,10,5
+I143318147,University of Maragheh,AZS,2022,335,7306,171,3,3
+I143318147,University of Maragheh,AZS,2023,338,5825,185,5,2
+I143318147,University of Maragheh,AZS,2024,354,4740,193,4,2
+I143318147,University of Maragheh,AZS,2025,377,1869,171,3,4
+I64728393,Farhangian University,THR,2000,7,0,0,0,2
+I64728393,Farhangian University,THR,2001,1,0,0,0,0
+I64728393,Farhangian University,THR,2008,1,47,0,0,0
+I64728393,Farhangian University,THR,2010,4,49,0,0,1
+I64728393,Farhangian University,THR,2011,3,0,0,0,0
+I64728393,Farhangian University,THR,2012,14,341,2,0,1
+I64728393,Farhangian University,THR,2013,81,351,9,3,13
+I64728393,Farhangian University,THR,2014,113,943,13,6,9
+I64728393,Farhangian University,THR,2015,183,834,10,8,15
+I64728393,Farhangian University,THR,2016,271,866,16,8,28
+I64728393,Farhangian University,THR,2017,310,1097,16,8,26
+I64728393,Farhangian University,THR,2018,412,1423,10,11,27
+I64728393,Farhangian University,THR,2019,554,1703,31,9,46
+I64728393,Farhangian University,THR,2020,770,2255,37,8,90
+I64728393,Farhangian University,THR,2021,704,1672,51,9,86
+I64728393,Farhangian University,THR,2022,228,1438,32,5,52
+I64728393,Farhangian University,THR,2023,295,1513,38,9,48
+I64728393,Farhangian University,THR,2024,397,1225,65,13,61
+I64728393,Farhangian University,THR,2025,567,788,82,18,106
+I33103891,Ardabil University of Medical Sciences,ARD,2000,5,4,0,0,0
+I33103891,Ardabil University of Medical Sciences,ARD,2002,1,40,0,0,0
+I33103891,Ardabil University of Medical Sciences,ARD,2003,4,554,2,0,0
+I33103891,Ardabil University of Medical Sciences,ARD,2004,4,134,1,0,0
+I33103891,Ardabil University of Medical Sciences,ARD,2005,6,442,2,0,0
+I33103891,Ardabil University of Medical Sciences,ARD,2006,14,172,1,0,1
+I33103891,Ardabil University of Medical Sciences,ARD,2007,20,754,2,1,0
+I33103891,Ardabil University of Medical Sciences,ARD,2008,24,261,6,0,1
+I33103891,Ardabil University of Medical Sciences,ARD,2009,24,763,6,0,2
+I33103891,Ardabil University of Medical Sciences,ARD,2010,40,457,4,1,0
+I33103891,Ardabil University of Medical Sciences,ARD,2011,90,1362,8,0,1
+I33103891,Ardabil University of Medical Sciences,ARD,2012,85,1293,9,0,5
+I33103891,Ardabil University of Medical Sciences,ARD,2013,126,1473,3,0,2
+I33103891,Ardabil University of Medical Sciences,ARD,2014,171,2405,7,1,1
+I33103891,Ardabil University of Medical Sciences,ARD,2015,257,2928,16,0,1
+I33103891,Ardabil University of Medical Sciences,ARD,2016,291,4471,11,0,1
+I33103891,Ardabil University of Medical Sciences,ARD,2017,351,5145,24,0,1
+I33103891,Ardabil University of Medical Sciences,ARD,2018,367,6021,24,1,2
+I33103891,Ardabil University of Medical Sciences,ARD,2019,386,10769,41,0,5
+I33103891,Ardabil University of Medical Sciences,ARD,2020,498,12475,91,3,2
+I33103891,Ardabil University of Medical Sciences,ARD,2021,508,9599,77,4,11
+I33103891,Ardabil University of Medical Sciences,ARD,2022,443,6729,81,4,3
+I33103891,Ardabil University of Medical Sciences,ARD,2023,445,4851,87,4,12
+I33103891,Ardabil University of Medical Sciences,ARD,2024,462,3183,81,7,11
+I33103891,Ardabil University of Medical Sciences,ARD,2025,498,2802,101,7,11
+I4210128695,Hormozgan University of Medical Sciences,HRM,2000,5,6,0,0,0
+I4210128695,Hormozgan University of Medical Sciences,HRM,2003,2,65,2,0,0
+I4210128695,Hormozgan University of Medical Sciences,HRM,2004,4,164,1,0,0
+I4210128695,Hormozgan University of Medical Sciences,HRM,2005,17,133,1,0,0
+I4210128695,Hormozgan University of Medical Sciences,HRM,2006,30,410,2,0,0
+I4210128695,Hormozgan University of Medical Sciences,HRM,2007,14,198,1,0,0
+I4210128695,Hormozgan University of Medical Sciences,HRM,2008,27,421,2,0,1
+I4210128695,Hormozgan University of Medical Sciences,HRM,2009,46,593,5,0,0
+I4210128695,Hormozgan University of Medical Sciences,HRM,2010,32,671,2,0,1
+I4210128695,Hormozgan University of Medical Sciences,HRM,2011,75,1615,10,0,1
+I4210128695,Hormozgan University of Medical Sciences,HRM,2012,90,1550,6,0,1
+I4210128695,Hormozgan University of Medical Sciences,HRM,2013,142,2001,12,1,1
+I4210128695,Hormozgan University of Medical Sciences,HRM,2014,159,2364,7,0,3
+I4210128695,Hormozgan University of Medical Sciences,HRM,2015,241,3151,10,2,6
+I4210128695,Hormozgan University of Medical Sciences,HRM,2016,297,4247,16,2,5
+I4210128695,Hormozgan University of Medical Sciences,HRM,2017,339,5936,30,0,3
+I4210128695,Hormozgan University of Medical Sciences,HRM,2018,290,5518,36,2,3
+I4210128695,Hormozgan University of Medical Sciences,HRM,2019,304,6870,41,0,3
+I4210128695,Hormozgan University of Medical Sciences,HRM,2020,433,8402,74,2,9
+I4210128695,Hormozgan University of Medical Sciences,HRM,2021,427,7092,84,3,4
+I4210128695,Hormozgan University of Medical Sciences,HRM,2022,447,4504,108,3,9
+I4210128695,Hormozgan University of Medical Sciences,HRM,2023,443,3516,108,2,6
+I4210128695,Hormozgan University of Medical Sciences,HRM,2024,449,3258,113,2,7
+I4210128695,Hormozgan University of Medical Sciences,HRM,2025,497,2621,122,3,4
+I61554058,Qom University of Medical Science and Health Services,QOM,2000,1,0,0,0,0
+I61554058,Qom University of Medical Science and Health Services,QOM,2004,1,17,0,0,0
+I61554058,Qom University of Medical Science and Health Services,QOM,2005,1,0,0,0,0
+I61554058,Qom University of Medical Science and Health Services,QOM,2006,3,0,0,0,0
+I61554058,Qom University of Medical Science and Health Services,QOM,2007,13,121,2,0,0
+I61554058,Qom University of Medical Science and Health Services,QOM,2008,39,447,4,0,0
+I61554058,Qom University of Medical Science and Health Services,QOM,2009,29,602,1,0,1
+I61554058,Qom University of Medical Science and Health Services,QOM,2010,46,774,2,1,0
+I61554058,Qom University of Medical Science and Health Services,QOM,2011,97,723,0,1,3
+I61554058,Qom University of Medical Science and Health Services,QOM,2012,120,1289,6,2,2
+I61554058,Qom University of Medical Science and Health Services,QOM,2013,183,2655,3,1,2
+I61554058,Qom University of Medical Science and Health Services,QOM,2014,212,2500,10,0,5
+I61554058,Qom University of Medical Science and Health Services,QOM,2015,310,4105,6,0,6
+I61554058,Qom University of Medical Science and Health Services,QOM,2016,378,11312,23,0,10
+I61554058,Qom University of Medical Science and Health Services,QOM,2017,446,12047,29,0,6
+I61554058,Qom University of Medical Science and Health Services,QOM,2018,378,4710,31,1,12
+I61554058,Qom University of Medical Science and Health Services,QOM,2019,463,9536,29,4,14
+I61554058,Qom University of Medical Science and Health Services,QOM,2020,481,7166,38,0,6
+I61554058,Qom University of Medical Science and Health Services,QOM,2021,443,7161,70,3,4
+I61554058,Qom University of Medical Science and Health Services,QOM,2022,351,2993,67,2,4
+I61554058,Qom University of Medical Science and Health Services,QOM,2023,297,2502,68,0,3
+I61554058,Qom University of Medical Science and Health Services,QOM,2024,405,2878,86,3,3
+I61554058,Qom University of Medical Science and Health Services,QOM,2025,417,2813,85,2,9
+I4210154083,Semnan University of Medical Sciences,SMN,2000,6,48,0,0,0
+I4210154083,Semnan University of Medical Sciences,SMN,2001,1,27,0,0,0
+I4210154083,Semnan University of Medical Sciences,SMN,2003,9,120,1,0,4
+I4210154083,Semnan University of Medical Sciences,SMN,2004,7,236,0,0,0
+I4210154083,Semnan University of Medical Sciences,SMN,2005,11,177,1,0,0
+I4210154083,Semnan University of Medical Sciences,SMN,2006,25,706,2,0,0
+I4210154083,Semnan University of Medical Sciences,SMN,2007,36,1361,7,0,0
+I4210154083,Semnan University of Medical Sciences,SMN,2008,28,661,3,0,0
+I4210154083,Semnan University of Medical Sciences,SMN,2009,40,1165,5,1,2
+I4210154083,Semnan University of Medical Sciences,SMN,2010,23,330,2,0,0
+I4210154083,Semnan University of Medical Sciences,SMN,2011,58,1385,2,0,1
+I4210154083,Semnan University of Medical Sciences,SMN,2012,89,1413,6,0,2
+I4210154083,Semnan University of Medical Sciences,SMN,2013,98,1335,6,0,1
+I4210154083,Semnan University of Medical Sciences,SMN,2014,158,2232,12,2,4
+I4210154083,Semnan University of Medical Sciences,SMN,2015,203,3357,17,1,0
+I4210154083,Semnan University of Medical Sciences,SMN,2016,246,4169,20,0,0
+I4210154083,Semnan University of Medical Sciences,SMN,2017,297,6014,39,2,4
+I4210154083,Semnan University of Medical Sciences,SMN,2018,365,7749,65,0,4
+I4210154083,Semnan University of Medical Sciences,SMN,2019,474,12588,98,0,4
+I4210154083,Semnan University of Medical Sciences,SMN,2020,496,11413,102,1,6
+I4210154083,Semnan University of Medical Sciences,SMN,2021,482,9158,86,2,10
+I4210154083,Semnan University of Medical Sciences,SMN,2022,424,6793,111,3,3
+I4210154083,Semnan University of Medical Sciences,SMN,2023,437,4874,101,3,7
+I4210154083,Semnan University of Medical Sciences,SMN,2024,493,4504,117,2,4
+I4210154083,Semnan University of Medical Sciences,SMN,2025,492,3986,132,1,4
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2000,45,1343,16,1,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2001,56,1333,16,1,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2002,58,965,21,0,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2003,67,1941,20,0,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2004,70,1910,13,1,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2005,77,2302,33,5,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2006,92,2729,32,7,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2007,95,4834,31,5,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2008,91,2235,28,4,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2009,99,2448,28,3,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2010,125,4087,47,6,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2011,144,4467,52,6,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2012,174,4956,63,6,1
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2013,173,4867,62,7,1
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2014,185,4710,69,8,2
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2015,215,5873,81,13,1
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2016,239,6195,101,10,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2017,245,6815,104,18,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2018,288,6724,128,15,1
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2019,276,5805,133,13,2
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2020,291,6577,140,22,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2021,278,5892,151,10,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2022,265,5090,152,16,2
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2023,276,4239,154,13,1
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2024,253,2695,154,15,0
+I161028277,Institute for Advanced Studies in Basic Sciences,ZNJ,2025,302,2805,170,19,1
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2000,4,1,0,0,0
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2002,1,10,0,0,0
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2004,1,178,0,0,0
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2005,4,29,0,0,0
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2006,5,31,0,0,0
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2007,2,145,0,0,0
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2008,15,432,1,0,0
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2009,19,363,6,0,1
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2010,40,467,5,1,0
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2011,93,506,3,0,2
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2012,106,993,1,0,0
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2013,121,1296,3,0,1
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2014,143,1251,7,1,0
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2015,180,2487,8,0,0
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2016,256,2550,10,0,2
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2017,248,3219,19,1,1
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2018,266,4005,28,1,1
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2019,351,6865,58,0,3
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2020,443,10139,111,1,2
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2021,523,10291,129,2,1
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2022,498,9391,130,5,4
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2023,526,6569,148,3,3
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2024,589,6001,184,4,5
+I2800744764,Islamic Azad University Medical Branch of Tehran,THR,2025,528,2241,141,6,4
+I3017965041,Medical University of Ilam,ILM,2000,12,18,0,0,0
+I3017965041,Medical University of Ilam,ILM,2001,1,11,1,0,0
+I3017965041,Medical University of Ilam,ILM,2002,1,4,1,0,0
+I3017965041,Medical University of Ilam,ILM,2003,2,8,0,0,1
+I3017965041,Medical University of Ilam,ILM,2005,7,20,0,0,0
+I3017965041,Medical University of Ilam,ILM,2006,8,141,1,0,0
+I3017965041,Medical University of Ilam,ILM,2007,14,392,6,0,0
+I3017965041,Medical University of Ilam,ILM,2008,19,571,4,0,0
+I3017965041,Medical University of Ilam,ILM,2009,25,520,4,0,0
+I3017965041,Medical University of Ilam,ILM,2010,46,610,11,0,0
+I3017965041,Medical University of Ilam,ILM,2011,77,1198,9,0,1
+I3017965041,Medical University of Ilam,ILM,2012,84,1785,15,1,1
+I3017965041,Medical University of Ilam,ILM,2013,193,3888,19,0,2
+I3017965041,Medical University of Ilam,ILM,2014,254,3528,25,1,10
+I3017965041,Medical University of Ilam,ILM,2015,324,4404,18,0,5
+I3017965041,Medical University of Ilam,ILM,2016,351,4325,13,2,8
+I3017965041,Medical University of Ilam,ILM,2017,334,5768,24,1,4
+I3017965041,Medical University of Ilam,ILM,2018,392,7388,39,1,3
+I3017965041,Medical University of Ilam,ILM,2019,455,13194,38,2,8
+I3017965041,Medical University of Ilam,ILM,2020,501,10267,98,2,8
+I3017965041,Medical University of Ilam,ILM,2021,411,6519,61,5,3
+I3017965041,Medical University of Ilam,ILM,2022,377,5839,57,18,4
+I3017965041,Medical University of Ilam,ILM,2023,316,3205,64,0,3
+I3017965041,Medical University of Ilam,ILM,2024,334,2768,66,4,1
+I3017965041,Medical University of Ilam,ILM,2025,375,703,52,2,8
+I4210098966,Islamic Azad University Rasht Branch,GIL,2000,10,5,0,0,1
+I4210098966,Islamic Azad University Rasht Branch,GIL,2001,1,0,0,0,0
+I4210098966,Islamic Azad University Rasht Branch,GIL,2002,2,15,0,0,0
+I4210098966,Islamic Azad University Rasht Branch,GIL,2003,5,102,0,0,0
+I4210098966,Islamic Azad University Rasht Branch,GIL,2004,7,144,0,0,0
+I4210098966,Islamic Azad University Rasht Branch,GIL,2005,17,583,0,0,0
+I4210098966,Islamic Azad University Rasht Branch,GIL,2006,18,1446,1,0,0
+I4210098966,Islamic Azad University Rasht Branch,GIL,2007,21,119,0,0,0
+I4210098966,Islamic Azad University Rasht Branch,GIL,2008,25,699,0,0,0
+I4210098966,Islamic Azad University Rasht Branch,GIL,2009,61,1272,1,1,0
+I4210098966,Islamic Azad University Rasht Branch,GIL,2010,80,773,4,2,0
+I4210098966,Islamic Azad University Rasht Branch,GIL,2011,99,1931,10,1,2
+I4210098966,Islamic Azad University Rasht Branch,GIL,2012,111,1208,7,1,1
+I4210098966,Islamic Azad University Rasht Branch,GIL,2013,148,2662,25,0,2
+I4210098966,Islamic Azad University Rasht Branch,GIL,2014,200,2987,38,1,2
+I4210098966,Islamic Azad University Rasht Branch,GIL,2015,264,2697,34,3,4
+I4210098966,Islamic Azad University Rasht Branch,GIL,2016,363,3742,41,4,4
+I4210098966,Islamic Azad University Rasht Branch,GIL,2017,400,5496,67,5,6
+I4210098966,Islamic Azad University Rasht Branch,GIL,2018,432,5349,61,5,10
+I4210098966,Islamic Azad University Rasht Branch,GIL,2019,430,8416,46,9,10
+I4210098966,Islamic Azad University Rasht Branch,GIL,2020,500,6594,61,9,9
+I4210098966,Islamic Azad University Rasht Branch,GIL,2021,494,5767,95,10,9
+I4210098966,Islamic Azad University Rasht Branch,GIL,2022,289,4287,96,10,8
+I4210098966,Islamic Azad University Rasht Branch,GIL,2023,259,2837,69,6,3
+I4210098966,Islamic Azad University Rasht Branch,GIL,2024,257,1648,74,10,2
+I4210098966,Islamic Azad University Rasht Branch,GIL,2025,278,420,31,16,7
+I4210116604,Ilam University,ILM,2000,3,0,0,0,0
+I4210116604,Ilam University,ILM,2004,2,6,0,0,0
+I4210116604,Ilam University,ILM,2005,12,252,6,0,0
+I4210116604,Ilam University,ILM,2006,4,94,2,0,0
+I4210116604,Ilam University,ILM,2007,43,1481,15,1,1
+I4210116604,Ilam University,ILM,2008,53,1783,20,0,0
+I4210116604,Ilam University,ILM,2009,63,1405,10,0,1
+I4210116604,Ilam University,ILM,2010,87,1933,12,0,1
+I4210116604,Ilam University,ILM,2011,101,2364,14,0,0
+I4210116604,Ilam University,ILM,2012,116,2914,13,4,6
+I4210116604,Ilam University,ILM,2013,207,4818,22,2,9
+I4210116604,Ilam University,ILM,2014,244,4223,27,2,15
+I4210116604,Ilam University,ILM,2015,280,6427,26,5,8
+I4210116604,Ilam University,ILM,2016,319,6124,26,2,9
+I4210116604,Ilam University,ILM,2017,276,6474,33,5,9
+I4210116604,Ilam University,ILM,2018,291,6223,42,2,12
+I4210116604,Ilam University,ILM,2019,309,6487,59,3,16
+I4210116604,Ilam University,ILM,2020,352,6459,73,8,16
+I4210116604,Ilam University,ILM,2021,375,6666,96,12,10
+I4210116604,Ilam University,ILM,2022,322,5281,96,6,16
+I4210116604,Ilam University,ILM,2023,303,4497,90,5,7
+I4210116604,Ilam University,ILM,2024,330,3331,85,2,4
+I4210116604,Ilam University,ILM,2025,388,1347,103,15,8
+I198873322,Golestan University,GLS,2000,1,1,0,0,0
+I198873322,Golestan University,GLS,2001,2,3,0,0,0
+I198873322,Golestan University,GLS,2002,1,1,0,0,0
+I198873322,Golestan University,GLS,2004,1,241,1,0,0
+I198873322,Golestan University,GLS,2005,2,40,1,0,0
+I198873322,Golestan University,GLS,2006,5,28,0,0,0
+I198873322,Golestan University,GLS,2007,10,1042,4,1,0
+I198873322,Golestan University,GLS,2008,13,570,1,1,0
+I198873322,Golestan University,GLS,2009,51,1031,21,1,0
+I198873322,Golestan University,GLS,2010,66,1454,20,2,0
+I198873322,Golestan University,GLS,2011,132,2082,46,5,2
+I198873322,Golestan University,GLS,2012,199,2376,39,7,0
+I198873322,Golestan University,GLS,2013,250,2296,39,9,2
+I198873322,Golestan University,GLS,2014,287,2528,36,10,4
+I198873322,Golestan University,GLS,2015,356,5916,45,10,7
+I198873322,Golestan University,GLS,2016,309,4252,37,7,5
+I198873322,Golestan University,GLS,2017,369,5642,41,3,4
+I198873322,Golestan University,GLS,2018,354,7654,46,7,7
+I198873322,Golestan University,GLS,2019,418,8346,65,6,4
+I198873322,Golestan University,GLS,2020,458,8500,83,6,12
+I198873322,Golestan University,GLS,2021,452,9433,108,14,12
+I198873322,Golestan University,GLS,2022,273,5638,98,7,9
+I198873322,Golestan University,GLS,2023,213,3782,71,12,13
+I198873322,Golestan University,GLS,2024,234,3464,95,8,10
+I198873322,Golestan University,GLS,2025,220,1626,77,6,12
+I183263030,Graduate University of Advanced Technology,KRM,2000,1,1,0,0,0
+I183263030,Graduate University of Advanced Technology,KRM,2009,2,73,1,0,0
+I183263030,Graduate University of Advanced Technology,KRM,2010,5,178,0,3,0
+I183263030,Graduate University of Advanced Technology,KRM,2011,10,68,0,2,0
+I183263030,Graduate University of Advanced Technology,KRM,2012,39,632,4,3,0
+I183263030,Graduate University of Advanced Technology,KRM,2013,130,5079,12,10,0
+I183263030,Graduate University of Advanced Technology,KRM,2014,221,7959,27,23,0
+I183263030,Graduate University of Advanced Technology,KRM,2015,274,8497,59,17,0
+I183263030,Graduate University of Advanced Technology,KRM,2016,284,10485,32,24,0
+I183263030,Graduate University of Advanced Technology,KRM,2017,320,7011,41,15,0
+I183263030,Graduate University of Advanced Technology,KRM,2018,391,7735,51,18,2
+I183263030,Graduate University of Advanced Technology,KRM,2019,427,9870,62,19,0
+I183263030,Graduate University of Advanced Technology,KRM,2020,391,8656,79,28,0
+I183263030,Graduate University of Advanced Technology,KRM,2021,401,10129,115,26,0
+I183263030,Graduate University of Advanced Technology,KRM,2022,347,7123,113,19,1
+I183263030,Graduate University of Advanced Technology,KRM,2023,269,3689,75,19,0
+I183263030,Graduate University of Advanced Technology,KRM,2024,231,2307,71,19,0
+I183263030,Graduate University of Advanced Technology,KRM,2025,327,2859,120,23,0
+I120234788,Imam Hossein University,THR,2000,12,33,1,0,0
+I120234788,Imam Hossein University,THR,2001,17,409,3,0,0
+I120234788,Imam Hossein University,THR,2002,17,234,6,0,0
+I120234788,Imam Hossein University,THR,2003,23,363,0,0,0
+I120234788,Imam Hossein University,THR,2004,26,475,6,0,0
+I120234788,Imam Hossein University,THR,2005,44,450,6,0,0
+I120234788,Imam Hossein University,THR,2006,23,252,2,0,0
+I120234788,Imam Hossein University,THR,2007,35,255,3,0,0
+I120234788,Imam Hossein University,THR,2008,38,550,0,0,0
+I120234788,Imam Hossein University,THR,2009,66,910,7,0,1
+I120234788,Imam Hossein University,THR,2010,49,497,1,1,1
+I120234788,Imam Hossein University,THR,2011,129,1063,3,5,1
+I120234788,Imam Hossein University,THR,2012,141,1131,3,4,2
+I120234788,Imam Hossein University,THR,2013,211,1769,7,4,5
+I120234788,Imam Hossein University,THR,2014,245,1780,10,1,4
+I120234788,Imam Hossein University,THR,2015,282,1101,8,5,3
+I120234788,Imam Hossein University,THR,2016,348,4283,16,5,2
+I120234788,Imam Hossein University,THR,2017,411,5537,21,7,4
+I120234788,Imam Hossein University,THR,2018,421,3432,15,7,1
+I120234788,Imam Hossein University,THR,2019,439,2201,20,9,7
+I120234788,Imam Hossein University,THR,2020,520,1656,12,15,8
+I120234788,Imam Hossein University,THR,2021,442,1641,18,12,9
+I120234788,Imam Hossein University,THR,2022,144,1453,15,7,3
+I120234788,Imam Hossein University,THR,2023,105,630,5,4,4
+I120234788,Imam Hossein University,THR,2024,112,435,6,4,6
+I120234788,Imam Hossein University,THR,2025,132,303,12,5,2
+I4405259699,Velayat University,SBL,2011,5,4,1,0,0
+I4405259699,Velayat University,SBL,2012,7,52,1,0,0
+I4405259699,Velayat University,SBL,2013,3,8,0,0,0
+I4405259699,Velayat University,SBL,2014,16,59,0,0,0
+I4405259699,Velayat University,SBL,2015,24,41,0,0,1
+I4405259699,Velayat University,SBL,2016,39,534,1,1,1
+I4405259699,Velayat University,SBL,2017,32,444,1,0,0
+I4405259699,Velayat University,SBL,2018,56,629,2,0,0
+I4405259699,Velayat University,SBL,2019,77,647,10,2,3
+I4405259699,Velayat University,SBL,2020,90,615,13,5,1
+I4405259699,Velayat University,SBL,2021,76,507,12,2,2
+I4405259699,Velayat University,SBL,2022,43,571,9,1,1
+I4405259699,Velayat University,SBL,2023,43,417,8,0,1
+I4405259699,Velayat University,SBL,2024,43,230,6,1,1
+I4405259699,Velayat University,SBL,2025,54,116,13,3,2

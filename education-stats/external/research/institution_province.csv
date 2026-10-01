@@ -1,0 +1,344 @@
+openalex_id,ror,name,group,city,openalex_region,lat,lon,province_code,method,nearest_capital,dist_km_to_nearest_capital,agrees_with_nearest_capital,works_2000_2025,works_all_time,fetched
+I23946033,05vf56z40,University of Tehran,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,133596,168055,True
+I110525433,01kzn7k21,"Islamic Azad University, Tehran",azad,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,107107,131374,True
+I70640408,01c4pz451,Tehran University of Medical Sciences,medical,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,104376,125665,True
+I48379061,0091vmj44,Shahid Beheshti University,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,90943,106862,True
+I58048189,034m2b326,Shahid Beheshti University of Medical Sciences,medical,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,66957,80003,True
+I1516879,03mwgfy56,Tarbiat Modares University,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,64610,77749,True
+I166459259,028qtbk54,Shiraz University,other_university,Shiraz,,29.610309600830078,52.531131744384766,FRS,city_dictionary,FRS,1,True,47221,60282,True
+I86958956,00g6ka752,Ferdowsi University of Mashhad,other_university,Mashhad,Razavi Khorasan,36.29807,59.60567,KHR,city_dictionary,KHR,1,True,44734,54436,True
+I161106909,03w04rv71,Iran University of Medical Sciences,medical,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,43372,53222,True
+I155419210,03187yj51,"Islamic Azad University, Science and Research Branch",azad,Tehran,,35.782569885253906,51.317237854003906,THR,city_dictionary,THR,14,True,44271,51449,True
+I158248296,04gzbav43,Amirkabir University of Technology,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,37358,50919,True
+I133529467,024c2fq17,Sharif University of Technology,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,33869,48965,True
+I41832843,01papkj44,University of Tabriz,other_university,Tabriz,East Azerbaijan,38.08,46.2919,AZS,city_dictionary,AZS,0,True,38764,47259,True
+I67009956,01jw2p796,Iran University of Science and Technology,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,34572,45896,True
+I194604659,01n3s4692,Shiraz University of Medical Sciences,medical,Shiraz,Fars,29.61031,52.53113,FRS,city_dictionary,FRS,1,True,37503,45606,True
+I55547365,031699d98,Payame Noor University,payame_noor,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,37872,43100,True
+I165560825,04sfka033,Mashhad University of Medical Sciences,medical,Mashhad,Razavi Khorasan,36.29807,59.60567,KHR,city_dictionary,KHR,1,True,36361,43087,True
+I114982161,04waqzz56,Isfahan University of Medical Sciences,medical,Isfahan,Isfahan,32.65246,51.67462,ISF,city_dictionary,ISF,1,True,36910,42778,True
+I163205636,04krpx645,Tabriz University of Medical Sciences,medical,Tabriz,East Azerbaijan,38.08,46.2919,AZS,city_dictionary,AZS,0,True,33741,40499,True
+I39268498,05h9t7759,University of Isfahan,other_university,Isfahan,Isfahan,32.65246,51.67462,ISF,city_dictionary,ISF,1,True,32189,38658,True
+I170013655,00af3sa43,Isfahan University of Technology,other_university,Isfahan,Isfahan,32.65246,51.67462,ISF,city_dictionary,ISF,1,True,27329,33784,True
+I877176835,01bdr6121,University of Guilan,other_university,Rasht,Gilan Province,37.27611,49.58862,GIL,city_dictionary,GIL,1,True,23170,27440,True
+I38476204,032fk0x53,Urmia University,other_university,Urmia,West Azerbaijan,37.55274,45.07605,AZG,city_dictionary,AZG,0,True,22124,26651,True
+I200432940,02cc4gc68,Allameh Tabataba'i University,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,22281,25099,True
+I80543232,0433abe34,K. N. Toosi University of Technology,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,18187,24450,True
+I181744264,05hsgex59,Kharazmi University,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,20021,23521,True
+I196051555,01k3mbs15,Shahid Chamran University of Ahvaz,other_university,Ahvāz,,31.31900978088379,48.684200286865234,KHZ,city_dictionary,KHZ,1,True,18938,22015,True
+I41775361,03a11m818,Islamic Azad University Central Tehran Branch,azad,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,18269,21713,True
+I115566878,04zn42r77,Shahid Bahonar University of Kerman,other_university,Kerman,Kerman,30.28321,57.07879,KRM,city_dictionary,KRM,1,True,17556,21471,True
+I167694869,04ka8rx28,Bu-Ali Sina University,other_university,Hamadan,Hamadan Province,34.79922,48.51456,HMD,city_dictionary,HMD,0,True,17717,20744,True
+I119939603,01rws6r75,Ahvaz Jundishapur University of Medical Sciences,medical,Ahvāz,Khuzestan,31.31901,48.6842,KHZ,city_dictionary,KHZ,1,True,17783,20679,True
+I1187138,02ynb0474,Razi University,other_university,Kermanshah,Kermanshah Province,34.31417,47.065,KSH,city_dictionary,KSH,1,True,16915,20074,True
+I235686326,02kxbqc24,Kerman University of Medical Sciences,medical,Kerman,Kerman,30.28321,57.07879,KRM,city_dictionary,KRM,1,True,16378,19707,True
+I112536369,02x99ac45,Yazd University,other_university,Yazd,,31.897220611572266,54.36750030517578,YZD,city_dictionary,YZD,0,True,15559,18719,True
+I928334797,029gksw03,Semnan University,other_university,Semnan,Semnan,35.57691,53.39205,SMN,city_dictionary,SMN,0,True,15622,18499,True
+I72341708,045zrcm98,University of Mohaghegh Ardabili,other_university,Ardabil,,38.24980163574219,48.29330062866211,ARD,city_dictionary,ARD,1,True,14916,17746,True
+I39642139,05vspf741,Kermanshah University of Medical Sciences,medical,Kermanshah,Kermanshah Province,34.31417,47.065,KSH,city_dictionary,KSH,1,True,14917,17708,True
+I4871159,05fp9g671,University of Mazandaran,other_university,Bābolsar,Māzandarān,36.69929,52.65011,MZN,city_dictionary,MZN,40,True,15582,17666,True
+I88085062,02wkcrp04,Mazandaran University of Medical Sciences,medical,Sari,Māzandarān,36.56332,53.06009,MZN,city_dictionary,MZN,0,True,14339,17129,True
+I67080706,013cdqc34,Alzahra University,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,13254,16959,True
+I112312016,02ekfbp48,Hamedan University of Medical Sciences,medical,Hamadan,Hamadan Province,34.79922,48.51456,HMD,city_dictionary,HMD,0,True,14658,16858,True
+I223669574,01zby9g91,Shahid Sadoughi University of Medical Sciences and Health Services,medical,Yazd,,31.897220611572266,54.36750030517578,YZD,city_dictionary,YZD,0,True,13262,15570,True
+I99861883,05e34ej29,University of Zanjan,other_university,Zanjan,Zanjan,36.67642,48.49628,ZNJ,city_dictionary,ZNJ,1,True,11725,14301,True
+I2799282979,039zhhm92,"Islamic Azad University, Isfahan",azad,Isfahan,Isfahan,32.65246,51.67462,ISF,city_dictionary,ISF,1,True,10975,13836,True
+I176861719,00yqvtm78,University of Shahrood,other_university,Shahrud,Semnan,36.41819,54.97628,SMN,city_dictionary,GLS,68,False,11224,13589,True
+I127908078,051rngw70,Shahrekord University,other_university,Shahr-e Kord,Chaharmahal and Bakhtiari,32.32612,50.8572,CHB,city_dictionary,CHB,1,True,10861,13260,True
+I120514687,01ysgtb61,Baqiyatallah University of Medical Sciences,medical,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,11396,13062,True
+I105818395,015zmr509,University of Kashan,other_university,Kāshān,,34.002281188964844,51.43878936767578,ISF,city_dictionary,QOM,87,False,10901,12763,True
+I3124704065,04k89yk85,University of Kurdistan,other_university,Sanandaj,,35.31494903564453,46.99882888793945,KRD,city_dictionary,KRD,1,True,10129,12725,True
+I119025939,01e8ff003,Shahed University,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,10694,12610,True
+I67388046,01w6vdf77,Gorgan University of Agricultural Sciences and Natural Resources,other_university,Gorgan,Golestan,36.8427,54.44391,GLS,city_dictionary,GLS,1,True,10333,12148,True
+I204331812,04ptbrd12,Guilan University of Medical Sciences,medical,Rasht,Gilan Province,37.27611,49.58862,GIL,city_dictionary,GIL,1,True,9882,12134,True
+I1293555014,04hnf9a51,Islamic Azad University of Tabriz,azad,Tabriz,,38.08000183105469,46.291900634765625,AZS,city_dictionary,AZS,0,True,10088,12036,True
+I180634299,02n43xw86,University of Sistan and Baluchestan,other_university,Zahedan,Sistan and Baluchestan,29.4963,60.8629,SBL,city_dictionary,SBL,0,True,10432,11901,True
+I84248293,02zc85170,Babol Noshirvani University of Technology,other_university,Babol,Māzandarān,36.55102,52.6786,MZN,city_dictionary,MZN,34,True,9635,11665,True
+I136830121,02xc21a77,Islamic Azad University South Tehran Branch,azad,Tehran,,35.71319580078125,51.419307708740234,THR,city_dictionary,THR,3,True,9804,11622,True
+I4210166308,05jme6y84,University of Social Welfare and Rehabilitation Sciences,medical,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,10232,11514,True
+I69425150,02jeykk09,Imam Khomeini International University,other_university,Qazvin,Qazvin Province,36.26877,50.0041,QZV,city_dictionary,QZV,0,True,9587,11372,True
+I97626857,03g4hym73,University of Birjand,other_university,Birjand,,32.87666702270508,59.218055725097656,KHJ,city_dictionary,KHJ,1,True,9206,11247,True
+I183067279,00sb1nr29,Islamic Azad University North Tehran Branch,azad,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,9539,10954,True
+I3123046734,051bats05,Lorestan University,other_university,Khorramabad,,33.4877815246582,48.355831146240234,LRS,city_dictionary,LRS,1,True,8004,10832,True
+I183859904,00bvysh61,"Islamic Azad University, Mashhad",azad,Mashhad,,36.29806900024414,59.60567092895508,KHR,city_dictionary,KHR,1,True,8344,10284,True
+I35510649,00ngrq502,Arak University,other_university,Arak,Markazi,34.09493,49.69809,MRK,city_dictionary,MRK,1,True,8745,10218,True
+I4391767979,03jbsdf87,Urmia University of Medical Sciences,medical,Urmia,West Azerbaijan,37.55274,45.07605,AZG,city_dictionary,AZG,0,True,8901,10143,True
+I70876197,02r5cmz65,Babol University of Medical Sciences,medical,Babol,Māzandarān,36.55102,52.6786,MZN,city_dictionary,MZN,34,True,8444,10109,True
+I9256017,015j7c446,Islamic Azad University of Najafabad,azad,Najafābād,Isfahan,32.63464,51.36525,ISF,city_dictionary,ISF,29,True,8348,10095,True
+I204588832,01y4xm534,"Islamic Azad University, Karaj",azad,Karaj,,35.854095458984375,50.9844856262207,ALB,city_dictionary,ALB,2,True,8700,9907,True
+I112450260,03d9mz263,Zabol University,other_university,Zabol,Sistan and Baluchestan,31.0306,61.4949,SBL,city_dictionary,SBL,180,True,7269,9473,True
+I51301133,05pg2cw06,Azarbaijan Shahid Madani University,other_university,Tabriz,East Azerbaijan,38.08,46.2919,AZS,city_dictionary,AZS,0,True,7728,9344,True
+I184468904,03ddeer04,University of Qom,other_university,Qom,Qom Province,34.6401,50.8764,QOM,city_dictionary,QOM,0,True,7519,8993,True
+I78323350,0043ezw98,Malek Ashtar University of Technology,other_university,Tehran,,35.69438934326172,51.4215087890625,THR,city_dictionary,THR,1,True,7528,8724,True
+I107853901,03wdrmh81,Sahand University of Technology,other_university,Tabriz,East Azerbaijan,38.08,46.2919,AZS,city_dictionary,AZS,0,True,7036,8646,True
+I4210133472,03r42d171,Zahedan University of Medical Sciences,medical,Zahedan,Sistan and Baluchestan,29.4963,60.8629,SBL,city_dictionary,SBL,0,True,7281,8257,True
+I116768543,01xf7jb19,Zanjan University of Medical Sciences,medical,Zanjan,Zanjan,36.67642,48.49628,ZNJ,city_dictionary,ZNJ,1,True,6840,8243,True
+I95990688,01h2hg078,Birjand University of Medical Sciences,medical,Birjand,South Khorasan Province,32.86628,59.22114,KHJ,city_dictionary,KHJ,0,True,6806,8049,True
+I198876898,03dc0dy65,Kashan University of Medical Sciences,medical,Kāshān,Isfahan,34.00228,51.43879,ISF,city_dictionary,QOM,87,False,6808,7933,True
+I197220011,023kjn321,Qazvin Islamic Azad University,azad,Qazvin,Qazvin Province,36.26877,50.0041,QZV,city_dictionary,QZV,0,True,5778,7925,True
+I64532579,04sexa105,Qazvin University of Medical Sciences,medical,Qazvin,Qazvin Province,36.26877,50.0041,QZV,city_dictionary,QZV,0,True,6423,7423,True
+I170350485,0506tgm76,Shahrekord University of Medical Sciences,medical,Shahr-e Kord,Chaharmahal and Bakhtiari,32.32612,50.8572,CHB,city_dictionary,CHB,1,True,6565,7365,True
+I83123760,02nkz4493,Shahid Rajaee Teacher Training University,other_university,Tehran,,35.69438934326172,51.4215087890625,THR,city_dictionary,THR,1,True,5856,7363,True
+I3121641575,05sy5hm57,Yasouj University,other_university,Yasuj,Kohgiluyeh and Boyer-Ahmad,30.66824,51.58796,KBA,city_dictionary,KBA,0,True,5460,7264,True
+I184896493,0284vkq26,Sari Agricultural Sciences and Natural Resources University,other_university,Sari,,36.56332015991211,53.060089111328125,MZN,city_dictionary,MZN,0,True,6216,7256,True
+I4210127922,03mcx2558,Golestan University of Medical Sciences,medical,Gorgan,,36.84270095825195,54.44390869140625,GLS,city_dictionary,GLS,1,True,5956,7214,True
+I40734275,00zyh6d22,Hakim Sabzevari University,other_university,Sabzawār,Razavi Khorasan,36.2126,57.68191,KHR,city_dictionary,KHS,143,False,5947,7178,True
+I4387153077,03hh69c20,Alborz University of Medical Sciences,medical,Karaj,Alborz Province,35.83266,50.99155,ALB,city_dictionary,ALB,1,True,5969,6926,True
+I90767664,03n2mgj60,Persian Gulf University,other_university,Bandar Būshehr,Bushehr,28.96887,50.83657,BSH,city_dictionary,BSH,5,True,5670,6750,True
+I133903919,056mgfb42,Arak University of Medical Sciences,medical,Arak,Markazi,34.09493,49.69809,MRK,city_dictionary,MRK,1,True,5852,6741,True
+I204490172,04bxa3v83,Shiraz University of Technology,other_university,Shiraz,Fars,29.61031,52.53113,FRS,city_dictionary,FRS,1,True,5203,6671,True
+I3122832768,01ntx4j68,Kurdistan University of Medical Sciences,medical,Sanandaj,Kurdistan Province,35.31495,46.99883,KRD,city_dictionary,KRD,1,True,5668,6667,True
+I3121602497,035t7rn63,Lorestan University of Medical Sciences,medical,Khorramabad,,33.4877815246582,48.355831146240234,LRS,city_dictionary,LRS,1,True,5577,6575,True
+I2801771032,02558wk32,"Islamic Azad University, Arak",azad,Arak,Markazi,34.09493,49.69809,MRK,city_dictionary,MRK,1,True,5409,6401,True
+I91138267,03xbchh53,Islamic Azad University of Shiraz,azad,Shiraz,,29.605018615722656,52.52631759643555,FRS,city_dictionary,FRS,1,True,5297,6349,True
+I4210147666,04vcs0j60,"Islamic Azad University, Ahvaz Branch",azad,Ahvāz,Khuzestan,31.31901,48.6842,KHZ,city_dictionary,KHZ,1,True,5441,6228,True
+I143318147,0037djy87,University of Maragheh,other_university,Marāgheh,,37.392059326171875,46.23908996582031,AZS,city_dictionary,AZS,76,True,5081,6186,True
+I64728393,01rvhet58,Farhangian University,other_university,Tehran,,35.69438934326172,51.4215087890625,THR,city_dictionary,THR,1,True,4915,6164,True
+I33103891,04n4dcv16,Ardabil University of Medical Sciences,medical,Ardabil,Ardabil Province,38.2498,48.2933,ARD,city_dictionary,ARD,1,True,5120,6076,True
+I4210128695,037wqsr57,Hormozgan University of Medical Sciences,medical,Bandar Abbas,Hormozgan,27.1865,56.2808,HRM,city_dictionary,HRM,1,True,4810,5954,True
+I61554058,00y2dy597,Qom University of Medical Science and Health Services,medical,Qom,Qom Province,34.6401,50.8764,QOM,city_dictionary,QOM,0,True,5114,5889,True
+I4210154083,05y44as61,Semnan University of Medical Sciences,medical,Semnan,Semnan,35.57691,53.39205,SMN,city_dictionary,SMN,0,True,4998,5887,True
+I161028277,00bzsst90,Institute for Advanced Studies in Basic Sciences,other_university,Zanjan,Zanjan,36.67642,48.49628,ZNJ,city_dictionary,ZNJ,1,True,4479,5795,True
+I2800744764,00eaebe27,Islamic Azad University Medical Branch of Tehran,azad,Tehran,,35.777565002441406,51.433807373046875,THR,city_dictionary,THR,10,True,4962,5793,True
+I3017965041,042hptv04,Medical University of Ilam,other_university,Īlām,Ilam Province,33.6374,46.4227,ILM,city_dictionary,ILM,0,True,4913,5780,True
+I4210098966,0151gh112,Islamic Azad University Rasht Branch,azad,Rasht,Gilan Province,37.27611,49.58862,GIL,city_dictionary,GIL,1,True,4771,5720,True
+I4210116604,01r277z15,Ilam University,other_university,Īlām,Ilam Province,33.6374,46.4227,ILM,city_dictionary,ILM,0,True,4480,5436,True
+I198873322,046nf9z89,Golestan University,other_university,Gorgan,Golestan,36.8427,54.44391,GLS,city_dictionary,GLS,1,True,4676,5384,True
+I183263030,0451xdy64,Graduate University of Advanced Technology,other_university,Kerman,Kerman,30.28321,57.07879,KRM,city_dictionary,KRM,1,True,4070,5379,True
+I4210086811,0032wgp28,Islamic Azad University Sari Branch,azad,Sari,Māzandarān,36.56332,53.06009,MZN,city_dictionary,MZN,0,True,,4985,False
+I120234788,04esb6v42,Imam Hossein University,other_university,Tehran,,35.75391387939453,51.59367370605469,THR,city_dictionary,THR,17,True,4432,4909,True
+I2800605188,028dyak29,Aja University of Medical Sciences,medical,Tehran,,35.69438934326172,51.4215087890625,THR,city_dictionary,THR,1,True,,4904,False
+I192805215,03v4m1x12,Damghan University,other_university,Dāmghān,Semnan,36.1679,54.34292,SMN,city_dictionary,GLS,75,False,,4880,False
+I2801954088,05sehyt57,Islamic Azad University of Kermanshah,azad,Kermanshah,Kermanshah Province,34.31417,47.065,KSH,city_dictionary,KSH,1,True,,4834,False
+I4210103810,01a79sw46,Iran Polymer and Petrochemical Institute,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,4662,False
+I52623189,02y18ts25,Bushehr University of Medical Sciences,medical,Bandar Būshehr,Bushehr,28.96887,50.83657,BSH,city_dictionary,BSH,5,True,,4644,False
+I4210090965,00bqttt79,"Islamic Azad University, Marvdasht",azad,Marvdasht,,29.915151596069336,52.83963394165039,FRS,city_dictionary,FRS,44,True,,4454,False
+I4210121772,02tbw3b35,Islamic Azad University of Shahrekord,azad,Shahr-e Kord,Chaharmahal and Bakhtiari,32.32612,50.8572,CHB,city_dictionary,CHB,1,True,,4420,False
+I86959772,01v8x0f60,Rafsanjan University of Medical Sciences,medical,Rafsanjān,Kerman,30.4067,55.9939,KRM,city_dictionary,KRM,104,True,,4356,False
+I3020488725,056xnk046,Vali Asr University of Rafsanjan,other_university,Rafsanjān,Kerman,30.4067,55.9939,KRM,city_dictionary,KRM,104,True,,4336,False
+I4210159272,04mwvcn50,"Islamic Azad University, Yazd",azad,Yazd,,31.839229583740234,54.349971771240234,YZD,city_dictionary,YZD,7,True,,4319,False
+I1306291479,00dzmf738,Islamic Azad University Roudehen Branch,azad,Rūdehen,Tehran,35.73338,51.90587,THR,city_dictionary,THR,44,True,,4212,False
+I4210088809,003jjq839,University of Hormozgan,other_university,Bandar Abbas,Hormozgan,27.1865,56.2808,HRM,city_dictionary,HRM,1,True,,4195,False
+I4210089026,007zpd132,Islamic Azad University of Hamedan,azad,Hamadan,,34.8448600769043,48.560001373291016,HMD,city_dictionary,HMD,7,True,,4023,False
+I4210152146,04ywz9252,Islamic Azad University Kerman,azad,Kerman,,30.24216651916504,57.077186584472656,KRM,city_dictionary,KRM,4,True,,3870,False
+I4210161716,058np3c43,Islamic Azad University Ardabil,azad,Ardabil,,38.227291107177734,48.27056884765625,ARD,city_dictionary,ARD,4,True,,3853,False
+I154127411,00r0xhf81,Petroleum University of Technology,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,3815,False
+I4210113955,0283g3v77,Qom Islamic Azad University,azad,Qom,,34.640098571777344,50.876399993896484,QOM,city_dictionary,QOM,0,True,,3746,False
+I4210163840,05km8ys10,Islamic Azad University of Urmia,azad,Urmia,,37.596763610839844,45.05902862548828,AZG,city_dictionary,AZG,6,True,,3696,False
+I2801503745,048vche49,Islamic Azad University Sanandaj Branch,azad,Sanandij,,35.31494903564453,46.99882888793945,KRD,city_dictionary,KRD,1,True,,3661,False
+I4210146087,03rk9sq81,Malayer University,other_university,Malāyer,,34.301578521728516,48.821659088134766,HMD,city_dictionary,HMD,62,True,,3534,False
+I3133452077,02mkkqv65,Imam Sadiq University,other_university,Tehran,,35.769981384277344,51.383724212646484,THR,city_dictionary,THR,9,True,,3509,False
+I71736372,023crty50,Shahroud University of Medical Sciences,medical,Shahrud,Semnan,36.41819,54.97628,SMN,city_dictionary,GLS,68,False,,3474,False
+I33162209,03dhqyc75,"Islamic Azad University, Lahijan Branch",azad,Lāhījān,,37.18989944458008,50.0111198425293,GIL,city_dictionary,GIL,39,True,,3415,False
+I4210097772,00fafvp33,Gonabad University of Medical Sciences,medical,Gonābād,,34.35287094116211,58.683650970458984,KHR,city_dictionary,KHJ,172,False,,3414,False
+I4210161235,05bh0zx16,Fasa University of Medical Sciences,medical,Fasa,,28.93829917907715,53.64820098876953,FRS,city_dictionary,FRS,131,True,,3394,False
+I4210159363,0536t7y80,North Khorasan University of Medical Sciences,medical,Bojnourd,,37.481754302978516,57.31614685058594,KHS,city_dictionary,KHS,2,True,,3284,False
+I131837588,02bq60y92,Islamic Azad University of Zanjan,azad,Zanjān,,36.67641830444336,48.496280670166016,ZNJ,city_dictionary,ZNJ,1,True,,3258,False
+I4210128112,037s33w94,Yasuj University of Medical Sciences,medical,Yasuj,,30.66823959350586,51.58795928955078,KBA,city_dictionary,KBA,0,True,,3236,False
+I4210138903,03y0dv989,Qaemshahr Islamic Azad University,azad,Qā’em Shahr,,36.4656867980957,52.861080169677734,MZN,city_dictionary,MZN,21,True,,3186,False
+I310735636,037tr0b92,Zabol University of Medical Sciences,medical,Zabol,,31.03059959411621,61.49489974975586,SBL,city_dictionary,SBL,180,True,,3175,False
+I143150842,02v319z25,Urmia University of Technology,other_university,Urmia,West Azerbaijan,37.55274,45.07605,AZG,city_dictionary,AZG,0,True,,3140,False
+I4210154044,04yrwqa21,Islamic Azad University Shahr-e-Rey,azad,Rey,,35.559627532958984,51.362674713134766,THR,city_dictionary,THR,15,True,,3136,False
+I1280764379,00mz6ad23,University of Jiroft,other_university,Jīroft,,28.67806053161621,57.74055862426758,KRM,city_dictionary,KRM,189,True,,3049,False
+I4210166348,05tgdvt16,Sabzevar University of Medical Sciences,medical,Sabzawār,,36.21260070800781,57.68191146850586,KHR,city_dictionary,KHS,143,False,,2945,False
+I11750234,048e0p659,University of Science and Culture,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,2871,False
+I4210093808,00j1sp553,"Islamic Azad University, Shahrood",azad,Shahrud,,36.418190002441406,54.976280212402344,SMN,city_dictionary,GLS,68,False,,2832,False
+I4210162396,053s4kp50,Islamic Azad University Saveh,azad,Sāveh,,35.03009796142578,50.300289154052734,MRK,city_dictionary,QOM,68,False,,2798,False
+I4210104301,01abrxp85,Islamic Azad University Semnan,azad,Semnan,,35.572776794433594,53.4294548034668,SMN,city_dictionary,SMN,4,True,,2793,False
+I4210089766,00854zy02,Technical and Vocational University,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,2755,False
+I115420810,025p0rk11,Islamic Azad University of Garmsar,azad,Garmsār,,35.22083282470703,52.31968307495117,SMN,city_dictionary,THR,97,False,,2688,False
+I2800768525,05khxfe53,University of Bojnord,other_university,Bojnourd,,37.43570327758789,57.296546936035156,KHS,city_dictionary,KHS,5,True,,2532,False
+I4210116557,02arrmv90,Islamic Azad University of Ayatollah Amoli,azad,Sari,,36.567081451416016,53.05802917480469,MZN,city_dictionary,MZN,1,True,,2528,False
+I4210116438,022ca9x91,"Islamic Azad University, Shahr-e-Qods Branch",azad,Tehran,,35.68939971923828,51.11323547363281,THR,city_dictionary,ALB,20,False,,2512,False
+I2799360687,01qskrs45,Islamic Azad University of Khomeynishahr,azad,Isfahan,,32.7172966003418,51.482051849365234,ISF,city_dictionary,ISF,19,True,,2489,False
+I4210109236,01px8ca57,Islamic Azad University of Varamin,azad,Varāmīn,,35.30778503417969,51.75103759765625,THR,city_dictionary,THR,52,True,,2455,False
+I4210159640,05a2cfm07,"Islamic Azad University, Damghan Branch",azad,Dāmghān,,36.16959762573242,54.31365966796875,SMN,city_dictionary,GLS,75,False,,2447,False
+I4210123125,03aqgee13,Isfahan University of Art,other_university,Isfahan,,32.658687591552734,51.675514221191406,ISF,city_dictionary,ISF,1,True,,2442,False
+I1312987727,01x41eb05,University of Neyshabur,other_university,Neyshabur,Razavi Khorasan,36.21329,58.79575,KHR,city_dictionary,KHR,73,True,,2382,False
+I4210159652,04zdgqb89,Islamic Azad University Islamshahr Branch,azad,Eslāmshahr,,35.556968688964844,51.25058364868164,THR,city_dictionary,THR,21,True,,2347,False
+I4210149299,042heys49,Islamic Azad University Tonekabon,azad,Tonekābon,,36.78738021850586,50.92921829223633,MZN,city_dictionary,QZV,101,False,,2321,False
+I1300409581,01app8660,University of Bonab,other_university,Bonāb,,37.34040069580078,46.05609893798828,AZS,city_dictionary,AZS,85,True,,2263,False
+I4210152512,04sssnv16,Islamic Azad University Pharmaceutical Sciences Branch,azad,Tehran,,35.77210235595703,51.439979553222656,THR,city_dictionary,THR,9,True,,2251,False
+I4210151845,05hkxne09,Kermanshah University of Technology,other_university,Kermanshah,,34.314170837402344,47.064998626708984,KSH,city_dictionary,KSH,1,True,,2214,False
+I4210117791,02865ms07,Islamic Azad University of Gorgan,azad,Gorgan,,36.86373519897461,54.448490142822266,GLS,city_dictionary,GLS,3,True,,2181,False
+I4210155764,05d1wpf45,"Islamic Azad University, Dezful Branch",azad,Dezful,,32.40367889404297,48.37700653076172,KHZ,city_dictionary,LRS,121,False,,2098,False
+I4210114866,0265k0q35,Islamic Azad University Boroujerd Branch,azad,Borūjerd,,33.92033004760742,48.693016052246094,LRS,city_dictionary,LRS,57,True,,2096,False
+I3132176766,03ezqnp95,Torbat Heydarieh University of Medical Sciences,medical,Torbat-e Ḩeydarīyeh,,35.274009704589844,59.21949005126953,KHR,city_dictionary,KHR,119,True,,2062,False
+I4210139445,048wxdk46,Khorramshahr University of Marine Science and Technology,other_university,Khorramshahr,,30.4407901763916,48.18428039550781,KHZ,city_dictionary,KHZ,108,True,,2010,False
+I4210103813,01am3pw68,"Islamic Azad University, Zahedan Branch",azad,Zahedan,,29.45523452758789,60.85298156738281,SBL,city_dictionary,SBL,5,True,,1976,False
+I4405272741,04n65fn83,Neyshabur University of Medical Sciences,medical,Neyshabur,Razavi Khorasan,36.21329,58.79575,KHR,city_dictionary,KHR,73,True,,1933,False
+I2800359231,00mbysk96,Al-Mustafa International University,other_university,Qom,,34.640098571777344,50.876399993896484,QOM,city_dictionary,QOM,0,True,,1932,False
+I2800262513,03xp8p672,Jahrom University,other_university,Jahrom,Fars,28.5,53.5605,FRS,city_dictionary,FRS,158,True,,1884,False
+I4210108001,0108cpj15,High Institute for Education and Research in Transfusion Medicine,other_university,Tehran,,35.69983673095703,51.38410186767578,THR,city_dictionary,THR,3,True,,1872,False
+I4210112351,022sv5w75,Islamic Azad University of Ahar,azad,Ahar,,38.4549446105957,47.019039154052734,AZS,city_dictionary,AZS,76,True,,1863,False
+I4210132474,03hhrzm12,"Islamic Azad University, Bushehr Branch",azad,Bandar Būshehr,,28.935762405395508,51.07538986206055,BSH,city_dictionary,BSH,23,True,,1851,False
+I4210113978,029rt7q74,Islamic Azad University of Nishapur,azad,Neyshabur,,36.21329116821289,58.79574966430664,KHR,city_dictionary,KHR,73,True,,1827,False
+I4210107186,01hgb6e08,Hamedan University of Technology,other_university,Hamadan,Hamadan Province,34.79922,48.51456,HMD,city_dictionary,HMD,0,True,,1808,False
+I4210125640,02twggb97,Amol University of Special Modern Technologies,other_university,Āmol,,36.469608306884766,52.3507194519043,MZN,city_dictionary,MZN,64,True,,1794,False
+I4210118177,02ggnbj54,Iran University of Art,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,1790,False
+I3132699434,01s8nf094,University of Religions and Denominations,other_university,Qom,,34.640098571777344,50.876399993896484,QOM,city_dictionary,QOM,0,True,,1774,False
+I4210134932,04a1nf004,Gonbad Kavous University,other_university,Gonbad-e Kāvūs,,37.250038146972656,55.16720962524414,GLS,city_dictionary,GLS,79,True,,1774,False
+I4210094515,006hvpn82,Islamic Azad University of Shahreza,azad,Shahreẕā,,31.988866806030273,51.82447814941406,ISF,city_dictionary,ISF,75,True,,1772,False
+I4210088705,007jfm765,Imam Reza International University,other_university,Mashhad,,36.29806900024414,59.60567092895508,KHR,city_dictionary,KHR,1,True,,1757,False
+I4210121477,02mm76478,Bam University of Medical Sciences,medical,Bam,,29.091642379760742,58.318450927734375,KRM,city_dictionary,KRM,179,True,,1740,False
+I4405255531,033z8fr92,Abadan University of Medical Sciences,medical,Ābādān,Khuzestan,30.3392,48.3043,KHZ,city_dictionary,KHZ,114,True,,1735,False
+I4210126091,041hvc055,Islamic Azad University Yasuj,azad,Yasuj,,30.710906982421875,51.55724334716797,KBA,city_dictionary,KBA,6,True,,1703,False
+I4210118335,02cytaa95,Islamic Azad University of Chalous,azad,Chālūs,,36.650611877441406,51.43500518798828,MZN,city_dictionary,ALB,98,False,,1698,False
+I123173325,03s3hf581,Mazandaran University of Science and Technology,other_university,Babol,Māzandarān,36.55102,52.6786,MZN,city_dictionary,MZN,34,True,,1697,False
+I4210129530,0377qcz53,Ayatollah Boroujerdi University,other_university,Borūjerd,,33.897300720214844,48.7515983581543,LRS,city_dictionary,LRS,58,True,,1660,False
+I4405260544,03xjqy265,Maragheh University of Medical Sciences,medical,Marāgheh,Razavi Khorasan,35.82916,59.63324,AZS,city_dictionary,KHR,52,False,,1632,False
+I63970466,00kj4zk54,Tabriz Islamic Arts University,other_university,Tabriz,,38.072025299072266,46.29478454589844,AZS,city_dictionary,AZS,1,True,,1627,False
+I4210109871,016tr2g85,Khatam University,other_university,Tehran,,35.69438934326172,51.4215087890625,THR,city_dictionary,THR,1,True,,1613,False
+I4210098257,00vp5ry21,Iranshahr University,other_university,Iranshahr,Sistan and Baluchestan,27.20245,60.68476,SBL,city_dictionary,SBL,256,True,,1604,False
+I4210139126,04jf6jw55,University of Science and Technology of Mazandaran,other_university,Behshahr,Māzandarān,36.69235,53.55262,MZN,city_dictionary,MZN,46,True,,1584,False
+I9570713,040f6ar92,Tafresh University,other_university,Tafresh,,34.67947006225586,50.05283737182617,MRK,city_dictionary,MRK,73,True,,1526,False
+I4210125694,02ytn4d59,Islamic Azad University Kazeron,azad,Kāzerūn,,29.6259708404541,51.64646911621094,FRS,city_dictionary,FRS,86,True,,1519,False
+I4405272793,04qkytk14,Behbahan Khatam Alanbia University of Technology,other_university,Behbahān,Khuzestan,30.5959,50.2417,KHZ,city_dictionary,KBA,129,False,,1518,False
+I4210157736,04zepk655,Qom University of Technology,other_university,Qom,,34.640098571777344,50.876399993896484,QOM,city_dictionary,QOM,0,True,,1514,False
+I4210128852,033hgcp80,Dezful University of Medical Sciences,medical,Dezful,,32.381141662597656,48.40581130981445,KHZ,city_dictionary,KHZ,120,True,,1501,False
+I4210152523,04tc04306,Islamic Azad University Quchan,azad,Qūchān,,37.06583023071289,58.53688430786133,KHR,city_dictionary,KHS,116,False,,1473,False
+I4210157180,053wftt74,Arak University of Technology,other_university,Tehran,,34.10161590576172,49.71151351928711,MRK,manual_name,MRK,2,True,,1441,False
+I4210130889,03b49d241,Islamic Azad University Shabestar,azad,Shabestar,,38.164310455322266,45.7285270690918,AZS,city_dictionary,AZS,50,True,,1413,False
+I93979751,00wapyh41,"Islamic Azad University, Bojnourd Branch",azad,Bojnourd,,37.4747314453125,57.32902908325195,KHS,city_dictionary,KHS,1,True,,1398,False
+I4210122540,02p42am41,Islamic Azad University of Birjand,azad,Birjand,,32.838462829589844,59.23466110229492,KHJ,city_dictionary,KHJ,4,True,,1387,False
+I4210110333,01q7qty61,Islamic Azad University Bandar Abbas,azad,Bandar Abbas,,27.208843231201172,56.33510971069336,HRM,city_dictionary,HRM,7,True,,1364,False
+I4210153432,04w2yhr49,"Islamic Azad University, Shoushtar Branch",azad,Shūshtar,,32.06694030761719,48.84334182739258,KHZ,city_dictionary,KHZ,84,True,,1359,False
+I189748745,01y361889,Islamic Azad University Mahshahr,azad,Bandar-e Māhshahr,,30.564435958862305,49.172088623046875,KHZ,city_dictionary,KHZ,97,True,,1352,False
+I4210108307,01v0kyj08,"Islamic Azad University, Jahrom Branch",azad,Jahrom,,28.5,53.56050109863281,FRS,city_dictionary,FRS,158,True,,1343,False
+I4210129655,03aa31r16,"Islamic Azad University, Khorramabad Branch",azad,Khorramabad,,33.48094177246094,48.429203033447266,LRS,city_dictionary,LRS,7,True,,1340,False
+I4405281540,04gy83161,Jiroft University of Medical Sciences,medical,Jīroft,Kerman,28.67806,57.74056,KRM,city_dictionary,KRM,189,True,,1324,False
+I4210165053,05r6qy592,Islamic Azad University Ilam Branch,azad,Īlām,,33.63858413696289,46.38188171386719,ILM,city_dictionary,ILM,4,True,,1286,False
+I4210101274,015sncd69,Islamic Azad University of Mahabad,azad,Mahabad,,36.76193618774414,45.74410629272461,AZG,city_dictionary,AZG,106,True,,1241,False
+I4210103782,025eayv75,"Islamic Azad University, Firoozkooh Branch",azad,Fīrūzkūh,,35.75764083862305,52.76343536376953,THR,city_dictionary,SMN,60,False,,1240,False
+I2801553314,05m5wey82,Islamic Azad University Dental Branch of Tehran,azad,Tehran,,35.769840240478516,51.458438873291016,THR,city_dictionary,THR,10,True,,1231,False
+I170905427,023tdry64,Sirjan University of Technology,other_university,Sīrjān,,29.41441535949707,55.69855880737305,KRM,city_dictionary,KRM,164,True,,1221,False
+I2802594446,02mgtjj52,Islamic Azad University of Parand,azad,Robāţ Karīm,,35.47407913208008,50.99642562866211,THR,city_dictionary,ALB,41,False,,1193,False
+I4210096424,00rs50b76,Chabahar Maritime University,other_university,Chabahar,Sistan and Baluchestan,25.2919,60.643,SBL,city_dictionary,SBL,468,True,,1193,False
+I3131332631,019f08v97,Jundi-Shapur University of Technology,other_university,Dezful,,32.43113327026367,48.36537170410156,KHZ,city_dictionary,LRS,118,False,,1192,False
+I4210110389,01kfq1x58,"Islamic Azad University, Abhar Branch",azad,Khorramdarreh,,36.205902099609375,49.2186393737793,ZNJ,city_dictionary,QZV,70,False,,1184,False
+I2802842351,01e0hb698,Islamic Azad University of Falavarjan,azad,Falāvarjān,,32.555301666259766,51.50973129272461,ISF,city_dictionary,ISF,18,True,,1183,False
+I4210163293,0516eyx49,Islamic Azad University of Damavand,azad,Damāvand,,35.70122146606445,52.05052185058594,THR,city_dictionary,THR,57,True,,1181,False
+I4210094568,00kp9ef37,Shahid Sattari University of Aeronautical Engineering,other_university,Tehran,,35.674049377441406,51.332305908203125,THR,city_dictionary,THR,8,True,,1156,False
+I4210111814,01sa5tb56,"Islamic Azad University, Aliabad Katoul",azad,Aliabad-e Katul,,36.909027099609375,54.85881423950195,GLS,city_dictionary,GLS,39,True,,1136,False
+I4210165322,05mtgrz63,Takestan Islamic Azad University,azad,Qazvin,,36.02680206298828,49.64786911010742,QZV,city_dictionary,QZV,42,True,,1131,False
+I4210140773,043zh9f19,Islamic Azad University of Sabzevar,azad,Sabzawār,,36.2119140625,57.68745040893555,KHR,city_dictionary,KHS,143,False,,1095,False
+I4210156805,056v0a906,"Islamic Azad University, Bonab Branch",azad,Bonāb,,37.34040069580078,46.05609893798828,AZS,city_dictionary,AZS,85,True,,1074,False
+I4210102260,01avkfv81,Baqir Al-Olum University,other_university,Qom,,34.5562744140625,50.81608200073242,QOM,city_dictionary,QOM,11,True,,1069,False
+I4210107877,01r1kqm06,Ramin Agriculture and Natural Resources University of Khouzestan,other_university,Ahvāz,,31.32229232788086,48.66714859008789,KHZ,city_dictionary,KHZ,0,True,,1029,False
+I4210093963,00nt0xf41,Islamic Azad University of Gachsaran,azad,Dogonbadan,,30.37874984741211,50.82611083984375,KBA,city_dictionary,KBA,80,True,,1007,False
+I4210164010,05fk72r68,Esfarayen University of Technology,other_university,Esfarāyen,North Khorasan,37.07645,57.51009,KHS,city_dictionary,KHS,47,True,,978,False
+I4210106588,01bzz5b22,Islamic Azad University Dehaghan,azad,Dehāqān,,31.93967056274414,51.65269470214844,ISF,city_dictionary,ISF,79,True,,961,False
+I4210133510,03ncps145,University of Torbat Heydarieh,other_university,Torbat-e Ḩeydarīyeh,,35.34746551513672,59.228431701660156,KHR,city_dictionary,KHR,111,True,,923,False
+I4210156833,04v0mdj41,Saveh University of Medical Sciences,medical,Sāveh,,35.025672912597656,50.354549407958984,MRK,city_dictionary,QOM,64,False,,916,False
+I4210127412,032syc365,"Islamic Azad University, Omidieh Branch",azad,Omīdīyeh,,30.748170852661133,49.721458435058594,KHZ,city_dictionary,KHZ,119,True,,885,False
+I4210147006,05343ec73,"Islamic Azad University, Azadshahr Branch",azad,Āzādshahr,,37.08436584472656,55.192176818847656,GLS,city_dictionary,GLS,73,True,,878,False
+I2801582476,04q36bj19,Islamic Azad University of Kashan,azad,Kāshān,,34.0117073059082,51.40238952636719,ISF,city_dictionary,QOM,85,False,,863,False
+I4210146840,05fbv2v73,Islamic Azad University of Arsanjan,azad,Arsanjān,,29.926841735839844,53.3206672668457,FRS,city_dictionary,FRS,83,True,,851,False
+I4210101211,0161hbt42,University of Gonabad,other_university,Gonābād,,34.343570709228516,58.67443084716797,KHR,city_dictionary,KHJ,171,False,,833,False
+I3129407287,044tdw637,Mofid University,other_university,Qom,,34.60782241821289,50.8459358215332,QOM,city_dictionary,QOM,5,True,,810,False
+I4405255784,03e0aj978,University of Larestan,other_university,Lārestān,Hormozgan,27.0,55.5,FRS,city_dictionary,HRM,79,False,,793,False
+I3132928613,04b9hej41,Sadjad University of Technology,other_university,Mashhad,Razavi Khorasan,36.29807,59.60567,KHR,city_dictionary,KHR,1,True,,762,False
+I3132257708,03r7vnf29,Golpayegan University of Engineering,other_university,Isfahan,,32.65245819091797,51.67462158203125,ISF,city_dictionary,ISF,1,True,,756,False
+I4210137408,03nsj9897,"Islamic Azad University, Sirjan Branch",azad,Sīrjān,,29.421035766601562,55.712215423583984,KRM,city_dictionary,KRM,162,True,,739,False
+I170733385,04r58gt57,University of Applied Science and Technology,other_university,Tehran,,35.720069885253906,51.33509826660156,THR,city_dictionary,THR,8,True,,727,False
+I4405259699,02jv8mz69,Velayat University,other_university,Iranshahr,Sistan and Baluchestan,27.20245,60.68476,SBL,city_dictionary,SBL,256,True,608,713,True
+I4405256938,04pt40967,Imam Ali University,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,703,False
+I98208027,050rnbb37,Shomal University,other_university,Āmol,Māzandarān,36.46961,52.35072,MZN,city_dictionary,MZN,64,True,,703,False
+I4210107575,01e7e7r31,Kosar University of Bojnord,other_university,Bojnourd,,37.4747314453125,57.32902908325195,KHS,city_dictionary,KHS,1,True,,693,False
+I4210124016,038bemd25,"Islamic Azad University, Khoy Branch",azad,Khowy,,38.49116516113281,44.952301025390625,AZG,city_dictionary,AZG,105,True,,692,False
+I4210158817,05m905s87,"Islamic Azad University, Masjed Soleyman",azad,Masjed Soleymān,,32.005149841308594,49.2391242980957,KHZ,city_dictionary,KHZ,93,True,,663,False
+I4210103000,01a3xr262,Islamic Azad University Mobarakeh,azad,Mobārakeh,,32.3516960144043,51.50457000732422,ISF,city_dictionary,ISF,37,True,,658,False
+I3131771360,02nee2y72,Buein Zahra Technical University,other_university,Bū’īn Zahrā,Qazvin Province,35.7669,50.0578,QZV,city_dictionary,QZV,56,True,,634,False
+I4210131670,03f84d710,"Islamic Azad University, Malayer Branch",azad,Malāyer,,34.30497741699219,48.84528350830078,HMD,city_dictionary,HMD,63,True,,614,False
+I4210151143,04rfmre55,Islamic Azad University of Marand,azad,Marand,,38.40959167480469,45.773345947265625,AZS,city_dictionary,AZS,58,True,,613,False
+I4210118749,03f754t19,Gerash University of Medical Sciences,medical,Fārsān,,27.684743881225586,54.144081115722656,FRS,manual_name,HRM,216,False,,596,False
+I4210118876,02psd3416,"Islamic Azad University, Nowshahr Branch",azad,Chālūs,,36.65114974975586,51.43501281738281,MZN,city_dictionary,ALB,98,False,,596,False
+I4405260035,033s45t12,University of Quran and Hadith,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,583,False
+I4210145406,04q7e9e16,Islamic Azad University Maybod,azad,Meybod,,32.19071960449219,54.03692626953125,YZD,city_dictionary,YZD,45,True,,542,False
+I4210108287,01s5r7k60,Razavi University of Islamic Sciences,other_university,Mashhad,Razavi Khorasan,36.29807,59.60567,KHR,city_dictionary,KHR,1,True,,541,False
+I4405273411,05sn3s448,Khalkhal University of Medical Sciences,medical,Khalkhāl,Ardabil Province,37.61837,48.52928,ARD,city_dictionary,ARD,73,True,,534,False
+I261916979,00jd71216,Islamic Azad University of Majlesi,azad,Isfahan,,32.65245819091797,51.67462158203125,ISF,city_dictionary,ISF,1,True,,528,False
+I3131139297,02p5wzp69,Iran Broadcasting University,other_university,Tehran,,35.69438934326172,51.4215087890625,THR,city_dictionary,THR,1,True,,527,False
+I4210095796,00veca956,"Islamic Azad University, Firuzabad Branch",azad,Fīrūzābād,,28.819618225097656,52.55186080932617,FRS,city_dictionary,FRS,88,True,,519,False
+I2799586765,011jgwj89,Iranian Academy of Medical Sciences,medical,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,506,False
+I4210106585,01bt5mj78,Quchan University of Advanced Technology,other_university,Qūchān,,37.070648193359375,58.53733444213867,KHR,city_dictionary,KHS,116,False,,504,False
+I4210155517,053p3yv46,Salman Farsi University of Kazerun,other_university,Iranshahr,Sistan and Baluchestan,27.20245,60.68476,FRS,manual_name,SBL,256,False,,490,False
+I4210106052,00y16bh55,"Islamic Azad University, Ashtian Branch",azad,Āshtīān,,34.52242660522461,50.01271438598633,MRK,city_dictionary,MRK,56,True,,489,False
+I4210128810,032fhk095,Karaj Payam Noor University,other_university,Karaj,,35.802242279052734,50.99094772338867,ALB,city_dictionary,ALB,4,True,,469,False
+I4210124802,034xs3n22,"Islamic Azad University, Naragh Branch",azad,Iranshahr,Sistan and Baluchestan,27.20245,60.68476,SBL,city_dictionary,SBL,256,True,,466,False
+I4405259703,02k1p8j92,Torbat Jam Faculty of Medical Sciences,medical,Torbat-e Jām,Razavi Khorasan,35.244,60.6225,KHR,city_dictionary,KHR,149,True,,465,False
+I4210090247,00crw9046,"Islamic Azad University, Estahban Branch",azad,Estahbān,,29.126100540161133,54.07175827026367,FRS,city_dictionary,FRS,158,True,,464,False
+I4210152007,05dsae220,Khayyam University,other_university,Mashhad,,36.35610580444336,59.48945617675781,KHR,city_dictionary,KHR,12,True,,461,False
+I3130046203,02hyahm52,University of Judicial Sciences and Administrative Services,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,459,False
+I4210126954,03bnp9h65,"Islamic Azad University, Bandar Anzali Branch",azad,Bandar-e Anzali,,37.460750579833984,49.56787109375,GIL,city_dictionary,GIL,20,True,,450,False
+I4405258181,00865g357,Islamic Azad University Gonabad,azad,Gonābād,Razavi Khorasan,34.35287,58.68365,KHR,city_dictionary,KHJ,172,False,,429,False
+I4210108082,01xbtjm93,"Islamic Azad University, Fasa Branch",azad,Fasa,Fars,28.9383,53.6482,FRS,city_dictionary,FRS,131,True,,425,False
+I3130249259,04bz0e642,Sheikh Bahaei University,other_university,Isfahan,Isfahan,32.65246,51.67462,ISF,city_dictionary,ISF,1,True,,423,False
+I4405262053,014e1qv83,University of Saravan,other_university,Sarāvān,Sistan and Baluchestan,27.37089,62.33096,SBL,city_dictionary,SBL,277,True,,413,False
+I4210144160,048gqac97,Izeh Islamic Azad University,azad,Īz̄eh,,31.8389892578125,49.872169494628906,KHZ,city_dictionary,CHB,108,False,,408,False
+I4210088567,0095a7z52,Islamic Azad University Kashmar Branch,azad,Solţānābād,,35.27723693847656,58.479393005371094,KHR,city_dictionary,KHR,152,True,,401,False
+I4405273028,055qhny09,Zand Institute of Higher Education,other_university,Shiraz,Fars,29.61031,52.53113,FRS,city_dictionary,FRS,1,True,,378,False
+I4405271129,01xvjzz02,Organization for Educational Research and Planning,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,371,False
+I4210091705,00hvbx079,School of International Relations,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,355,False
+I4210120980,02wenm763,Islamic Azad University Shirvan Branch,azad,Shīrvān,,37.408512115478516,57.923763275146484,KHS,city_dictionary,KHS,53,True,,355,False
+I4210123837,03eykm948,"Islamic Azad University, Buin-Zahra",azad,Bū’īn Zahrā,,35.763275146484375,50.09164810180664,QZV,city_dictionary,QZV,57,True,,335,False
+I4405261133,04vkn5g30,Bozorgmehr University of Qaenat,other_university,Qā’en,South Khorasan Province,33.72654,59.18439,KHJ,city_dictionary,KHJ,95,True,,332,False
+I4210122456,02k34sh32,"Islamic Azad University, Jiroft Branch",azad,Jīroft,,28.663639068603516,57.7574577331543,KRM,city_dictionary,KRM,192,True,,329,False
+I4210126724,02e9szc72,Shahab Danesh University,other_university,Qom,Qom Province,34.6401,50.8764,QOM,city_dictionary,QOM,0,True,,307,False
+I4210145150,047hrmf08,"Islamic Azad University, Larestan Branch",azad,Shahr-e Qadīm-e Lār,,27.656944274902344,54.28789520263672,FRS,city_dictionary,HRM,202,False,,304,False
+I4405254615,0212r6c65,University of Torbat-e Jam,other_university,Shahrestān-e Torbat-e Jām,Razavi Khorasan,35.47517,60.75145,KHR,city_dictionary,KHR,139,True,,289,False
+I4405259179,01vxda543,Mahallat Institute of Higher Education,other_university,Shahrestān-e Maḩallāt,Markazi,33.91667,50.41667,MRK,city_dictionary,MRK,70,True,,261,False
+I4405254209,01j240j59,Research Institute of Meteorology and Atmospheric Science,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,258,False
+I4210097622,00wwe0e57,Sabalan University of Advanced Technologies,other_university,Namīn,,38.430171966552734,48.48516082763672,ARD,city_dictionary,ARD,26,True,,241,False
+I3010108046,044jx8018,Islamic Azad University of Malard,azad,Malārd,,35.66377639770508,50.96995544433594,THR,city_dictionary,ALB,20,False,,236,False
+I4405275237,037hpsz89,Islamic Azad University Gonbad Kavoos Branch,azad,Gonbad-e Kāvūs,Golestan,37.25004,55.16721,GLS,city_dictionary,GLS,79,True,,235,False
+I4210120856,02kqbjv38,University College of Nabi Akram,other_university,Tabriz,,38.08000183105469,46.291900634765625,AZS,city_dictionary,AZS,0,True,,233,False
+I3129968221,00eqgy272,Allameh Mohaddes Nouri University,other_university,Nūr,,36.55470657348633,52.02460861206055,MZN,city_dictionary,MZN,92,True,,227,False
+I4405281742,04thhjk10,Shahid Motahari University,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,220,False
+I4210139362,04ramzc89,"Islamic Azad University, Langarud Branch",azad,Langarūd,,37.17644119262695,50.145652770996094,GIL,city_dictionary,GIL,51,True,,199,False
+I4210147115,03xtc7g80,Industrial Management Institute,other_university,Tehran,,35.7825927734375,51.413631439208984,THR,city_dictionary,THR,10,True,,198,False
+I4210110345,01qpg5w50,Tabaran Institute of Higher Education,other_university,Mashhad,Razavi Khorasan,36.29807,59.60567,KHR,city_dictionary,KHR,1,True,,190,False
+I3130553126,01t0d1m90,Iran Banking Institute,other_university,Tehran,,35.76068115234375,51.454437255859375,THR,city_dictionary,THR,8,True,,187,False
+I4210127068,033mn5m13,Pasargad Institute for Advanced Innovative Solutions,other_university,Tehran,,35.75901794433594,51.400691986083984,THR,city_dictionary,THR,8,True,,183,False
+I4405255154,02p066h55,Pars University of Art and Architecture,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,180,False
+I4210097110,00y611a79,Shiraz University of Arts,other_university,Shiraz,,29.625295639038086,52.55930709838867,FRS,city_dictionary,FRS,3,True,,179,False
+I4210140966,049g0t365,Islamic Azad University Dolatabad,azad,Dowlatābād,,32.80531311035156,51.71338653564453,ISF,city_dictionary,ISF,18,True,,162,False
+I4405258107,0044v6530,Ahlul Bayt International University,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,161,False
+I4210120974,02bcg1976,Islamic Azad University of Tafresh,azad,Tafresh,,34.698055267333984,49.98239517211914,MRK,city_dictionary,MRK,73,True,,160,False
+I4210141687,042jrxd70,International University of Chabahar,other_university,Chabahar,,25.330535888671875,60.63267517089844,SBL,city_dictionary,SBL,463,True,,147,False
+I4210091465,00ejh1102,"Islamic Azad University, Boukan",azad,Būkān,,36.48795700073242,46.19994354248047,AZG,city_dictionary,KRD,149,False,,139,False
+I4210162482,05bmwgs04,Sabzevar University of New Technology,other_university,Sabzawār,,36.18967819213867,57.693092346191406,KHR,city_dictionary,KHS,146,False,,138,False
+I4210131019,02yerkk86,Afagh Higher Education Institute,other_university,Urmia,,37.53942108154297,45.08550262451172,AZG,city_dictionary,AZG,1,True,,134,False
+I4210136844,02x44xg10,Ragheb Esfahani Institute,other_university,Isfahan,,32.710514068603516,51.57433319091797,ISF,city_dictionary,ISF,11,True,,134,False
+I4405253787,0138n7g46,"Islamic Azad University, Saghez Branch",azad,Saqqez,Kurdistan Province,36.24992,46.2735,KRD,city_dictionary,KRD,123,True,,133,False
+I2802465448,02jywn868,Islamic Azad University of Farahan,azad,Farmahīn,,34.51897048950195,49.68391036987305,MRK,city_dictionary,MRK,48,True,,130,False
+I4210108235,01yz57p78,Iran University of Industries and Mines,other_university,Tehran,,35.7280387878418,51.38875961303711,THR,city_dictionary,THR,5,True,,124,False
+I4405270677,015cs5g61,Ershad Damavand Institute Of Higher Education,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,115,False
+I4405257983,05wzf8525,Energy Institute for Higher Education,other_university,Sar-e Sāveh,,36.47582,45.05826,MRK,city_dictionary,AZG,119,False,,111,False
+I4210157053,04t50yw64,"Islamic Azad University, Shahinshahr Branch",azad,Shāhīn Shahr,,32.87797546386719,51.519615173339844,ISF,city_dictionary,ISF,29,True,,103,False
+I3131464915,04bad2882,Civil Aviation Technology College,other_university,Tehran,,35.69455337524414,51.326900482177734,THR,city_dictionary,THR,8,True,,92,False
+I4405257873,05rtm6v16,Shandiz Institute of Higher Education,other_university,Mashhad,Razavi Khorasan,36.29807,59.60567,KHR,city_dictionary,KHR,1,True,,88,False
+I4210098846,0129hgq75,Danesh-e-Tandorosti Iranian Institute of Higher Health,other_university,Isfahan,,32.63484191894531,51.67302322387695,ISF,city_dictionary,ISF,2,True,,82,False
+I4405255994,03n56e796,"Islamic Azad University, Shahrebabak",azad,Shahr-e Bābak,Kerman,30.1165,55.1186,KRM,city_dictionary,KRM,188,True,,82,False
+I4210158196,04rvh3240,Al-Mustafa Open University,other_university,Qom,,34.66280746459961,50.86647415161133,QOM,city_dictionary,QOM,3,True,,76,False
+I4210160940,04r8tna72,Hadaf Institute of Higher Education,other_university,Sari,,36.63285446166992,53.073509216308594,MZN,city_dictionary,MZN,8,True,,75,False
+I4210108167,01r4svf88,Sadra Institute Of Higher Education,other_university,Tehran,,35.76865005493164,51.27880859375,THR,city_dictionary,THR,15,True,,70,False
+I4405254245,01k1m6p08,Rahman Institute of Higher Education,other_university,Ramsar,Māzandarān,36.91796,50.64802,MZN,city_dictionary,QZV,92,False,,70,False
+I4405256670,04dyzk191,"Islamic Azad University, Aras Branch",azad,Shahrestān-e Jolfā,East Azerbaijan,38.83343,45.9168,AZS,city_dictionary,AZS,90,True,,69,False
+I4210155841,051t3nd40,Islamic Azad University Bostanabad,azad,Bostānābād,,37.84654235839844,46.829200744628906,AZS,city_dictionary,AZS,54,True,,57,False
+I4405261916,008xs7w12,Shafagh Institute of Higher Education,other_university,Tonekābon,Māzandarān,36.81626,50.87376,MZN,city_dictionary,QZV,99,False,,53,False
+I4405280138,02ga8d922,Hekmat Razavi Institute of Higher Education,other_university,Mashhad,Razavi Khorasan,36.29807,59.60567,KHR,city_dictionary,KHR,1,True,,46,False
+I3130602494,04ppdmy96,Tabarestan University,other_university,Chālūs,,36.65073776245117,51.442237854003906,MZN,city_dictionary,ALB,99,False,,43,False
+I4405278480,0040e6286,Chabahar University of Medical Sciences,medical,Chabahar,Sistan and Baluchestan,25.2919,60.643,SBL,city_dictionary,SBL,468,True,,40,False
+I4210094141,00n55wf36,University of Iranians,other_university,Tehran,,35.77753829956055,51.41413879394531,THR,city_dictionary,THR,10,True,,36,False
+I4405263285,04qt8pd90,Shariaty Technical College,other_university,Tehran,Tehran,35.69439,51.42151,THR,city_dictionary,THR,1,True,,36,False
+I4210096727,00z0c0y28,Islamic Azad University Mehriz,azad,Mahrīz,,31.579761505126953,54.44342803955078,YZD,city_dictionary,YZD,36,True,,32,False
+I4405279872,024bw8954,Shams Institute of Science and Technology,other_university,Tabriz,East Azerbaijan,38.08,46.2919,AZS,city_dictionary,AZS,0,True,,28,False
+I4405259512,02bfwyh45,Rahedanesh Institute of Higher Education,other_university,Babol,Māzandarān,36.55102,52.6786,MZN,city_dictionary,MZN,34,True,,26,False
+I4405261517,05dvzp814,Islamic Azad University Harand branch,azad,Harand,Isfahan,32.56531,52.43654,ISF,city_dictionary,ISF,72,True,,17,False
+I4210150886,05p4qy229,Shahid Beheshti Teacher Training College,other_university,Mashhad,,36.30380630493164,59.534690856933594,KHR,city_dictionary,KHR,6,True,,9,False
+I4210105700,01c0kpp64,University College of Azarabadegan,other_university,Urmia,,37.5461540222168,45.06818389892578,AZG,city_dictionary,AZG,1,True,,8,False
+I4210115839,01hdcfr51,"Islamic Azad University, Komijan Branch",azad,Komījān,,34.6944580078125,49.336124420166016,MRK,city_dictionary,MRK,74,True,,6,False
+I4210086250,0015z8z93,University College of Allameh Helli,other_university,Behshahr,,36.69234848022461,53.55261993408203,MZN,city_dictionary,MZN,46,True,,5,False
+I4210154612,057f4mk30,Islamic Azad University Janah,azad,Jenāḩ,,27.02422523498535,54.28999328613281,HRM,city_dictionary,HRM,197,True,,3,False
+I4405261211,04yqbsw50,Institute of Higher Education of Art and Islamic Thought,other_university,Qom,Qom Province,34.6401,50.8764,QOM,city_dictionary,QOM,0,True,,1,False

@@ -181,3 +181,13 @@ length d (regulation, not in the yearbooks) and every reading of a ratio as "com
   share 3.9 % (1380) -> 18.8 % (1395) -> 14.9 % (1402), PhD 0.84 % (1385) -> 4.4 % (1402); Azad's pre-1393 doctorate figure
   bundles PhD and professional doctorate.
 Reproduce: `uv run python -m etl.run views && uv run python scripts/export_site.py`; tests `tests/test_export_site.py`.
+
+## Research output per academic staff (OpenAlex, 2026-10-01)
+
+Not an analysis script of its own: `scripts/research_openalex.py` builds `external/research/*` and `exports/site/he_research.json`;
+the findings are in `docs/findings.md` section 7 (growth 2.7 k works in 2000 to 115 k in 2020; Tehran about 52 % of works; works per
+full-time academic staff 1.15 nationally in 2018, Tehran 2.38 against Hormozgan 0.29). The join with `he.json` aligns academic year t SH to
+publication year t+621. Association only, and **partial data** (108 of 343 institutions fetched, 88 % of works) until the fetch is completed;
+the pre-1393 staff basis differs and is kept in a separate field. Could be paired with `ratio_vs_outcomes.py` (staff ratios) as a
+second outcome; not done.
+

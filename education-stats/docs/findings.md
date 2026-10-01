@@ -350,3 +350,26 @@ Views `v_he_cohort_completion`, `v_he_rank_mix`, `v_he_degree_mix_trend` (sql/vi
   national cells do not match Azad + non-Azad (`population_mismatch`) and are withheld; the combined basis fills
   1375-1392. Non-Azad totals jump in 1386 and 1388 (definition changes, UAST footnotes), which moves pre-1393 shares.
   Province degree tables exist for all_reported 1393-1398 and 1401-1402 only.
+
+## 7. Research output of Iranian universities (OpenAlex) next to academic staff (2026-10-01)
+
+Data and method: `external/research/README.md`; pipeline `scripts/research_openalex.py`; site data `exports/site/he_research.json`.
+**Partial data (proven):** 108 of 343 education institutions are fetched (88 % of their all-time works) because the OpenAlex daily
+budget ran out; all numbers below are for those and are lower bounds, most of all for small provinces. Re-run to complete.
+
+Measured (OpenAlex, articles and reviews, institutions fetched):
+
+* **Growth.** National works (union over the fetched institutions) rise from 2.7 thousand (2000) to 29 thousand (2010), 80 thousand (2015) and a peak of 115.5 thousand (2020), then fall to 106.8 thousand (2021), 72.5 thousand (2022), 65.8 thousand (2023) and 68.2 / 74.2 thousand (2024 / 2025, partial). The fall after 2021 is a feature of the OpenAlex data; **whether it is real or an indexing/affiliation artefact is not tested** (the all-Iran national group_by that would test it is not yet cached).
+* **Concentration.** Tehran province carries 58 % of the works in 2005, 52 % in 2015 and 2021; then Isfahan 9-10 % (8.5 % in 2021), Khorasan Razavi 6-7 %, East Azerbaijan 4-8 %, Fars 6-8 %. University of Tehran (133.6 k works 2000-2025), Islamic Azad University Tehran (107 k), Tehran University of Medical Sciences (104 k), Shahid Beheshti (91 k), Shahid Beheshti medical (67 k), Tarbiat Modares (65 k) lead; outside Tehran Shiraz (47 k), Ferdowsi (45 k), Tabriz (39 k).
+* **Internationalisation.** Share of works with a co-author from another country: 11 % (2000), 10 % (2015), 17 % (2020), 30 % (2022-24). Highest among the large universities: Isfahan University of Technology (28 %), Sharif (27 %), Tabriz medical (24 %); lowest Allameh Tabataba'i (5 %), Payame Noor (10 %), Azad Central Tehran (11 %).
+* **Slices.** AI (subfield Artificial Intelligence) is 2.6 % of works overall (33.6 k works), about 2.0-2.8 thousand a year since 2019; University of Tehran (3.8 k), Azad Tehran (3.5 k), Amirkabir (2.1 k), Shahid Beheshti (1.8 k), Sharif (1.8 k) lead. Education research is 1.6 % overall (1.1-2.1 thousand a year in 2020-25, falling from 2.1 k in 2020 to 1.1 k in 2023).
+* **Per academic staff** (full-time `all_reported` basis, comparable 2014-2022): national works per staff member 0.91 (2014), 1.15 (2018), 1.22 (2019), 1.31 (2021), 0.91 (2022; staff is 2022 SH 1401). Across provinces in 2018: Tehran 2.38, Isfahan 1.87, Kermanshah 1.45, Ardabil 1.43, Khorasan Razavi 1.43, East Azerbaijan 1.36; lowest Hormozgan 0.29, Kohgiluyeh and Boyer-Ahmad 0.41, Bushehr 0.46, Alborz 0.53. Tehran is about 8 times Hormozgan; the gap is partly the institution mix (research universities vs branch and applied institutions), unmeasured here.
+* **Rankings.** ISC World University Rankings 2025 lists 76 Iranian universities; best are University of Tehran (451-500), Tehran University of Medical Sciences (501-600), Shahid Beheshti medical (601-700). SCImago Institutions Rankings could not be fetched (Cloudflare 403); URL recorded.
+
+Inferred / not established:
+
+* The 2020 value of 2.08 works per staff is most likely an artefact of the staff series (national staff 55 k for 1399 SH against 88 k in 2019 and 82 k in 2021; the cause in the yearbook table is not checked), not a jump in productivity.
+* Before 1393 SH the staff series mixes bases (full-time plus hourly, Azad unspecified): ratios for 2001-2013 are in a separate `works_per_staff_mixed_basis` field and are not comparable with the full-time series. Do not read the rise from 0.4 (2010) to 1.0 (2015) as pure productivity: the staff basis changes inside it.
+* Citation sums are right-censored (3.2 citations per paper for 2025 against 14 for 2015) and dominated for a few institutions by large collaborations; no field normalisation.
+* Province attribution uses the institution's main site (OpenAlex geo and a hand-made city table; 3 overrides). Works per staff relates all output of the province's education institutions to its academic staff, including hospital-based and part-time authorship.
+

@@ -8,3 +8,4 @@ data/out/
 .ruff_cache/
 .pytest_cache/
 .gstack/
+external/research/cache/
