@@ -28,3 +28,15 @@ Dropout / progression (2026-10-01): `v_k12_cohort_survival` (columns `year_sh` =
 `school_reform_1391_93, pandemic_in_window, provenance`). Apparent cohort survival, not a drop-out rate: the
 yearbooks print no drop-out, out-of-school or coverage table (docs/findings.md section 6). After editing
 `sql/views.sql` re-create the views without a reload: `uv run python -m etl.run views`.
+
+Higher-education quality (2026-10-01): `v_he_flow` / `v_he_flow_checked` (entrants and graduates, `checks_ok` = province rows
+add up to the national row within 0.97-1.03), `v_he_programme_length` (nominal entry lag d per degree, `nominal` and
+`plus_1`), `v_he_cohort_completion` (`year_sh` = graduation year t, `entry_year_sh` = t-d, `university_type`
+all_reported | azad_plus_excl_azad, `degree_level`, `gender`, `nominal_years`, `length_basis`, `graduates`, `entrants`,
+`completion_ratio` (NULL when withheld), `completion_ratio_raw`, `status` ok | implausible_rate (outside 0.2-1.3) |
+province_sum_mismatch, `pandemic_in_window`, coverage flags of both sides, `provenance`), `v_he_rank_mix` (professors ...
+instructors, `faculty_members`, `senior_share`, `students_per_senior`, status ok | rank_incomplete | rank_sum_mismatch),
+`v_he_degree_mix_trend` (shares by degree, `share_doctoral`, `share_postgraduate`, status ok | degree_missing |
+degree_sum_mismatch | population_mismatch | population_unverified). Not a completion rate: two stocks of different people;
+d is the regulated programme length, not printed in the yearbooks. Views are split on `;` by `etl/load.py::_split_sql`,
+so no `;` or `--` inside SQL string literals. Export: `exports/site/he_quality.json`.

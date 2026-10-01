@@ -355,3 +355,231 @@ SELECT year_sh, survival_year_sh, province_code, gender, lower_students, upper_s
        CASE WHEN year_sh BETWEEN 1396 AND 1400 THEN 1 ELSE 0 END AS pandemic_in_window,
        provenance
 FROM y;
+
+
+-- ================================================================ Higher-education quality indicators (added 2026-10-01)
+-- Cohort completion, faculty rank mix and degree mix. Association/descriptive measures built only from
+-- printed counts; see docs/findings.md section 7 for what is measured and what is inferred.
+
+-- Entrants and graduates, one value per key (field_group 'all', rank 'all'), with the footnote flags of the
+-- source table. The max() only collapses duplicate cells of the SAME key; v_he_best already has one row per key.
+CREATE OR REPLACE VIEW v_he_flow AS
+SELECT year_sh, province_code, university_type, degree_level, gender, metric,
+       MAX(value) AS value,
+       STRING_AGG(DISTINCT NULLIF(coverage, ''), '|') AS coverage_flags,
+       MIN(source_file || ' :: ' || source_table) AS provenance
+FROM v_he_best
+WHERE metric IN ('new_entrants', 'graduates') AND field_group = 'all' AND rank = 'all'
+  AND university_type IN ('all_reported', 'azad', 'excl_azad')
+GROUP BY year_sh, province_code, university_type, degree_level, gender, metric;
+
+-- Province rows are only used when they add up to the printed national row of the same table family
+-- (0.97..1.03). The 1399 province graduate tables fail this (province sums 3-1500% of the national value:
+-- the parser reads a different table), 1398 has no province graduate table at all.
+CREATE OR REPLACE VIEW v_he_flow_checked AS
+SELECT f.*,
+       MAX(CASE WHEN province_code = 'IRN' THEN value END)
+         OVER (PARTITION BY year_sh, university_type, degree_level, gender, metric) AS national_value,
+       SUM(CASE WHEN province_code <> 'IRN' THEN value END)
+         OVER (PARTITION BY year_sh, university_type, degree_level, gender, metric) AS province_sum,
+       CASE WHEN province_code = 'IRN' THEN 1
+            WHEN SUM(CASE WHEN province_code <> 'IRN' THEN value END)
+                   OVER (PARTITION BY year_sh, university_type, degree_level, gender, metric)
+                 / NULLIF(MAX(CASE WHEN province_code = 'IRN' THEN value END)
+                   OVER (PARTITION BY year_sh, university_type, degree_level, gender, metric), 0)
+                 BETWEEN 0.97 AND 1.03 THEN 1
+            ELSE 0 END AS checks_ok
+FROM v_he_flow f;
+
+-- Nominal entry lag d (years between entry and graduation) by degree level. These are the regulated
+-- programme lengths (inferred from MSRT/MOHME regulations, NOT printed in the yearbooks):
+-- associate 2, bachelor 4, master 2, PhD 4 (3-5 in practice), professional doctorate 6 (medicine 7).
+-- 'plus_1' is a sensitivity variant for programmes that run longer. 'all' mixes the lengths and is only a
+-- continuity series across the 1393 break (d = 4 is then a convention, not a programme length).
+CREATE OR REPLACE VIEW v_he_programme_length AS
+SELECT * FROM (VALUES
+  ('associate', 2, 'nominal'), ('associate', 3, 'plus_1'),
+  ('bachelor', 4, 'nominal'), ('bachelor', 5, 'plus_1'),
+  ('master', 2, 'nominal'), ('master', 3, 'plus_1'),
+  ('phd', 4, 'nominal'), ('phd', 5, 'plus_1'),
+  ('professional_doctorate', 6, 'nominal'), ('professional_doctorate', 7, 'plus_1'),
+  ('all', 4, 'mixed_convention')
+) AS t(degree_level, entry_lag, length_basis);
+
+-- Cohort completion RATIO = graduates in year t / new entrants in year t - d (same degree level, gender,
+-- province and population basis). NOT a completion rate and not a cohort tracking: the numerator and
+-- denominator are two different stocks of different people (transfers between degrees and institutions,
+-- guest students, repeaters, programmes longer or shorter than d, dropouts and late finishers all move
+-- it). Bases: 'all_reported' (1393+ both sides; incl. Azad, Payame Noor, UAST ...);
+-- 'azad_plus_excl_azad' (degree 'all' only, entry and graduation years before 1393: the yearbooks print no
+-- entrants by degree for those years; Azad + non-Azad summed where both exist). A ratio outside
+-- 0.2..1.3 is never published (status 'implausible_rate'); a province row whose side does not add up to
+-- the national row is withheld (status 'province_sum_mismatch'); raw value kept in completion_ratio_raw.
+CREATE OR REPLACE VIEW v_he_cohort_completion AS
+WITH comb AS (
+  SELECT year_sh, province_code, 'azad_plus_excl_azad' AS university_type, degree_level, gender, metric,
+         SUM(value) AS value, MIN(checks_ok) AS checks_ok,
+         STRING_AGG(DISTINCT coverage_flags, '|') AS coverage_flags, MIN(provenance) AS provenance
+  FROM v_he_flow_checked
+  WHERE university_type IN ('azad', 'excl_azad') AND degree_level = 'all'
+  GROUP BY year_sh, province_code, degree_level, gender, metric
+  HAVING COUNT(DISTINCT university_type) = 2
+),
+fc AS (
+  SELECT year_sh, province_code, university_type, degree_level, gender, metric, value, checks_ok, coverage_flags, provenance
+  FROM v_he_flow_checked WHERE university_type = 'all_reported'
+  UNION ALL
+  SELECT year_sh, province_code, university_type, degree_level, gender, metric, value, checks_ok, coverage_flags, provenance
+  FROM comb
+),
+j AS (
+  SELECT g.year_sh, g.year_sh - l.entry_lag AS entry_year_sh, g.province_code, g.university_type, g.degree_level,
+         g.gender, l.entry_lag AS nominal_years, l.length_basis,
+         g.value AS graduates, e.value AS entrants,
+         g.value / NULLIF(e.value, 0) AS raw_ratio,
+         g.checks_ok * e.checks_ok AS sides_ok,
+         g.coverage_flags AS coverage_graduates, e.coverage_flags AS coverage_entrants,
+         g.provenance || ' <- ' || e.provenance AS provenance
+  FROM fc g
+  JOIN v_he_programme_length l ON l.degree_level = g.degree_level
+  JOIN fc e ON e.year_sh = g.year_sh - l.entry_lag AND e.province_code = g.province_code
+           AND e.university_type = g.university_type AND e.degree_level = g.degree_level AND e.gender = g.gender
+  WHERE g.metric = 'graduates' AND e.metric = 'new_entrants'
+    AND (g.university_type <> 'all_reported' OR e.year_sh >= 1393)  -- the Azad break: both sides must be 1393+
+)
+SELECT year_sh, entry_year_sh, province_code, university_type, degree_level, gender, nominal_years, length_basis,
+       graduates, entrants,
+       CASE WHEN sides_ok = 0 OR raw_ratio > 1.3 OR raw_ratio < 0.2 THEN NULL ELSE raw_ratio END AS completion_ratio,
+       raw_ratio AS completion_ratio_raw,
+       CASE WHEN sides_ok = 0 THEN 'province_sum_mismatch'
+            WHEN raw_ratio > 1.3 OR raw_ratio < 0.2 THEN 'implausible_rate'
+            ELSE 'ok' END AS status,
+       CASE WHEN entry_year_sh <= 1400 AND year_sh >= 1399 THEN 1 ELSE 0 END AS pandemic_in_window,
+       CASE WHEN university_type = 'azad_plus_excl_azad' THEN 1 ELSE 0 END AS mixed_degree_lengths_pre_1393,
+       coverage_entrants, coverage_graduates, provenance
+FROM j;
+
+-- Degree mix: share of each degree level in total enrolment (gender total), per population basis.
+--   all_reported         1393+ (province level 1393-98, 1401-02; 1399, 1400 national) and the national
+--                        years before that which add up to Azad + non-Azad (1375 does not: status
+--                        'population_mismatch', it equals the non-Azad figure)
+--   azad_plus_excl_azad  <= 1392, Azad + non-Azad summed where both exist
+--   azad / excl_azad     as printed
+-- Azad's doctorate cells before 1393 bundle PhD and professional doctorate (they equal the Azad part of the
+-- later split), so PhD alone is NULL for azad and azad_plus_excl_azad before 1393 and `doctoral`
+-- (PhD + professional doctorate) is the comparable column. postgraduate = master + doctoral.
+CREATE OR REPLACE VIEW v_he_degree_mix_trend AS
+WITH p AS (
+  SELECT year_sh, province_code, university_type,
+         MAX(CASE WHEN degree_level = 'all' THEN students END) AS total,
+         MAX(CASE WHEN degree_level = 'associate' THEN students END) AS associate,
+         MAX(CASE WHEN degree_level = 'bachelor' THEN students END) AS bachelor,
+         MAX(CASE WHEN degree_level = 'master' THEN students END) AS master,
+         MAX(CASE WHEN degree_level = 'phd' THEN students END) AS phd,
+         MAX(CASE WHEN degree_level = 'professional_doctorate' THEN students END) AS professional_doctorate,
+         MIN(provenance) AS provenance
+  FROM v_he_students
+  WHERE field_group = 'all' AND university_type IN ('all_reported', 'azad', 'excl_azad')
+  GROUP BY year_sh, province_code, university_type
+),
+d AS (
+  SELECT p.*, CASE WHEN phd IS NOT NULL THEN phd + COALESCE(professional_doctorate, 0)
+                   ELSE professional_doctorate END AS doctoral
+  FROM p
+),
+comb AS (
+  SELECT year_sh, province_code, 'azad_plus_excl_azad' AS university_type,
+         SUM(total) AS total, SUM(associate) AS associate, SUM(bachelor) AS bachelor, SUM(master) AS master,
+         CASE WHEN COUNT(phd) = 2 THEN SUM(phd) END AS phd,
+         CASE WHEN COUNT(professional_doctorate) = 2 AND COUNT(phd) = 2 THEN SUM(professional_doctorate) END
+           AS professional_doctorate,
+         SUM(doctoral) AS doctoral, MIN(provenance) AS provenance
+  FROM d WHERE university_type IN ('azad', 'excl_azad')
+  GROUP BY year_sh, province_code HAVING COUNT(*) = 2 AND COUNT(total) = 2 AND COUNT(doctoral) = 2
+),
+u AS (
+  SELECT year_sh, province_code, university_type, total, associate, bachelor, master, phd, professional_doctorate,
+         doctoral, provenance FROM d
+  UNION ALL
+  SELECT year_sh, province_code, university_type, total, associate, bachelor, master, phd, professional_doctorate,
+         doctoral, provenance FROM comb
+),
+x AS (
+  SELECT u.*, cb.total AS combined_total
+  FROM u LEFT JOIN comb cb ON cb.year_sh = u.year_sh AND cb.province_code = u.province_code
+                          AND u.university_type = 'all_reported'
+)
+SELECT year_sh, province_code, university_type, total AS students, associate, bachelor, master, phd,
+       professional_doctorate, doctoral,
+       associate / NULLIF(total, 0) AS share_associate, bachelor / NULLIF(total, 0) AS share_bachelor,
+       master / NULLIF(total, 0) AS share_master,
+       CASE WHEN phd IS NOT NULL THEN phd / NULLIF(total, 0) END AS share_phd,
+       doctoral / NULLIF(total, 0) AS share_doctoral,
+       (master + doctoral) / NULLIF(total, 0) AS share_postgraduate,
+       CASE WHEN total IS NULL OR master IS NULL OR doctoral IS NULL OR associate IS NULL OR bachelor IS NULL
+              THEN 'degree_missing'
+            WHEN (associate + bachelor + master + doctoral) / NULLIF(total, 0) NOT BETWEEN 0.97 AND 1.03
+              THEN 'degree_sum_mismatch'
+            WHEN university_type = 'all_reported' AND year_sh <= 1392 AND combined_total IS NOT NULL
+                 AND ABS(total / combined_total - 1) > 0.02 THEN 'population_mismatch'
+            WHEN university_type = 'all_reported' AND year_sh <= 1392 AND combined_total IS NULL
+              THEN 'population_unverified'
+            ELSE 'ok' END AS status,
+       provenance
+FROM x;
+
+-- Academic staff by rank (full-time staff from 1393, see v_he_students_per_staff for the employment basis).
+-- Ranks are printed for gender = total only. instructors = instructor (morabbi) + instructor assistant
+-- (morabbi amoozeshyar); non_faculty is NOT counted as a faculty member (same convention as v_he_staff).
+-- senior = professor + associate professor. status: 'rank_incomplete' (a rank missing),
+-- 'rank_sum_mismatch' (faculty members differ from all-staff minus non-faculty by more than 2%), else 'ok'.
+-- students_per_senior = all students (degree all) of the same population / senior faculty. For all_reported
+-- before 1393 the students are only used when v_he_degree_mix_trend verifies that population (the national
+-- 1375 and 1392 all_reported students do not add up to Azad + non-Azad); otherwise NULL.
+CREATE OR REPLACE VIEW v_he_rank_mix AS
+WITH r AS (
+  SELECT year_sh, province_code, university_type, employment,
+         MAX(CASE WHEN rank = 'professor' THEN value END) AS professors,
+         MAX(CASE WHEN rank = 'associate_professor' THEN value END) AS associate_professors,
+         MAX(CASE WHEN rank = 'assistant_professor' THEN value END) AS assistant_professors,
+         MAX(CASE WHEN rank = 'instructor' THEN value END) AS instructors_main,
+         MAX(CASE WHEN rank = 'instructor_assistant' THEN value END) AS instructor_assistants,
+         MAX(CASE WHEN rank = 'non_faculty' THEN value END) AS non_faculty,
+         MAX(CASE WHEN rank = 'all' THEN value END) AS academic_staff,
+         MIN(source_file || ' :: ' || source_table) AS provenance
+  FROM v_he_best
+  WHERE metric = 'academic_staff' AND degree_level = 'all' AND field_group = 'all' AND gender = 'total'
+    AND university_type IN ('all_reported', 'azad', 'excl_azad')
+  GROUP BY year_sh, province_code, university_type, employment
+),
+c AS (
+  SELECT r.*,
+         COALESCE(instructors_main, 0) + COALESCE(instructor_assistants, 0) AS instructors,
+         professors + associate_professors + assistant_professors
+           + COALESCE(instructors_main, 0) + COALESCE(instructor_assistants, 0) AS faculty_members
+  FROM r WHERE professors IS NOT NULL OR associate_professors IS NOT NULL OR assistant_professors IS NOT NULL
+)
+SELECT c.year_sh, c.province_code, c.university_type, c.employment,
+       c.professors, c.associate_professors, c.assistant_professors, c.instructors, c.non_faculty,
+       c.academic_staff, c.faculty_members,
+       c.professors + c.associate_professors AS senior_faculty,
+       (c.professors + c.associate_professors) / NULLIF(c.faculty_members, 0) AS senior_share,
+       CASE WHEN s.students_ok = 1 THEN s.students END AS students,
+       CASE WHEN s.students_ok = 1 THEN s.students / NULLIF(c.professors + c.associate_professors, 0) END
+         AS students_per_senior,
+       CASE WHEN s.students_ok = 1 THEN s.students / NULLIF(c.faculty_members, 0) END AS students_per_faculty_member,
+       CASE WHEN c.professors IS NULL OR c.associate_professors IS NULL OR c.assistant_professors IS NULL
+                 OR c.instructors_main IS NULL THEN 'rank_incomplete'
+            WHEN c.academic_staff IS NOT NULL
+                 AND c.faculty_members / NULLIF(c.academic_staff - COALESCE(c.non_faculty, 0), 0) NOT BETWEEN 0.98 AND 1.02
+              THEN 'rank_sum_mismatch'
+            ELSE 'ok' END AS status,
+       c.provenance
+FROM c
+LEFT JOIN (SELECT st.*, CASE WHEN st.university_type = 'all_reported' AND st.year_sh <= 1392
+                                  AND COALESCE(dm.status, 'x') <> 'ok' THEN 0 ELSE 1 END AS students_ok
+           FROM v_he_students st
+           LEFT JOIN v_he_degree_mix_trend dm ON dm.year_sh = st.year_sh AND dm.province_code = st.province_code
+                                             AND dm.university_type = st.university_type
+           WHERE st.degree_level = 'all' AND st.field_group = 'all') s
+  ON s.year_sh = c.year_sh AND s.province_code = c.province_code AND s.university_type = c.university_type;

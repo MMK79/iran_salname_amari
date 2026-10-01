@@ -159,3 +159,25 @@ Against students per teacher (`relations.json -> cohort_survival_*`, same estima
 student/teacher, both p > 0.1 and of opposite sign. **No detectable association; association only.** Reproduce:
 `uv run python -m etl.run views && uv run python scripts/export_site.py`; checks in `tests/test_export_site.py`
 (`test_cohort_survival_*`).
+
+
+## Higher education: cohort completion, rank mix, degree mix (2026-10-01)
+
+Full account with numbers: docs/findings.md section 7. **Measured** = printed counts; **inferred** = nominal programme
+length d (regulation, not in the yearbooks) and every reading of a ratio as "completion".
+
+* `completion_ratio` = graduates in t / entrants in t-d, by degree, gender, province, all_reported basis (entry year
+  >= 1393, i.e. national t = 1395-1401, provinces t = 1397, 1400, 1401). Before 1393 only a mixed all-degree series
+  (Azad + non-Azad, d = 4 by convention). Withheld outside 0.2-1.3 and where province tables do not sum to the national
+  row (1399; 1398 has no province table). National bachelor 0.587 (1397) -> 0.577 (1401).
+* Caveats: stock-flow mismatch, programme-length variation (d+1 variant published), transfers and associate-to-bachelor
+  continuation, Azad intake collapse 1396-98, COVID window flag, students studying outside the province of entry, the
+  1393 Azad/full-time-staff break, the 1399 province tables.
+* Association (`relations.json -> he_completion_vs_students_per_staff`, same `_cluster_fe` as above): bachelor completion
+  vs students per staff at entry year, province + year FE: -0.42 pp per +1 student/staff (SE 0.17, p = 0.019, n = 93,
+  3 years); cross-province r -0.47 / -0.25 / -0.21. Weakly identified; association only.
+* Rank mix: senior share of full-time faculty 17.0 % (1393) -> 23.7 % (1398); students per senior 370 -> 154; ranks only
+  for gender total, province 1393-1398 (all_reported) and 1380-1392 (Azad / non-Azad, not comparable). Degree mix: master
+  share 3.9 % (1380) -> 18.8 % (1395) -> 14.9 % (1402), PhD 0.84 % (1385) -> 4.4 % (1402); Azad's pre-1393 doctorate figure
+  bundles PhD and professional doctorate.
+Reproduce: `uv run python -m etl.run views && uv run python scripts/export_site.py`; tests `tests/test_export_site.py`.

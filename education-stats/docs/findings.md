@@ -283,3 +283,70 @@ passes" would need one). It is arithmetic on printed counts (*measured*); what i
   reworded between yearbooks. (4) The window 1396-1400 contains COVID years (flag
   `cohort_survival_pandemic_window`); the 1399 fall cannot be split into pandemic, dropout and migration.
   (5) Only 6 province-years per province, so fixed effects are weakly identified.
+
+## 7. Higher education: cohort completion, faculty rank mix, degree mix (2026-10-01)
+
+Views `v_he_cohort_completion`, `v_he_rank_mix`, `v_he_degree_mix_trend` (sql/views.sql); export `he_quality.json`
+(`he.json` is unchanged); association in `relations.json -> he_completion_vs_students_per_staff`. Tests:
+`tests/test_export_site.py::test_he_quality_*`, `test_he_completion_relations`.
+
+### Cohort completion ratio = graduates in t / new entrants in t-d
+* **Measured:** the two printed counts. **Inferred:** d. The yearbooks print no programme length; d is the regulated
+  nominal length (associate 2, bachelor 4, master 2, PhD 4, professional doctorate 6), each also shown with d+1
+  (`plus_1`; PhD 5 and professional doctorate 7 cover the 4-5 / 6-7 ranges). Not verified against the data (5 usable
+  years are too few to estimate a lag).
+* **Coverage.** Basis `all_reported` (incl. Azad, Payame Noor, UAST) needs entry year >= 1393 as well, because
+  before 1393 the yearbooks print entrants by degree for the non-Azad set only (one 1385 table) and the national
+  `all_reported` cells of 1375-1392 do not match Azad + non-Azad (graduates 1385 bachelor 2.49 M). Hence national
+  t = 1395-1401 (associate, master), 1397-1401 (bachelor, PhD), 1399-1401 (professional doctorate). Provinces: only
+  t = 1397, 1400, 1401 (entrants have province tables 1393-98; graduates 1392-97 and 1399-1401; **1398 has none,
+  1399 fails the province-sum check**: province sums 3-1500 % of the national row, so every province is withheld,
+  `province_sum_mismatch`). Gender exists for all three publishable years; ratios outside 0.2-1.3 are withheld
+  (`implausible_rate`; a handful of tiny-province PhD / professional-doctorate cells).
+  Before 1393: degree level `all` only (`azad_plus_excl_azad`, d = 4 by convention, mixes 2- and 6-year
+  programmes, national 1374-1388, provinces 1384-1388; 1387 is withheld nationally because the non-Azad graduate
+  cell 567,415 is not credible). Treat as a continuity series, not a rate.
+* **National, nominal d (total):** bachelor 0.587 (1397) -> 0.667 (1398) -> 0.607 -> 0.585 -> 0.577 (1401); associate 0.548 (1395) ... 0.830 (1399, entrants collapsed to 105 k in 1397) -> 0.558
+  (1401); master 0.639 (1395) ... 0.763 (1398), 0.495 (1399), 0.447 (1401); PhD 0.483 (1397) -> 0.670 -> 0.401 ->
+  0.595 -> 0.523 (1401); professional doctorate 0.890 (1399) -> 0.795 -> 0.859 (1401); all degrees (d = 4) 0.541
+  (1397) -> 0.485 (1399) -> 0.606 (1401). Bachelor 1401 by province: 0.50 (Tehran) to 0.81 (South Khorasan).
+* **Not a completion rate.** Stock-flow mismatch (two different groups of people); programmes shorter or longer
+  than d (the `plus_1` bachelor ratio is 0.54 in 1401 against 0.58); transfers between degree levels and
+  institutions, associate -> bachelor continuation (entrants include them), guest students, dropouts and late
+  finishers, Azad's shrinking intake (master entrants 254 k in 1395 -> 184 k in 1396, which makes 1398 look high
+  and 1399 low), and COVID (`completion_pandemic_window`, any window touching 1399-1400). Province: students
+  graduate in another province than they entered (Azad / Payame Noor branches).
+* **Association with students per academic staff member (bachelor, all_reported, provinces, total):** cross-
+  province Pearson r with staff ratio *at entry year*: -0.47 (t = 1397), -0.25 (1400), -0.21 (1401); with the
+  graduation-year ratio: -0.07 (1397), +0.12 (1401). Province + year FE (3 years x 31, SE clustered by province),
+  exposure at entry year: -0.42 pp completion per +1 student per staff (SE 0.17, p = 0.019); degree `all`: -0.34
+  pp (p = 0.011). The graduation-year exposure has fewer than three usable years, so no FE estimate is published.
+  **Association only, weakly identified (3 years, one slow-moving regressor, composition effects of Azad / Payame
+  Noor, entry-year ratios fall everywhere); do not read as an effect.** *(uncertain)*
+
+### Faculty rank mix (`v_he_rank_mix`)
+* Ranks are printed for gender total only (no gender, no degree, no university-type split after 1392). Province
+  level: all_reported 1393-1398 (full-time staff); azad and excl_azad 1380-1392 (excl_azad includes hourly staff, so
+  pre-1393 shares are **not** comparable with 1393+). No rank table exists for 1399-1402. No `term_map` change was
+  needed: no academic-staff cell of 1380+ is unmapped. Instructors = morabbi + morabbi amoozeshyar; non-faculty
+  staff is left out of the faculty denominator. Rows whose ranks do not add up to all-staff minus non-faculty
+  (2 %) are withheld (4 Azad provinces 1387; Azad 1375).
+* **National senior share (professor + associate) of faculty members:** 17.0 % (1393) -> 18.0 -> 20.1 -> 21.8 ->
+  22.4 -> 23.7 % (1398); professors 4,018 -> 6,856, instructors 28.9 k -> 22.2 k. Students per senior faculty member
+  370 (1393) -> 154 (1398) (students fell 4.80 M -> 3.18 M while seniors rose 12,967 -> 20,711). Province 1398: senior
+  share 5.8 % (South Khorasan) to 31.7 % (Tehran); students per senior 493 (South Khorasan) to 103 (Tehran).
+  Azad (separate table, pre-1393): senior share 3-6 %, 700-1,000 students per senior. *measured*; the Azad
+  count is unspecified full/part-time, so it is not comparable with full-time government figures.
+
+### Degree mix (`v_he_degree_mix_trend`)
+* All-reported national: master share 3.9 % (1380) -> 7.1 % (1389) -> 15.0 % (1393) -> 18.8 % (1395) -> 14.9 % (1402);
+  PhD share 0.84 % (1385) -> 1.96 % (1393) -> 4.83 % (1399) -> 4.36 % (1402); master + doctoral ("postgraduate") 6.4 %
+  (1385) -> 18.5 % (1393) -> 25.0 % (1397) -> 22.4 % (1402); bachelor 70 % (1380) -> 59 % (1393) -> 64 % (1402);
+  associate 26 % (1385) -> 12.6 % (1401). Province 1397: master share 9.8 % (South Khorasan) to 24.1 % (Tehran).
+* The rise is a share of a shrinking base after 1393 (total enrolment 4.80 M -> 3.37 M in 1399 -> 3.35 M in 1402);
+  headcount of master students peaked in 1394 (775 k) and fell to 499 k in 1402, PhD headcount ~150 k since 1397.
+* Before 1393 Azad's doctorate cell bundles PhD and professional doctorate, so `share_phd` is null for `azad` and
+  `azad_plus_excl_azad`; `share_doctoral` (PhD + professional) is the comparable column. All-reported 1375 and 1392
+  national cells do not match Azad + non-Azad (`population_mismatch`) and are withheld; the combined basis fills
+  1375-1392. Non-Azad totals jump in 1386 and 1388 (definition changes, UAST footnotes), which moves pre-1393 shares.
+  Province degree tables exist for all_reported 1393-1398 and 1401-1402 only.

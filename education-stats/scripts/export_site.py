@@ -3,10 +3,12 @@
 
     uv run python scripts/export_site.py [--db data/out/edu.duckdb] [--out exports/site]
 
-Writes provinces.json, k12.json, he.json, outcomes.json, relations.json, provenance.json, meta.json.
+Writes provinces.json, k12.json, he.json, he_quality.json, outcomes.json, relations.json, provenance.json,
+meta.json.
 Everything is read from the SQL views (v_k12_best, v_k12_students_per_teacher,
 v_k12_core_students_per_teacher, v_he_best, v_he_students_per_staff, v_k12_pass_rate, v_k12_class_size,
-v_k12_completion, v_he_graduation_ratio); no cleaning is redone here.
+v_k12_completion, v_he_graduation_ratio, v_he_cohort_completion, v_he_rank_mix, v_he_degree_mix_trend);
+no cleaning is redone here.
 
 Conventions
 * A missing value is absent or JSON null; a zero is never used for "not available".
@@ -439,6 +441,200 @@ def he_json(con) -> tuple[dict, dict]:
 
 
 
+# ------------------------------------------------------------------ higher-education quality
+COMPLETION_DEGREES = ["associate", "bachelor", "master", "phd", "professional_doctorate", "all"]
+DEGREE_MIX_BASES = ["all_reported", "azad_plus_excl_azad", "azad", "excl_azad"]
+
+
+def _flags_he_quality(y: int, section: str, withheld: bool = False, pandemic: bool = False, mixed: bool = False):
+    f = []
+    if section == "completion":
+        if mixed:
+            f.append("completion_mixed_degree_lengths")
+        if pandemic:
+            f.append("completion_pandemic_window")
+        if withheld:
+            f.append("completion_provinces_withheld")
+        f.append("coverage_excl_azad_vs_azad_separate" if y <= 1392 else "coverage_incl_azad_fulltime_staff")
+    elif section == "rank_mix":
+        f.append("coverage_excl_azad_vs_azad_separate" if y <= 1392 else "coverage_incl_azad_fulltime_staff")
+        f.append("rank_not_split_by_gender")
+    elif section == "degree_mix":
+        f.append("coverage_excl_azad_vs_azad_separate" if y <= 1392 else "coverage_incl_azad_fulltime_staff")
+        if y <= 1392:
+            f.append("azad_doctorate_bundled")
+    return f
+
+
+def he_quality_json(con) -> tuple[dict, dict]:
+    """Cohort completion ratio, faculty rank mix and degree mix, all with a status per value."""
+    prov: dict[int, set] = {}
+    comp: dict[int, dict] = {}
+    withheld_years: dict[int, set] = {}
+    pandemic: dict[int, bool] = {}
+    mixed_years: set[int] = set()
+    for (y, ey, p, ut, dl, g, nom, lb, gr, en, cr, status, pw, mixed, prv) in con.execute(
+        """select year_sh, entry_year_sh, province_code, university_type, degree_level, gender, nominal_years,
+                  length_basis, graduates, entrants, completion_ratio, status, pandemic_in_window,
+                  mixed_degree_lengths_pre_1393, provenance
+           from v_he_cohort_completion"""
+    ).fetchall():
+        if lb == "plus_1" and g != "total":
+            continue  # the sensitivity variant is published for gender total only
+        slot = (
+            comp.setdefault(y, {}).setdefault(p, {}).setdefault(ut, {}).setdefault(dl, {}).setdefault(lb, {})
+        )
+        slot["nominal_years"] = int(nom)
+        slot["entry_year_sh"] = int(ey)
+        if cr is None:
+            slot[g] = {"completion_ratio": None, "status": status}
+            if p != "IRN":
+                withheld_years.setdefault(y, set()).add(status)
+        else:
+            slot[g] = {
+                "graduates": _num(gr),
+                "entrants": _num(en),
+                "completion_ratio": _round(cr),
+                "status": status,
+            }
+        pandemic[y] = pandemic.get(y, False) or bool(pw)
+        if ut == "azad_plus_excl_azad":
+            mixed_years.add(y)
+        g_src, _, e_src = prv.partition(" <- ")
+        prov.setdefault(y, set()).add(g_src)
+        prov.setdefault(ey, set()).add(e_src)
+    comp_years = []
+    for y in sorted(comp):
+        comp_years.append(
+            {
+                "year_sh": y,
+                "n_provinces": len([p for p in comp[y] if p != "IRN"]),
+                "flags": _flags_he_quality(
+                    y, "completion", withheld=bool(withheld_years.get(y)), pandemic=pandemic.get(y, False),
+                    mixed=y in mixed_years,
+                ),
+            }
+        )
+
+    # rank mix
+    ranks: dict[int, dict] = {}
+    best: dict[tuple, tuple] = {}
+    for row in con.execute(
+        """select year_sh, province_code, university_type, employment, professors, associate_professors,
+                  assistant_professors, instructors, non_faculty, faculty_members, senior_share, students,
+                  students_per_senior, students_per_faculty_member, status, provenance
+           from v_he_rank_mix"""
+    ).fetchall():
+        k = (row[0], row[1], row[2])
+        pref = HE_STAFF_PREFERENCE.get(row[3], 9)
+        if k not in best or pref < best[k][0]:
+            best[k] = (pref, row)
+    for (y, p, ut), (_, r) in best.items():
+        (_y, _p, _ut, emp, pr, ap, asp, ins, nf, fac, sh, stu, sps, spf, status, prv) = r
+        if status != "ok":
+            rec = {"employment": emp, "status": status}
+        else:
+            rec = {
+                "employment": emp,
+                "professors": _num(pr),
+                "associate_professors": _num(ap),
+                "assistant_professors": _num(asp),
+                "instructors": _num(ins),
+                "non_faculty": _num(nf),
+                "faculty_members": _num(fac),
+                "senior_share": _round(sh),
+                "students": _num(stu),
+                "students_per_senior": _round(sps, 2),
+                "students_per_faculty_member": _round(spf, 2),
+                "status": status,
+            }
+        ranks.setdefault(y, {}).setdefault(p, {})[ut] = rec
+        prov.setdefault(y, set()).add(prv)
+    rank_years = [
+        {
+            "year_sh": y,
+            "n_provinces": len([p for p in ranks[y] if p != "IRN"]),
+            "flags": _flags_he_quality(y, "rank_mix"),
+        }
+        for y in sorted(ranks)
+    ]
+
+    # degree mix
+    mix: dict[int, dict] = {}
+    for y, p, ut, tot, a, b, m, ph, pd_, dc, sa, sb, sm, sp, sd, spg, status, prv in con.execute(
+        """select year_sh, province_code, university_type, students, associate, bachelor, master, phd,
+                  professional_doctorate, doctoral, share_associate, share_bachelor, share_master, share_phd,
+                  share_doctoral, share_postgraduate, status, provenance
+           from v_he_degree_mix_trend where status <> 'degree_missing'"""
+    ).fetchall():
+        if status == "ok":
+            rec = {
+                "students": _num(tot),
+                "students_by_degree": {
+                    "associate": _num(a), "bachelor": _num(b), "master": _num(m), "phd": _num(ph),
+                    "professional_doctorate": _num(pd_), "doctoral": _num(dc),
+                },
+                "share": {
+                    "associate": _round(sa), "bachelor": _round(sb), "master": _round(sm), "phd": _round(sp),
+                    "doctoral": _round(sd), "postgraduate": _round(spg),
+                },
+                "status": status,
+            }
+        else:
+            rec = {"status": status}
+        mix.setdefault(y, {}).setdefault(p, {})[ut] = rec
+        prov.setdefault(y, set()).add(prv)
+    mix_years = [
+        {
+            "year_sh": y,
+            "n_provinces": len([p for p in mix[y] if p != "IRN"]),
+            "flags": _flags_he_quality(y, "degree_mix"),
+        }
+        for y in sorted(mix)
+    ]
+
+    doc = {
+        "measures": {
+            "completion": "COHORT COMPLETION RATIO, not a completion rate: graduates in year t / new entrants in year "
+            "t - d, same degree level, gender, province and population basis. d = nominal programme length "
+            "(associate 2, bachelor 4, master 2, PhD 4, professional doctorate 6), plus_1 = d + 1 (sensitivity). "
+            "The two are different stocks of different people (transfers, repeaters, longer or shorter "
+            "programmes, dropouts, late finishers, guest students). null + status when withheld "
+            "(implausible_rate: outside 0.2-1.3 | province_sum_mismatch: provinces do not add up to the national "
+            "row). data[year=t][province][basis][degree][length_basis][gender]; length_basis nominal | plus_1 "
+            "(gender total only) | mixed_convention (degree 'all', d = 4 by convention). basis all_reported = "
+            "1393+ (entry year >= 1393 as well, i.e. t >= 1395 for associate/master, 1397 for bachelor/PhD, "
+            "1399 for professional doctorate); azad_plus_excl_azad = degree 'all' only, years before 1393.",
+            "rank_mix": "Full-time (1393+; excl_azad includes hourly staff, azad unspecified before) academic staff by "
+            "rank; senior = professor + associate professor; senior_share = senior / faculty members "
+            "(professor + associate + assistant + instructor + instructor assistant, non-faculty excluded); "
+            "students_per_senior = all students of the same population / senior. data[year][province][university_type]. "
+            "Ranks are printed for gender total only. instructors = morabbi + morabbi amoozeshyar.",
+            "degree_mix": "Share of each degree level in total enrolment (gender total). share.doctoral = PhD + "
+            "professional doctorate (comparable across the 1393 break: before 1393 Azad prints one doctorate "
+            "figure bundling both, so share.phd is null for azad and azad_plus_excl_azad); share.postgraduate = "
+            "master + doctoral. Province level exists for all_reported 1393-1398 and 1401-1402 only. "
+            "data[year][province][basis]; basis all_reported | azad_plus_excl_azad | azad | excl_azad.",
+        },
+        "completion_degree_levels": COMPLETION_DEGREES,
+        "degree_mix_bases": DEGREE_MIX_BASES,
+        "genders": GENDERS,
+        "completion": {
+            "years": comp_years,
+            "data": {str(y): {p: _clean(v) for p, v in d.items()} for y, d in sorted(comp.items())},
+        },
+        "rank_mix": {
+            "years": rank_years,
+            "data": {str(y): {p: _clean(v) for p, v in d.items()} for y, d in sorted(ranks.items())},
+        },
+        "degree_mix": {
+            "years": mix_years,
+            "data": {str(y): {p: _clean(v) for p, v in d.items()} for y, d in sorted(mix.items())},
+        },
+    }
+    return doc, prov
+
+
 # ------------------------------------------------------------------ outcomes + relations
 PASS_LEVELS = ["primary", "lower_secondary"]
 REL_MIN_PROVINCES = 25  # a cross-province correlation is only computed for years with >= this many units
@@ -708,6 +904,70 @@ def _survival_relations(con) -> tuple[dict, dict]:
     }
 
 
+# HE cohort completion (v_he_cohort_completion, all_reported, gender total, province level) against students per
+# academic staff member (v_he_students_per_staff). Year t = graduation year; the exposure is read where the
+# cohort ENTERED (t - d) or where it graduated (t).
+HE_EXPOSURES = {
+    "at_entry_year": "students per academic staff member of all_reported in year t - d (the cohort's entry year)",
+    "at_graduation_year": "students per academic staff member of all_reported in year t (graduation year)",
+}
+HE_FE_SPECS = {"all_valid_years": "every province x year with a published completion ratio and staff ratio"}
+HE_COMPLETION_DEGREES = ["bachelor", "all"]
+
+
+def _he_completion_relations(con) -> dict:
+    out: dict = {}
+    for dl in HE_COMPLETION_DEGREES:
+        df = con.execute(
+            f"""select c.year_sh, c.entry_year_sh, c.province_code, c.completion_ratio,
+                       e.students_per_staff as sps_entry, g.students_per_staff as sps_grad
+                from v_he_cohort_completion c
+                left join v_he_students_per_staff e on e.year_sh=c.entry_year_sh and e.province_code=c.province_code
+                     and e.university_type='all_reported'
+                left join v_he_students_per_staff g on g.year_sh=c.year_sh and g.province_code=c.province_code
+                     and g.university_type='all_reported'
+                where c.university_type='all_reported' and c.degree_level='{dl}' and c.gender='total'
+                  and c.length_basis in ('nominal', 'mixed_convention') and c.province_code <> 'IRN'
+                  and c.completion_ratio is not null"""
+        ).df()
+        cross: dict = {}
+        fe: dict = {}
+        for name, x in (("at_entry_year", "sps_entry"), ("at_graduation_year", "sps_grad")):
+            rows = []
+            for yr, g in df.groupby("year_sh"):
+                d = g[[x, "completion_ratio"]].dropna()
+                if len(d) < REL_MIN_PROVINCES:
+                    continue
+                rows.append(
+                    {
+                        "year_sh": int(yr),
+                        "entry_year_sh": int(g["entry_year_sh"].iloc[0]),
+                        "n": int(len(d)),
+                        "pearson": _round(d[x].corr(d["completion_ratio"], method="pearson")),
+                        "spearman": _round(d[x].corr(d["completion_ratio"], method="spearman")),
+                        "flags": [f for f, ok in (("completion_pandemic_window", yr >= 1399),) if ok],
+                    }
+                )
+            cross[name] = rows
+            for spec in HE_FE_SPECS:
+                fe.setdefault(name, {})[spec] = _cluster_fe(df, x, "completion_ratio")
+        out[dl] = {"cross_province_by_year": cross, "within_province_fixed_effects": fe}
+    return {
+        "interpretation": "ASSOCIATION, not effect. Province aggregates; students_per_staff is crude (students attend "
+        "Azad / Payame Noor branches staffed from other provinces) and the completion ratio is a stock-flow ratio "
+        "(see he_quality.json measures.completion). Only 3-4 graduation years exist at province level "
+        "(t = 1397, 1400, 1401; 1398 has no province graduate table, 1399 fails the province-sum check).",
+        "model": "completion_ratio_it = a_province + b_year + beta * x_it + e_it, OLS with dummies, standard errors "
+        "CR1-clustered by province; coef = change in the completion ratio (a fraction; x100 for percentage "
+        "points) per +1 student per academic staff member",
+        "outcome": "graduates in t / entrants in t - d, university_type all_reported, gender total; bachelor d = 4, "
+        "'all' = all degrees with d = 4 by convention",
+        "exposures": HE_EXPOSURES,
+        "specs": HE_FE_SPECS,
+        "by_degree": out,
+    }
+
+
 def relations_json(con) -> dict:
     df = con.execute(
         """select t.year_sh, t.province_code, t.level, t.students_per_teacher, t.teacher_definition,
@@ -774,6 +1034,7 @@ def relations_json(con) -> dict:
         },
         "cohort_survival_cross_province_by_year": surv_cross,
         "cohort_survival_within_province_fixed_effects": surv_fe,
+        "he_completion_vs_students_per_staff": _he_completion_relations(con),
     }
 
 
@@ -883,6 +1144,29 @@ FLAG_DEFINITIONS = {
         "The cohort window t..t+3 contains the COVID-19 years 1399-1400; a part of the change in survival may "
         "be pandemic-related (not separable here)."
     ),
+    "completion_mixed_degree_lengths": (
+        "Higher education before 1393: the yearbooks print no entrants by degree level, so the completion ratio is "
+        "computed for all degrees together (Azad + non-Azad summed, d = 4 by convention) although associate "
+        "programmes last 2 years and professional doctorates 6-7. A crude continuity series only."
+    ),
+    "completion_pandemic_window": (
+        "The cohort window (entry year .. graduation year) contains the COVID-19 years 1399-1400; part of the "
+        "change in the completion ratio may be pandemic-related (not separable here)."
+    ),
+    "completion_provinces_withheld": (
+        "Some province completion ratios of this graduation year are not published: the province tables of one "
+        "side do not add up to the national row (status province_sum_mismatch, e.g. the 1399 graduate tables) or "
+        "the ratio lies outside 0.2-1.3 (status implausible_rate)."
+    ),
+    "rank_not_split_by_gender": (
+        "Academic staff by rank (professor ... instructor) is printed for gender total only; no split by gender "
+        "or degree level exists."
+    ),
+    "azad_doctorate_bundled": (
+        "Before 1393 Islamic Azad University prints one doctorate figure that bundles PhD and professional "
+        "doctorate (it equals their sum in 1393). PhD alone is withheld for azad and azad_plus_excl_azad; "
+        "use the doctoral share (PhD + professional doctorate)."
+    ),
     "coverage_incl_azad_fulltime_staff": (
         "Higher education from 1393: all_reported includes Islamic Azad University and counts full-time "
         "academic staff only. Break in series at 1393."
@@ -969,12 +1253,18 @@ def meta_json(k12, he, generated_at) -> dict:
             "k12.json": "data[year][province][level][gender] = {students, teachers, students_per_teacher}",
             "he.json": "data[year][province|null][university_type][degree_level][gender] = "
             "{students, academic_staff, students_per_staff}; province null = quarantined",
+            "he_quality.json": "completion.data[year=t][province][basis][degree][length_basis][gender] = {graduates, "
+            "entrants, completion_ratio, status} (graduates in t / entrants in t-d); rank_mix.data[year][province]"
+            "[university_type] = {professors, associate_professors, assistant_professors, instructors, senior_share, "
+            "students_per_senior, status}; degree_mix.data[year][province][basis] = {students, share.{associate, "
+            "bachelor, master, phd, doctoral, postgraduate}, status}; withheld values are null with a status",
             "outcomes.json": "data[year][province].{pass_rate[level][gender], class_size[level], "
             "completion_proxy[gender], he_graduation_ratio[gender], cohort_survival[gender]}; withheld values are "
             "null with a status",
             "relations.json": "cross_province_by_year (Pearson/Spearman, n >= 25) and "
             "within_province_fixed_effects (province + year FE, cluster-robust); association only; "
-            "cohort_survival_* keys hold the same two estimates for cohort survival",
+            "cohort_survival_* keys hold the same two estimates for cohort survival; "
+            "he_completion_vs_students_per_staff.by_degree[bachelor|all] the same for HE cohort completion",
             "provenance.json": "datasets[k12|he][year] = list of 'source_file :: source_table'",
         },
     }
@@ -991,6 +1281,7 @@ def export(db: Path, out: Path) -> dict[str, int]:
     con = duckdb.connect(str(db), read_only=True)
     k12, k_prov = k12_json(con)
     he, h_prov = he_json(con)
+    heq, q_prov = he_quality_json(con)
     outcomes = outcomes_json(con)
     relations = relations_json(con)
     con.close()
@@ -1000,6 +1291,7 @@ def export(db: Path, out: Path) -> dict[str, int]:
         "datasets": {
             "k12": {str(y): sorted(v) for y, v in sorted(k_prov.items())},
             "he": {str(y): sorted(v) for y, v in sorted(h_prov.items())},
+            "he_quality": {str(y): sorted(v) for y, v in sorted(q_prov.items())},
         },
     }
     sizes = {}
@@ -1007,6 +1299,7 @@ def export(db: Path, out: Path) -> dict[str, int]:
         ("provinces.json", provinces_json()),
         ("k12.json", k12),
         ("he.json", he),
+        ("he_quality.json", heq),
         ("outcomes.json", outcomes),
         ("relations.json", relations),
         ("provenance.json", provenance),

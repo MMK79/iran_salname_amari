@@ -32,7 +32,7 @@ def walk(o, path=()):
 
 
 def test_files_and_size(out):
-    assert {"provinces", "k12", "he", "outcomes", "relations", "provenance", "meta"} <= set(out)
+    assert {"provinces", "k12", "he", "he_quality", "outcomes", "relations", "provenance", "meta"} <= set(out)
     total = sum(p.stat().st_size for p in out["_dir"].glob("*.json"))
     assert total < 5_000_000
     assert (out["_dir"] / "provinces.json").stat().st_size < 400_000
@@ -340,3 +340,127 @@ def test_no_direct_dropout_table_in_the_database():
     for kw in ("ترک تحصیل", "بازمانده", "نرخ پوشش", "پوشش تحصیلی", "مردود", "تکرار پایه"):
         k = norm(kw).replace(" ", "")
         assert not [t for t in titles if k in t], kw
+
+
+# ------------------------------------------------------------------ HE quality: completion, rank mix, degree mix
+def test_he_quality_completion_bounds_and_arithmetic(out):
+    q = out["he_quality"]["completion"]
+    n_pub = n_with = 0
+    for y, d in q["data"].items():
+        for p, bases in d.items():
+            for ut, degs in bases.items():
+                assert ut in ("all_reported", "azad_plus_excl_azad")
+                for dl, lbs in degs.items():
+                    for lb, gs in lbs.items():
+                        assert lb in ("nominal", "plus_1", "mixed_convention")
+                        assert lbs[lb]["entry_year_sh"] == int(y) - lbs[lb]["nominal_years"]
+                        if ut == "all_reported":
+                            assert lbs[lb]["entry_year_sh"] >= 1393  # never across the Azad break
+                        for g, v in gs.items():
+                            if g in ("nominal_years", "entry_year_sh"):
+                                continue
+                            if v.get("completion_ratio") is None:
+                                assert v["status"] in ("implausible_rate", "province_sum_mismatch")
+                                n_with += 1
+                            else:
+                                n_pub += 1
+                                assert v["status"] == "ok" and 0.2 <= v["completion_ratio"] <= 1.3
+                                assert abs(v["completion_ratio"] - v["graduates"] / v["entrants"]) <= 5e-5 + 1e-9
+    assert n_pub > 1000 and n_with > 0
+    nominal = {"associate": 2, "bachelor": 4, "master": 2, "phd": 4, "professional_doctorate": 6}
+    nat = q["data"]["1401"]["IRN"]["all_reported"]
+    for dl, nd in nominal.items():
+        assert nat[dl]["nominal"]["nominal_years"] == nd and nat[dl]["plus_1"]["nominal_years"] == nd + 1
+    # national bachelor 1401: 283,721 graduates / 491,308 entrants of 1397
+    b = nat["bachelor"]["nominal"]["total"]
+    assert (b["graduates"], b["entrants"]) == (283721, 491308) and b["completion_ratio"] == pytest.approx(0.5775, abs=1e-4)
+    # the 1399 province graduate tables do not add up to the national row -> every province withheld
+    for p, bases in q["data"]["1399"].items():
+        if p != "IRN":
+            assert bases["all_reported"]["bachelor"]["nominal"]["total"]["status"] == "province_sum_mismatch"
+    # 1398 has no province graduate table: national only
+    assert set(q["data"]["1398"]) == {"IRN"}
+    by = {y["year_sh"]: y for y in q["years"]}
+    assert "completion_pandemic_window" in by[1400]["flags"] and "completion_mixed_degree_lengths" in by[1385]["flags"]
+    assert set(out["meta"]["flag_definitions"]) >= {f for sec in ("completion", "rank_mix", "degree_mix")
+                                                    for y in out["he_quality"][sec]["years"] for f in y["flags"]}
+
+
+def test_he_quality_province_sides_add_up_to_national():
+    """A published province completion ratio needs both province sides to sum to the printed national row."""
+    import duckdb
+
+    con = duckdb.connect(str(DB), read_only=True)
+    rows = con.execute(
+        """select year_sh, metric, degree_level, gender, national_value, province_sum
+           from v_he_flow_checked where university_type='all_reported' and province_code='IRN'
+             and degree_level='bachelor' and gender='total' and year_sh between 1393 and 1401"""
+    ).fetchall()
+    con.close()
+    assert rows
+    for y, _m, _d, _g, nat, psum in rows:
+        if psum is not None and nat:
+            assert (0.97 <= psum / nat <= 1.03) == (y != 1399), y
+
+
+def test_he_quality_rank_mix(out):
+    rm = out["he_quality"]["rank_mix"]["data"]
+    n = 0
+    for y, d in rm.items():
+        for p, types in d.items():
+            for ut, r in types.items():
+                if r["status"] != "ok":
+                    assert r["status"] in ("rank_incomplete", "rank_sum_mismatch")
+                    continue
+                n += 1
+                fac = r["professors"] + r["associate_professors"] + r["assistant_professors"] + r["instructors"]
+                assert fac == r["faculty_members"]
+                assert r["senior_share"] == pytest.approx((r["professors"] + r["associate_professors"]) / fac, abs=5e-5)
+                if r.get("students_per_senior") is not None:
+                    assert r["students_per_senior"] == pytest.approx(
+                        r["students"] / (r["professors"] + r["associate_professors"]), abs=0.006)
+    assert n > 500
+    nat = rm["1398"]["IRN"]["all_reported"]
+    assert nat["professors"] == 6856 and nat["employment"] == "fulltime"
+    assert nat["senior_share"] > rm["1393"]["IRN"]["all_reported"]["senior_share"]  # seniority rose
+    assert len([p for p in rm["1395"] if p != "IRN"]) == 31
+    assert "1399" not in rm and "1402" not in rm  # no rank table published
+    assert "students_per_senior" not in rm["1375"]["IRN"]["all_reported"]  # 1375 students are non-Azad only
+
+
+def test_he_quality_degree_mix(out):
+    dm = out["he_quality"]["degree_mix"]["data"]
+    for y, d in dm.items():
+        for p, bases in d.items():
+            for b, r in bases.items():
+                if r["status"] != "ok":
+                    assert r["status"] in ("degree_sum_mismatch", "population_mismatch", "population_unverified")
+                    continue
+                s = r["share"]
+                assert 0.97 <= s["associate"] + s["bachelor"] + s["master"] + s["doctoral"] <= 1.03
+                assert s["postgraduate"] == pytest.approx(s["master"] + s["doctoral"], abs=2e-4)
+                if b in ("azad", "azad_plus_excl_azad") and int(y) <= 1392:
+                    assert "phd" not in s  # Azad's doctorate figure bundles PhD and professional doctorate
+    nat = dm["1399"]["IRN"]["all_reported"]
+    assert nat["students"] == 3070748 and 0.04 < nat["share"]["phd"] < 0.06
+    assert dm["1375"]["IRN"]["all_reported"] == {"status": "population_mismatch"}
+    assert dm["1395"]["THR"]["all_reported"]["share"]["master"] > dm["1380"]["IRN"]["all_reported"]["share"]["master"]
+
+
+def test_he_completion_relations(out):
+    rel = out["relations"]["he_completion_vs_students_per_staff"]["by_degree"]
+    assert set(rel) == {"bachelor", "all"}
+    for dl, v in rel.items():
+        for name, rows in v["cross_province_by_year"].items():
+            assert rows
+            for r in rows:
+                assert r["n"] >= 25 and -1 <= r["pearson"] <= 1 and r["year_sh"] not in (1398, 1399)
+        e = v["within_province_fixed_effects"]["at_entry_year"]["all_valid_years"]
+        assert e["n"] >= 90 and e["n_provinces"] == 31 and e["se_cluster"] > 0 and e["n_years"] >= 3
+        # graduation-year exposure has fewer than 3 usable years: no fixed-effects estimate rather than a bad one
+        assert v["within_province_fixed_effects"]["at_graduation_year"]["all_valid_years"] is None
+
+
+def test_he_json_unchanged_by_quality_export(out):
+    assert out["he"]["fields"] == ["students", "academic_staff", "students_per_staff"]
+    assert "he_quality.json" in out["meta"]["files"] and "he_quality" in out["provenance"]["datasets"]
