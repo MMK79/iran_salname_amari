@@ -252,3 +252,91 @@ def test_fixed_effects_match_statsmodels():
     )
     assert ours["coef"] == pytest.approx(m.params["students_per_teacher"], abs=1e-6)
     assert ours["se_cluster"] == pytest.approx(m.bse["students_per_teacher"], abs=1e-6)
+
+
+# ------------------------------------------------------------------ cohort survival (drop-out proxy)
+def test_cohort_survival_published_values_are_plausible_and_consistent(out):
+    oc = out["outcomes"]["data"]
+    n_pub = 0
+    for y, d in oc.items():
+        for p, rec in d.items():
+            for g, v in rec.get("cohort_survival", {}).items():
+                assert g in ("total", "male", "female")
+                if v.get("cohort_survival") is None:
+                    assert v["status"] in ("reform_window", "boundary_change", "implausible_rate", "year_unreliable")
+                    continue
+                n_pub += 1
+                assert v["status"] == "ok"
+                assert 0.5 <= v["cohort_survival"] <= 1.05, (y, p, g, v)
+                assert v["survival_year_sh"] == int(y) + 3
+                assert abs(v["cohort_survival"] - v["upper_students"] / v["lower_students"]) <= 5e-5 + 1e-9
+    assert n_pub > 500
+    # reform windows (t = 1388-1393) are withheld everywhere, provinces and national
+    for y in range(1388, 1394):
+        for p, rec in oc[str(y)].items():
+            assert all(v.get("cohort_survival") is None and v["status"] == "reform_window"
+                       for v in rec.get("cohort_survival", {}).values()), (y, p)
+    # 1387 province rows are misaligned in the source: provinces withheld, national row kept
+    assert all(
+        rec["cohort_survival"]["total"].get("cohort_survival") is None
+        for p, rec in oc["1387"].items()
+        if p != "IRN" and "cohort_survival" in rec
+    )
+    assert oc["1387"]["IRN"]["cohort_survival"]["total"].get("cohort_survival") is not None
+    # province data from t = 1394: 31 provinces; national 1394 close to the arithmetic of the printed students
+    prov_1394 = [p for p, r in oc["1394"].items() if p != "IRN" and r["cohort_survival"]["total"].get("cohort_survival") is not None]
+    assert len(prov_1394) == 31
+    by = {y["year_sh"]: y for y in out["outcomes"]["years"]}
+    assert "cohort_survival_reform_window" in by[1391]["flags"] and "cohort_survival_provinces_withheld" in by[1387]["flags"]
+    assert set(out["meta"]["flag_definitions"]) >= {f for y in out["outcomes"]["years"] for f in y["flags"]}
+
+
+def test_cohort_survival_national_equals_stock_ratio():
+    """The national row is the arithmetic ratio of two printed stocks, three years apart."""
+    import duckdb
+
+    con = duckdb.connect(str(DB), read_only=True)
+    lo, up, sv = con.execute(
+        """select s.lower_students, s.upper_students, s.cohort_survival from v_k12_cohort_survival s
+           where s.province_code='IRN' and s.gender='total' and s.year_sh=1396"""
+    ).fetchone()
+    lo_ref = con.execute(
+        "select value from v_k12_best where province_code='IRN' and gender='total' and metric='students' "
+        "and programme='regular' and level='lower_secondary' and year_sh=1396"
+    ).fetchone()[0]
+    up_ref = con.execute(
+        "select value from v_k12_best where province_code='IRN' and gender='total' and metric='students' "
+        "and programme='regular' and level='upper_secondary' and year_sh=1399"
+    ).fetchone()[0]
+    con.close()
+    assert (lo, up) == (lo_ref, up_ref) and sv == pytest.approx(up_ref / lo_ref)
+
+
+def test_cohort_survival_relations(out):
+    rel = out["relations"]
+    cross = rel["cohort_survival_cross_province_by_year"]
+    assert set(cross) == {"lower_secondary_at_t", "upper_secondary_at_t_plus_3"}
+    for rows in cross.values():
+        assert {r["year_sh"] for r in rows} == set(range(1394, 1400))  # only publishable years, never reform/1387
+        for r in rows:
+            assert r["n"] >= 25 and -1 <= r["pearson"] <= 1 and -1 <= r["spearman"] <= 1
+    res = rel["cohort_survival_within_province_fixed_effects"]["results"]
+    for x in cross:
+        e = res[x]["all_valid_years"]
+        assert e["n"] > 150 and e["n_provinces"] >= 30 and e["se_cluster"] > 0 and e["years"] == [1394, 1399]
+        assert res[x]["excl_cohort_1399"]["years"] == [1394, 1398] and res[x]["excl_cohort_1399"]["n"] < e["n"]
+
+
+def test_no_direct_dropout_table_in_the_database():
+    """Documented negative result (docs/findings.md section 6): no drop-out / out-of-school / coverage table."""
+    import duckdb
+
+    from etl.normalize import norm
+
+    con = duckdb.connect(str(DB), read_only=True)
+    titles = [norm(t or "").replace(" ", "") for (t,) in con.execute(
+        "select title from source_tables where yearbook_sh >= 1370").fetchall()]
+    con.close()
+    for kw in ("ترک تحصیل", "بازمانده", "نرخ پوشش", "پوشش تحصیلی", "مردود", "تکرار پایه"):
+        k = norm(kw).replace(" ", "")
+        assert not [t for t in titles if k in t], kw

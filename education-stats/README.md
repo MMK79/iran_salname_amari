@@ -30,6 +30,7 @@ make etl           # in Docker: convert .doc -> .cache, extract, validate, load 
 make etl-local     # same; loads Postgres if it is up, else DuckDB data/out/edu.duckdb
 make test          # pytest (28 tests)
 make dashboard     # Streamlit prototype on http://localhost:8501
+uv run python -m etl.run views   # re-create sql/views.sql on the existing DuckDB (no re-extract)
 make export-site   # static JSON for a website map -> exports/site/ (scripts/export_site.py)
 uv run python analysis/ratio_vs_outcomes.py   # students/teacher vs pass rate: figures + numbers (analysis/README.md)
 ```

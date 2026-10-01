@@ -177,6 +177,7 @@ def main(argv=None) -> None:
     lo = sub.add_parser("load")
     lo.add_argument("--pg", default=None)
     lo.add_argument("--duckdb", default=None)
+    sub.add_parser("views", help="re-apply sql/views.sql to data/out/edu.duckdb (no reload)")
     sub.add_parser("validate")
     sub.add_parser("mappings")
     sub.add_parser("docs")
@@ -187,6 +188,10 @@ def main(argv=None) -> None:
         from etl.load import load
 
         load(pg=args.pg, duck=args.duckdb)
+    elif args.cmd == "views":
+        from etl.load import apply_views
+
+        apply_views()
     elif args.cmd == "validate":
         from etl.validate import run
 

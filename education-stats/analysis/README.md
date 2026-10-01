@@ -142,3 +142,20 @@ microdata is not in the repo). Writes `analysis/figures/timss2023_class_size_*.p
   guaranteed to remove bias.
 * Class size here is the grade-4 class or the grade-8 maths/science class, not the school-level pupil-teacher ratio
   in the yearbook; the two are not interchangeable.
+
+## Drop-out / progression: apparent cohort survival (2026-10-01)
+
+No yearbook table gives drop-out, out-of-school or coverage-rate data (search in docs/findings.md section 6), so the
+outcome is derived: **cohort survival = upper-secondary students in t+3 / lower-secondary students in t**
+(regular programme, province x gender; `v_k12_cohort_survival`). The same three cohorts are counted twice, so it
+needs no cohort-size correction; it is *not* a drop-out rate (repeaters, migration between provinces and moves to
+adult programmes enter it). Publishable: provinces t = 1394-1399 (6 years x 31), national also 1377-1387 (old
+system); t = 1388-1393 (reform windows) and 1387 provinces are withheld with a status. National: 0.865 (1394) ->
+0.869 (1397) -> 0.835 (1399), male 0.858 -> 0.799, female 0.873 -> 0.874.
+
+Against students per teacher (`relations.json -> cohort_survival_*`, same estimator as the pass-rate relation,
+`_cluster_fe`): cross-province r by year is within -0.20..+0.07 for lower-secondary students/teacher at t and
+-0.11..-0.17 for upper-secondary at t+3; province + year FE: -0.19 pp (SE 0.13) and +0.26 pp (SE 0.18) per extra
+student/teacher, both p > 0.1 and of opposite sign. **No detectable association; association only.** Reproduce:
+`uv run python -m etl.run views && uv run python scripts/export_site.py`; checks in `tests/test_export_site.py`
+(`test_cohort_survival_*`).

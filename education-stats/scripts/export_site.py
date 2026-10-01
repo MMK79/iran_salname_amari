@@ -521,9 +521,34 @@ def outcomes_json(con) -> dict:
         )
         prov(y, p).setdefault("he_graduation_ratio", {})[g] = rec
 
+    surv_withheld: dict[int, str] = {}
+    for y, sy, p, g, lo, up, sv, status in con.execute(
+        "select year_sh, survival_year_sh, province_code, gender, lower_students, upper_students, cohort_survival, "
+        "status from v_k12_cohort_survival"
+    ).fetchall():
+        if sv is None:
+            rec = {"cohort_survival": None, "status": status}
+            if p != "IRN":
+                surv_withheld.setdefault(y, set()).add(status)
+        else:
+            rec = {
+                "lower_students": _num(lo),
+                "upper_students": _num(up),
+                "survival_year_sh": int(sy),
+                "cohort_survival": _round(sv),
+                "status": status,
+            }
+        prov(y, p).setdefault("cohort_survival", {})[g] = rec
+
     years = []
     for y in sorted(data):
         flags = []
+        if 1388 <= y <= 1393:
+            flags.append("cohort_survival_reform_window")
+        if 1396 <= y <= 1400:
+            flags.append("cohort_survival_pandemic_window")
+        if surv_withheld.get(y) and y not in range(1388, 1394):
+            flags.append("cohort_survival_provinces_withheld")
         if 1391 <= y <= 1393:
             flags.append("school_reform_1391_93")
         if y == 1399:
@@ -560,6 +585,13 @@ def outcomes_json(con) -> dict:
             "he_graduation_ratio": "higher-education graduates / students, all degrees (a throughput proxy, "
             "NOT a completion rate); basis = all_reported | azad_plus_excl_azad | mixed; "
             "data[year][prov].he_graduation_ratio[gender]",
+            "cohort_survival": "APPARENT COHORT SURVIVAL lower -> upper secondary (the yearbooks print no drop-out "
+            "or out-of-school table): upper-secondary students in year t+3 / lower-secondary students in year t, "
+            "regular programme, same province and gender. data[year=t][prov].cohort_survival[gender] = "
+            "{lower_students, upper_students, survival_year_sh, cohort_survival, status}. Not a drop-out rate: "
+            "it also reflects repeaters, inter-province migration and moves to adult/non-regular programmes. "
+            "null + status when withheld (reform_window | boundary_change | implausible_rate | year_unreliable). "
+            "Usable: provinces t = 1394-1399; national t = 1377-1387 (old 5-3-4 system) and 1394-1399",
         },
         "years": years,
         "data": {
@@ -620,6 +652,62 @@ def _cluster_fe(df: pd.DataFrame, x: str, y: str) -> dict | None:
     return out
 
 
+# Cohort survival (lower -> upper secondary, v_k12_cohort_survival) against students per teacher.
+# Year t = the lower-secondary year; the exposure is read either at the cohort's baseline (lower-secondary
+# students per teacher in t) or where the survivors are counted (upper-secondary students per teacher in t+3).
+SURV_EXPOSURES = {
+    "lower_secondary_at_t": "students per teacher of lower secondary in year t (the cohort's baseline year)",
+    "upper_secondary_at_t_plus_3": "students per teacher of upper secondary in year t+3 (where survivors are counted)",
+}
+SURV_FE_SPECS = {
+    "all_valid_years": "every publishable window: t = 1394-1399 (the 1388-93 windows touch the reform; 1387 misaligned)",
+    "excl_cohort_1399": "drops t = 1399 (window 1399-1402, the last year, includes COVID years)",
+}
+
+
+def _survival_relations(con) -> tuple[dict, dict]:
+    df = con.execute(
+        """select s.year_sh, s.province_code, s.cohort_survival,
+                  lo.students_per_teacher as spt_lower_at_t, up.students_per_teacher as spt_upper_at_t3
+           from v_k12_cohort_survival s
+           left join v_k12_students_per_teacher lo on lo.year_sh=s.year_sh and lo.province_code=s.province_code
+                and lo.level='lower_secondary'
+           left join v_k12_students_per_teacher up on up.year_sh=s.survival_year_sh
+                and up.province_code=s.province_code and up.level='upper_secondary'
+           where s.gender='total' and s.province_code <> 'IRN' and s.cohort_survival is not null"""
+    ).df()
+    xs = {"lower_secondary_at_t": "spt_lower_at_t", "upper_secondary_at_t_plus_3": "spt_upper_at_t3"}
+    cross: dict = {}
+    fe: dict = {}
+    for name, x in xs.items():
+        rows = []
+        for yr, g in df.groupby("year_sh"):
+            d = g[[x, "cohort_survival"]].dropna()
+            if len(d) < REL_MIN_PROVINCES:
+                continue
+            rows.append(
+                {
+                    "year_sh": int(yr),
+                    "n": int(len(d)),
+                    "pearson": _round(d[x].corr(d["cohort_survival"], method="pearson")),
+                    "spearman": _round(d[x].corr(d["cohort_survival"], method="spearman")),
+                    "flags": [f for f, ok in (("cohort_survival_pandemic_window", 1396 <= yr <= 1400),) if ok],
+                }
+            )
+        cross[name] = rows
+        for spec in SURV_FE_SPECS:
+            d = df if spec == "all_valid_years" else df[df.year_sh <= 1398]
+            fe.setdefault(name, {})[spec] = _cluster_fe(d, x, "cohort_survival")
+    return cross, {
+        "model": "cohort_survival_it = a_province + b_year + beta * x_it + e_it (t = lower-secondary year), OLS "
+        "with dummies, standard errors CR1-clustered by province; coef = change in survival (a fraction; x100 "
+        "for percentage points) per +1 student per teacher",
+        "exposures": SURV_EXPOSURES,
+        "specs": SURV_FE_SPECS,
+        "results": fe,
+    }
+
+
 def relations_json(con) -> dict:
     df = con.execute(
         """select t.year_sh, t.province_code, t.level, t.students_per_teacher, t.teacher_definition,
@@ -668,6 +756,7 @@ def relations_json(con) -> dict:
                     d = d[d.year_sh >= 1394]
                 est = _cluster_fe(d, x, y)
                 fe.setdefault(name, {}).setdefault(lv, {})[spec] = est
+    surv_cross, surv_fe = _survival_relations(con)
     return {
         "interpretation": "ASSOCIATION, not effect. Correlations are ecological (province aggregates) and "
         "confounded by urbanisation, income, the teacher-definition break at 1394, composition of "
@@ -683,6 +772,8 @@ def relations_json(con) -> dict:
             "specs": FE_SPECS,
             "results": fe,
         },
+        "cohort_survival_cross_province_by_year": surv_cross,
+        "cohort_survival_within_province_fixed_effects": surv_fe,
     }
 
 
@@ -779,6 +870,19 @@ FLAG_DEFINITIONS = {
         "Province pass rates of the listed levels are not published for this year (>= 2 provinces with "
         "rates outside 0.5-1; source table misaligned). Individual implausible rows are also withheld."
     ),
+    "cohort_survival_reform_window": (
+        "Cohort survival (upper-secondary students in t+3 / lower-secondary students in t): windows t = 1388-1393 "
+        "touch the 1391-93 reform. The national ratio there is 0.99-1.09 against 0.83-0.88 on both sides, so "
+        "the two stocks do not cover the same grades; withheld (status reform_window)."
+    ),
+    "cohort_survival_provinces_withheld": (
+        "Province cohort survival of this year is not published (>= 2 provinces outside 0.5-1.05, 1387: lower-"
+        "secondary province rows misaligned in the source); the national row stays."
+    ),
+    "cohort_survival_pandemic_window": (
+        "The cohort window t..t+3 contains the COVID-19 years 1399-1400; a part of the change in survival may "
+        "be pandemic-related (not separable here)."
+    ),
     "coverage_incl_azad_fulltime_staff": (
         "Higher education from 1393: all_reported includes Islamic Azad University and counts full-time "
         "academic staff only. Break in series at 1393."
@@ -866,9 +970,11 @@ def meta_json(k12, he, generated_at) -> dict:
             "he.json": "data[year][province|null][university_type][degree_level][gender] = "
             "{students, academic_staff, students_per_staff}; province null = quarantined",
             "outcomes.json": "data[year][province].{pass_rate[level][gender], class_size[level], "
-            "completion_proxy[gender], he_graduation_ratio[gender]}; withheld values are null with a status",
+            "completion_proxy[gender], he_graduation_ratio[gender], cohort_survival[gender]}; withheld values are "
+            "null with a status",
             "relations.json": "cross_province_by_year (Pearson/Spearman, n >= 25) and "
-            "within_province_fixed_effects (province + year FE, cluster-robust); association only",
+            "within_province_fixed_effects (province + year FE, cluster-robust); association only; "
+            "cohort_survival_* keys hold the same two estimates for cohort survival",
             "provenance.json": "datasets[k12|he][year] = list of 'source_file :: source_table'",
         },
     }

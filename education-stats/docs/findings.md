@@ -224,3 +224,62 @@ microdata is not in the repo). Writes `analysis/figures/timss2023_class_size_*.p
   guaranteed to remove bias.
 * Class size here is the grade-4 class or the grade-8 maths/science class, not the school-level pupil-teacher ratio
   in the yearbook; the two are not interchangeable.
+
+## 6. Drop-out / out-of-school: no direct measure; apparent cohort survival instead (2026-10-01)
+
+**Search (proven).** Every table title (3.3k tables) and every row/column label (405k cells) was searched,
+after unifying Arabic/Persian letters, for «ترک تحصیل», «بازمانده(گان)», «بازمانده از تحصیل», «پوشش تحصیلی»,
+«نرخ پوشش», «لازم‌التعلیم», «جمعیت لازم‌التعلیم», «مردود(ی)», «تکرار (پایه)», «افت تحصیلی», «نرخ ثبت‌نام (خالص/ناخالص)».
+Result: **no K-12 table gives drop-out, out-of-school children, enrolment/coverage rates, repeaters or a
+school-age population.** The only hits are not school measures: «پوشش» = villages/learners covered by the
+literacy movement (نهضت سوادآموزی, 1363-1369 and 1380+ adult-literacy tables); «لازم‌التعلیم» = compulsory-age
+learners in literacy-movement classes (1366-1369, 24 provinces, yearbooks outside the verified range, a count
+of children *served by literacy classes*, not of children out of school); 1361 table 38 = planning *targets*
+for «درصد پوشش آموزشی»; census literacy tables (rate of literate 6+, census years only, not attendance).
+`tests/test_export_site.py::test_no_direct_dropout_table_in_the_database` pins this. Grade-level counts do
+not exist either (tables give totals per level, except the upper-secondary first-grade column from 1392 and
+graduates in 8 years), so the suggested "first grade of lower secondary in t+1 / final primary grade in t"
+cannot be computed.
+
+**Derived measure: apparent cohort survival, lower -> upper secondary** (`v_k12_cohort_survival`, exported as
+`outcomes.json -> data[t][prov].cohort_survival[gender]`):
+
+    survival(t) = upper-secondary students in year t+3 / lower-secondary students in year t
+
+regular programme, same province and gender, `year_sh` = t. The lower-secondary stock of year t is three
+cohorts (grades 7-9 / old 6-8); three years later those cohorts are in upper-secondary grades 10-12 / 9-11, so
+the stocks cover the same pupils and no cohort-size correction is needed (a ratio like "first-grade intake /
+passes" would need one). It is arithmetic on printed counts (*measured*); what it *means* is inferred (below).
+
+* **Coverage.** Provinces (31, gender male/female/total): t = 1394-1399 (survivors counted 1397-1402).
+  National: t = 1377-1387 (sparse upper-secondary years; old 5-3-4 system) and 1394-1399. Province
+  upper-secondary data exist only from 1390, so no province value before t = 1387.
+* **Withheld, with status.** t = 1388-1393 (`reform_window`): the window touches the 1391-93 reform; the
+  national ratio there is 0.99-1.09 against 0.83-0.88 on both sides, i.e. the two stocks do not cover the same
+  grades. t = 1387 provinces (`year_unreliable`, 30 of 32 rows implausible or misaligned in the source; the
+  national row stays). `boundary_change` (Tehran/Alborz around 1390, Khorasan around 1383) is coded but no
+  published window crosses either split. Single ratios > 1.05 or < 0.5 are never published.
+* **National trend (total).** Old system 0.753 (1377) -> 0.762 (1380) -> 0.847 (1384) -> 0.819 (1386) ->
+  0.850 (1387); new system 0.865 (1394) -> 0.869 (1397) -> 0.848 (1398) -> 0.835 (1399). The old and new
+  levels are *not* strictly comparable (different grades/definitions, 4-year technical tracks in the old
+  upper secondary). Within 1394-1399 the fall since 1397 is entirely male: male 0.858 (1394) -> 0.848 (1397) ->
+  0.799 (1399); female 0.873 -> 0.891 -> 0.874. In 1399 the median province gap (female minus male) is 7.4
+  pp (was 0.3 pp in 1394); lowest male values 1399: Sistan and Baluchestan 0.669, West Azerbaijan 0.714,
+  North Khorasan 0.732. Lowest total 1399: Sistan and Baluchestan 0.693; highest: Ilam 0.922. *measured*
+* **Association with students per teacher (t = 1394-1399, 31 provinces, total gender).** Cross-province
+  Pearson r with lower-secondary students per teacher in t: +0.07, +0.05, -0.06, -0.16, -0.16, -0.20 (1394 ->
+  1399); with upper-secondary students per teacher in t+3: -0.11 ... -0.17 in every year. Province + year
+  fixed effects, SE clustered by province: -0.19 pp of survival per +1 lower-secondary student/teacher at t
+  (SE 0.13, p = 0.14, n = 186) and +0.26 pp per +1 upper-secondary student/teacher at t+3 (SE 0.18, p = 0.17).
+  Dropping t = 1399: -0.16 pp (p = 0.38) and +0.22 pp (p = 0.21). **Neither is distinguishable from zero and
+  the two have opposite signs: no evidence of an association; association only, never an effect.**
+  *(uncertain)*
+* **What is doubtful.** (1) It is a stock ratio, not a tracking: repeaters, re-entrants and anyone entering the
+  upper secondary from outside the regular lower-secondary stock inflate it; dropout, death, **migration
+  between provinces** (large for Tehran, Alborz, Khorasan) and **moves to adult/evening/non-formal schools**
+  (excluded here, programme = regular) deflate it. (2) Private/non-profit schools are inside the stock
+  (sector = all) but home-schooling and unregistered pupils are not in any yearbook count. (3) Definition
+  changes: reform 1391-93 (withheld), a 4th upper-secondary grade in old technical tracks, adult exclusions
+  reworded between yearbooks. (4) The window 1396-1400 contains COVID years (flag
+  `cohort_survival_pandemic_window`); the 1399 fall cannot be split into pandemic, dropout and migration.
+  (5) Only 6 province-years per province, so fixed effects are weakly identified.

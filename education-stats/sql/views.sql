@@ -292,3 +292,66 @@ SELECT gu.year_sh, gu.province_code, gu.gender, gu.graduates, su.students,
             ELSE 'mixed' END AS basis,
        CASE WHEN gu.graduates / NULLIF(su.students, 0) BETWEEN 0.05 AND 0.6 THEN 'ok' ELSE 'implausible' END AS status
 FROM gu JOIN su ON su.year_sh = gu.year_sh AND su.province_code = gu.province_code AND su.gender = gu.gender;
+
+
+-- ================================================================ Drop-out / progression (added 2026-10-01)
+-- The yearbooks print NO drop-out, out-of-school, coverage-rate, repetition or compulsory-age-population
+-- table for K-12 (searched titles and every row/column label; see docs/findings.md section 6). The only
+-- derivable progression measure is an APPARENT COHORT SURVIVAL between two three-grade levels:
+--   survival(t) = upper-secondary students in year t+3 / lower-secondary students in year t
+-- (regular programme, same province and gender). The lower-secondary stock of year t is exactly three
+-- cohorts (grades 7-9 in the 6-3-3 system, 6-8 in the old 5-3-4 system); three years later the same three
+-- cohorts sit in the upper-secondary grades 10-12 (9-11), so no cohort-size correction is needed. It is
+-- 1 - (drop-out + net out-migration + move to adult/non-regular programmes + deaths) + repeaters and
+-- re-entrants; it is NOT a drop-out rate and not a cohort tracking.
+-- year_sh = t (the lower-secondary year, so it lines up with students_per_teacher of that year);
+-- survival_year_sh = t+3. Upper-secondary province data exist from 1390, so provinces start at t = 1387.
+--   * reform_window: [t, t+3] touches 1391-93 (5-3-4 -> 6-3-3). In these windows the national ratio is
+--     0.99-1.09 against 0.83-0.88 on both sides of the reform, i.e. the two stocks do not cover the same
+--     grades. Withheld for every row (status 'reform_window').
+--   * boundary_change: province units that were split during the window (Tehran/Alborz at 1390 in the
+--     data, Khorasan at 1383); the two stocks do not cover the same territory. Withheld.
+--   * a ratio > 1.05 or < 0.5 is never published (status 'implausible_rate'); if >= 2 provinces of a year
+--     are implausible (counted on gender = total) the whole province set of that year is withheld
+--     (status 'year_unreliable'), as in v_k12_pass_rate. The national row stays unless it is itself bad.
+CREATE OR REPLACE VIEW v_k12_cohort_survival AS
+WITH lo AS (
+  SELECT year_sh, province_code, gender, value AS lower_students, source_file || ' :: ' || source_table AS lower_provenance
+  FROM v_k12_best WHERE metric = 'students' AND programme = 'regular' AND level = 'lower_secondary'
+),
+up AS (
+  SELECT year_sh, province_code, gender, value AS upper_students, source_file || ' :: ' || source_table AS upper_provenance
+  FROM v_k12_best WHERE metric = 'students' AND programme = 'regular' AND level = 'upper_secondary'
+),
+j AS (
+  SELECT lo.year_sh, up.year_sh AS survival_year_sh, lo.province_code, lo.gender, lo.lower_students, up.upper_students,
+         up.upper_students / NULLIF(lo.lower_students, 0) AS raw_ratio,
+         CASE WHEN lo.year_sh <= 1393 AND up.year_sh >= 1391 THEN 1 ELSE 0 END AS reform_window,
+         CASE WHEN (lo.province_code IN ('TEH', 'ALB') AND lo.year_sh < 1390 AND up.year_sh >= 1390)
+                OR (lo.province_code IN ('KHO', 'KHR', 'KHS', 'KHJ') AND lo.year_sh < 1383 AND up.year_sh >= 1383)
+              THEN 1 ELSE 0 END AS boundary_change,
+         lo.lower_provenance || ' -> ' || up.upper_provenance AS provenance
+  FROM lo JOIN up ON up.year_sh = lo.year_sh + 3 AND up.province_code = lo.province_code AND up.gender = lo.gender
+),
+r AS (
+  SELECT j.*, CASE WHEN raw_ratio > 1.05 OR raw_ratio < 0.5 THEN 1 ELSE 0 END AS implausible FROM j
+),
+y AS (
+  SELECT r.*, SUM(CASE WHEN province_code <> 'IRN' AND gender = 'total' AND reform_window = 0 THEN implausible ELSE 0 END)
+              OVER (PARTITION BY year_sh) AS n_implausible_provinces
+  FROM r
+)
+SELECT year_sh, survival_year_sh, province_code, gender, lower_students, upper_students,
+       CASE WHEN reform_window = 1 OR boundary_change = 1 OR implausible = 1
+              OR (province_code <> 'IRN' AND n_implausible_provinces >= 2) THEN NULL
+            ELSE raw_ratio END AS cohort_survival,
+       raw_ratio AS cohort_survival_raw,
+       CASE WHEN reform_window = 1 THEN 'reform_window'
+            WHEN boundary_change = 1 THEN 'boundary_change'
+            WHEN implausible = 1 THEN 'implausible_rate'
+            WHEN province_code <> 'IRN' AND n_implausible_provinces >= 2 THEN 'year_unreliable'
+            ELSE 'ok' END AS status,
+       reform_window AS school_reform_1391_93,
+       CASE WHEN year_sh BETWEEN 1396 AND 1400 THEN 1 ELSE 0 END AS pandemic_in_window,
+       provenance
+FROM y;

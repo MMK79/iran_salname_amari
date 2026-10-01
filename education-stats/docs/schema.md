@@ -22,3 +22,9 @@ Views: `v_k12_clean`, `v_k12_best` (one value per key), `v_k12_level_panel`,
 Outcome views (2026-10-01): `v_k12_passed_best` (best `passed` value; repairs the 1399-PDF table that is
 the 1398 one, see views.sql), `v_k12_pass_rate`, `v_k12_class_size`, `v_k12_completion` (proxy),
 `v_he_graduation_ratio` (proxy). Each carries a `status` column (`ok` | `implausible*` | `year_unreliable`).
+Dropout / progression (2026-10-01): `v_k12_cohort_survival` (columns `year_sh` = t, `survival_year_sh` = t+3,
+`province_code, gender, lower_students, upper_students, cohort_survival` (NULL when withheld),
+`cohort_survival_raw, status` (`ok` | `reform_window` | `boundary_change` | `implausible_rate` | `year_unreliable`),
+`school_reform_1391_93, pandemic_in_window, provenance`). Apparent cohort survival, not a drop-out rate: the
+yearbooks print no drop-out, out-of-school or coverage table (docs/findings.md section 6). After editing
+`sql/views.sql` re-create the views without a reload: `uv run python -m etl.run views`.

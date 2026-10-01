@@ -142,6 +142,17 @@ def load_duckdb(path: str) -> None:
     print(f"loaded into {p}")
 
 
+def apply_views(path: str | None = None) -> None:
+    """Re-create the views of sql/views.sql on an existing DuckDB file (no ETL, no data change)."""
+    import duckdb
+
+    con = duckdb.connect(str(path or OUT / "edu.duckdb"))
+    for stmt in _split_sql((SQL / "views.sql").read_text()):
+        con.execute(stmt)
+    con.close()
+    print("views re-applied")
+
+
 def load(pg: str | None = None, duck: str | None = None) -> None:
     url = pg or (None if duck else os.environ.get("DATABASE_URL"))
     if url:
