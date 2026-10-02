@@ -1,4 +1,4 @@
-# make up | etl | load | test | lint | dashboard | etl-local | export-site
+# make up | etl | load | test | lint | dashboard | etl-local | export-site | research-quartiles
 SOURCE_DIR ?= /Volumes/MigMig/Programming/Datasets/Statistical Yearbook/Keshvari
 PG ?= postgresql://edu:edu@localhost:5433/edu
 export SOURCE_DIR
@@ -25,6 +25,9 @@ test:
 export-site:  ## static-site JSON (map paths, K-12, HE, provenance, meta) -> exports/site/
 	uv run python scripts/export_site.py
 
+research-quartiles:  ## AI-in-education Iran vs world by SJR quartile (OpenAlex + SCImago SJR, cached) -> external/research/quartiles_*.csv, exports/site/research_quartiles.json
+	uv run python scripts/research_quartiles.py all
+
 lint:
 	uv run ruff check etl tests dashboard
 
@@ -33,4 +36,4 @@ dashboard:     ## Streamlit prototype on http://localhost:8501 (reads DuckDB or 
 
 down:
 	docker compose down
-.PHONY: up etl etl-local load test lint dashboard export-site down
+.PHONY: up etl etl-local load test lint dashboard export-site research-quartiles down

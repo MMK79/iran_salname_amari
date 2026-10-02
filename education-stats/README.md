@@ -33,6 +33,7 @@ make dashboard     # Streamlit prototype on http://localhost:8501
 uv run python -m etl.run views   # re-create sql/views.sql on the existing DuckDB (no re-extract)
 make export-site   # static JSON for a website map -> exports/site/ (scripts/export_site.py)
 uv run python analysis/ratio_vs_outcomes.py   # students/teacher vs pass rate: figures + numbers (analysis/README.md)
+make research-quartiles   # AI-in-education Iran vs world by SCImago SJR quartile (OpenAlex, cached; needs external/research/scimago/scimagojr_2025.csv, see below)
 ```
 
 Step by step: `scripts/convert_docs.sh 4` -> `uv run python -m etl.run extract [--years 1388-1402]`
@@ -41,6 +42,18 @@ inventory and mappings). `SOURCE_DIR` overrides the source path.
 
 Without Docker: everything works with the DuckDB fallback (`data/out/edu.duckdb`), same schema
 and views.
+
+### Journal quality: Iran vs world (`make research-quartiles`)
+
+`scripts/research_quartiles.py` counts AI-in-education works 2015-2026 per OpenAlex source and year (Iran =
+>= 1 Iranian affiliation; world = no country filter), joins sources to SCImago SJR quartiles by ISSN and writes
+`external/research/quartiles_by_year.csv`, `quartiles_journals.csv` and `exports/site/research_quartiles.json`.
+`uv run python scripts/research_quartiles.py --test` is the offline self-check (also in `make test`).
+Needs `OPENALEX_API_KEY` in the environment (cached, resumable, ~2-3k group_by calls at 1 credit each).
+**SJR file (manual, gitignored):** scimagojr.com blocks scripted downloads. Open
+https://www.scimagojr.com/journalrank.php, pick the year, "Download data", save as
+`external/research/scimago/scimagojr_<year>.csv` (the script uses 2025). Method, caveats and results:
+`analysis/README.md`, section "Journal quality".
 
 ## Layout
 

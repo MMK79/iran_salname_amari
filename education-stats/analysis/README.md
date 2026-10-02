@@ -191,3 +191,54 @@ publication year t+621. Association only, and **partial data** (108 of 343 insti
 the pre-1393 staff basis differs and is kept in a separate field. Could be paired with `ratio_vs_outcomes.py` (staff ratios) as a
 second outcome; not done.
 
+
+## Journal quality of AI-in-education publications: Iran vs world (2026-10-02)
+
+Reproduce: `make research-quartiles` (`scripts/research_quartiles.py`; needs `OPENALEX_API_KEY` and the hand-downloaded
+`external/research/scimago/scimagojr_2025.csv`, see README). Outputs: `external/research/quartiles_by_year.csv`
+(bucket x scope x year x class), `quartiles_journals.csv` (every source with class, SJR, h-index, works),
+`exports/site/research_quartiles.json` (for a configurable web view). `uv run python scripts/research_quartiles.py --test`
+is the offline self-check; `make test` includes it.
+
+**What is measured.** OpenAlex works 2015-2026-10-02 whose title/abstract match one of three keyword buckets
+(`ai`: AI/ML/deep learning AND education words; `llm`: ChatGPT/LLM/generative AI AND education words; `its`: intelligent
+tutoring / knowledge tracing / knowledge graph AND education words). Scope `iran` = at least one author affiliation
+`country_code:IR` (co-authored works count); `world` = no country filter (Iran is a subset). Each work is assigned to its
+OpenAlex primary source; the source is joined to SCImago SJR 2025 by ISSN. Class = best SJR quartile across the journal's
+subject categories (Q1-Q4), else `not_ranked` (journal or book series without SJR match/quartile), `conference`,
+`repository` (arXiv, SSRN, ...), `other`, `unknown` (no primary source). `group_by` is capped at 200 groups, so date windows
+are split recursively (down to single days, then by type/OA/language/DOI/paratext filters) until every window is exact.
+
+### Results (counts are works; Iran share = Iran / world)
+
+| bucket | works Iran / world | in Q1: Iran / world | Q1 share of all works: Iran vs world | Q1 among SJR-ranked journal works (Q1-Q4): Iran vs world | Iran share of world Q1 | Iran share of all works |
+|---|---|---|---|---|---|---|
+| ai (broad) | 1,363 / 220,032 | 405 / 30,855 | 29.7% vs 14.0% | 64.0% vs 51.8% | 1.31% | 0.62% |
+| llm | 333 / 80,568 | 112 / 13,506 | 33.6% vs 16.8% | 75.7% vs 57.3% | 0.83% | 0.41% |
+| its | 34 / 14,244 | 7 / 1,548 | 20.6% vs 10.9% | 87.5% vs 39.6% (n = 8 ranked Iranian works) | 0.45% | 0.24% |
+
+* Iran sits more in Q1 than the world on every bucket, and less in unranked venues (ai: 32% of Iran's journal works are
+  `not_ranked` vs 55% worldwide; Q1+Q2 = 85% vs 75% of ranked works). 30% of Iranian ai works are in repositories or have no source
+  (preprints, no source) vs 37% worldwide.
+* Iran's top venues (ai): Scientific Reports (25), BMC Medical Education (24), Assessment and Practice in Educational
+  Sciences (17, not ranked), J Education and Health Promotion (14, Q2), European J Education (11), Health Science Reports (11),
+  IEEE Access (11). World: Springer proceedings series (Lecture Notes in Networks and Systems 1,919, LNCS 1,602, CCIS 1,155),
+  then Scientific Reports, Frontiers in Education, IEEE Access, Frontiers in Psychology. Per-year series and top-15 lists for
+  both scopes are in the JSON.
+* Iranian counts are tiny in absolute terms and per-year shares are noisy (its bucket: 34 works in 12 years; do not read
+  trends there).
+
+### Proven vs inferred
+* **Proven (computed from the files above):** the counts, classes and shares, given the keyword filters, the SJR 2025 file
+  and the OpenAlex state on 2026-10-02. `--test` checks the quartile logic, window splitting and the build on a fixture.
+* **Inferred / not checked:** that the buckets measure AI-in-education (keyword matching is noisy: medical education, EFL and
+  non-education ML are inside `ai`); that quartile reflects paper quality (Iranian Q1 output is concentrated in mega-journals
+  such as Scientific Reports, BMC Medical Education and IEEE Access; the venue's quartile is not the paper's quality); that a
+  Q1 share higher than the world's means "better" research rather than a different venue mix.
+* **Known losses:** about 1.1% of `ai` world works (2,448 of ~220k) and 0.4% of `llm` world works fall on days with more than
+  200 sources even after partitioning (mostly 1 Jan and month-end dates) and are not counted; Iran is unaffected. OpenAlex
+  under-indexes Persian-language journals, so Iranian counts are for the English-language record.
+* **Quartile caveats:** SJR quartile is per subject category; the best quartile is used, which inflates Q1 for both scopes. One
+  SJR edition (2025) is applied to all publication years. The ISSN join is exact only: journals missing from SJR, or without
+  ISSN, are `not_ranked` (not low quality). Clarivate JCR is paywalled and not used; Iran's ISC ranking is not included.
+* 2026 is a partial year (to 2026-10-02).

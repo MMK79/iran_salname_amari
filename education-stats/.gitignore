@@ -9,3 +9,4 @@ data/out/
 .pytest_cache/
 .gstack/
 external/research/cache/
+external/research/scimago/

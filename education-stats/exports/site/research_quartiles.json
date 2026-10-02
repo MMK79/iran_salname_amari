@@ -1,0 +1,3029 @@
+{
+ "meta": {
+  "as_of": "2026-10-02",
+  "years": [
+   2015,
+   2026
+  ],
+  "partial_year": "2026 to 2026-10-02",
+  "sources": {
+   "works": "OpenAlex /works group_by primary_location.source.id (title_and_abstract.search; leaf date windows, exact)",
+   "journal_rank": "SCImago SJR 2025 (scimagojr_2025.csv, manual download from scimagojr.com; best quartile across subject categories; one edition applied to all publication years)",
+   "not_used": "Clarivate JCR (paywalled); Iran ISC journal ranking (not included)"
+  },
+  "classes": [
+   "Q1",
+   "Q2",
+   "Q3",
+   "Q4",
+   "not_ranked",
+   "conference",
+   "repository",
+   "other",
+   "unknown"
+  ],
+  "class_notes": {
+   "not_ranked": "OpenAlex journal/book series with no SJR match (by ISSN)",
+   "conference": "OpenAlex source type conference",
+   "repository": "OpenAlex source type repository (arXiv, SSRN, ResearchGate, Zenodo ...)",
+   "other": "ebook platform, metadata, other",
+   "unknown": "work without a primary source"
+  },
+  "queries": {
+   "ai": "(\"artificial intelligence\" OR \"machine learning\" OR \"deep learning\") AND (education OR student OR students OR teaching OR \"e-learning\")",
+   "llm": "(ChatGPT OR \"large language model\" OR \"large language models\" OR \"generative AI\" OR \"generative artificial intelligence\" OR LLM OR LLMs) AND (education OR student OR students OR teacher OR teachers OR teaching)",
+   "its": "(\"intelligent tutoring\" OR \"intelligent tutor\" OR \"knowledge tracing\" OR (\"knowledge graph\" AND (education OR learners OR course OR curriculum)))"
+  },
+  "scopes": {
+   "iran": "authorships.institutions.country_code:IR (>= 1 Iranian affiliation)",
+   "world": "no country filter (includes Iran)"
+  },
+  "caveats": [
+   "OpenAlex under-indexes Persian-language journals (and does not index IranDoc theses): Iranian counts are a lower bound for the Persian-language record and cover mostly English-language output.",
+   "Topic matching is keyword based (title_and_abstract.search, stemmed): the broad AI/ML bucket includes medical education, EFL and non-education ML; counts are upper bounds of genuine AI-in-education work.",
+   "Iran = works with at least one author affiliation in Iran (co-authored works count); Iran is a subset of world.",
+   "SJR quartile is defined per subject category; the best quartile across a journal's categories is used (a journal is Q1 if it is Q1 in any category), which inflates Q1 relative to a single-category ranking.",
+   "A single SJR edition is applied to all publication years; journal quartiles change over time and journals discontinued or renamed before the edition may show as not_ranked.",
+   "Match to SJR is by ISSN only; journals without ISSN or not in Scopus/SJR are not_ranked (not a judgement of quality). Clarivate JCR is paywalled and not used; Iran's ISC ranking is not included.",
+   "2026 is a partial year (to the as_of date) and the newest works are not yet fully indexed.",
+   "SJR file = the scimagojr.com 'Download data' export saved by hand (the site blocks scripted downloads); SCImago's data, gitignored, not redistributed here."
+  ]
+ },
+ "buckets": {
+  "ai": {
+   "label": "AI/ML + education (broad, noisy)",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "iran": {
+    "Q1": [
+     0,
+     3,
+     0,
+     2,
+     6,
+     15,
+     19,
+     26,
+     28,
+     58,
+     142,
+     106
+    ],
+    "Q2": [
+     2,
+     0,
+     2,
+     0,
+     2,
+     5,
+     9,
+     5,
+     14,
+     22,
+     39,
+     35
+    ],
+    "Q3": [
+     0,
+     1,
+     3,
+     0,
+     1,
+     1,
+     3,
+     1,
+     2,
+     9,
+     17,
+     16
+    ],
+    "Q4": [
+     0,
+     0,
+     1,
+     1,
+     4,
+     1,
+     3,
+     1,
+     4,
+     7,
+     7,
+     10
+    ],
+    "not_ranked": [
+     3,
+     2,
+     2,
+     6,
+     5,
+     3,
+     7,
+     10,
+     19,
+     58,
+     119,
+     68
+    ],
+    "conference": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     1,
+     0,
+     1,
+     0,
+     0
+    ],
+    "repository": [
+     4,
+     3,
+     5,
+     2,
+     3,
+     7,
+     17,
+     10,
+     19,
+     26,
+     87,
+     123
+    ],
+    "other": [
+     0,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1,
+     2,
+     1,
+     5
+    ],
+    "unknown": [
+     2,
+     1,
+     0,
+     4,
+     3,
+     4,
+     6,
+     5,
+     11,
+     26,
+     24,
+     21
+    ],
+    "total": [
+     11,
+     10,
+     14,
+     15,
+     24,
+     38,
+     65,
+     59,
+     98,
+     209,
+     436,
+     384
+    ]
+   },
+   "world": {
+    "Q1": [
+     119,
+     214,
+     242,
+     404,
+     731,
+     1088,
+     1399,
+     1962,
+     3171,
+     4919,
+     7875,
+     8731
+    ],
+    "Q2": [
+     85,
+     84,
+     139,
+     223,
+     335,
+     507,
+     711,
+     944,
+     1396,
+     2181,
+     3377,
+     3752
+    ],
+    "Q3": [
+     36,
+     40,
+     71,
+     83,
+     147,
+     312,
+     320,
+     404,
+     571,
+     978,
+     1638,
+     1977
+    ],
+    "Q4": [
+     32,
+     45,
+     73,
+     106,
+     134,
+     244,
+     459,
+     591,
+     778,
+     1442,
+     2202,
+     2311
+    ],
+    "not_ranked": [
+     227,
+     271,
+     402,
+     645,
+     1156,
+     1761,
+     2466,
+     2906,
+     5387,
+     11890,
+     22721,
+     22838
+    ],
+    "conference": [
+     32,
+     31,
+     37,
+     97,
+     155,
+     272,
+     552,
+     801,
+     179,
+     187,
+     171,
+     178
+    ],
+    "repository": [
+     200,
+     288,
+     387,
+     552,
+     728,
+     1119,
+     1101,
+     1129,
+     1995,
+     2629,
+     9011,
+     24629
+    ],
+    "other": [
+     24,
+     64,
+     76,
+     79,
+     145,
+     255,
+     182,
+     394,
+     430,
+     500,
+     622,
+     751
+    ],
+    "unknown": [
+     296,
+     340,
+     510,
+     756,
+     1086,
+     1722,
+     1785,
+     1714,
+     4011,
+     6709,
+     10897,
+     7971
+    ],
+    "total": [
+     1051,
+     1377,
+     1937,
+     2945,
+     4617,
+     7280,
+     8975,
+     10845,
+     17918,
+     31435,
+     58514,
+     73138
+    ]
+   },
+   "iran_share_pct": {
+    "Q1": [
+     0.0,
+     1.4,
+     0.0,
+     0.5,
+     0.82,
+     1.38,
+     1.36,
+     1.33,
+     0.88,
+     1.18,
+     1.8,
+     1.21
+    ],
+    "Q2": [
+     2.35,
+     0.0,
+     1.44,
+     0.0,
+     0.6,
+     0.99,
+     1.27,
+     0.53,
+     1.0,
+     1.01,
+     1.15,
+     0.93
+    ],
+    "Q3": [
+     0.0,
+     2.5,
+     4.23,
+     0.0,
+     0.68,
+     0.32,
+     0.94,
+     0.25,
+     0.35,
+     0.92,
+     1.04,
+     0.81
+    ],
+    "Q4": [
+     0.0,
+     0.0,
+     1.37,
+     0.94,
+     2.99,
+     0.41,
+     0.65,
+     0.17,
+     0.51,
+     0.49,
+     0.32,
+     0.43
+    ],
+    "not_ranked": [
+     1.32,
+     0.74,
+     0.5,
+     0.93,
+     0.43,
+     0.17,
+     0.28,
+     0.34,
+     0.35,
+     0.49,
+     0.52,
+     0.3
+    ],
+    "conference": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.37,
+     0.18,
+     0.12,
+     0.0,
+     0.53,
+     0.0,
+     0.0
+    ],
+    "repository": [
+     2.0,
+     1.04,
+     1.29,
+     0.36,
+     0.41,
+     0.63,
+     1.54,
+     0.89,
+     0.95,
+     0.99,
+     0.97,
+     0.5
+    ],
+    "other": [
+     0.0,
+     0.0,
+     1.32,
+     0.0,
+     0.0,
+     0.39,
+     0.0,
+     0.0,
+     0.23,
+     0.4,
+     0.16,
+     0.67
+    ],
+    "unknown": [
+     0.68,
+     0.29,
+     0.0,
+     0.53,
+     0.28,
+     0.23,
+     0.34,
+     0.29,
+     0.27,
+     0.39,
+     0.22,
+     0.26
+    ],
+    "total": [
+     1.05,
+     0.73,
+     0.72,
+     0.51,
+     0.52,
+     0.52,
+     0.72,
+     0.54,
+     0.55,
+     0.66,
+     0.75,
+     0.53
+    ]
+   },
+   "totals": {
+    "iran": {
+     "Q1": 405,
+     "Q2": 135,
+     "Q3": 54,
+     "Q4": 39,
+     "not_ranked": 302,
+     "conference": 4,
+     "repository": 306,
+     "other": 11,
+     "unknown": 107,
+     "total": 1363
+    },
+    "world": {
+     "Q1": 30855,
+     "Q2": 13734,
+     "Q3": 6577,
+     "Q4": 8417,
+     "not_ranked": 72670,
+     "conference": 2692,
+     "repository": 43768,
+     "other": 3522,
+     "unknown": 37797,
+     "total": 220032
+    },
+    "iran_share_pct": {
+     "Q1": 1.31,
+     "Q2": 0.98,
+     "Q3": 0.82,
+     "Q4": 0.46,
+     "not_ranked": 0.42,
+     "conference": 0.15,
+     "repository": 0.7,
+     "other": 0.31,
+     "unknown": 0.28,
+     "total": 0.62
+    }
+   },
+   "top_journals_iran": [
+    {
+     "source_id": "S196734849",
+     "name": "Scientific Reports",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.893,
+     "h_index": 382,
+     "issn": "2045-2322",
+     "works": 25,
+     "by_year": {
+      "2020": 1,
+      "2021": 1,
+      "2022": 1,
+      "2023": 1,
+      "2024": 2,
+      "2025": 11,
+      "2026": 8
+     }
+    },
+    {
+     "source_id": "S144187503",
+     "name": "BMC Medical Education",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 1.065,
+     "h_index": 120,
+     "issn": "1472-6920",
+     "works": 24,
+     "by_year": {
+      "2023": 2,
+      "2024": 1,
+      "2025": 11,
+      "2026": 10
+     }
+    },
+    {
+     "source_id": "S5407054088",
+     "name": "Assessment and Practice in Educational Sciences",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "3092-717X",
+     "works": 17,
+     "by_year": {
+      "2025": 5,
+      "2026": 12
+     }
+    },
+    {
+     "source_id": "S2764854573",
+     "name": "Journal of Education and Health Promotion",
+     "type": "journal",
+     "class": "Q2",
+     "sjr": 0.517,
+     "h_index": 38,
+     "issn": "2277-9531",
+     "works": 14,
+     "by_year": {
+      "2021": 1,
+      "2022": 1,
+      "2023": 2,
+      "2024": 2,
+      "2025": 4,
+      "2026": 4
+     }
+    },
+    {
+     "source_id": "S71191459",
+     "name": "European Journal of Education",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 1.285,
+     "h_index": 72,
+     "issn": "0141-8211",
+     "works": 11,
+     "by_year": {
+      "2024": 2,
+      "2025": 6,
+      "2026": 3
+     }
+    },
+    {
+     "source_id": "S4210188016",
+     "name": "Health Science Reports",
+     "type": "journal",
+     "class": "Q2",
+     "sjr": 0.677,
+     "h_index": 32,
+     "issn": "2398-8835",
+     "works": 11,
+     "by_year": {
+      "2023": 2,
+      "2024": 2,
+      "2025": 4,
+      "2026": 3
+     }
+    },
+    {
+     "source_id": "S2485537415",
+     "name": "IEEE Access",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.884,
+     "h_index": 338,
+     "issn": "2169-3536",
+     "works": 11,
+     "by_year": {
+      "2020": 3,
+      "2021": 1,
+      "2022": 1,
+      "2023": 1,
+      "2025": 3,
+      "2026": 2
+     }
+    },
+    {
+     "source_id": "S7407067703",
+     "name": "AI and Tech in Behavioral and Social Sciences",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "3041-9433",
+     "works": 8,
+     "by_year": {
+      "2023": 1,
+      "2024": 1,
+      "2025": 5,
+      "2026": 1
+     }
+    },
+    {
+     "source_id": "S90466346",
+     "name": "Interactive Learning Environments",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 2.24,
+     "h_index": 93,
+     "issn": "1049-4820",
+     "works": 8,
+     "by_year": {
+      "2022": 2,
+      "2023": 2,
+      "2025": 1,
+      "2026": 3
+     }
+    },
+    {
+     "source_id": "S4387280196",
+     "name": "Discover Education",
+     "type": "journal",
+     "class": "Q2",
+     "sjr": 0.559,
+     "h_index": 19,
+     "issn": "2731-5525",
+     "works": 7,
+     "by_year": {
+      "2025": 2,
+      "2026": 5
+     }
+    },
+    {
+     "source_id": "S4210220229",
+     "name": "Journal of Medical Education and Development",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2251-7065",
+     "works": 7,
+     "by_year": {
+      "2024": 1,
+      "2025": 2,
+      "2026": 4
+     }
+    },
+    {
+     "source_id": "S7407063988",
+     "name": "Management Education and Development in Digital Age",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "3092-6645",
+     "works": 7,
+     "by_year": {
+      "2024": 1,
+      "2025": 6
+     }
+    },
+    {
+     "source_id": "S5407016528",
+     "name": "Strategic Management of Organizational Knowledge",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2645-4262",
+     "works": 7,
+     "by_year": {
+      "2023": 1,
+      "2024": 1,
+      "2025": 3,
+      "2026": 2
+     }
+    },
+    {
+     "source_id": "S107516304",
+     "name": "BMC Medical Informatics and Decision Making",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 1.224,
+     "h_index": 117,
+     "issn": "1472-6947",
+     "works": 6,
+     "by_year": {
+      "2022": 1,
+      "2024": 1,
+      "2025": 3,
+      "2026": 1
+     }
+    },
+    {
+     "source_id": "S166722454",
+     "name": "Education and Information Technologies",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 2.131,
+     "h_index": 121,
+     "issn": "1360-2357",
+     "works": 6,
+     "by_year": {
+      "2022": 1,
+      "2023": 2,
+      "2024": 2,
+      "2025": 1
+     }
+    }
+   ],
+   "top_journals_world": [
+    {
+     "source_id": "S4210169156",
+     "name": "Lecture notes in networks and systems",
+     "type": "book series",
+     "class": "Q4",
+     "sjr": 0.165,
+     "h_index": 57,
+     "issn": "2367-3370",
+     "works": 1919,
+     "by_year": {
+      "2017": 7,
+      "2018": 4,
+      "2019": 4,
+      "2020": 14,
+      "2021": 92,
+      "2022": 152,
+      "2023": 175,
+      "2024": 356,
+      "2025": 488,
+      "2026": 627
+     }
+    },
+    {
+     "source_id": "S106296714",
+     "name": "Lecture notes in computer science",
+     "type": "book series",
+     "class": "Q2",
+     "sjr": 0.393,
+     "h_index": 535,
+     "issn": "0302-9743",
+     "works": 1602,
+     "by_year": {
+      "2015": 27,
+      "2016": 19,
+      "2017": 30,
+      "2018": 59,
+      "2019": 89,
+      "2020": 115,
+      "2021": 127,
+      "2022": 142,
+      "2023": 160,
+      "2024": 231,
+      "2025": 322,
+      "2026": 281
+     }
+    },
+    {
+     "source_id": "S4210180746",
+     "name": "Advances in computational intelligence and robotics book series",
+     "type": "book series",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2327-0411",
+     "works": 1507,
+     "by_year": {
+      "2015": 4,
+      "2016": 3,
+      "2018": 1,
+      "2020": 5,
+      "2021": 3,
+      "2022": 10,
+      "2023": 9,
+      "2024": 63,
+      "2025": 653,
+      "2026": 756
+     }
+    },
+    {
+     "source_id": "S2764900261",
+     "name": "Communications in computer and information science",
+     "type": "book series",
+     "class": "Q4",
+     "sjr": 0.181,
+     "h_index": 82,
+     "issn": "1865-0929",
+     "works": 1155,
+     "by_year": {
+      "2015": 2,
+      "2016": 6,
+      "2017": 8,
+      "2018": 18,
+      "2019": 35,
+      "2020": 44,
+      "2021": 44,
+      "2022": 59,
+      "2023": 106,
+      "2024": 200,
+      "2025": 347,
+      "2026": 286
+     }
+    },
+    {
+     "source_id": "S196734849",
+     "name": "Scientific Reports",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.893,
+     "h_index": 382,
+     "issn": "2045-2322",
+     "works": 671,
+     "by_year": {
+      "2019": 3,
+      "2020": 11,
+      "2021": 21,
+      "2022": 24,
+      "2023": 27,
+      "2024": 89,
+      "2025": 236,
+      "2026": 260
+     }
+    },
+    {
+     "source_id": "S2596526815",
+     "name": "Frontiers in Education",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.744,
+     "h_index": 65,
+     "issn": "2504-284X",
+     "works": 625,
+     "by_year": {
+      "2019": 3,
+      "2020": 7,
+      "2021": 3,
+      "2022": 19,
+      "2023": 20,
+      "2024": 59,
+      "2025": 178,
+      "2026": 336
+     }
+    },
+    {
+     "source_id": "S2485537415",
+     "name": "IEEE Access",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.884,
+     "h_index": 338,
+     "issn": "2169-3536",
+     "works": 610,
+     "by_year": {
+      "2015": 1,
+      "2017": 3,
+      "2018": 12,
+      "2019": 21,
+      "2020": 42,
+      "2021": 56,
+      "2022": 37,
+      "2023": 76,
+      "2024": 128,
+      "2025": 158,
+      "2026": 76
+     }
+    },
+    {
+     "source_id": "S9692511",
+     "name": "Frontiers in Psychology",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.941,
+     "h_index": 241,
+     "issn": "1664-1078",
+     "works": 607,
+     "by_year": {
+      "2016": 1,
+      "2017": 1,
+      "2018": 2,
+      "2019": 6,
+      "2020": 12,
+      "2021": 32,
+      "2022": 102,
+      "2023": 24,
+      "2024": 26,
+      "2025": 74,
+      "2026": 327
+     }
+    },
+    {
+     "source_id": "S166722454",
+     "name": "Education and Information Technologies",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 2.131,
+     "h_index": 121,
+     "issn": "1360-2357",
+     "works": 592,
+     "by_year": {
+      "2018": 3,
+      "2019": 8,
+      "2020": 14,
+      "2021": 14,
+      "2022": 58,
+      "2023": 88,
+      "2024": 144,
+      "2025": 170,
+      "2026": 93
+     }
+    },
+    {
+     "source_id": "S4210198394",
+     "name": "International Journal of Research and Innovation in Social Science",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2454-6186",
+     "works": 563,
+     "by_year": {
+      "2023": 4,
+      "2024": 31,
+      "2025": 192,
+      "2026": 336
+     }
+    },
+    {
+     "source_id": "S2764566388",
+     "name": "International Journal for Research in Applied Science and Engineering Technology",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2321-9653",
+     "works": 541,
+     "by_year": {
+      "2017": 1,
+      "2018": 7,
+      "2019": 11,
+      "2020": 12,
+      "2021": 21,
+      "2022": 33,
+      "2023": 62,
+      "2024": 78,
+      "2025": 145,
+      "2026": 171
+     }
+    },
+    {
+     "source_id": "S2738008561",
+     "name": "Education Sciences",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.878,
+     "h_index": 85,
+     "issn": "2227-7102",
+     "works": 540,
+     "by_year": {
+      "2016": 1,
+      "2017": 1,
+      "2018": 3,
+      "2019": 10,
+      "2020": 4,
+      "2021": 16,
+      "2022": 15,
+      "2023": 46,
+      "2024": 63,
+      "2025": 157,
+      "2026": 224
+     }
+    },
+    {
+     "source_id": "S4210209777",
+     "name": "Applied Mathematics and Nonlinear Sciences",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2444-8656",
+     "works": 507,
+     "by_year": {
+      "2021": 1,
+      "2022": 3,
+      "2023": 144,
+      "2024": 279,
+      "2025": 80
+     }
+    },
+    {
+     "source_id": "S4210179225",
+     "name": "Advances in educational technologies and instructional design book series",
+     "type": "book series",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2326-8905",
+     "works": 505,
+     "by_year": {
+      "2015": 2,
+      "2016": 4,
+      "2017": 6,
+      "2018": 8,
+      "2019": 21,
+      "2020": 23,
+      "2021": 20,
+      "2022": 15,
+      "2023": 62,
+      "2024": 290,
+      "2025": 54
+     }
+    },
+    {
+     "source_id": "S4210240841",
+     "name": "INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2582-3930",
+     "works": 501,
+     "by_year": {
+      "2021": 1,
+      "2022": 10,
+      "2023": 32,
+      "2024": 115,
+      "2025": 213,
+      "2026": 130
+     }
+    }
+   ]
+  },
+  "llm": {
+   "label": "LLM / ChatGPT / generative AI + education",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "iran": {
+    "Q1": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     3,
+     20,
+     45,
+     44
+    ],
+    "Q2": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     3,
+     3,
+     8,
+     12
+    ],
+    "Q3": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     3
+    ],
+    "Q4": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     2,
+     0,
+     2
+    ],
+    "not_ranked": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     4,
+     8,
+     29,
+     21
+    ],
+    "conference": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "repository": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     8,
+     12,
+     17,
+     58
+    ],
+    "other": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "unknown": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     6,
+     14,
+     7
+    ],
+    "total": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     21,
+     51,
+     114,
+     147
+    ]
+   },
+   "world": {
+    "Q1": [
+     2,
+     4,
+     2,
+     4,
+     2,
+     9,
+     12,
+     15,
+     891,
+     2475,
+     4443,
+     5647
+    ],
+    "Q2": [
+     3,
+     0,
+     2,
+     1,
+     2,
+     2,
+     3,
+     6,
+     350,
+     1054,
+     1938,
+     2384
+    ],
+    "Q3": [
+     0,
+     1,
+     2,
+     2,
+     2,
+     0,
+     1,
+     2,
+     136,
+     354,
+     572,
+     807
+    ],
+    "Q4": [
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     0,
+     5,
+     100,
+     442,
+     785,
+     1098
+    ],
+    "not_ranked": [
+     4,
+     27,
+     4,
+     5,
+     8,
+     9,
+     18,
+     25,
+     1169,
+     3435,
+     6974,
+     8269
+    ],
+    "conference": [
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     5,
+     23,
+     99,
+     142,
+     214
+    ],
+    "repository": [
+     7,
+     7,
+     8,
+     4,
+     10,
+     12,
+     19,
+     42,
+     1111,
+     1972,
+     5258,
+     13921
+    ],
+    "other": [
+     1,
+     4,
+     0,
+     11,
+     3,
+     13,
+     0,
+     1,
+     47,
+     71,
+     155,
+     199
+    ],
+    "unknown": [
+     8,
+     29,
+     11,
+     17,
+     9,
+     15,
+     8,
+     28,
+     908,
+     2804,
+     5202,
+     4659
+    ],
+    "total": [
+     25,
+     73,
+     30,
+     44,
+     37,
+     60,
+     62,
+     129,
+     4735,
+     12706,
+     25469,
+     37198
+    ]
+   },
+   "iran_share_pct": {
+    "Q1": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.34,
+     0.81,
+     1.01,
+     0.78
+    ],
+    "Q2": [
+     0.0,
+     null,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.86,
+     0.28,
+     0.41,
+     0.5
+    ],
+    "Q3": [
+     null,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null,
+     0.0,
+     0.0,
+     0.74,
+     0.0,
+     0.17,
+     0.37
+    ],
+    "Q4": [
+     null,
+     0.0,
+     null,
+     null,
+     0.0,
+     null,
+     null,
+     0.0,
+     1.0,
+     0.45,
+     0.0,
+     0.18
+    ],
+    "not_ranked": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.34,
+     0.23,
+     0.42,
+     0.25
+    ],
+    "conference": [
+     null,
+     null,
+     0.0,
+     null,
+     null,
+     null,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "repository": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.72,
+     0.61,
+     0.32,
+     0.42
+    ],
+    "other": [
+     0.0,
+     0.0,
+     null,
+     0.0,
+     0.0,
+     0.0,
+     null,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "unknown": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.11,
+     0.21,
+     0.27,
+     0.15
+    ],
+    "total": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.44,
+     0.4,
+     0.45,
+     0.4
+    ]
+   },
+   "totals": {
+    "iran": {
+     "Q1": 112,
+     "Q2": 26,
+     "Q3": 5,
+     "Q4": 5,
+     "not_ranked": 62,
+     "conference": 0,
+     "repository": 95,
+     "other": 0,
+     "unknown": 28,
+     "total": 333
+    },
+    "world": {
+     "Q1": 13506,
+     "Q2": 5745,
+     "Q3": 1879,
+     "Q4": 2432,
+     "not_ranked": 19947,
+     "conference": 485,
+     "repository": 22371,
+     "other": 505,
+     "unknown": 13698,
+     "total": 80568
+    },
+    "iran_share_pct": {
+     "Q1": 0.83,
+     "Q2": 0.45,
+     "Q3": 0.27,
+     "Q4": 0.21,
+     "not_ranked": 0.31,
+     "conference": 0.0,
+     "repository": 0.42,
+     "other": 0.0,
+     "unknown": 0.2,
+     "total": 0.41
+    }
+   },
+   "top_journals_iran": [
+    {
+     "source_id": "S196734849",
+     "name": "Scientific Reports",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.893,
+     "h_index": 382,
+     "issn": "2045-2322",
+     "works": 15,
+     "by_year": {
+      "2024": 2,
+      "2025": 7,
+      "2026": 6
+     }
+    },
+    {
+     "source_id": "S4210188016",
+     "name": "Health Science Reports",
+     "type": "journal",
+     "class": "Q2",
+     "sjr": 0.677,
+     "h_index": 32,
+     "issn": "2398-8835",
+     "works": 6,
+     "by_year": {
+      "2024": 1,
+      "2025": 1,
+      "2026": 4
+     }
+    },
+    {
+     "source_id": "S4210180746",
+     "name": "Advances in computational intelligence and robotics book series",
+     "type": "book series",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2327-0411",
+     "works": 4,
+     "by_year": {
+      "2025": 1,
+      "2026": 3
+     }
+    },
+    {
+     "source_id": "S4210198611",
+     "name": "Computers in Human Behavior Reports",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 1.436,
+     "h_index": 43,
+     "issn": "2451-9588",
+     "works": 4,
+     "by_year": {
+      "2024": 2,
+      "2026": 2
+     }
+    },
+    {
+     "source_id": "S4210220416",
+     "name": "Discover Artificial Intelligence",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 1.184,
+     "h_index": 27,
+     "issn": "2731-0809",
+     "works": 4,
+     "by_year": {
+      "2025": 1,
+      "2026": 3
+     }
+    },
+    {
+     "source_id": "S4210196789",
+     "name": "Technology in Language Teaching & Learning",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.725,
+     "h_index": 8,
+     "issn": "2652-1687",
+     "works": 4,
+     "by_year": {
+      "2025": 3,
+      "2026": 1
+     }
+    },
+    {
+     "source_id": "S5407054088",
+     "name": "Assessment and Practice in Educational Sciences",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "3092-717X",
+     "works": 3,
+     "by_year": {
+      "2025": 1,
+      "2026": 2
+     }
+    },
+    {
+     "source_id": "S4387280196",
+     "name": "Discover Education",
+     "type": "journal",
+     "class": "Q2",
+     "sjr": 0.559,
+     "h_index": 19,
+     "issn": "2731-5525",
+     "works": 3,
+     "by_year": {
+      "2025": 1,
+      "2026": 2
+     }
+    },
+    {
+     "source_id": "S12098962",
+     "name": "Obesity Surgery",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 1.058,
+     "h_index": 169,
+     "issn": "0960-8923",
+     "works": 3,
+     "by_year": {
+      "2024": 1,
+      "2026": 2
+     }
+    },
+    {
+     "source_id": "S130873806",
+     "name": "System",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 2.45,
+     "h_index": 125,
+     "issn": "0346-251X",
+     "works": 3,
+     "by_year": {
+      "2023": 1,
+      "2025": 1,
+      "2026": 1
+     }
+    },
+    {
+     "source_id": "S7407067703",
+     "name": "AI and Tech in Behavioral and Social Sciences",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "3041-9433",
+     "works": 2,
+     "by_year": {
+      "2024": 1,
+      "2025": 1
+     }
+    },
+    {
+     "source_id": "S4210179225",
+     "name": "Advances in educational technologies and instructional design book series",
+     "type": "book series",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2326-8905",
+     "works": 2,
+     "by_year": {
+      "2023": 1,
+      "2024": 1
+     }
+    },
+    {
+     "source_id": "S183798913",
+     "name": "Applied Linguistics",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 2.207,
+     "h_index": 138,
+     "issn": "0142-6001",
+     "works": 2,
+     "by_year": {
+      "2025": 1,
+      "2026": 1
+     }
+    },
+    {
+     "source_id": "S122814990",
+     "name": "Artificial Intelligence Review",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 3.638,
+     "h_index": 169,
+     "issn": "0269-2821",
+     "works": 2,
+     "by_year": {
+      "2025": 2
+     }
+    },
+    {
+     "source_id": "S107516304",
+     "name": "BMC Medical Informatics and Decision Making",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 1.224,
+     "h_index": 117,
+     "issn": "1472-6947",
+     "works": 2,
+     "by_year": {
+      "2025": 2
+     }
+    }
+   ],
+   "top_journals_world": [
+    {
+     "source_id": "S106296714",
+     "name": "Lecture notes in computer science",
+     "type": "book series",
+     "class": "Q2",
+     "sjr": 0.393,
+     "h_index": 535,
+     "issn": "0302-9743",
+     "works": 1058,
+     "by_year": {
+      "2022": 1,
+      "2023": 38,
+      "2024": 167,
+      "2025": 369,
+      "2026": 483
+     }
+    },
+    {
+     "source_id": "S2764900261",
+     "name": "Communications in computer and information science",
+     "type": "book series",
+     "class": "Q4",
+     "sjr": 0.181,
+     "h_index": 82,
+     "issn": "1865-0929",
+     "works": 630,
+     "by_year": {
+      "2023": 19,
+      "2024": 85,
+      "2025": 234,
+      "2026": 292
+     }
+    },
+    {
+     "source_id": "S4210169156",
+     "name": "Lecture notes in networks and systems",
+     "type": "book series",
+     "class": "Q4",
+     "sjr": 0.165,
+     "h_index": 57,
+     "issn": "2367-3370",
+     "works": 469,
+     "by_year": {
+      "2023": 5,
+      "2024": 96,
+      "2025": 135,
+      "2026": 233
+     }
+    },
+    {
+     "source_id": "S4210180746",
+     "name": "Advances in computational intelligence and robotics book series",
+     "type": "book series",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2327-0411",
+     "works": 440,
+     "by_year": {
+      "2023": 3,
+      "2024": 22,
+      "2025": 167,
+      "2026": 248
+     }
+    },
+    {
+     "source_id": "S2596526815",
+     "name": "Frontiers in Education",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.744,
+     "h_index": 65,
+     "issn": "2504-284X",
+     "works": 353,
+     "by_year": {
+      "2023": 7,
+      "2024": 37,
+      "2025": 93,
+      "2026": 216
+     }
+    },
+    {
+     "source_id": "S2738008561",
+     "name": "Education Sciences",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.878,
+     "h_index": 85,
+     "issn": "2227-7102",
+     "works": 349,
+     "by_year": {
+      "2023": 17,
+      "2024": 46,
+      "2025": 123,
+      "2026": 163
+     }
+    },
+    {
+     "source_id": "S166722454",
+     "name": "Education and Information Technologies",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 2.131,
+     "h_index": 121,
+     "issn": "1360-2357",
+     "works": 308,
+     "by_year": {
+      "2021": 1,
+      "2023": 13,
+      "2024": 79,
+      "2025": 137,
+      "2026": 78
+     }
+    },
+    {
+     "source_id": "S2738950867",
+     "name": "Cureus",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2168-8184",
+     "works": 267,
+     "by_year": {
+      "2023": 39,
+      "2024": 69,
+      "2025": 103,
+      "2026": 56
+     }
+    },
+    {
+     "source_id": "S4210183364",
+     "name": "Computers and Education Artificial Intelligence",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 7.083,
+     "h_index": 86,
+     "issn": "2666-920X",
+     "works": 260,
+     "by_year": {
+      "2021": 1,
+      "2023": 19,
+      "2024": 86,
+      "2025": 78,
+      "2026": 76
+     }
+    },
+    {
+     "source_id": "S9692511",
+     "name": "Frontiers in Psychology",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.941,
+     "h_index": 241,
+     "issn": "1664-1078",
+     "works": 228,
+     "by_year": {
+      "2020": 1,
+      "2022": 1,
+      "2023": 4,
+      "2024": 7,
+      "2025": 28,
+      "2026": 187
+     }
+    },
+    {
+     "source_id": "S196734849",
+     "name": "Scientific Reports",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.893,
+     "h_index": 382,
+     "issn": "2045-2322",
+     "works": 218,
+     "by_year": {
+      "2023": 9,
+      "2024": 24,
+      "2025": 63,
+      "2026": 122
+     }
+    },
+    {
+     "source_id": "S4210198394",
+     "name": "International Journal of Research and Innovation in Social Science",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2454-6186",
+     "works": 212,
+     "by_year": {
+      "2023": 1,
+      "2024": 3,
+      "2025": 64,
+      "2026": 144
+     }
+    },
+    {
+     "source_id": "S144187503",
+     "name": "BMC Medical Education",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 1.065,
+     "h_index": 120,
+     "issn": "1472-6920",
+     "works": 201,
+     "by_year": {
+      "2024": 18,
+      "2025": 89,
+      "2026": 94
+     }
+    },
+    {
+     "source_id": "S4210191458",
+     "name": "Proceedings of the AAAI Conference on Artificial Intelligence",
+     "type": "conference",
+     "class": "conference",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2159-5399",
+     "works": 195,
+     "by_year": {
+      "2021": 1,
+      "2022": 1,
+      "2023": 5,
+      "2024": 35,
+      "2025": 55,
+      "2026": 98
+     }
+    },
+    {
+     "source_id": "S90466346",
+     "name": "Interactive Learning Environments",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 2.24,
+     "h_index": 93,
+     "issn": "1049-4820",
+     "works": 191,
+     "by_year": {
+      "2023": 7,
+      "2024": 28,
+      "2025": 65,
+      "2026": 91
+     }
+    }
+   ]
+  },
+  "its": {
+   "label": "Intelligent tutoring / knowledge tracing / educational knowledge graph",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "iran": {
+    "Q1": [
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     1,
+     0,
+     2,
+     1
+    ],
+    "Q2": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0
+    ],
+    "Q3": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "Q4": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "not_ranked": [
+     2,
+     1,
+     1,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     3,
+     0,
+     1
+    ],
+    "conference": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "repository": [
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     2,
+     6
+    ],
+    "other": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "unknown": [
+     3,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     2,
+     0
+    ],
+    "total": [
+     5,
+     2,
+     2,
+     2,
+     1,
+     0,
+     1,
+     1,
+     1,
+     4,
+     7,
+     8
+    ]
+   },
+   "world": {
+    "Q1": [
+     48,
+     54,
+     44,
+     43,
+     47,
+     68,
+     88,
+     120,
+     155,
+     196,
+     332,
+     353
+    ],
+    "Q2": [
+     65,
+     52,
+     53,
+     89,
+     71,
+     77,
+     102,
+     98,
+     101,
+     132,
+     236,
+     244
+    ],
+    "Q3": [
+     11,
+     8,
+     11,
+     5,
+     13,
+     12,
+     22,
+     19,
+     27,
+     37,
+     55,
+     143
+    ],
+    "Q4": [
+     10,
+     17,
+     10,
+     12,
+     18,
+     27,
+     27,
+     48,
+     75,
+     77,
+     161,
+     194
+    ],
+    "not_ranked": [
+     67,
+     68,
+     56,
+     80,
+     100,
+     82,
+     90,
+     117,
+     174,
+     440,
+     1100,
+     1207
+    ],
+    "conference": [
+     38,
+     14,
+     10,
+     4,
+     24,
+     27,
+     43,
+     81,
+     19,
+     11,
+     16,
+     20
+    ],
+    "repository": [
+     61,
+     52,
+     89,
+     95,
+     63,
+     85,
+     80,
+     87,
+     158,
+     178,
+     528,
+     1688
+    ],
+    "other": [
+     4,
+     5,
+     1,
+     2,
+     3,
+     7,
+     10,
+     10,
+     17,
+     13,
+     11,
+     16
+    ],
+    "unknown": [
+     116,
+     137,
+     125,
+     128,
+     119,
+     196,
+     129,
+     135,
+     255,
+     418,
+     810,
+     618
+    ],
+    "total": [
+     420,
+     407,
+     399,
+     458,
+     458,
+     581,
+     591,
+     715,
+     981,
+     1502,
+     3249,
+     4483
+    ]
+   },
+   "iran_share_pct": {
+    "Q1": [
+     0.0,
+     1.85,
+     0.0,
+     2.33,
+     0.0,
+     0.0,
+     0.0,
+     0.83,
+     0.65,
+     0.0,
+     0.6,
+     0.28
+    ],
+    "Q2": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.42,
+     0.0
+    ],
+    "Q3": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Q4": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "not_ranked": [
+     2.99,
+     1.47,
+     1.79,
+     1.25,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.68,
+     0.0,
+     0.08
+    ],
+    "conference": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "repository": [
+     0.0,
+     0.0,
+     1.12,
+     0.0,
+     1.59,
+     0.0,
+     1.25,
+     0.0,
+     0.0,
+     0.0,
+     0.38,
+     0.36
+    ],
+    "other": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "unknown": [
+     2.59,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.24,
+     0.25,
+     0.0
+    ],
+    "total": [
+     1.19,
+     0.49,
+     0.5,
+     0.44,
+     0.22,
+     0.0,
+     0.17,
+     0.14,
+     0.1,
+     0.27,
+     0.22,
+     0.18
+    ]
+   },
+   "totals": {
+    "iran": {
+     "Q1": 7,
+     "Q2": 1,
+     "Q3": 0,
+     "Q4": 0,
+     "not_ranked": 9,
+     "conference": 0,
+     "repository": 11,
+     "other": 0,
+     "unknown": 6,
+     "total": 34
+    },
+    "world": {
+     "Q1": 1548,
+     "Q2": 1320,
+     "Q3": 363,
+     "Q4": 676,
+     "not_ranked": 3581,
+     "conference": 307,
+     "repository": 3164,
+     "other": 99,
+     "unknown": 3186,
+     "total": 14244
+    },
+    "iran_share_pct": {
+     "Q1": 0.45,
+     "Q2": 0.08,
+     "Q3": 0.0,
+     "Q4": 0.0,
+     "not_ranked": 0.25,
+     "conference": 0.0,
+     "repository": 0.35,
+     "other": 0.0,
+     "unknown": 0.19,
+     "total": 0.24
+    }
+   },
+   "top_journals_iran": [
+    {
+     "source_id": "S2764746358",
+     "name": "Indian Journal of Science and Technology",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "0974-5645",
+     "works": 3,
+     "by_year": {
+      "2015": 2,
+      "2016": 1
+     }
+    },
+    {
+     "source_id": "S4210179225",
+     "name": "Advances in educational technologies and instructional design book series",
+     "type": "book series",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2326-8905",
+     "works": 1,
+     "by_year": {
+      "2024": 1
+     }
+    },
+    {
+     "source_id": "S166722454",
+     "name": "Education and Information Technologies",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 2.131,
+     "h_index": 121,
+     "issn": "1360-2357",
+     "works": 1,
+     "by_year": {
+      "2016": 1
+     }
+    },
+    {
+     "source_id": "S4210237229",
+     "name": "Educational Challenges",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2709-7986",
+     "works": 1,
+     "by_year": {
+      "2024": 1
+     }
+    },
+    {
+     "source_id": "S64516541",
+     "name": "European journal of medical research",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": 78,
+     "issn": "0949-2321",
+     "works": 1,
+     "by_year": {
+      "2026": 1
+     }
+    },
+    {
+     "source_id": "S4404668935",
+     "name": "Forum for education studies.",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "3029-2956",
+     "works": 1,
+     "by_year": {
+      "2024": 1
+     }
+    },
+    {
+     "source_id": "S9692511",
+     "name": "Frontiers in Psychology",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.941,
+     "h_index": 241,
+     "issn": "1664-1078",
+     "works": 1,
+     "by_year": {
+      "2026": 1
+     }
+    },
+    {
+     "source_id": "S2485537415",
+     "name": "IEEE Access",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.884,
+     "h_index": 338,
+     "issn": "2169-3536",
+     "works": 1,
+     "by_year": {
+      "2022": 1
+     }
+    },
+    {
+     "source_id": "S90466346",
+     "name": "Interactive Learning Environments",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 2.24,
+     "h_index": 93,
+     "issn": "1049-4820",
+     "works": 1,
+     "by_year": {
+      "2018": 1
+     }
+    },
+    {
+     "source_id": "S2737327475",
+     "name": "International Journal of Instruction",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "1308-1470",
+     "works": 1,
+     "by_year": {
+      "2018": 1
+     }
+    },
+    {
+     "source_id": "S2486819371",
+     "name": "Journal of Cloud Computing Advances Systems and Applications",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 1.101,
+     "h_index": 58,
+     "issn": "2192-113X",
+     "works": 1,
+     "by_year": {
+      "2025": 1
+     }
+    },
+    {
+     "source_id": "S4210189435",
+     "name": "Journal of Computers in Education",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 1.738,
+     "h_index": 38,
+     "issn": "2197-9987",
+     "works": 1,
+     "by_year": {
+      "2023": 1
+     }
+    },
+    {
+     "source_id": "S4210186663",
+     "name": "Journal of Responsible Technology",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.96,
+     "h_index": 15,
+     "issn": "2666-6596",
+     "works": 1,
+     "by_year": {
+      "2025": 1
+     }
+    },
+    {
+     "source_id": "S4210176815",
+     "name": "Proceedings of the Human Factors and Ergonomics Society Annual Meeting",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": 0.269,
+     "h_index": 65,
+     "issn": "0163-5182",
+     "works": 1,
+     "by_year": {
+      "2017": 1
+     }
+    },
+    {
+     "source_id": "S32326811",
+     "name": "The Journal of Supercomputing",
+     "type": "journal",
+     "class": "Q2",
+     "sjr": 0.729,
+     "h_index": 99,
+     "issn": "0920-8542",
+     "works": 1,
+     "by_year": {
+      "2025": 1
+     }
+    }
+   ],
+   "top_journals_world": [
+    {
+     "source_id": "S106296714",
+     "name": "Lecture notes in computer science",
+     "type": "book series",
+     "class": "Q2",
+     "sjr": 0.393,
+     "h_index": 535,
+     "issn": "0302-9743",
+     "works": 769,
+     "by_year": {
+      "2015": 52,
+      "2016": 39,
+      "2017": 41,
+      "2018": 65,
+      "2019": 55,
+      "2020": 60,
+      "2021": 77,
+      "2022": 62,
+      "2023": 59,
+      "2024": 70,
+      "2025": 102,
+      "2026": 87
+     }
+    },
+    {
+     "source_id": "S2764900261",
+     "name": "Communications in computer and information science",
+     "type": "book series",
+     "class": "Q4",
+     "sjr": 0.181,
+     "h_index": 82,
+     "issn": "1865-0929",
+     "works": 208,
+     "by_year": {
+      "2015": 2,
+      "2016": 3,
+      "2017": 2,
+      "2018": 5,
+      "2019": 8,
+      "2020": 11,
+      "2021": 11,
+      "2022": 10,
+      "2023": 38,
+      "2024": 24,
+      "2025": 51,
+      "2026": 43
+     }
+    },
+    {
+     "source_id": "S4210180746",
+     "name": "Advances in computational intelligence and robotics book series",
+     "type": "book series",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2327-0411",
+     "works": 166,
+     "by_year": {
+      "2018": 1,
+      "2021": 1,
+      "2023": 1,
+      "2024": 1,
+      "2025": 78,
+      "2026": 84
+     }
+    },
+    {
+     "source_id": "S4210169156",
+     "name": "Lecture notes in networks and systems",
+     "type": "book series",
+     "class": "Q4",
+     "sjr": 0.165,
+     "h_index": 57,
+     "issn": "2367-3370",
+     "works": 102,
+     "by_year": {
+      "2018": 1,
+      "2020": 1,
+      "2021": 3,
+      "2022": 8,
+      "2023": 16,
+      "2024": 20,
+      "2025": 18,
+      "2026": 35
+     }
+    },
+    {
+     "source_id": "S171267539",
+     "name": "International Journal of Artificial Intelligence in Education",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 3.207,
+     "h_index": 77,
+     "issn": "1560-4292",
+     "works": 85,
+     "by_year": {
+      "2015": 13,
+      "2016": 12,
+      "2017": 10,
+      "2018": 4,
+      "2019": 2,
+      "2020": 9,
+      "2021": 9,
+      "2022": 8,
+      "2023": 2,
+      "2024": 5,
+      "2025": 9,
+      "2026": 2
+     }
+    },
+    {
+     "source_id": "S2485537415",
+     "name": "IEEE Access",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 0.884,
+     "h_index": 338,
+     "issn": "2169-3536",
+     "works": 72,
+     "by_year": {
+      "2018": 2,
+      "2019": 3,
+      "2020": 5,
+      "2021": 1,
+      "2022": 6,
+      "2023": 5,
+      "2024": 7,
+      "2025": 24,
+      "2026": 19
+     }
+    },
+    {
+     "source_id": "S2764477435",
+     "name": "Advances in Education",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2160-729X",
+     "works": 66,
+     "by_year": {
+      "2023": 1,
+      "2024": 8,
+      "2025": 25,
+      "2026": 32
+     }
+    },
+    {
+     "source_id": "S4210205812",
+     "name": "Applied Sciences",
+     "type": "journal",
+     "class": "Q2",
+     "sjr": 0.555,
+     "h_index": 197,
+     "issn": "2076-3417",
+     "works": 66,
+     "by_year": {
+      "2019": 2,
+      "2020": 2,
+      "2021": 2,
+      "2022": 5,
+      "2023": 7,
+      "2024": 6,
+      "2025": 23,
+      "2026": 19
+     }
+    },
+    {
+     "source_id": "S130363450",
+     "name": "IEEE Transactions on Learning Technologies",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 1.893,
+     "h_index": 74,
+     "issn": "1939-1382",
+     "works": 63,
+     "by_year": {
+      "2016": 4,
+      "2017": 6,
+      "2018": 1,
+      "2019": 3,
+      "2020": 1,
+      "2021": 3,
+      "2022": 3,
+      "2023": 16,
+      "2024": 13,
+      "2025": 4,
+      "2026": 9
+     }
+    },
+    {
+     "source_id": "S4210209777",
+     "name": "Applied Mathematics and Nonlinear Sciences",
+     "type": "journal",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2444-8656",
+     "works": 56,
+     "by_year": {
+      "2023": 9,
+      "2024": 33,
+      "2025": 14
+     }
+    },
+    {
+     "source_id": "S13144211",
+     "name": "Expert Systems with Applications",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 1.939,
+     "h_index": 315,
+     "issn": "0957-4174",
+     "works": 56,
+     "by_year": {
+      "2021": 3,
+      "2022": 7,
+      "2023": 11,
+      "2024": 11,
+      "2025": 12,
+      "2026": 12
+     }
+    },
+    {
+     "source_id": "S2764905038",
+     "name": "Advances in intelligent systems and computing",
+     "type": "book series",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2194-5357",
+     "works": 52,
+     "by_year": {
+      "2015": 1,
+      "2016": 8,
+      "2017": 7,
+      "2018": 8,
+      "2019": 8,
+      "2020": 11,
+      "2021": 5,
+      "2022": 2,
+      "2023": 1,
+      "2025": 1
+     }
+    },
+    {
+     "source_id": "S10169007",
+     "name": "Knowledge-Based Systems",
+     "type": "journal",
+     "class": "Q1",
+     "sjr": 1.753,
+     "h_index": 206,
+     "issn": "0950-7051",
+     "works": 51,
+     "by_year": {
+      "2016": 1,
+      "2017": 1,
+      "2018": 1,
+      "2020": 3,
+      "2021": 3,
+      "2022": 5,
+      "2023": 2,
+      "2024": 9,
+      "2025": 14,
+      "2026": 12
+     }
+    },
+    {
+     "source_id": "S4210191458",
+     "name": "Proceedings of the AAAI Conference on Artificial Intelligence",
+     "type": "conference",
+     "class": "conference",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2159-5399",
+     "works": 50,
+     "by_year": {
+      "2015": 2,
+      "2017": 1,
+      "2018": 1,
+      "2019": 2,
+      "2020": 5,
+      "2021": 7,
+      "2022": 2,
+      "2023": 5,
+      "2024": 5,
+      "2025": 7,
+      "2026": 13
+     }
+    },
+    {
+     "source_id": "S4210179225",
+     "name": "Advances in educational technologies and instructional design book series",
+     "type": "book series",
+     "class": "not_ranked",
+     "sjr": null,
+     "h_index": null,
+     "issn": "2326-8905",
+     "works": 47,
+     "by_year": {
+      "2017": 2,
+      "2018": 3,
+      "2019": 5,
+      "2020": 2,
+      "2021": 2,
+      "2023": 3,
+      "2024": 24,
+      "2025": 6
+     }
+    }
+   ]
+  }
+ }
+}
