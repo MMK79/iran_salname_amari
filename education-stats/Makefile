@@ -19,7 +19,7 @@ etl-local:     ## same pipeline on the host; loads Postgres if it is up, else Du
 load:          ## (re)load parquet outputs into Postgres
 	uv run python -m etl.run load --pg $(PG)
 
-test:
+test: ## run pytest
 	uv run pytest -q
 
 export-site:  ## static-site JSON (map paths, K-12, HE, provenance, meta) -> exports/site/
@@ -28,12 +28,15 @@ export-site:  ## static-site JSON (map paths, K-12, HE, provenance, meta) -> exp
 research-quartiles:  ## AI-in-education Iran vs world by SJR quartile (OpenAlex + SCImago SJR, cached) -> external/research/quartiles_*.csv, exports/site/research_quartiles.json
 	uv run python scripts/research_quartiles.py all
 
-lint:
+lint: ## ruff check
 	uv run ruff check etl tests dashboard
 
-dashboard:     ## Streamlit prototype on http://localhost:8501 (reads DuckDB or Postgres)
+dashboard:     ## Streamlit prototype on http://localhost:8501 (reads DuckDB or Postgres; Ctrl-C stops it)
 	uv run streamlit run dashboard/app.py
 
-down:
+down: ## stop Postgres
 	docker compose down
-.PHONY: up etl etl-local load test lint dashboard export-site research-quartiles down
+.PHONY: help up etl etl-local load test lint dashboard export-site research-quartiles down
+
+help: ## list the commands
+	@grep -E '^[a-z0-9-]+:.*## ' $(MAKEFILE_LIST) | sed -E 's/:[^#]*## /\t/' | awk -F'\t' '{printf "  make %-20s %s\n", $$1, $$2}'
